@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web IDE</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9fafb;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      background-color: #4caf50;
+      color: white;
+      width: 100%;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    textarea {
+      width: 90%;
+      height: 150px;
+      margin-top: 20px;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 16px;
+    }
+    button {
+      margin: 10px 0;
+      padding: 10px 20px;
+      background-color: #2196f3;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    iframe {
+      width: 90%;
+      height: 300px;
+      margin-top: 20px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HTML, CSS, JavaScript IDE</h1>
+  </header>
+  <textarea id="htmlCode" placeholder="HTML Code">&lt;h1&gt;Hello World&lt;/h1&gt;</textarea>
+  <textarea id="cssCode" placeholder="CSS Code">h1 { color: blue; }</textarea>
+  <textarea id="jsCode" placeholder="JavaScript Code">console.log('Hello World');</textarea>
+  <button onclick="runWebCode()">Run Code</button>
+  <iframe id="output"></iframe>
+
+  <script>
+    function runWebCode() {
+      const htmlCode = document.getElementById('htmlCode').value;
+      const cssCode = document.getElementById('cssCode').value;
+      const jsCode = document.getElementById('jsCode').value;
+
+      const iframe = document.getElementById('output');
+      const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+      iframeDoc.open();
+      iframeDoc.write(`
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <style>${cssCode}</style>
+        </head>
+        <body>
+          ${htmlCode}
+          <script>${jsCode}<\/script>
+        </body>
+        </html>
+      `);
+      iframeDoc.close();
+    }
+  </script>
+</body>
+</html>

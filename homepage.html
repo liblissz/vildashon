@@ -1,0 +1,1879 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VILDASH online learning</title>
+  <link rel="stylesheet" href="cp.css">
+  <link rel="stylesheet" href="style.css" />
+  <script src="./script.js" defer></script>
+  <link rel="icon" href="file-KXYNjXBEo2D9qPtH9iD6VQ (5).webp">
+  <link rel="stylesheet" href="footer.css">
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="load.css">
+
+<script>
+  window.addEventListener('load', function () {
+  const load = document.querySelector('.preload');
+  const content = document.getElementById('content');
+
+  setTimeout( () =>{
+load.style.opacity = '0';
+setTimeout(() =>{
+load.style.display = 'none';
+content.style.display = 'block';
+}, 1000)
+Transition
+  }, 1200)
+});
+
+</script>
+  <div class="preload">
+    <div class="loading-container">
+      <div class="box-loading">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div id="content" >
+  <div class="container">
+    <div class="overlay"></div>
+    <div class="overlay2"></div>
+    <!-- Side nav -->
+    <div class="sideNav">
+      <nav>
+        <div class="navHead">
+          <div class="profile">
+            
+            
+            <img style="margin: 10px !important ; border-radius: 5px !important;" src="file-KXYNjXBEo2D9qPtH9iD6VQ (5).webp" alt="profile" />
+
+          </div>
+          <div class="userName">
+          
+          
+            <script>
+              // ... (rest of your code)
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+import {getAuth, onAuthStateChanged, signOut} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+import{getFirestore, getDoc, doc} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js"
+
+const firebaseConfig = {
+    //YOUR COPIED FIREBASE PART SHOULD BE HERE
+ //WATCH THIS VIDEO TO LEARN WHAT TO PUT HERE   https://youtu.be/_Xczf06n6x0
+ apiKey: "AIzaSyD9rdo1_fbEUbZmwqGubn9dMOiCJiBqXk8",
+ authDomain: "vildash-a9de4.firebaseapp.com",
+ projectId: "vildash-a9de4",
+ storageBucket: "vildash-a9de4.firebasestorage.app",
+ messagingSenderId: "320348519512",
+ appId: "1:320348519512:web:169f0c7a179d48c763de2d"
+  };
+ 
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+
+  const auth=getAuth();
+  const db=getFirestore();
+
+  onAuthStateChanged(auth, (user)=>{
+    const loggedInUserId=localStorage.getItem('loggedInUserId');
+    if(loggedInUserId){
+        console.log(user);
+        const docRef = doc(db, "users", loggedInUserId);
+        getDoc(docRef)
+        .then((docSnap)=>{
+            if(docSnap.exists()){
+                const userData=docSnap.data();
+                document.getElementById('loggedUserFName').innerText=userData.firstName;
+                document.getElementById('loggedUserEmail').innerText=userData.email;
+                document.getElementById('loggedUserLName').innerText=userData.lastName;
+
+            }
+            else{
+                console.log("no document found matching id")
+            }
+        })
+        .catch((error)=>{
+            console.log("Error getting document");
+        })
+    }
+    else{
+        console.log("User Id not Found in Local storage")
+    }
+  })
+
+  const logoutButton=document.getElementById('logout');
+
+  logoutButton.addEventListener('click',()=>{
+    localStorage.removeItem('loggedInUserId');
+    signOut(auth)
+    .then(()=>{
+        window.location.href='index.html';
+    })
+    .catch((error)=>{
+        console.error('Error Signing out:', error);
+    })
+  })
+            </script>
+          </div>
+
+        </div>
+        <div class="navBody">
+          <ul id="links">
+<a href="feedback.html">
+            <li>
+              <div class="icon">
+                <ion-icon name="mail-unread-outline"></ion-icon>
+              </div>
+              <p>send feedback</p>
+            </li>
+            </a>
+            <style>
+              a {
+                text-decoration: none;
+                color: black;
+              }
+            </style>
+            <a href="csharp.html">
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn c#</p>
+              </li>
+            </a>
+            <a href="c ++\C++Lesson1.html">
+            <li>
+              <div class="icon">
+                <ion-icon name="log-out-outline"></ion-icon>
+              </div>
+              <p>learn c++ </p>
+            </li>
+          </a>
+<a href="DOC-20250105-WA0007.html">
+            <li>
+              <div class="icon">
+                <ion-icon name="log-out-outline"></ion-icon>
+              </div>
+              <p>learn javascript(.js)</p>
+            </li>
+          </a>
+          <a href="html-1.html">
+            <li>
+
+              <div class="icon">
+                <ion-icon name="log-out-outline"></ion-icon>
+              </div>
+              <p>learn html</p>
+            </li>
+            </a>
+            <a href="projected-page.html">
+            <li>
+              <div class="icon">
+                <ion-icon name="log-out-outline"></ion-icon>
+              </div>
+              <p>buy website templates</p>
+            </li>
+            </a>
+            <a href="c\c.html">
+            <li>
+              <div class="icon">
+                <ion-icon name="log-out-outline"></ion-icon>
+              </div>
+              <p>learn c </p>
+            </li>
+            </a>
+            <a href="AIVILDASH.html">
+            <li>
+              <div class="icon">
+                <ion-icon name="log-out-outline"></ion-icon>
+              </div>
+              <p>Use our AI</p>
+            </li>
+          </a>
+            <a href="javascript: viod(0);" id="logout">
+           
+</a>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="topNav">
+      <nav>
+        <div class="topLeft">
+          <div id="hamburgar" class="hamburgar">
+            <div class="line"></div>
+          </div>
+          <p>VILDASH ONLINE LEARNING</p>
+        </div>
+        <div id="demo" style=" font-weight: bold; color:#fff;"> 
+           <input style="opacity: none !important; padding:10px;" type="text" placeholder="
+          search our pages........" name="search" id="searchinput" onkeyup="search()"> 
+          
+          <div id="results" style="padding: 20px;"></div></div>
+<style>
+  #searchinput::placeholder{
+    float: right;
+    padding-left: 13px;
+  }
+  #results {
+   background-color: #1650245e;
+   display: flex;
+   flex-direction: column;
+   gap: 6px;
+  }
+</style>
+        <!--<div class="ctaBtn">
+            <button class="ctaModal">Sign In</button>
+          </div>-->
+      </nav>
+    </div>
+    <script>
+      const pages = [
+{title: "csharp(c#)", url:"csharp.html", content:"learn c#" },
+{title: "feedback", url:"feedback.html", content:"give a feedback message" },
+{title: "java", url:"java.html", content:"learn java" },
+{title: "python", url:"python.html", content:"learn python" },
+{title: "c program", url:"c.html", content:"learn c" },
+{title: "c++", url:"cplusplus.html", content:"learn c++" },
+{title: "javscript js", url:"java.html", content:"learn javascript(js)" },
+{title: "css", url:"css.html", content:"learn casceding stylesheet(css)" },
+{title: "html", url:"html.html", content:"learn html" },
+{title: "terms and condition", url:"term.html", content:"term and condition" },
+{title: "use AI", url:"ai.html", content:"use  AI" },
+{title: "c++", url:"cplusplus.html", content:"learn c++" }
+
+];
+
+function search(){
+const query = document.getElementById("searchinput").value.toLowerCase();
+const resultcontainer = document.getElementById("results");
+resultcontainer.innerHTML ='';
+if(query){
+    const results = pages.filter(pages => pages.content.toLowerCase().includes(query)||
+    pages.title.toLowerCase().includes(query)
+);
+if(results.length > 0){
+    results.forEach(result =>{
+        const resultDiv = document.createElement('div');
+        resultDiv.classList.add('results');
+    resultDiv.style.background = "#333";
+    resultDiv.style.padding = "10px";
+    resultDiv.style.borderRadius = "10px";
+        resultDiv.innerHTML = `<h2><a style ="color: white;" href="${result.url}">${result.title}</a></h2>
+        <p>${result.content}</p>`;
+        resultcontainer.appendChild(resultDiv);
+        
+    });
+}
+    else{
+        resultcontainer.innerHTML = `<p>no results found</p>`
+    }
+
+}
+}
+
+    </script>
+
+
+<style>
+  #demo input{
+    opacity: 0.8;
+    border: 1px solid rgb(18, 64, 8);
+  }
+  #demo button{
+   background-color: #fff;
+   color: #28a745;
+   cursor: pointer;
+  }
+  #demo button:hover{
+    background-color: #28a745;
+    color: #fff;
+  }
+  @media screen and (max-width:652px) {
+    #demo button{
+     padding: 5px;
+     display: none;
+     }
+     #demo input{
+      opacity: 0.8;
+      border: 5px solid rgb(18, 64, 8);
+    }
+  }
+  
+</style>
+<link rel="stylesheet" href="https://fontawesome.com/icons/facebook?f=brands&s=solid">
+    <section class="heroSection">
+      <!--<div id="red" style=" font-weight: bold; color:#fff;"> 
+        <input style="opacity: none !important; padding:10px;" type="text" placeholder="
+       search......" name="search" id="searchinput" onkeyup="search()"> 
+       <button onkeyup="search()" style=" padding: 10px;">search</button>
+       <div id="results"></div></div>-->
+
+      <div class="textCont">
+
+        <h1>WELCOME TO VILDASH LEARNING PLATFORM</h1>
+        <p>
+          Here you will learn how to code with css, c++, c#, javascript, html,and c.
+          our turtorial are very explicit and it is meant to teach beginers in a way that
+          they can become pro's
+        </p>
+        <div class="ctaBtn">
+          <!--<button class="ctaModal">Sign In</button>-->
+        </div>
+      </div>
+    </section>
+    <main>
+      <div class="textContainer">
+
+
+
+        <h2>SECRETE TIPS TO BECOME A PRO IN PROGRAMING?</h2>
+        <p>
+          Never you try to cram the codes, dont spend time mastering the syntax but spend
+          time learning what the codes do. always have a book for jotting the codes down
+          and interpriting the codes
+        </p>
+        <h2>Feature of this Platform</h2>
+        <p>
+          We have incomperated different IDEs for the different languages we will teach you here
+          so you can learn coding from our website and if you want to code no need to use and external
+          IDE(integrated development enviroment) or code editor we've got you on that. you can
+          learn coding and after each course you will take a quize which you will answer to some
+          questions, when you answer at the end you will have to screenshot your results and
+          paste it in the reply section were orther programers can see your results
+        </p>
+        <h2>Upcoming Features</h2>
+        <p>
+          we plan on adding Features were users can communicate with each orther
+          we plan on adding and AI to our system. There are alot of thinks we plan on adding
+          for upgrade, but there is a section for feedbacksuch that you can say what you want for
+          the site.
+        </p>
+        <h2></h2>
+
+        <p>
+
+        </p>
+        <h2></h2>
+        <p>
+
+        </p>
+
+        <!--<h1>EXPLORE OUR IDEs</h1>
+<p>click below to code with any of the IDEs</p>-->
+        <!--------------------SECTION 3-------------------->
+        <!--<section class="section3">
+          <div class="card-grid">
+              <a class="card" href="gelary.html">
+                  <div class="card__background" style="background-image: url(1718824468720.jpg)">
+                  </div>
+                  <div class="card__content">
+                      <p class="card__category"><span></span>c sharp</p>
+                      <h3 class="card__heading">blending the art
+                          of photography and cinematography</h3>
+                  </div>
+              </a>
+              <a class="card" href="learn.html">
+                  <div class="card__background" style="background-image: url(1718824474178.jpg)">
+                  </div>
+                  <div class="card__content">
+                      <p class="card__category"> c </p>
+                      <h3 class="card__heading">Capturing the essence of individuals with professional and artistic
+                          portrait sessions.</h3>
+                  </div>
+              </a>
+       
+              <a class="card" href="vicks.html">
+                  <div class="card__background" style="background-image: url(1718824474178.jpg)">
+                  </div>
+                  <div class="card__content">
+                      <p class="card__category">html, css and js</p>
+                      <h3 class="card__heading">you can get to us on facebook, twitter, whatsapp and instegram</h3>
+                  </div>
+                  </li>
+                  <a class="card" href="partnership/index.html">
+                      <div class="card__background" style="background-image: url(1718824478649.jpg)">
+                      </div>
+                      <div class="card__content">
+                          <p class="card__category">c++</p>
+                          <h3 class="card__heading">click here if your would like to patner with us
+                          </h3>
+                      </div>
+                  </a>
+                  <div>
+      </section>-->
+        <h1>FOLLOW OUR YOUTUBE CHANEL</h1>
+        <p>you can follow our youtube chanel for updated turtorials</p>
+        <style>
+          @media screen and (max-width: 641px) {
+            iframe {
+              width: 100%;
+            }
+          }
+        </style>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/j4BN4sjJrEU?si=TOqpET7hLyO66Tqt"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </center>
+      </div>
+    </main>
+  </div>
+
+
+
+
+
+
+
+  <style>
+    .containe .main-box {
+      width: 450px;
+      height: 600px;
+      background-color: #394d38;
+      border-radius: 5px;
+      position: relative;
+      border: 2px solid #E6E6E6;
+    }
+
+    .containe .main-box .one {
+      width: 100%;
+      border-top-left-radius:
+        5px;
+      border-top-right-radius: 5px;
+    }
+
+    .containe .main-box .two {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 2px solid white;
+      position: absolute;
+      top: 255px;
+      right: 25px;
+      box-shadow: 0 0 5px grey;
+    }
+
+    .main-box .text h3 {
+      color:
+        #ffffff;
+      font-weight: 400;
+      font-size: 30px;
+      padding-left: 10px;
+      margin: 5px 0;
+      text-transform: capitalize;
+    }
+
+    .main-box .text .p {
+      padding-left: 10px;
+      color:
+        #999999;
+    }
+
+    .main-box .text .p a {
+      text-decoration: none;
+      color: #5aa49d;
+      text-transform: capitalize;
+      font-weight: 400;
+      font-size: 1.4em;
+    }
+
+    .main-box .text .p a:hover {
+      text-decoration: underline;
+    }
+
+    .main-box .text .p2 {
+      padding-left: 10px;
+      color:
+        #999999;
+    }
+
+    .main-box .text .location i {
+      color: #009688;
+      padding-right: 5px;
+    }
+
+    .main-box .text .location {
+      color: #999999;
+      padding-left: 10px;
+    }
+
+    .main-box .line {
+      width: 400px;
+      height: 20px;
+      margin: 10px auto;
+      background-color: #F1F2F2;
+      position: relative;
+    }
+
+    .main-box .line::before {
+      content: "";
+      width: 50%;
+      height:
+        100%;
+      background-color: #b5d8d5;
+      position: absolute;
+      border-radius: 0 10px 10px 0;
+    }
+
+    .main-box .Evaluation {
+      display: grid;
+      grid-template-columns:
+        repeat(auto-fit, minmax(100px, 1fr));
+      gap: 20px;
+      text-align: center;
+    }
+
+    .main-box .Evaluation .col {
+      margin: auto;
+    }
+
+    .main-box .Evaluation .col h4 {
+      margin: 10px 0;
+    }
+
+    .main-box .Evaluation .col p {
+      color: #999999;
+      margin: 5px 0;
+      
+    }
+
+    @media (max-width: 450px) {
+      .containe .main-box {
+        width: 350px;
+        height: 500px;
+      }
+
+      .containe .main-box .two {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 2px solid white;
+        position: absolute;
+        top: 165px;
+        right: 25px;
+        box-shadow: 0 0 5px grey;
+      }
+
+      .main-box .text h3 {
+        color: #454545;
+        font-weight:
+          400;
+        font-size: 20px;
+        padding-left: 10px;
+        margin: 5px 0;
+        text-transform:
+          capitalize;
+      }
+
+      .main-box .text .p {
+        padding-left: 10px;
+        color: #999999;
+        font-size: 13px;
+      }
+
+      .main-box .line {
+        width: 275px;
+      }
+
+      .main-box .Evaluation {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+        gap:
+          10px;
+      }
+    }
+  </style>
+  <div style="display: flex; flex-wrap: wrap; margin: 10px; gap: 12px; background:#bfd1c89a ;">
+    <h1 style="font-size: 2.3em; font-weight: 1000; ">CLICK ON THE LANGUAGE YOU WANT TO LEARN BELLOW</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  <div class="containe">
+    <div class="main-box"> <img src="program-code-software-digital-abstract-code-javascript-text-vector-illustration.jpg"
+        alt="smart watch" title="smart watch" class="one" /> <img src="IMG-20241231-WA0060.jpg"
+        alt="coffe" title="coffe" class="two" />
+      <div class="text">
+        <h3>LEARN HTML</h3>
+        <p class="p"> info: <a href="" target="_blank"></a> <i
+            class="fa-solid fa-tags"></i> <a href="html-1.html">click here to learn html</a> </p>
+        <p class="p2">
+          this turtorial was brought to you by Enjebel </p>
+        <div class="location"> <i class="fa-solid fa-location-dot"></i> capabilities of it:</div>
+      </div>
+      <div class="line"></div>
+      <div class="Evaluation">
+        <div class="col">
+          <h4>50%</h4>
+          <p>prostandard</p>
+        </div>
+        <div class="col">
+          <h4>100%</h4>
+          <p>learners standard</p>
+        </div>
+        <div class="col">
+          <h4>100%</h4>
+          <p>complete course</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="containe">
+    <div class="main-box"> <img src="shutterstock_1361674454-100939444-orig.jpg"
+        alt="smart watch" title="smart watch" class="one" /> <img src="IMG-20241231-WA0061.jpg"
+        alt="coffe" title="coffe" class="two" />
+      <div class="text">
+        <h3>Learn JavaScript</h3>
+        <p class="p"> info: <a href="" target="_blank"></a> <i
+            class="fa-solid fa-tags"></i> <a href="DOC-20250105-WA0007.html">click here to learn javascript</a> </p>
+        <p class="p2">
+        this turtorial was brought to you by lewis  </p>
+        <div class="location"> <i class="fa-solid fa-location-dot"></i> capabilities</div>
+      </div>
+      <div class="line"></div>
+      <div class="Evaluation">
+        <div class="col">
+          <h4>50%</h4>
+          <p>theory</p>
+        </div>
+        <div class="col">
+          <h4>100%</h4>
+          <p>practical</p>
+        </div>
+        <div class="col">
+          <h4>100%</h4>
+          <p>brainstorming</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="containe">
+    <div class="main-box"> <img src="istockphoto-1457290530-612x612.jpg"
+        alt="smart watch" title="smart watch" class="one" /> <img src="IMG-20241231-WA0062.jpg"
+        alt="coffe" title="coffe" class="two" />
+      <div class="text">
+        <h3>LEARN JAVA</h3>
+        <p class="p"> info: <a href="" target="_blank">
+        </a> <i
+            class="fa-solid fa-tags"></i> <a href="java.html">click here to learn java</a> </p>
+        <p class="p2">
+          this tutorial was brought to you by Broskii</p>
+        <div class="location"> <i class="fa-solid fa-location-dot"></i> capabilities</div>
+      </div>
+      <div class="line"></div>
+      <div class="Evaluation">
+        <div class="col">
+          <h4>50%</h4>
+          <p>pro</p>
+        </div>
+        <div class="col">
+          <h4>100%</h4>
+          <p>learners</p>
+        </div>
+        <div class="col">
+          <h4>100%</h4>
+          <p>dynamic</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="containe">
+    <div class="main-box"> <img src="av9ji0n47qe41.jpg"
+        alt="smart watch" title="smart watch" class="one" /> <img src="IMG-20241231-WA0063.jpg"
+        alt="coffe" title="coffe" class="two" />
+      <div class="text">
+        <h3>LEARN Cplusplus(c++)</h3>
+        <p class="p"> info: <a href="" target="_blank"></a> <i
+            class="fa-solid fa-tags"></i> <a href="c ++\C++Lesson1.html">click here to learn c++</a> </p>
+        <p class="p2">
+          this tutorial was brought to you by BK </p>
+        <div class="location"> <i class="fa-solid fa-location-dot"></i>capabilities </div>
+      </div>
+      <div class="line"></div>
+      <div class="Evaluation">
+        <div class="col">
+          <h4>50%</h4>
+          <p>pro</p>
+        </div>
+        <div class="col">
+          <h4>100%</h4>
+          <p>beginers</p>
+        </div>
+        <div class="col">
+          <h4>100%</h4>
+          <p>productive</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="containe">
+    <div class="main-box"> <img src="Generate-CSS-Code-in-Photoshop.png"
+        alt="smart watch" title="smart watch" class="one" /> <img src="IMG-20241231-WA0060.jpg"
+        alt="coffe" title="coffe" class="two" />
+      <div class="text">
+        <h3>LEARN CSS</h3>
+        <p class="p"> info: <a href="" target="_blank">
+        
+        </a> <i
+            class="fa-solid fa-tags"></i> <a href="CSS introduction .html">click here to learn css</a> </p>
+        <p class="p2">
+          this turtorial was brought to you by Enjebel </p>
+        <div class="location"> <i class="fa-solid fa-location-dot"></i> c apabilities </div>
+      </div>
+      <div class="line"></div>
+      <div class="Evaluation">
+        <div class="col">
+          <h4>50%</h4>
+          <p>pro</p>
+        </div>
+        <div class="col">
+          <h4>100%</h4>
+          <p>beginers</p>
+        </div>
+        <div class="col">
+          <h4>100%</h4>
+          <p>full course</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="containe">
+    <div class="main-box"> <img src="programming-background-with-person-working-with-codes-computer_23-2150010125.avif"
+        alt="smart watch" title="smart watch" class="one" /> <img src="IMG-20241231-WA0061.jpg"
+        alt="coffe" title="coffe" class="two" />
+      <div class="text">
+        <h3>LEARN PYTHON</h3>
+        <p class="p"> info: <a href="" target="_blank"></a> <i
+            class="fa-solid fa-tags"></i> <a href="DOC-20250105-WA0008.html">click here to learn python</a> </p>
+        <p class="p2">
+          this tutorial was brought by Lewis </p>
+        <div class="location"> <i class="fa-solid fa-location-dot"></i> capabilities</div>
+      </div>
+      <div class="line"></div>
+      <div class="Evaluation">
+        <div class="col">
+          <h4>50%</h4>
+          <p>beginers</p>
+        </div>
+        <div class="col">
+          <h4>40%</h4>
+          <p>user friendly</p>
+        </div>
+        <div class="col">
+          <h4>20%</h4>
+          <p>complete course</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="containe">
+    <div class="main-box"> <img src="0_vOZ2vc8u2TKwAm1E.png"
+        alt="smart watch" title="smart watch" class="one" /> <img src="program-code-software-digital-abstract-code-javascript-text-vector-illustration.jpg"
+        alt="coffe" title="coffe" class="two" />
+      <div class="text">
+        <h3>LEARN CSHARP(c#)</h3>
+        <p class="p"> info: <a href="" target="_blank"></a> <i
+            class="fa-solid fa-tags"></i> <a href="csharp.html">click here to learn c#</a> </p>
+        <p class="p2">
+          this tutorial was brought to you by Li Blissz </p>
+        <div class="location"> <i class="fa-solid fa-location-dot"></i>capabilities </div>
+      </div>
+      <div class="line"></div>
+      <div class="Evaluation">
+        <div class="col">
+          <h4>50%</h4>
+          <p>pro</p>
+        </div>
+        <div class="col">
+          <h4>100%</h4>
+          <p>beginers</p>
+        </div>
+        <div class="col">
+          <h4>100%</h4>
+          <p>productive</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="containe">
+    <div class="main-box"> <img src="0_vOZ2vc8u2TKwAm1E.png"
+        alt="smart watch" title="smart watch" class="one" /> <img src="IMG-20241231-WA0063.jpg"
+        alt="coffe" title="coffe" class="two" />
+      <div class="text">
+        <h3>LEARN C(.c)</h3>
+        <p class="p"> info: <a href="" target="_blank"></a> <i
+            class="fa-solid fa-tags"></i> <a href="c\c.html">click here to learn c</a> </p>
+        <p class="p2">
+          this tutorial was brought to you by BK </p>
+        <div class="location"> <i class="fa-solid fa-location-dot"></i>capabilities </div>
+      </div>
+      <div class="line"></div>
+      <div class="Evaluation">
+        <div class="col">
+          <h4>50%</h4>
+          <p>pro</p>
+        </div>
+        <div class="col">
+          <h4>100%</h4>
+          <p>beginers</p>
+        </div>
+        <div class="col">
+          <h4>100%</h4>
+          <p>productive</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+  <div class="background" style="margin-top: 100px;">
+    <!-- For full page background -->
+    <div class="container">
+
+
+      <div class="hero">
+        <div class="hero-img">
+          <img src="https://bit.ly/3wufimz" alt="illustration-mockups" class="mockup">
+        </div>
+
+        <div class="hero-text">
+          <h1 class="head">WHAT WE ARE OUT TO DO</h1>
+
+          <p class="text">We dont just teach you to code we teach you to code and build amazing systems.</p>
+
+          <button class="btn text">VILDASH</button>
+        </div>
+      </div>
+
+      <div class="socials">
+        <!-- Social Links -->
+        <button class="social-btn facebook"></button>
+        <button class="social-btn twitter"></button>
+        <button class="social-btn instagram"></button>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    img {
+      display: block;
+      max-width: 100%;
+      pointer-events: none;
+    }
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      overflow-wrap: break-word;
+    }
+
+    #root,
+    #__next {
+      isolation: isolate;
+    }
+
+    /* </---------Reset CSS---------> */
+
+    /* <---------Variables---------> */
+
+    :root {
+      /* Primary Colors */
+      --Violet: #28a745;
+      --Soft-Magenta: #000000;
+
+
+      /* Font Size */
+      --head: 3rem;
+      --text: 1.3rem;
+
+      /* Font Weight */
+      --regular: 400;
+      --bold: 600;
+    }
+
+    /* </---------Variables---------> */
+
+    /* <---------Utility Classes---------> */
+
+    .head {
+      font-size: var(--head);
+      font-weight: var(--bold);
+      color: white;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .text {
+      font-size: var(--text);
+      font-weight: var(--regular);
+      color: white;
+      font-family: "Open Sans", sans-serif;
+    }
+
+    /* </---------Utility Classes---------> */
+
+    /* <---------General CSS---------> */
+
+    .background {
+      min-height: 100vh;
+      background-color: var(--Violet);
+      background-image: url(https://bit.ly/3CA3FP6);
+      background-repeat: no-repeat;
+      background-size: 85% 100%;
+      background-position: center;
+      overflow: auto;
+      padding: 0 4em;
+    }
+
+    .container {
+      margin: 5em auto 2em auto;
+      max-width: 1800px;
+    }
+
+    .hero {
+      margin: 5em 0 3em 0;
+      display: flex;
+      gap: 6em;
+    }
+
+    .hero-img {
+      flex-basis: 50%;
+    }
+
+    .mockup {
+      width: 100%;
+    }
+
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5em;
+      align-self: center;
+      max-width: 35em;
+    }
+
+    .btn {
+      background-color: white;
+      color: var(--Violet);
+      border: 0;
+      width: 15em;
+      padding: 0.5em 1.5em;
+      border-radius: 2em;
+      box-shadow: 5px 5px 10px 0px rgba(63, 63, 63, 0.86);
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      color: white;
+      background-color: var(--Soft-Magenta);
+    }
+
+    .socials {
+      display: flex;
+      gap: 1em;
+      justify-content: flex-end;
+    }
+
+    .social-btn {
+      border: 2px solid white;
+      border-radius: 100%;
+      background: transparent;
+      width: 3em;
+      height: 3em;
+      cursor: pointer;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 1.5em;
+    }
+
+    .social-btn:hover {
+      border: 2px solid var(--Soft-Magenta);
+    }
+
+    .facebook {
+      background-image: url(https://bit.ly/3ANDWRW);
+    }
+
+    .facebook:hover {
+      background-image: url(https://bit.ly/3Aj9mOo);
+    }
+
+    .twitter {
+      background-image: url(https://bit.ly/3e1Xl8Q);
+    }
+
+    .twitter:hover {
+      background-image: url(https://bit.ly/3R9V4Xp);
+    }
+
+    .instagram {
+      background-image: url(https://bit.ly/3pO9z7r);
+    }
+
+    .instagram:hover {
+      background-image: url(https://bit.ly/3dTh0aN);
+    }
+
+    /* </---------General CSS---------> */
+
+    /* <---------Media Queries---------> */
+
+    /* For medium screen */
+    @media (min-width: 800px) and (max-width: 1200px) {
+      :root {
+        --head: 2.5rem;
+        --text: 1.2rem;
+      }
+
+      .hero-text {
+        max-width: 30em;
+      }
+    }
+
+    /* For smaller screen */
+    @media (min-width: 200px) and (max-width: 800px) {
+      :root {
+        --head: 2rem;
+        --text: 1rem;
+      }
+
+      .background {
+        min-height: 100vh;
+        background-color: var(--Violet);
+        background-image: url(https://bit.ly/3PN5FGJ);
+        background-repeat: no-repeat;
+        background-size: 100% 60%;
+        background-position: top;
+        overflow: auto;
+        padding: 0 2em;
+
+      }
+
+      .container {
+        margin: 2em 0 1em 0;
+      }
+
+      .logo {
+        width: 12em;
+      }
+
+      .hero {
+        flex-direction: column;
+        margin: 3em 0 2em 0;
+      }
+
+      .hero-text {
+        text-align: center;
+      }
+
+      .btn {
+        margin: 0 auto;
+      }
+
+      .socials {
+        justify-content: center;
+      }
+    }
+
+    /* For medium screen */
+    @media (min-width: 600px) and (max-width: 800px) {
+      :root {
+        --head: 2.5rem;
+        --text: 1.2rem;
+      }
+    }
+  </style>
+  <section class="service" id="service">
+
+    <div class="container service-section">
+
+      <div class="row">
+
+
+
+
+      </div>
+
+  </section>
+
+
+
+
+  <style>
+    .credit {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      color: inherit;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      overflow: hidden;
+      min-width: 600px;
+      max-width: 900px;
+      width: calc(100% - 100px);
+      height: 400px;
+    }
+
+    .options .option {
+      position: relative;
+      overflow: hidden;
+      min-width: 60px;
+      margin: 10px;
+      background: var(--optionBackground, #E6E9ED);
+      background-size: auto 120%;
+      background-position: center;
+      cursor: pointer;
+      transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+    }
+
+    .options .option.active {
+      flex-grow: 10000;
+      max-width: 600px;
+      margin: 0;
+      border-radius: 40px;
+      background-size: auto 100%;
+    }
+
+    .options .option.active .shadow {
+      box-shadow: inset 0 -120px 120px -120px black, inset 0 -120px 120px -100px black;
+    }
+
+    .options .option .shadow {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 120px;
+      transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+    }
+
+    .options .option .label {
+      display: flex;
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      height: 40px;
+      transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+    }
+
+    .options .option .label .icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 40px;
+      max-width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      background-color: white;
+    }
+
+    .options .option .label .info {
+      display: flex;
+      flex-direction: column;
+      margin-left: 10px;
+      color: white;
+    }
+  </style>
+
+  <div class="options">
+    <div class="option active"
+      style="--optionBackground:url(programming-background-with-person-working-with-codes-computer_23-2150010125.avif);">
+      <div class="shadow"></div>
+      <div class="label">
+        <div class="icon"><i class="fas fa-walking"></i></div>
+        <div class="info">
+          <div class="main">WORD OF ADVICE</div>
+          <div class="sub">sleep, wakeup, and code</div>
+        </div>
+      </div>
+    </div>
+    <div class="option" style="--optionBackground:url(istockphoto-1457290530-612x612.jpg);">
+      <div class="shadow"></div>
+      <div class="label">
+        <div class="icon"><i class="fas fa-snowflake"></i></div>
+        <div class="info">
+          <div class="main">Oretemauw</div>
+          <div class="sub">Omuke trughte a otufta</div>
+        </div>
+      </div>
+    </div>
+    <div class="option" style="--optionBackground:url(istockphoto-1457290530-612x612.jpg);">
+      <div class="shadow"></div>
+      <div class="label">
+        <div class="icon"><i class="fas fa-tree"></i></div>
+        <div class="info">
+          <div class="main">Iteresuselle</div>
+          <div class="sub">Omuke trughte a otufta</div>
+        </div>
+      </div>
+    </div>
+    <div class="option"
+      style="--optionBackground:url(programming-background-with-person-working-with-codes-computer_23-2150010125.avif);">
+      <div class="shadow"></div>
+      <div class="label">
+        <div class="icon"><i class="fas fa-tint"></i></div>
+        <div class="info">
+          <div class="main">Idiefe</div>
+          <div class="sub">Omuke trughte a otufta</div>
+        </div>
+      </div>
+    </div>
+    <div class="option" style="--optionBackground:url(istockphoto-1457290530-612x612.jpg);">
+      <div class="shadow"></div>
+      <div class="label">
+        <div class="icon"><i class="fas fa-sun"></i></div>
+        <div class="info">
+          <div class="main">Inatethi</div>
+          <div class="sub">Omuke trughte a otufta</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(".option").click(function () {
+      $(".option").removeClass("active");
+      $(this).addClass("active");
+    });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+
+
+
+  <!-- jQuery and Slick CSS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+  </head>
+
+  <body>
+    <!-- Cat Slider -->
+    <div class="slider">
+      <div><img src="istockphoto-1457290530-612x612.jpg" alt="Cat 1"></div>
+      <div><img src="programming-background-with-person-working-with-codes-computer_23-2150010125.avif" alt="Cat 2">
+      </div>
+      <div><img src="istockphoto-1457290530-612x612.jpg" alt="Cat 3"></div>
+      <div><img src="istockphoto-1457290530-612x612.jpg" alt="Cat 4"></div>
+      <div><img src="istockphoto-1457290530-612x612.jpg" alt="Cat 5"></div>
+    </div>
+
+    <!-- Slick Initialization -->
+    <script>
+      $(document).ready(function () {
+        $('.slider').slick({
+          autoplay: true,
+          autoplaySpeed: 2000,
+          dots: true,
+          arrows: true,
+          prevArrow: '<button type="button" class="slick-prev">&larr;</button>',
+          nextArrow: '<button type="button" class="slick-next">&rarr;</button>',
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1
+        });
+      });
+    </script>
+
+    <style>
+      /* Slick Carousel default styles */
+      .slick-slider {
+        margin: 0 auto;
+        width: 90%;
+        max-width: 800px;
+      }
+
+      .slick-slide img {
+        width: 100%;
+        border-radius: 10px;
+        height: auto;
+      }
+
+      .slick-dots {
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .slick-arrow {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 18px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+
+      .slick-prev {
+        left: -40px;
+      }
+
+      .slick-next {
+        right: -40px;
+      }
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="blog-card">
+      <div class="meta">
+        <div class="photo"
+          style="background-image: url('https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg')"></div>
+        <ul class="details">
+          <li class="author"><a href="#"></a></li>
+          <li class="date"></li>
+          <li class="tags">
+            <ul>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="description">
+        <img src="ccode.PNG" style="height: 200px;" alt="">
+        <h1>C CODING IDE</h1>
+        <h2>this compiler is very flexible if offers auto code and parenthesis completion</h2>
+        <p>we integrated a c compiler for this this ide is meant to make coding with c easier <a style="color: #28a745;" href="finalcide.html">USE THIS IDE</a></p>
+        <p class="read-more">
+          <a href="finalcide.html">click here to ue the IDE</a>
+        </p>
+      </div>
+    </div>
+
+
+
+
+    <div class="blog-card alt">
+      <div class="meta">
+        <div class="photo"
+          style="background-image: url('https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg')"></div>
+        <ul class="details">
+          <li class="author"><a href="#"></a></li>
+          <li class="date"></li>
+          <li class="tags">
+            <ul>
+              <li><a href="#"></a></li>
+              <li><a href="#">
+          
+              </a></li>
+              <li><a href="#"></a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="description">
+        <img src="Screenshot_20250101-195228~2.png" style="height: 200px;" alt="">
+        <h1>C# IDE OR CODE EDITOR</h1>
+        <h2>c# is not the same as c</h2>
+        <p>Learn and code with the c# compiler . learn coding and improve your coding by using our amazing. <a href="finalc#.html">USE THE IDE</a></p>
+        <p class="read-more">
+          <a href="csharpfinal.html">click here to use the IDE</a>
+        </p>
+      </div>
+     
+    </div>
+    <div class="blog-card alt">
+      <div class="meta">
+        <div class="photo"
+          style="background-image: url('https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg')"></div>
+        <ul class="details">
+          <li class="author"><a href="#">Jane Doe</a></li>
+          <li class="date">July. 15, 2015</li>
+          <li class="tags">
+            <ul>
+              <li><a href="#">Learn</a></li>
+              <li><a href="#">Code</a></li>
+              <li><a href="#">JavaScript</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="description">
+        <img src="cplusplus.PNG" style="height: 200px;" alt="">
+        <h1>Explore this one</h1>
+        <h2>c++ is not the same as c</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta
+          praesentium, quam nobis!</p>
+        <p class="read-more">
+          <a href="finalcpp.html">click here to use the IDE</a>
+        </p>
+      </div>
+     
+    </div>
+   
+
+    <div class="blog-card alt">
+      <div class="meta">
+        <div class="photo"
+          style="background-image: url('https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg')"></div>
+        <ul class="details">
+          <li class="author"><a href="#">Jane Doe</a></li>
+          <li class="date">July. 15, 2015</li>
+          <li class="tags">
+            <ul>
+              <li><a href="#">Learn</a></li>
+              <li><a href="#">Code</a></li>
+              <li><a href="#">JavaScript</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="description">
+        <img src="Screenshot_20250101-191850.png" style="height: 200px;" alt="">
+        <h1>Explore this one</h1>
+        <h2>java is not the same as javascript</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta
+          praesentium, quam nobis!</p>
+        <p class="read-more">
+          <a href="javafinal.html">click here to use the IDE</a>
+        </p>
+      </div>
+     
+    </div>
+    <div class="blog-card alt">
+      <div class="meta">
+        <div class="photo"
+          style="background-image: url('https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg')"></div>
+        <ul class="details">
+          <li class="author"><a href="#">Jane Doe</a></li>
+          <li class="date">July. 15, 2015</li>
+          <li class="tags">
+            <ul>
+              <li><a href="#">Learn</a></li>
+              <li><a href="#">Code</a></li>
+              <li><a href="#">JavaScript</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="description">
+        <img src="cplusplus.PNG" style="height: 200px;" alt="">
+        <h1>PYTHON</h1>
+        <h2>c++ is not the same as c</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta
+          praesentium, quam nobis!</p>
+        <p class="read-more">
+          <a href="pythonfinaal.html">click here to use the IDE</a>
+        </p>
+      </div>
+     
+    </div>
+   
+
+    <div class="blog-card alt">
+      <div class="meta">
+        <div class="photo"
+          style="background-image: url('https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg')"></div>
+        <ul class="details">
+          <li class="author"><a href="#">Jane Doe</a></li>
+          <li class="date">July. 15, 2015</li>
+          <li class="tags">
+            <ul>
+              <li><a href="#">Learn</a></li>
+              <li><a href="#">Code</a></li>
+              <li><a href="#">JavaScript</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="description">
+        <img src="Screenshot_20250101-191850.png" style="height: 200px;" alt="">
+        <h1>VISUAL BASIC</h1>
+        <h2>java is not the same as javascript</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta
+          praesentium, quam nobis!</p>
+        <p class="read-more">
+          <a href="visual basic.html">click here to use the IDE</a>
+        </p>
+      </div>
+     
+    </div>
+    <div class="blog-card alt">
+      <div class="meta">
+        <div class="photo"
+          style="background-image: url('https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg')"></div>
+        <ul class="details">
+          <li class="author"><a href="#">Jane Doe</a></li>
+          <li class="date">July. 15, 2015</li>
+          <li class="tags">
+            <ul>
+              <li><a href="#">Learn</a></li>
+              <li><a href="#">Code</a></li>
+              <li><a href="#">JavaScript</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="description">
+        <img src="Screenshot_20250101-195228.png" style="height: 200px;" alt="">
+        <h1>HTML CSS AND JavaScript</h1>
+        <h2>vb is not the same as c</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta
+          praesentium, quam nobis!</p>
+        <p class="read-more">
+          <a href="FINALHTML.html">click here to use the IDE</a>
+        </p>
+      </div>
+     
+    </div>
+   
+
+
+    <style>
+      /* Blog Card Styles */
+      .blog-card {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem auto;
+        box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1.6%;
+        background: #ffffff;
+        line-height: 1.4;
+        font-family: sans-serif;
+        border-radius: 5px;
+        overflow: hidden;
+        z-index: 0;
+      }
+
+      .blog-card a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .blog-card a:hover {
+        color: #3b70fc;
+      }
+
+      .blog-card:hover .photo {
+        transform: scale(1.3) rotate(3deg);
+      }
+
+      /* Meta Section */
+      .blog-card .meta {
+        position: relative;
+        z-index: 0;
+        height: 200px;
+      }
+
+      .blog-card .photo {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-size: cover;
+        background-position: center;
+        transition: transform 0.2s;
+      }
+
+      /* Details Section */
+      .blog-card .details,
+      .blog-card .details ul {
+        margin: auto;
+        padding: 0;
+        list-style: none;
+      }
+
+      .blog-card .details {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -100%;
+        margin: auto;
+        transition: left 0.2s;
+        background: rgba(0, 0, 0, 0.6);
+        color: #65aa60;
+        padding: 10px;
+        width: 100%;
+        font-size: 0.9rem;
+      }
+
+      .blog-card .details a {
+        text-decoration: dotted underline;
+      }
+
+      .blog-card .details ul li {
+        display: inline-block;
+      }
+
+      .blog-card .details .author:before {
+        font-family: FontAwesome;
+        margin-right: 10px;
+        content: "\f007";
+      }
+
+      .blog-card .details .date:before {
+        font-family: FontAwesome;
+        margin-right: 10px;
+        content: "\f133";
+      }
+
+      .blog-card .details .tags ul:before {
+        font-family: FontAwesome;
+        content: "\f02b";
+        margin-right: 10px;
+      }
+
+      /* Description Section */
+      .blog-card .description {
+        padding: 1rem;
+        background: #e8ede8;
+        position: relative;
+        z-index: 1;
+      }
+
+      .blog-card .description h1,
+      .blog-card .description h2 {
+        font-family: Poppins, sans-serif;
+      }
+
+      .blog-card .description h1 {
+        line-height: 1;
+        margin: 0;
+        font-size: 1.7rem;
+      }
+
+      .blog-card .description h2 {
+        font-size: 1rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: #a2a2a2;
+        margin-top: 5px;
+      }
+
+      .blog-card .description p {
+        margin: 1rem 0 0;
+      }
+
+      .blog-card .description p:first-of-type {
+        margin-top: 1.25rem;
+        position: relative;
+      }
+
+      .blog-card .description p:first-of-type:before {
+        content: "";
+        position: absolute;
+        height: 5px;
+        background: #3b70fc;
+        width: 35px;
+        top: -0.75rem;
+        border-radius: 3px;
+      }
+
+      .blog-card .description .read-more {
+        text-align: right;
+      }
+
+      .blog-card .description .read-more a {
+        color: #3b70fc;
+        position: relative;
+        display: inline-block;
+      }
+
+      .blog-card .description .read-more a:after {
+        content: "\f061";
+        font-family: FontAwesome;
+        margin-left: -10px;
+        opacity: 0;
+        transition: margin 0.3s, opacity 0.3s;
+      }
+
+      .blog-card .description .read-more a:hover:after {
+        margin-left: 5px;
+        opacity: 1;
+      }
+    </style>
+
+
+
+
+
+
+
+
+    <!--FOOTER-->
+    <footer class="padding_4x">
+      <div class="top_footer flex">
+        <section class="flex_content">
+
+        </section>
+      </div>
+      <div>
+        <div class="footer_body flex">
+          <section class="flex_content padding_1x">
+            <figure class="logo fixed_flex">
+
+              <figcaption>
+                <strong class="title">VILDASH</strong> NETWORK
+              </figcaption>
+            </figure>
+            <a href="#">
+              <i class="fa fa-map-marker"></i>
+              we are here for you. they key to knowing how to code is concistency in coding
+              and we are here to make you explore to the fullest of technologies. contact us at
+            </a>
+            <i class="fa fa-envelope-o"></i>
+            liblissz3@gmail.com
+            </a>
+            <a href="tel:654598457">
+              <i class="fa fa-headphones"></i>
+              654598457
+            </a>
+          </section>
+          <section class="flex_content padding_1x">
+            <h3> keep </h3>
+            <a href="feedback.html">feedback</a>
+            <a href="AIVILDASH.html">Our AI</a>
+            <a href="csharp.html">learn c#</a>
+            <a href="c ++\C++Lesson1.html">learn c++</a>
+            <a href="">learn css</a>
+ <a href="html-1.html">learn html</a>
+          </section>
+          <section class="flex_content padding_1x">
+            <h3>Other Links</h3>
+            <a href="c\c.html">learn c</a>
+            <a href="DOC-20250105-WA0008.html">learn python</a>
+            <a href="DOC-20250105-WA0007.html">learn javascript</a>
+            <a href="java.html">learn java</a>
+            <a href="projected-page.html">buy webpages</a>
+            <a href="feedback.html">send feedback</a>
+          </section>
+          <section class="flex_content padding_1x">
+            <h3>vildash network</h3>
+            <p>we are here to see you prosper</p>
+            <h1>you can logout by clicking bellow</h1>
+            <button id="logout" style=" color:blueviolet;
+                  background-color:#c9d6ff;
+                  padding:5px;
+                  border-radius:5px;
+                  font-size:1rem;
+                  font-weight:bold;
+                  border:none;">Logout</button>
+    
+            <!--<fieldset class="fixed_flex">
+  <input type="email" name="newsletter" placeholder="Your Email Address">
+  <button class="btn btn_2">Subscribe</button>
+  </fieldset>-->
+          </section>
+        </div>
+        <div class="flex">
+          <section class="flex-content padding_1x">
+            <p>Copyright ©2024 All rights reserved || VILDASH NETWORK</p>
+          </section>
+          <section class="flex-content padding_1x">
+            <a href="https://web.facebook.com/profile.php?id=61552332181172&sk=followers"><i
+                class="fa fa-facebook"></i></a>
+            <a href="https://www.instagram.com/holy_conceptsstudio/"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@holyconcepts"><i class="fa fa-youtube"></i></i></a>
+
+
+
+  <!--<h1 id="red">Welcome to the Homepage</h1>
+  <div id="blue">First Name: <span id="loggedUserFName"></span></div>
+  <div>Last Name: <span id="loggedUserLName"></span></div>
+  <div>Email: <span id="loggedUserEmail"></span></div>
+  <button id="logout">Logout</button>
+  <style>
+    #red{
+      text-align:center;
+
+  }
+  #logout{
+      color:blueviolet;
+      background-color:#c9d6ff;
+      padding:5px;
+      border-radius:5px;
+      font-size:1rem;
+      font-weight:bold;
+      border:none;
+  }
+  #logout:hover{
+      text-decoration: underline;
+      color:blue;
+  }
+  #logout, #blue{
+      margin-left:15%;
+      font-size:20px;
+      padding:10px;
+  }
+  #blue{
+      font-weight:400;
+      color:rgb(12,11,11);
+
+  }
+  span{
+      font-weight:600;
+      font-size:22px;
+      color:black;
+  }
+  </style>-->
+
+
+          </section>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  </div>
+  </body>
+
+</html>
