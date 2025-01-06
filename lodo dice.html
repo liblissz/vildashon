@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: black;
+        }
+
+        .cube {
+            background-color: white;
+            width: 100px;
+            height: 100px;
+            margin: 300px;
+            border-radius: 14px;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            animation: Spin 5s ease-in-out;
+            text-align: center;
+           
+
+        }
+
+        .dots {
+            width: 100REM;
+            height: 100rem;
+            border-radius: 50%;
+            background-color:transparent;
+            margin-top: 2px;
+            color: black;
+            
+
+
+        }
+        .centa{
+            margin-left: 30px;
+            font-size: 4em;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .togle-on{
+            position: relative;
+        }
+
+        @keyframes Spin {
+            0% {
+                right: 300px;
+                background-color: white;
+                transform: scale(0);
+
+            }
+
+            10% {
+                right: 300px;
+                background-color: rgb(255, 255, 255);
+                transform: scale(1);
+
+            }
+
+            25% {
+
+                background-color: green;
+                transform: rotateZ(360deg);
+                
+            }
+
+            50% {
+                background-color: green;
+                /*transform:rotateZ(360deg);*/
+                width: 100px;
+                height: 100px;
+
+
+            }
+
+            60% {
+                background-color: green;
+                transform:rotateZ(0deg);
+                width: 100px;
+                height: 100px;
+
+
+            }
+            99% {
+                right: 300px;
+                background-color: rgb(11, 78, 22);
+                width: 600px;
+                height: 5px;
+            }
+            100% {
+                right: 300px;
+                background-color: transparent;
+                height: 5px;
+                display: none;
+            }
+
+
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <button class="togle-on" id="OnTogle">Night Mode</button>
+   <center>
+    <div class="cube">
+        <!--
+            <div class="dots"></div>
+            <div class="dots"></div>
+            <div class="dots"></div>
+            <div class="dots"></div>
+            <div class="dots"></div> 
+            <div class="dots">V</div>-->
+
+           <center class="centa">V</center> 
+           
+    </div>
+    </center>
+    
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LEARN C++(.cpp)</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="./script.js" defer></script>
+  <script src="asset.js"></script>
+    <link rel="icon" href="../file-KXYNjXBEo2D9qPtH9iD6VQ (5).webp">
+</head>
+
+<body>
+  <!--LAODING ANIM-->
+  <div class="cube" id="landing"></div>
+
+  <!--#######-->
+  <div class="container">
+    <div class="overlay"></div>
+    <div class="overlay2"></div>
+    <!-- Side nav -->
+    <div class="sideNav">
+      <nav>
+        <div class="navHead">
+          <div class="profile">
+            <img style="margin: 10px !important ; border-radius: 5px !important;" src="../file-KXYNjXBEo2D9qPtH9iD6VQ (5).webp" alt="profile" />
+
+          </div>
+          <div class="userName">
+            <p></p>
+          </div>
+
+        </div>
+        <div class="navBody">
+          <ul id="links">
+
+            <a href="../feedback.html">
+            <li>
+
+              <div class="icon">
+                <ion-icon name="list-outline"></ion-icon>
+              </div>
+              <p>send feedback</p>
+            </li>
+</a>
+            <button onclick=" CreateAndFollow()" id="lessonGenButton">
+              <a href="#">
+                <li>
+                  <div class="icon">
+                    <ion-icon name="log-out-outline"></ion-icon>
+                  </div>
+                  <p>learn c++</p>
+
+                </li>
+
+              </a>
+            </button>
+            <div id="welcome"></div>
+            <a href="">
+
+            </a>
+            <a href="../c/c.html">
+            <li>
+              <div class="icon">
+                <ion-icon name="log-out-outline"></ion-icon>
+              </div>
+              <p>learn c</p>
+            </li>
+          </a>
+          <a href="../DOC-20250105-WA0007.html">
+            <li>
+              <div class="icon">
+                <ion-icon name="log-out-outline"></ion-icon>
+              </div>
+              <p>learn javascript(.js)</p>
+            </li>
+          </a>
+          <a href="../html-1.html">
+            <li>
+              <div class="icon">
+                <ion-icon name="log-out-outline"></ion-icon>
+              </div>
+              <p>learn html</p>
+            </li>
+          </a>
+          <a href="../Basic concepts in css.html">
+            <li>
+              <div class="icon">
+                <ion-icon name="log-out-outline"></ion-icon>
+              </div>
+              <p>learn css</p>
+            </li>
+          </a>
+          <a href="../csharp.html">
+            <li>
+              <div class="icon">
+                <ion-icon name="log-out-outline"></ion-icon>
+              </div>
+              <p>learn c sharp </p>
+            </li>
+            </a>
+            <a href="../homepage.html">
+            <li>
+              <div class="icon">
+                <ion-icon name="log-out-outline"></ion-icon>
+              </div>
+              <p>home page</p>
+            </li>
+          </a>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- Hero Section -->
+    <div class="topNav">
+      <nav>
+        <div class="topLeft" id="lessons">
+          <div id="hamburgar" class="hamburgar">
+            <div class="line"></div>
+          </div>
+          <p>LEARN C++ (.cpp)</p>
+        </div>
+        <div id="demo" style="opacity: 0.4; font-size: 1rem;
+          font-weight: bold; color:#fff;"><input style="opacity: none !important; padding:10px;" type="text" placeholder="
+          search our pages........" name="search" id="searchinput" onkeyup="search()"> 
+          
+          <div id="results" style="padding: 20px;"></div></div>
+
+        <!--<div class="ctaBtn">
+            <button class="ctaModal">Sign In</button>
+          </div>-->
+      </nav>
+    </div>
+    <section class="heroSection">
+      <div class="textCont">
+        <h1></h1>
+        <p>
+
+        </p>
+        <div class="ctaBtn">
+          <!--<button class="ctaModal">Sign In</button>-->
+        </div>
+      </div>
+    </section>
+    <main>
+      <!--START-->
+      <div class="readers">
+        <button onclick="readText(textToread)" class="readBtn" id="read">READ OUT LOUD</button>
+        <button onclick="stopReading()" class="readBtn" id="stop">STOP READING</button>
+      </div>
+
+
+      <div class="textContainer">
+        <div>
+          <span id="textToget">
+            <h1>Lesson #1 : Introduction to C++ Programming </h1>
+
+            <p>C++ is a powerful, general-purpose programming language that was developed by
+              Bjarne Stroustrup in the early 1980s as an extension of the C language. It began 
+              as an extension of the C programming language, adding features like classes and objects to support object-oriented programming.
+            </p>
+
+
+
+
+            <h2>Here are some reasons to learn C++</h2>
+            <br>
+            <ol>
+              <strong>
+                <li> Performance and Efficiency:</li>
+              </strong>
+              <ul>
+                <li>High Performance:</li>
+                <p>C++ is renowned for its speed and efficiency, making it ideal for resource-intensive applications
+                  like game development, scientific computing, and systems programming.</p>
+                <li>Hardware Control:</li>
+                <p> C++ allows for direct hardware manipulation, providing fine-grained control over system resources.
+                </p>
+
+              </ul>
+              <strong>
+                <li> Versatility and Flexibility:</li>
+              </strong>
+              <ul>
+                <li>Wide Range of Applications: </li>
+                <p>C++ is used in various domains, including game development, finance, scientific computing, and
+                  systems programming.</p>
+                <li>Object-Oriented Programming (OOP):</li>
+
+                <p> C++ supports OOP principles like encapsulation, inheritance, and polymorphism, enabling modular and
+                  maintainable code.</p>
+                <li>Low-Level and High-Level Capabilities: </li>
+                <p> C++ can be used for both low-level tasks (like system programming) and high-level tasks (like
+                  building complex applications)</p>
+              </ul>
+              <strong>
+                <li>Career Opportunities:</li>
+              </strong>
+              <ul>
+                <li>Industry Demand: </li>
+                <p>C++ remains a highly sought-after skill in the job market, particularly in industries like gaming,
+                  finance, and automotive.</p>
+                <li>High Salaries:</li>
+                <p> C++ developers often command competitive salaries due to the language's complexity and the demand
+                  for skilled professionals.</p>
+              </ul>
+              <strong>
+                <li>Foundation for Other Languages:</li>
+              </strong>
+              <ul>
+                <li>Learning Other Languages:</li>
+                <p> Understanding C++ can make it easier to learn other object-oriented languages like Java, Python, and
+                  C#.</p>
+
+              </ul>
+              <strong>
+                <li> Intellectual Challenge:</li>
+              </strong>
+              <ul>
+                <li>Problem-Solving:</li>
+                <p> C++ challenges you to think critically and solve complex problems efficiently.</p>
+                <li>Continuous Learning: </li>
+                <p> C++ offers a deep and complex learning curve, providing ongoing intellectual stimulation and a sense
+                  of accomplishment.</p>
+              </ul>
+
+
+
+
+              </ul>
+              <br>
+              <h2>Key Features of C++</h2>
+              <br>
+              <ul>
+                <li><strong>Object-Oriented Programming (OOP):</strong></li>
+                <ul>
+
+
+                  <li>Classes and Objects:</li>
+                  <p> C++ allows you to create classes, which are blueprints for objects.
+                    Objects are instances of classes and encapsulate data (attributes)
+                    and methods (functions) that operate on that data. </p>
+                  <li>Inheritance:</li>
+                  <p>Classes can inherit properties and behaviors from other classes, promoting code reusability and
+                    modularity. </p>
+                  <li>Polymorphism: </li>
+                  <p> Objects of different classes can be treated as objects of a common type, enabling flexible and
+                    dynamic behavior.</p>
+                  <li>Encapsulation:</li>
+                  <p> Data and methods within a class can be hidden from external access, protecting the integrity of
+                    the class's internal state. </p>
+                </ul>
+                <ul>
+                  <li><strong> Performance and Efficiency:</strong></li>
+
+                  <li>High Performance:</li>
+                  <p> C++ is known for its speed and efficiency, making it suitable for resource-intensive applications
+                    like game
+                    development, scientific computing, and systems programming. </p>
+                  <li> Low-Level Control: </li>
+                  <p> C++ provides direct access to hardware and memory, allowing for fine-grained control over system
+                    resources. </p>
+                </ul>
+                <li><strong>Rich Standard Library (STL):</strong></li>
+                <ul>
+                  <li>Pre-built Components:</li>
+
+                  <p> The Standard Template Library (STL) provides a wide range of pre-built data structures
+                    (like vectors, lists, maps) and algorithms (like sorting, searching, and numerical operations),
+                    saving developers time and effort.</p>
+                </ul>
+                <li><strong>4. Platform Independence:</strong></li>
+
+
+                <p>Portability: C++ code can be compiled and run on various operating systems and hardware platforms
+                  with minimal modifications.</p>
+
+                <li><strong>Flexibility:</strong> </li>
+
+                <p> Multiple Programming Paradigms: C++ supports multiple programming paradigms, including procedural,
+                  object-oriented, and generic programming, giving developers flexibility in how they approach
+                  problem-solving. </p> 
+                <li><strong>Extensive Community and Resources:
+                  </strong></li>
+                <p> Large Community: C++ has a large and active community of developers, providing ample support,
+                  libraries, and resources.</p>
+
+
+              </ul>
+
+              </ul>
+              <br>
+              <br>
+              <h1>Applications of C++ </h1>
+              <ol>
+                <li><strong>Game Development:</strong></li>
+                <p>
+
+                  <li>Game Engines:</li>
+                <p> C++ is the foundation for many popular game engines like Unreal Engine and Unity,
+                  powering graphics rendering, physics simulations, and game logic. </p>
+                <li>High-Performance Games:</li>
+                <p>Its speed and efficiency are crucial for demanding games with complex graphics and physics. </p>
+                </ul>
+
+                <li><strong>Systems Programming:</strong></li>
+                <ul>
+                  <li>Operating Systems:</li>
+                  <p>C++ plays a vital role in developing operating systems like Windows, Linux, and macOS, handling
+                    core functionalities like memory
+                    management, device drivers, and system calls. </p>
+                  <li>Device Drivers:</li>
+                  <p> C++ is used to create device drivers that enable communication between hardware components and the
+                    operating system. </p>
+                </ul>
+                <li><strong>Scientific and Numerical Computing:</strong></li>
+                <ul>
+                  <li>High-Performance Computing:</li>
+                  <p> C++ is employed in scientific simulations, data analysis, and numerical computations due to its
+                    performance and support
+                    for complex mathematical operations. </p>
+                  <li>Scientific Software:</li>
+                  <p>Libraries and applications in fields like physics, chemistry, and engineering often rely on C++ for
+                    their computational needs. </p>
+                </ul>
+
+                <li><strong>Embedded Systems:</strong></li>
+                <ul>
+                  <li>Microcontrollers and Embedded Devices:</li>
+                  <p>C++ is used in developing software for microcontrollers and embedded systems found in various
+                    devices like automobiles, medical equipment, and IoT devices. </p>
+                  <li>Real-time Systems:</li>
+                  <p> Its efficiency and control over hardware make it suitable for real-time systems where timing is
+                    critical. </p>
+                </ul>
+
+                <li><strong>Financial Services:</strong></li>
+                <ul>
+                  <li>High-Frequency Trading:</li>
+                  <p> C++'s speed and performance are essential for high-frequency trading applications that require
+                    rapid execution of trades. </p>
+                  <li>Financial Modeling:</li>
+                  <p> C++ is used for building complex financial models and simulations. </p>
+                </ul>
+                <li><strong>Web Browsers:</strong></li>
+
+                <ul>
+
+                  <li>Browser Engines:</li>
+                  <p> C++ is used in developing components of web browsers like rendering engines (e.g., Google Chrome's
+                    Blink) and JavaScript engines. </p>
+                </ul>
+                <li><strong>Databases:</strong></li>
+
+                <ul>
+                  <li>Database Management Systems:</li>
+                  <p>C++ is used in the development of database systems like MySQL and PostgreSQL, handling data
+                    storage, retrieval, and query processing. </p>
+                </ul>
+                <li><strong>Artificial Intelligence and Machine Learning:</strong></li>
+                <ul>
+                  <li>AI and ML Frameworks:</li>
+                  <p>C++ is used in developing high-performance machine learning libraries and frameworks. </p>
+                  <li>Computer Vision and Natural Language Processing:</li>
+                  <p> C++ is employed in computationally intensive tasks like image and speech recognition. </p>
+                </ul>
+              </ol>
+              <div class="container-1">
+                <br>
+                <h1 class="text-center">Hello World!</h1>
+                <br>
+                <h3>Let's Write Our First C++ Program</h3>
+
+                <br>
+                <p>We want to print <strong>Hello world ! &excl; </strong> Using the C++ language.
+                  We will simple write some lines of code instructing the computer
+                  to do the printing of the text "hello word to the screen"
+                  Below is some sample code we can use to perform that
+
+
+                </p>
+
+              </div>
+
+              <br>
+              <br>
+              <br>
+              <hr>
+              <br>
+              <div class="row">
+                <div class="col-md-6">
+                  <h3>Sample Code</h3>
+
+                  <pre id="code-sample">
+#include &lt; iostream  &gt;
+           
+int main() {
+std::cout &lt;&lt;"Hello, World!" &lt;&lt;std::endl;
+return 0;
+}
+                                    </pre>
+                </div>
+                <div class="col-md-6">
+                  <br>
+                  <h3>Output</h3>
+
+                  <div id="output">Hello World!</div><br><br>
+                  <h4 class="mt-3">Explanation</h4>
+                  <p id="explanation">
+                    This is a simple c++ Program that outputs <strong>"hello world"</strong> using the
+                    <strong>"iostream"</strong> that includes input/output libraries </p>
+
+                  </p>
+                  <!--END -->
+          </span>
+        </div>
+      </div>
+  </div>
+  <br>
+  <br>
+  <hr>
+  <h2>Write Your Own Program</h2>
+  <textarea id="cCode" class="UserProgram">
+#include &lt;iostream&gt;
+int main() {
+std::cout &lt;&lt;"Hello, World!"&lt;&lt;std::endl;
+return 0;
+}
+</textarea><br>
+  <button onclick="compileC()" class="C-run">Run Code</button><br>
+  <iframe id="output-1" class="iframeOut"></iframe>
+  </p>
+  <button class="testYourSelf" onclick="stopReading()"><a href="QuizC++1.html">Test My skill</a></button>
+  <button class="nextLessonBtn" onclick="stopReading()"><a href="C++Lesson2.html">Next Lesson</a></button>
+  </div>
+
+  </main>
+  </div>
+
+
+
+  <!--FOOTER-->
+  <footer class="padding_4x">
+    <div class="top_footer flex">
+      <section class="flex_content">
+
+      </section>
+    </div>
+    <div>
+      <div class="footer_body flex">
+        <section class="flex_content padding_1x">
+          <figure class="logo fixed_flex">
+
+            <figcaption>
+              <strong class="title">VILDASH</strong> NETWORK
+            </figcaption>
+          </figure>
+          <a href="#">
+            <i class="fa fa-map-marker"></i>
+            we are here for you. they key to knowing how to code is concistency in coding
+            and we are here to make you explore to the fullest of technologies. contact us at
+          </a>
+          <i class="fa fa-envelope-o"></i>
+          liblissz3@gmail.com
+          </a>
+          <a href="tel:654598457">
+            <i class="fa fa-headphones"></i>
+            654598457
+          </a>
+        </section>
+        <section class="flex_content padding_1x">
+          <h3> keep </h3>
+          <a href="../feedback.html">feedback</a>
+          <a href="../AIVILDASH.html">Our AI</a>
+          <a href="../csharp.html">learn c#</a>
+          <a href="../c ++\C++Lesson1.html">learn c++</a>
+          <a href="../Basic concepts in css.html">learn css</a>
+<a href="../html-1.html">learn html</a>
+        </section>
+        <section class="flex_content padding_1x">
+          <h3>Other Links</h3>
+          <a href="../c\c.html">learn c</a>
+          <a href="../DOC-20250105-WA0008.html">learn python</a>
+          <a href="../DOC-20250105-WA0007.html">learn javascript</a>
+          <a href="../java.html">learn java</a>
+          <a href="../projected-page.html">buy webpages</a>
+          <a href="../feedback.html">send feedback</a>
+        </section>
+        <section class="flex_content padding_1x">
+          <h3>vildash network</h3>
+          <p>we are here to see you prosper</p>
+          <!--<fieldset class="fixed_flex">
+     <input type="email" name="newsletter" placeholder="Your Email Address">
+     <button class="btn btn_2">Subscribe</button>
+     </fieldset>-->
+        </section>
+      </div>
+      <div class="flex">
+        <section class="flex-content padding_1x">
+          <p>Copyright ©2024 All rights reserved || VILDASH NETWORK</p>
+        </section>
+        <section class="flex-content padding_1x">
+          <a href="https://web.facebook.com/profile.php?id=61552332181172&sk=followers"><i
+              class="fa fa-facebook"></i></a>
+          <a href="https://www.instagram.com/holy_conceptsstudio/"><i class="fa fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@holyconcepts"><i class="fa fa-youtube"></i></i></a>
+
+        </section>
+      </div>
+  </footer>
+  <script>
+    //laoding animation 
+    window.addEventListener('load', () => {
+      const cube = document.getElementById('landing');
+      cube.style.display = 'none';
+    })
+
+  </script>
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  <link rel="stylesheet" href="footer.css">
+
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+</body>
+
+</html>
