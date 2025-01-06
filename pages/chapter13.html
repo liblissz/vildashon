@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Files in Java</title>
+    <link rel="stylesheet" href="./chapters.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="./chapter.js" defer></script>
+    <script src="../script.js" defer></script>
+    <link rel="icon" href="../file-KXYNjXBEo2D9qPtH9iD6VQ (5).webp">
+    <script src="asset.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="overlay"></div>
+      <div class="overlay2"></div>
+      <!-- Side nav -->
+      <div class="sideNav">
+        <nav>
+          <div class="navHead">
+            <div class="profile">
+              <img style="margin: 10px !important ; border-radius: 5px !important;" src="../file-KXYNjXBEo2D9qPtH9iD6VQ (5).webp" alt="profile" />    
+              
+            </div>
+            <div class="userName">
+              <p></p>
+            </div>
+            
+          </div>
+          <div class="navBody">
+            <ul id="links">
+              <a href="../feedback.html">
+     
+              <li>
+            
+                <div class="icon">
+                  <ion-icon name="list-outline"></ion-icon>
+                </div>
+                <p>send feedback</p>
+              </li>
+              </a>
+             <style>
+              a{
+                text-decoration: none;
+                color: black;
+              }
+             </style>
+             <a href="../javafinal.html">
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>use the java IDE</p>
+              </li>
+              </a>
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn c++ </p>
+              </li>
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn javascript(.js)</p>
+              </li>
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn html</p>
+              </li>
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn css</p>
+              </li>
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn c </p>
+              </li>
+              <a href="../homepage.html">
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>back to home</p>
+              </li>
+              </a>
+      
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- Hero Section -->
+      <div class="topNav">
+        <nav>
+          <div class="topLeft">
+            <div id="hamburgar" class="hamburgar">
+              <div class="line"></div>
+            </div>
+            <p>Learn Java Programming (java)</p>
+          </div>
+          <div id="demo" style="opacity: 0.4; font-size: 1rem;
+          font-weight: bold; color:#fff;"><input style="opacity: none !important; padding:10px;" type="text" placeholder="
+          search our pages........" name="search" id="searchinput" onkeyup="search()"> 
+          
+          <div id="results" style="padding: 20px;"></div></div>
+
+          <!--<div class="ctaBtn">
+            <button class="ctaModal">Sign In</button>
+          </div>-->
+        </nav>
+      </div>
+      <section class="heroSection">
+        <div class="textCont">
+          <h1>Files in Java</h1>
+          <p>
+            Explore the different cores of java programming below
+          </p>
+          <div class="ctaBtn">
+            <!--<button class="ctaModal">Sign In</button>-->
+          </div>
+        </div>
+      </section>
+      <main>
+        <div class="textContents">
+            <div class="contents">
+                <h2>Accessing file data</h2>
+                <p>Files in Java are used to store and retrieve data, providing a robust way to handle file operations such as reading, writing, and accessing data. Java offers the java.io and java.nio.file packages to perform file-related actions. The File class in the java.io package serves as the primary tool for file management. It allows you to create new files, check for the existence of a file, and perform operations such as deleting or renaming files. With File objects, developers can easily access metadata like the file name, path, and size, enabling efficient file handling in applications.</p>
+                <button class="read-aloud">Read aloud</button>
+            </div>
+            <div class="contents">
+                <h2>Reading files</h2>
+                <p>Reading from files is a common operation in Java, often achieved using classes such as FileReader, BufferedReader, or Scanner. These classes allow developers to read data in various formats, including line-by-line or character-by-character. For instance, BufferedReader improves efficiency by reading larger chunks of data at once and providing the ability to process lines directly with its readLine method. For modern and efficient file reading, the Files class from the java.nio.file package is often preferred. It offers methods like Files.readAllLines() or Files.lines() to read files into a list of strings or stream objects for more advanced processing.</p>
+                <button class="read-aloud">Read aloud</button>
+            </div>
+            <div class="contents">
+                <h2>Actions with files</h2>
+                <p>Performing actions on files includes writing data, modifying content, or copying files. Java provides classes such as FileWriter, BufferedWriter, and PrintWriter for writing data to files. These classes ensure data is appended or overwritten efficiently, depending on the configuration. With Files and Paths from the java.nio.file package, developers can also perform file operations like copying, moving, or deleting files using methods such as Files.copy(), Files.move(), and Files.delete(). Exception handling is crucial in file operations to manage scenarios like missing files, permission issues, or input/output errors, ensuring robust and error-free programs.
+                </p>
+                <button class="read-aloud">Read aloud</button>
+            </div>
+       <div class="contents">
+          <div class="code-container">
+            <h2>Reading a File Using BufferedReader</h2>
+            <p>This example reads a text file line by line using BufferedReader:</p>
+            <pre class="code-snippet">
+    <code>
+        import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class ReadFileExample {
+    public static void main(String[] args) {
+        String fileName = "example.txt"; // Path to the file
+        try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                System.out.println(line); // Output each line
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}                                  
+    </code>
+            </pre>
+            <button class="copy-button">Copy Code</button>
+        </div>
+          <div class="code-container">
+            <h2>Example 2: Writing to a File Using BufferedWriter</h2>
+            <p>This example writes a string to a text file using BufferedWriter:</p>
+            <pre class="code-snippet">
+    <code>
+        import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class WriteFileExample {
+    public static void main(String[] args) {
+        String fileName = "output.txt"; // Path to the file
+        String content = "This is a sample content written to the file.";
+        
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
+            writer.write(content); // Write the content to the file
+            System.out.println("Data written to the file successfully.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}                            
+    </code>
+            </pre>
+            <button class="copy-button">Copy Code</button>
+        </div>
+          <div class="code-container">
+            <h2>Example 3: Copying a File Using Files Class</h2>
+            <p>This example demonstrates how to copy a file using the Files class from the java.nio.file package:</p>
+            <pre class="code-snippet">
+    <code>
+        import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+public class FileCopyExample {
+    public static void main(String[] args) {
+        Path sourcePath = Paths.get("source.txt"); // Path to the source file
+        Path destinationPath = Paths.get("destination.txt"); // Path to the destination file
+
+        try {
+            Files.copy(sourcePath, destinationPath); // Copy file
+            System.out.println("File copied successfully.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}                                           
+    </code>
+            </pre>
+            <button class="copy-button">Copy Code</button>
+        </div>
+        <button class="quiz-btn">Take a quiz</button>
+       </div>
+       <div class="quiz-container">
+        <!-- Question 1: Theory -->
+        <div class="question" id="question1">
+            <p>1. What is the purpose of the BufferedReader in Java?</p>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a"> To read text from an input stream, efficiently handling the buffering of data.</label>
+                <label><input type="radio" name="q1" value="b"> To write text to a file, ensuring data is buffered.</label>
+                <label><input type="radio" name="q1" value="c"> To handle errors while working with file input/output operations.</label>
+            </div>
+        </div>
+    
+        <!-- Question 2: Theory -->
+        <div class="question" id="question2">
+            <p>2. What does the FileWriter class in Java do?</p>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a"> It reads files line by line and returns their content as strings.</label>
+                <label><input type="radio" name="q2" value="b"> It is used to write data to a file.</label>
+                <label><input type="radio" name="q2" value="c"> It copies content from one file to another.</label>
+            </div>
+        </div>
+    
+        <!-- Question 3: Theory -->
+        <div class="question" id="question3">
+            <p>3. Which class from the java.nio.file package is used for basic file operations like copy, move, and delete?</p>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a"> FileReader</label>
+                <label><input type="radio" name="q3" value="b"> BufferedWriter</label>
+                <label><input type="radio" name="q3" value="c"> Files</label>
+            </div>
+        </div>
+    
+        <!-- Question 4: Code -->
+        <div class="question" id="question4">
+            <p>4. What will the following code output?</p>
+            <pre>
+                import java.io.BufferedReader;
+                import java.io.FileReader;
+                import java.io.IOException;
+
+                public class FileRead {
+                    public static void main(String[] args) {
+                        try (BufferedReader br = new BufferedReader(new FileReader("test.txt"))) {
+                            String line;
+                            while ((line = br.readLine()) != null) {
+                                System.out.println(line);
+                            }
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            </pre>
+            <div class="options">
+                <label><input type="radio" name="q4" value="a"> The program will throw a FileNotFoundException.</label>
+                <label><input type="radio" name="q4" value="b"> The program will print the content of the file line by line.</label>
+                <label><input type="radio" name="q4" value="c"> Compilation error due to incorrect file path.</label>
+            </div>
+        </div>
+    
+        <!-- Question 5: Code -->
+        <div class="question" id="question5">
+            <p>5. What will the following code output?</p>
+            <pre>
+                import java.io.FileWriter;
+                import java.io.BufferedWriter;
+                import java.io.IOException;
+
+                public class WriteToFile {
+                    public static void main(String[] args) {
+                        String content = "Hello, Java!";
+                        try (BufferedWriter writer = new BufferedWriter(new FileWriter("output.txt"))) {
+                            writer.write(content);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            </pre>
+            <div class="options">
+                <label><input type="radio" name="q5" value="a"> The program will print "Hello, Java!" to the console.</label>
+                <label><input type="radio" name="q5" value="b"> The program will write "Hello, Java!" to the `output.txt` file.</label>
+                <label><input type="radio" name="q5" value="c"> The program will throw an exception.</label>
+            </div>
+        </div>
+    
+        <!-- Question 6: Code -->
+        <div class="question" id="question6">
+            <p>6. What will the following code output?</p>
+            <pre>
+                import java.io.IOException;
+                import java.nio.file.Files;
+                import java.nio.file.Paths;
+
+                public class FileCopy {
+                    public static void main(String[] args) {
+                        try {
+                            Files.copy(Paths.get("source.txt"), Paths.get("destination.txt"));
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            </pre>
+            <div class="options">
+                <label><input type="radio" name="q6" value="a"> The program copies the content of `source.txt` to `destination.txt`.</label>
+                <label><input type="radio" name="q6" value="b"> The program will throw a FileNotFoundException.</label>
+                <label><input type="radio" name="q6" value="c"> The program will cause a runtime exception.</label>
+            </div>
+        </div>
+    
+        <!-- Question 7: Code -->
+        <div class="question" id="question7">
+            <p>7. What will the following code output?</p>
+            <pre>
+                import java.io.File;
+
+                public class FileExists {
+                    public static void main(String[] args) {
+                        File file = new File("example.txt");
+                        if (file.exists()) {
+                            System.out.println("File exists.");
+                        } else {
+                            System.out.println("File does not exist.");
+                        }
+                    }
+                }
+            </pre>
+            <div class="options">
+                <label><input type="radio" name="q7" value="a"> File exists.</label>
+                <label><input type="radio" name="q7" value="b"> File does not exist.</label>
+                <label><input type="radio" name="q7" value="c"> Compilation error due to missing file.</label>
+            </div>
+        </div>
+    
+        <!-- Buttons -->
+        <div class="button-container">
+            <button class="btn" id="next-btn" onclick="nextQuestion()">Next Question</button>
+          </div>
+        <div class="result" id="result" style="display: none;"></div>
+    </div>
+   
+        </div>
+      </main>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+   <!--FOOTER-->
+   <footer class="padding_4x">
+    <div class="top_footer flex">
+    <section class="flex_content">
+    
+    </section>
+    </div>
+    <div>
+    <div class="footer_body flex" >
+    <section class="flex_content padding_1x">
+    <figure class="logo fixed_flex">
+    
+    <figcaption>
+    <strong class="title">VILDASH</strong> NETWORK  
+    </figcaption>
+    </figure>
+    <a href="#">
+    <i class="fa fa-map-marker"></i>
+    we are here for you. they key to knowing how to code is concistency in coding 
+    and we are here to make you explore to the fullest of technologies. contact us at
+    </a>
+    <i class="fa fa-envelope-o"></i>
+    liblissz3@gmail.com
+    </a>
+    <a href="tel:654598457">
+    <i class="fa fa-headphones"></i>
+    654598457
+    </a>
+    </section>
+    <section class="flex_content padding_1x">
+    <h3> keep </h3>
+    <a href="../feedback.html">feedback</a>
+    <a href="../AIVILDASH.html">Our AI</a>
+    <a href="../csharp.html">learn c#</a>
+   
+    <a href="../Basic concepts in css.html">learn css</a>
+<a href="../html-1.html">learn html</a>
+    </section>
+    <section class="flex_content padding_1x">
+    <h3>Other Links</h3>
+    <a href="../c\c.html">learn c</a>
+    <a href="../DOC-20250105-WA0008.html">learn python</a>
+    <a href="../DOC-20250105-WA0007.html">learn javascript</a>
+    <a href="../java.html">learn java</a>
+    <a href="../projected-page.html">buy webpages</a>
+    <a href="../feedback.html">send feedback</a>
+    <a href="../c ++/C++Lesson1.html">learn c++</a>
+    </section>
+    <section class="flex_content padding_1x">
+    <h3>vildash network</h3>
+    <p>we are here to see you prosper</p>
+    <!--<fieldset class="fixed_flex">
+    <input type="email" name="newsletter" placeholder="Your Email Address">
+    <button class="btn btn_2">Subscribe</button>
+    </fieldset>-->
+    </section>
+    </div>
+    <div class="flex">
+    <section class="flex-content padding_1x">
+    <p>Copyright ©2024 All rights reserved || VILDASH NETWORK</p>
+    </section>
+    <section class="flex-content padding_1x">
+    <a href="https://web.facebook.com/profile.php?id=61552332181172&sk=followers"><i class="fa fa-facebook"></i></a>
+    <a href="https://www.instagram.com/holy_conceptsstudio/"><i class="fa fa-instagram"></i></a>
+    <a href="https://www.youtube.com/@holyconcepts"><i class="fa fa-youtube"></i></i></a> 
+     
+    </section>
+    </div>
+    </footer>
+      <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+     <link rel="stylesheet" href="../footer.css">
+  </body>
+
+</html>

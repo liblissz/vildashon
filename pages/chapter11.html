@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inheritance,Polymorphism and Encapsulation in Java</title>
+    <link rel="stylesheet" href="./chapters.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="./chapter.js" defer></script>
+    <script src="../script.js" defer></script>
+    <script src="asset.js"></script>
+    <link rel="icon" href="../file-KXYNjXBEo2D9qPtH9iD6VQ (5).webp">
+  </head>
+  <body>
+    <div class="container">
+      <div class="overlay"></div>
+      <div class="overlay2"></div>
+      <!-- Side nav -->
+      <div class="sideNav">
+        <nav>
+          <div class="navHead">
+            <div class="profile">
+                <img style="margin: 10px !important ; border-radius: 5px !important;" src="../file-KXYNjXBEo2D9qPtH9iD6VQ (5).webp" alt="profile" />    
+            </div>
+            <div class="userName">
+              <p></p>
+            </div>
+            
+          </div>
+          <div class="navBody">
+            <ul id="links">
+                <a href="../feedback.html">
+    
+                <li>
+    
+                  <div class="icon">
+                    <ion-icon name="list-outline"></ion-icon>
+                  </div>
+                  <p>send feedback</p>
+                </li>
+                </a>
+                  <a href="../c/c.html">
+                    <li>
+                      <div class="icon">
+                        <ion-icon name="log-out-outline"></ion-icon>
+                      </div>
+                      <p>learn c</p>
+    
+                    </li>
+    
+                  </a>
+                </button>
+                <div id="welcome"></div>
+                <a href="../c ++/C++Lesson1.html">
+                <li>
+                  <div class="icon">
+                    <ion-icon name="log-out-outline"></ion-icon>
+                  </div>
+                  <p>learn c++ </p>
+                </li>
+                </a>
+                <a href="../DOC-20250105-WA0007.html">
+                <li>
+                  <div class="icon">
+                    <ion-icon name="log-out-outline"></ion-icon>
+                  </div>
+                  <p>learn javascript(.js)</p>
+                </li>
+              </a>
+              <a href="../html-1.html">
+                <li>
+               
+                  <div class="icon">
+                    <ion-icon name="log-out-outline"></ion-icon>
+                  </div>
+                  <p>learn html</p>
+                </li>
+              </a>
+              <a href="../Basic concepts in css.html">
+                <li>
+                  <div class="icon">
+                    <ion-icon name="log-out-outline"></ion-icon>
+                  </div>
+                  <p>learn css</p>
+                </li>
+                </a>
+                <a href="../csharp.html">
+                <li>
+                  <div class="icon">
+                    <ion-icon name="log-out-outline"></ion-icon>
+                  </div>
+                  <p>learn c sharp </p>
+                </li>
+                </a>
+                <a href="../AIVILDASH.html">
+                  <li>
+                    <div class="icon">
+                      <ion-icon name="log-out-outline"></ion-icon>
+                    </div>
+                    <p>use our AI</p>
+                  </li>
+                  </a>
+                <a href="../homepage.html">
+                <li>
+                  <div class="icon">
+                    <ion-icon name="log-out-outline"></ion-icon>
+                  </div>
+                  <p>home page</p>
+                </li>
+    </a>
+              </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- Hero Section -->
+      <div class="topNav">
+        <nav>
+          <div class="topLeft">
+            <div id="hamburgar" class="hamburgar">
+              <div class="line"></div>
+            </div>
+            <p>Learn Java Programming (java)</p>
+          </div>
+          <div id="demo" style="opacity: 0.4; font-size: 1rem;
+          font-weight: bold; color:#fff;"><input style="opacity: none !important; padding:10px;" type="text" placeholder="
+          search our pages........" name="search" id="searchinput" onkeyup="search()"> 
+          
+          <div id="results" style="padding: 20px;"></div></div>
+
+          <!--<div class="ctaBtn">
+            <button class="ctaModal">Sign In</button>
+          </div>-->
+        </nav>
+      </div>
+      <section class="heroSection" style="margin-top: 100px;">
+        <div class="textCont">
+          <h1>Inheritance,Polymorphism and Encapsulation in Java</h1>
+          <p>
+            Explore the different cores of java programming below
+          </p>
+          <div class="ctaBtn">
+            <!--<button class="ctaModal">Sign In</button>-->
+          </div>
+        </div>
+      </section>
+      <main>
+        <div class="textContents">
+            <div class="contents">
+                <h2>Inheritance in Java</h2>
+                <p>Inheritance is a fundamental concept in object-oriented programming that allows one class, known as the child or subclass, to inherit the properties and behaviors of another class, known as the parent or superclass. This mechanism promotes code reusability by enabling developers to create new classes based on existing ones. For example, if a Vehicle class defines common attributes like speed and fuel, a Car class can inherit these attributes while adding specific features such as numberOfDoors. Java supports single inheritance directly, meaning a class can only inherit from one superclass, but it allows multiple inheritance through interfaces. By leveraging inheritance, developers can create hierarchical relationships and extend the functionality of classes without rewriting code.</p>
+                <button class="read-aloud">Read aloud</button>
+            </div>
+            <div class="contents">
+                <h2>Polymorphism in Java</h2>
+                <p>Polymorphism enables objects to take on multiple forms, enhancing flexibility and scalability in Java programs. It primarily exists in two forms: compile-time (method overloading) and runtime (method overriding). In method overloading, multiple methods in the same class share the same name but differ in their parameter lists, allowing the same method to perform different tasks based on input. In method overriding, a subclass provides its own implementation of a method defined in the parent class, allowing the subclass to tailor behavior while maintaining a common interface. Polymorphism is vital for achieving dynamic behavior in applications, as it enables developers to write more generic and reusable code, often using interfaces or abstract classes as a foundation.</p>
+                <button class="read-aloud">Read aloud</button>
+            </div>
+            <div class="contents">
+                <h2> Encapsulation in Java</h2>
+                <p>Encapsulation is the practice of bundling data (fields) and methods (functions) that operate on the data into a single unit, typically a class. By using access modifiers like private, protected, and public, encapsulation restricts direct access to an object's internal state and enforces controlled access through getter and setter methods. This ensures that the internal implementation of a class remains hidden from the outside world, promoting data integrity and security. For instance, in a BankAccount class, sensitive data like account balance can be made private, with public methods controlling deposits and withdrawals. Encapsulation not only improves code maintainability and readability but also supports the principles of abstraction by hiding unnecessary implementation details from end users.
+                </p>
+                <button class="read-aloud">Read aloud</button>
+            </div>
+       <div class="contents">
+          <div class="code-container">
+            <h2>Example 1:   Basic Inheritance</h2>
+            <pre class="code-snippet">
+    <code>
+        // Parent class
+class Animal {
+    String name;
+
+    void eat() {
+        System.out.println(name + " is eating.");
+    }
+}
+
+// Child class
+class Dog extends Animal {
+    void bark() {
+        System.out.println(name + " is barking.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.name = "Buddy";
+        dog.eat(); // Inherited method
+        dog.bark(); // Method of Dog class
+    }
+}
+                                     
+    </code>
+            </pre>
+            <button class="copy-button">Copy Code</button>
+        </div>
+          <div class="code-container">
+            <h2>Example 2: Multilevel Inheritance</h2>
+            <pre class="code-snippet">
+    <code>
+        // Parent class
+class Vehicle {
+    void start() {
+        System.out.println("Vehicle is starting.");
+    }
+}
+
+// Child class
+class Car extends Vehicle {
+    void drive() {
+        System.out.println("Car is driving.");
+    }
+}
+
+// Grandchild class
+class SportsCar extends Car {
+    void turbo() {
+        System.out.println("SportsCar turbo mode activated.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        SportsCar sportsCar = new SportsCar();
+        sportsCar.start(); // Inherited from Vehicle
+        sportsCar.drive(); // Inherited from Car
+        sportsCar.turbo(); // Method of SportsCar
+    }
+}                          
+    </code>
+            </pre>
+            <button class="copy-button">Copy Code</button>
+        </div>
+          <div class="code-container">
+            <h2>Example 3: Method Overloading (Compile-time Polymorphism)</h2>
+            <pre class="code-snippet">
+    <code>
+        class Calculator {
+            int add(int a, int b) {
+                return a + b;
+            }
+        
+            double add(double a, double b) {
+                return a + b;
+            }
+        
+            int add(int a, int b, int c) {
+                return a + b + c;
+            }
+        }
+        
+        public class Main {
+            public static void main(String[] args) {
+                Calculator calc = new Calculator();
+                System.out.println("Sum of 2 integers: " + calc.add(5, 10));
+                System.out.println("Sum of 2 doubles: " + calc.add(5.5, 2.3));
+                System.out.println("Sum of 3 integers: " + calc.add(1, 2, 3));
+            }
+        }                                            
+    </code>
+            </pre>
+            <button class="copy-button">Copy Code</button>
+        </div>
+          <div class="code-container">
+            <h2>Example 4: Method Overriding (Runtime Polymorphism)</h2>
+            <pre class="code-snippet">
+    <code>
+        // Parent class
+class Animal {
+    void makeSound() {
+        System.out.println("Some generic animal sound.");
+    }
+}
+
+// Child class
+class Dog extends Animal {
+    @Override
+    void makeSound() {
+        System.out.println("Dog barks.");
+    }
+}
+
+// Child class
+class Cat extends Animal {
+    @Override
+    void makeSound() {
+        System.out.println("Cat meows.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal myAnimal;
+
+        myAnimal = new Dog();
+        myAnimal.makeSound(); // Output: Dog barks.
+
+        myAnimal = new Cat();
+        myAnimal.makeSound(); // Output: Cat meows.
+    }
+}
+                                    
+    </code>
+            </pre>
+            <button class="copy-button">Copy Code</button>
+        </div>
+          <div class="code-container">
+            <h2>Example 5: Using Getters and Setters (Encapsulation in Java)</h2>
+            <pre class="code-snippet">
+    <code>
+        class BankAccount {
+            private double balance;
+        
+            // Getter method
+            public double getBalance() {
+                return balance;
+            }
+        
+            // Setter method
+            public void setBalance(double balance) {
+                if (balance >= 0) {
+                    this.balance = balance;
+                } else {
+                    System.out.println("Balance cannot be negative.");
+                }
+            }
+        }
+        
+        public class Main {
+            public static void main(String[] args) {
+                BankAccount account = new BankAccount();
+                account.setBalance(500.00);
+                System.out.println("Account balance: $" + account.getBalance());
+            }
+        }        
+                                    
+    </code>
+            </pre>
+            <button class="copy-button">Copy Code</button>
+        </div>
+          <div class="code-container">
+            <h2>Example 6: Hiding Sensitive Data (Encapsulation in Java)</h2>
+            <pre class="code-snippet">
+    <code>
+        class Employee {
+            private String name;
+            private double salary;
+        
+            public String getName() {
+                return name;
+            }
+        
+            public void setName(String name) {
+                this.name = name;
+            }
+        
+            public double getSalary() {
+                return salary;
+            }
+        
+            public void setSalary(double salary) {
+                if (salary > 0) {
+                    this.salary = salary;
+                } else {
+                    System.out.println("Salary must be positive.");
+                }
+            }
+        }
+        
+        public class Main {
+            public static void main(String[] args) {
+                Employee emp = new Employee();
+                emp.setName("John Doe");
+                emp.setSalary(55000);
+                System.out.println("Employee: " + emp.getName());
+                System.out.println("Salary: $" + emp.getSalary());
+            }
+        }        
+                                    
+    </code>
+            </pre>
+            <button class="copy-button">Copy Code</button>
+        </div>
+        <button class="quiz-btn">Take a quiz</button>
+       </div>
+       <div class="quiz-container">
+        <!-- Question 1: Theory -->
+        <div class="question" id="question1">
+            <p>1. What is inheritance in Java?</p>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a"> The process of creating a class that inherits properties and methods from another class.</label>
+                <label><input type="radio" name="q1" value="b"> A method to encapsulate data within a class.</label>
+                <label><input type="radio" name="q1" value="c"> The ability of objects to take multiple forms.</label>
+            </div>
+        </div>
+    
+        <!-- Question 2: Theory -->
+        <div class="question" id="question2">
+            <p>2. What is polymorphism in Java?</p>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a"> A mechanism to control access to class fields.</label>
+                <label><input type="radio" name="q2" value="b"> The ability of methods to perform different tasks based on input or context.</label>
+                <label><input type="radio" name="q2" value="c"> The use of interfaces to simulate multiple inheritance.</label>
+            </div>
+        </div>
+    
+        <!-- Question 3: Theory -->
+        <div class="question" id="question3">
+            <p>3. What is encapsulation in Java?</p>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a"> Wrapping data and methods that operate on it into a single unit and restricting access.</label>
+                <label><input type="radio" name="q3" value="b"> Creating a subclass that overrides a parent class's methods.</label>
+                <label><input type="radio" name="q3" value="c"> Allowing objects to inherit from multiple parent classes.</label>
+            </div>
+        </div>
+    
+        <!-- Question 4: Theory -->
+        <div class="question" id="question4">
+            <p>4. Which type of polymorphism involves method overloading?</p>
+            <div class="options">
+                <label><input type="radio" name="q4" value="a"> Compile-time polymorphism.</label>
+                <label><input type="radio" name="q4" value="b"> Runtime polymorphism.</label>
+                <label><input type="radio" name="q4" value="c"> Encapsulation polymorphism.</label>
+            </div>
+        </div>
+    
+        <!-- Question 5: Theory -->
+        <div class="question" id="question5">
+            <p>5. What is the primary benefit of encapsulation?</p>
+            <div class="options">
+                <label><input type="radio" name="q5" value="a"> It allows multiple classes to inherit from a single parent.</label>
+                <label><input type="radio" name="q5" value="b"> It promotes code reusability through class hierarchies.</label>
+                <label><input type="radio" name="q5" value="c"> It ensures data security by hiding implementation details.</label>
+            </div>
+        </div>
+    
+        <!-- Question 6: Code -->
+        <div class="question" id="question6">
+            <p>6. What will the following code output?</p>
+            <pre>
+                class Vehicle {
+                    void start() {
+                        System.out.println("Vehicle is starting.");
+                    }
+                }
+                class Car extends Vehicle {
+                    void drive() {
+                        System.out.println("Car is driving.");
+                    }
+                }
+                public class Main {
+                    public static void main(String[] args) {
+                        Car car = new Car();
+                        car.start();
+                        car.drive();
+                    }
+                }
+            </pre>
+            <div class="options">
+                <label><input type="radio" name="q6" value="a"> Compilation error</label>
+                <label><input type="radio" name="q6" value="b"> Vehicle is starting. Car is driving.</label>
+                <label><input type="radio" name="q6" value="c"> Runtime exception</label>
+            </div>
+        </div>
+    
+        <!-- Question 7: Code -->
+        <div class="question" id="question7">
+            <p>7. What will the following code output?</p>
+            <pre>
+                class Animal {
+                    void sound() {
+                        System.out.println("Some animal sound.");
+                    }
+                }
+                class Dog extends Animal {
+                    @Override
+                    void sound() {
+                        System.out.println("Dog barks.");
+                    }
+                }
+                public class Main {
+                    public static void main(String[] args) {
+                        Animal animal = new Dog();
+                        animal.sound();
+                    }
+                }
+            </pre>
+            <div class="options">
+                <label><input type="radio" name="q7" value="a"> Some animal sound.</label>
+                <label><input type="radio" name="q7" value="b"> Dog barks.</label>
+                <label><input type="radio" name="q7" value="c"> Compilation error</label>
+            </div>
+        </div>
+    
+        <!-- Question 8: Code -->
+        <div class="question" id="question8">
+            <p>8. What will the following code output?</p>
+            <pre>
+                class BankAccount {
+                    private double balance;
+                    public double getBalance() {
+                        return balance;
+                    }
+                    public void setBalance(double balance) {
+                        this.balance = balance > 0 ? balance : 0;
+                    }
+                }
+                public class Main {
+                    public static void main(String[] args) {
+                        BankAccount account = new BankAccount();
+                        account.setBalance(-500);
+                        System.out.println(account.getBalance());
+                    }
+                }
+            </pre>
+            <div class="options">
+                <label><input type="radio" name="q8" value="a"> -500</label>
+                <label><input type="radio" name="q8" value="b"> 0</label>
+                <label><input type="radio" name="q8" value="c"> Compilation error</label>
+            </div>
+        </div>
+        <!-- Question 9: Code -->
+        <div class="question" id="question8">
+            <p>9. Which of the following keywords is used to define a constant in Java?</p>
+            <div class="options">
+                <label><input type="radio" name="q8" value="a"> constant</label>
+                <label><input type="radio" name="q8" value="b"> final</label>
+                <label><input type="radio" name="q8" value="c"> immutable</label>
+            </div>
+        </div>
+        <div class="question" id="question8">
+            <p>10. What is the size of the float data type in Java?</p>
+            <div class="options">
+                <label><input type="radio" name="q8" value="a"> 16 bytes</label>
+                <label><input type="radio" name="q8" value="b"> 4 bytes</label>
+                <label><input type="radio" name="q8" value="c"> 8 bytes</label>
+            </div>
+        </div>
+    
+         <!-- Buttons -->
+         <div class="button-container">
+            <button class="btn" id="next-btn" onclick="nextQuestion()">Next Question</button>
+            <a href="chapter12.html"><button id="me">Next course</button></a>  
+        </div>
+    
+        <div class="result" id="result" style="display: none;"></div>
+    </div>
+        </div>
+      </main>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+<!--FOOTER-->
+<footer class="padding_4x">
+    <div class="top_footer flex">
+    <section class="flex_content">
+    
+    </section>
+    </div>
+    <div>
+    <div class="footer_body flex" >
+    <section class="flex_content padding_1x">
+    <figure class="logo fixed_flex">
+    
+    <figcaption>
+    <strong class="title">VILDASH</strong> NETWORK  
+    </figcaption>
+    </figure>
+    <a href="#">
+    <i class="fa fa-map-marker"></i>
+    we are here for you. they key to knowing how to code is concistency in coding 
+    and we are here to make you explore to the fullest of technologies. contact us at
+    </a>
+    <i class="fa fa-envelope-o"></i>
+    liblissz3@gmail.com
+    </a>
+    <a href="tel:654598457">
+    <i class="fa fa-headphones"></i>
+    654598457
+    </a>
+    </section>
+    <section class="flex_content padding_1x">
+    <h3> keep </h3>
+    <a href="../feedback.html">feedback</a>
+    <a href="../AIVILDASH.html">Our AI</a>
+    <a href="../csharp.html">learn c#</a>
+   
+    <a href="../Basic concepts in css.html">learn css</a>
+<a href="../html-1.html">learn html</a>
+    </section>
+    <section class="flex_content padding_1x">
+    <h3>Other Links</h3>
+    <a href="../c\c.html">learn c</a>
+    <a href="../DOC-20250105-WA0008.html">learn python</a>
+    <a href="../DOC-20250105-WA0007.html">learn javascript</a>
+    <a href="../java.html">learn java</a>
+    <a href="../projected-page.html">buy webpages</a>
+    <a href="../feedback.html">send feedback</a>
+    <a href="../c ++/C++Lesson1.html">learn c++</a>
+    </section>
+    <section class="flex_content padding_1x">
+    <h3>vildash network</h3>
+    <p>we are here to see you prosper</p>
+    <!--<fieldset class="fixed_flex">
+    <input type="email" name="newsletter" placeholder="Your Email Address">
+    <button class="btn btn_2">Subscribe</button>
+    </fieldset>-->
+    </section>
+    </div>
+    <div class="flex">
+    <section class="flex-content padding_1x">
+    <p>Copyright ©2024 All rights reserved || VILDASH NETWORK</p>
+    </section>
+    <section class="flex-content padding_1x">
+    <a href="https://web.facebook.com/profile.php?id=61552332181172&sk=followers"><i class="fa fa-facebook"></i></a>
+    <a href="https://www.instagram.com/holy_conceptsstudio/"><i class="fa fa-instagram"></i></a>
+    <a href="https://www.youtube.com/@holyconcepts"><i class="fa fa-youtube"></i></i></a> 
+     
+    </section>
+    </div>
+    </footer>
+      <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+     <link rel="stylesheet" href="../footer.css">
+  </body>
+
+</html>

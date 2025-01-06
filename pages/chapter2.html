@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variables in Java</title>
+    <link rel="stylesheet" href="./chapters.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="./chapter.js" defer></script>
+    <script src="../script.js" defer></script>
+    <link rel="icon" href="../file-KXYNjXBEo2D9qPtH9iD6VQ (5).webp">
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="overlay"></div>
+      <div class="overlay2"></div>
+      <!-- Side nav -->
+      <div class="sideNav">
+        <nav>
+          <div class="navHead">
+            <div class="profile">
+              <img style="margin: 10px !important ; border-radius: 5px !important;" src="../file-KXYNjXBEo2D9qPtH9iD6VQ (5).webp" alt="profile" />
+              
+              
+            </div>
+            <div class="userName">
+
+            </div>
+            
+          </div>
+          <div class="navBody">
+            <ul id="links">
+              <a href="../feedback.html">
+  
+              <li>
+  
+                <div class="icon">
+                  <ion-icon name="list-outline"></ion-icon>
+                </div>
+                <p>send feedback</p>
+              </li>
+              </a>
+                <a href="../c/c.html">
+                  <li>
+                    <div class="icon">
+                      <ion-icon name="log-out-outline"></ion-icon>
+                    </div>
+                    <p>learn c</p>
+  
+                  </li>
+  
+                </a>
+              </button>
+              <div id="welcome"></div>
+              <a href="../c ++/C++Lesson1.html">
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn c++ </p>
+              </li>
+              </a>
+              <a href="../DOC-20250105-WA0007.html">
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn javascript(.js)</p>
+              </li>
+            </a>
+            <a href="../html-1.html">
+              <li>
+             
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn html</p>
+              </li>
+            </a>
+            <a href="../Basic concepts in css.html">
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn css</p>
+              </li>
+              </a>
+              <a href="../csharp.html">
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn c sharp </p>
+              </li>
+              </a>
+              <a href="../AIVILDASH.html">
+                <li>
+                  <div class="icon">
+                    <ion-icon name="log-out-outline"></ion-icon>
+                  </div>
+                  <p>use our AI</p>
+                </li>
+                </a>
+              <a href="../homepage.html">
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>home page</p>
+              </li>
+  </a>
+            </ul>
+            
+          </div>
+        </nav>
+      </div>
+      <!-- Hero Section -->
+      <div class="topNav">
+        <nav>
+          <div class="topLeft">
+            <div id="hamburgar" class="hamburgar">
+              <div class="line"></div>
+            </div>
+            <p>Learn Java Programming (java)</p>
+          </div>
+          <div id="demo" style="opacity: 0.4; font-size: 1rem;
+          font-weight: bold; color:#fff;"><input style="opacity: none !important; padding:10px;" type="text" placeholder="
+          search our pages........" name="search" id="searchinput" onkeyup="search()"> 
+          
+          <div id="results" style="padding: 20px;"></div></div>
+          <style>
+            #searchinput::placeholder{
+              float: right;
+              padding-left: 13px;
+            }
+            #results {
+             background-color: #1650245e;
+             display: flex;
+             flex-direction: column;
+             gap: 6px;
+            }
+          </style>
+          <script>
+            const pages = [
+      {title: "csharp(c#)", url:"../csharp.html", content:"learn c#" },
+      {title: "feedback", url:"../feedback.html", content:"give a feedback message" },
+      {title: "java", url:"../java.html", content:"learn java" },
+      {title: "python", url:"../python.html", content:"learn python" },
+      {title: "c program", url:"../c.html", content:"learn c" },
+      {title: "c++", url:"../cplusplus.html", content:"learn c++" },
+      {title: "javscript js", url:"../java.html", content:"learn javascript(js)" },
+      {title: "css", url:"../css.html", content:"learn casceding stylesheet(css)" },
+      {title: "html", url:"../html.html", content:"learn html" },
+      {title: "terms and condition", url:"../term.html", content:"term and condition" },
+      {title: "use AI", url:"../ai.html", content:"use  AI" },
+      {title: "c++", url:"../cplusplus.html", content:"learn c++" }
+      
+      ];
+      
+      function search(){
+      const query = document.getElementById("searchinput").value.toLowerCase();
+      const resultcontainer = document.getElementById("results");
+      resultcontainer.innerHTML ='';
+      if(query){
+          const results = pages.filter(pages => pages.content.toLowerCase().includes(query)||
+          pages.title.toLowerCase().includes(query)
+      );
+      if(results.length > 0){
+          results.forEach(result =>{
+              const resultDiv = document.createElement('div');
+              resultDiv.classList.add('results');
+          resultDiv.style.background = "#333";
+          resultDiv.style.padding = "10px";
+          resultDiv.style.borderRadius = "10px";
+              resultDiv.innerHTML = `<h2><a style ="color: white;" href="${result.url}">${result.title}</a></h2>
+              <p style = "color:white">${result.content}</p>`;
+              resultcontainer.appendChild(resultDiv);
+              
+          });
+      }
+          else{
+              resultcontainer.innerHTML = `<p>no results found</p>`
+          }
+      
+      }
+      }
+      
+          </script>
+          <!--<div class="ctaBtn">
+            <button class="ctaModal">Sign In</button>
+          </div>-->
+        </nav>
+      </div>
+      <section class="heroSection">
+        <div class="textCont">
+          <h1>Variables in Java</h1>
+          <p>
+            Explore the different cores of java programming below
+          </p>
+          <div class="ctaBtn">
+            <!--<button class="ctaModal">Sign In</button>-->
+          </div>
+        </div>
+      </section>
+      <main>
+        <div class="textContents">
+            <div class="contents">
+                <h2>Introduction to Variables in Java</h2>
+                <p>In Java, a variable is a container used to store data that can be referenced and manipulated during the program's execution. Variables are essential because they allow programs to store and retrieve information dynamically. Before using a variable, it must be declared, meaning the programmer needs to specify the type of data it will hold, such as numbers, characters, or more complex structures. Variables in Java are strongly typed, meaning the type of data a variable can store must be defined explicitly. This helps catch errors early during compilation by ensuring that operations performed on the variable are valid for its data type.</p>
+                <button class="read-aloud">Read aloud</button>
+            </div>
+            <div class="contents">
+                <h2>Declaration and Usage of Variables</h2>
+                <p>In Java, declaring a variable involves specifying its type followed by its name. For example, to declare an integer variable, you would write int age;, where int is the data type, and age is the variable name. Once declared, a variable can be assigned a value using the assignment operator =, like age = 25;. Java variables can be declared and initialized in a single step, like int age = 25;. Variables must be initialized before they are used in expressions. Java’s strict typing system ensures that the data type of the value assigned to a variable matches its declared type, preventing type errors and making the code safer and easier to understand.</p>
+                <button class="read-aloud">Read aloud</button>
+            </div>
+            <div class="contents">
+                <h2>Various Variable Types in Java</h2>
+                <p>Java supports several types of variables, categorized mainly into primitive types and reference types. Primitive types include basic data types like int for integers, double for floating-point numbers, char for single characters, boolean for true/false values, and others like byte, short, long, and float. These types store values directly. Reference types, on the other hand, refer to objects or arrays in memory and include classes, interfaces, and arrays. For instance, String is a reference type used to store sequences of characters. Variables in Java are also categorized by their scope and lifetime, including local variables (declared within methods), instance variables (associated with an object), and class variables (static variables associated with the class itself). Understanding these different types and how to use them effectively is key to mastering Java programming.</p>
+                <button class="read-aloud">Read aloud</button>
+            </div>
+       <div class="contents">
+          <div class="code-container">
+            <h2>Integer Variable (int)</h2>
+            <pre class="code-snippet">
+    <code>
+        public class VariableExamples {
+            public static void main(String[] args) {
+                // Declare an integer variable
+                int age = 25;
+        
+                // Output the value of the variable
+                System.out.println("Age: " + age);
+            }
+        }
+        
+    </code>
+            </pre>
+            <button class="copy-button">Copy Code</button>
+        </div>
+          <div class="code-container">
+            <h2>Floating-point Variable (double)</h2>
+            <pre class="code-snippet">
+    <code>
+        public class VariableExamples {
+            public static void main(String[] args) {
+                // Declare a double variable for decimals
+                double price = 19.99;
+        
+                // Output the value of the variable
+                System.out.println("Price: " + price);
+            }
+        }        
+    </code>
+            </pre>
+            <button class="copy-button">Copy Code</button>
+        </div>
+          <div class="code-container">
+            <h2>Character Variable (char)</h2>
+            <pre class="code-snippet">
+    <code>
+        public class VariableExamples {
+            public static void main(String[] args) {
+                // Declare a char variable for a single character
+                char grade = 'A';
+        
+                // Output the value of the variable
+                System.out.println("Grade: " + grade);
+            }
+        }        
+    </code>
+            </pre>
+            <button class="copy-button">Copy Code</button>
+        </div>
+          <div class="code-container">
+            <h2>Boolean Variable (boolean)</h2>
+            <pre class="code-snippet">
+    <code>
+        public class VariableExamples {
+            public static void main(String[] args) {
+                // Declare a boolean variable
+                boolean isJavaFun = true;
+        
+                // Output the value of the variable
+                System.out.println("Is Java fun? " + isJavaFun);
+                // After this we obtain an output of true
+            }
+        }   
+    </code>
+            </pre>
+            <button class="copy-button">Copy Code</button>
+        </div>
+          <div class="code-container">
+            <h2>Reference Data Types</h2>
+            <pre class="code-snippet">
+    <code>
+        public class VariableExamples {
+            public static void main(String[] args) {
+                // Declare a String variable
+                String greeting = "Hello, World!";
+        
+                // Output the value of the variable
+                System.out.println(greeting);
+            }
+        }           
+    </code>
+            </pre>
+            <button class="copy-button">Copy Code</button>
+        </div>
+          <div class="code-container">
+            <h2>Array Variable</h2>
+            <pre class="code-snippet">
+    <code>
+        public class VariableExamples {
+            public static void main(String[] args) {
+                // Declare an array of integers
+                int[] numbers = {1, 2, 3, 4, 5};
+        
+                // Output the first element in the array
+                System.out.println("First number: " + numbers[0]);
+
+                // numbers[0] accesses the first element stored which is 1, so the result will be First Number: 1
+            }
+        }                  
+    </code>
+            </pre>
+            <button class="copy-button">Copy Code</button>
+        </div>
+          <div class="code-container">
+            <h2>Object Variable (Reference Type)</h2>
+            <pre class="code-snippet">
+    <code>
+        public class VariableExamples {
+            public static void main(String[] args) {
+                // Declare an object variable
+                Person person = new Person("Alice", 30);
+        
+                // Output object properties
+                System.out.println("Name: " + person.getName());
+                System.out.println("Age: " + person.getAge());
+            }
+        }
+        
+        class Person {
+            String name;
+            int age;
+        
+            // Constructor to initialize the Person object
+            public Person(String name, int age) {
+                this.name = name;
+                this.age = age;
+            }
+        
+            // Getter methods for name and age
+            public String getName() {
+                return name;
+            }
+        
+            public int getAge() {
+                return age;
+            }
+        }
+                          
+    </code>
+            </pre>
+            <button class="copy-button">Copy Code</button>
+        </div>
+        <button class="quiz-btn">Take a quiz</button>
+       </div>
+       <div class="quiz-container">
+        <!-- Question 1 -->
+    <div class="question" id="question1">
+        <p>1. What must be specified when declaring a variable in Java?</p>
+        <div class="options">
+          <label><input type="radio" name="q1" value="a"> The type of data it will hold</label>
+          <label><input type="radio" name="q1" value="b"> The variable's name only</label>
+          <label><input type="radio" name="q1" value="c"> The value it will store</label>
+        </div>
+      </div>
+    
+        <!-- Question 2 -->
+    <div class="question" id="question2">
+        <p>2. What is a key characteristic of Java's variable system?</p>
+        <div class="options">
+          <label><input type="radio" name="q2" value="a"> It is loosely typed</label>
+          <label><input type="radio" name="q2" value="b"> It is strongly typed</label>
+          <label><input type="radio" name="q2" value="c"> It is dynamically typed</label>
+        </div>
+      </div>
+    
+        <!-- Question 3 -->
+    <div class="question" id="question3">
+        <p>3. Which of the following is a primitive data type in Java?</p>
+        <div class="options">
+          <label><input type="radio" name="q3" value="a"> String</label>
+          <label><input type="radio" name="q3" value="b"> Object</label>
+          <label><input type="radio" name="q3" value="c"> int</label>
+        </div>
+      </div>
+
+      <!-- Question 4 -->
+    <div class="question" id="question4">
+        <p>4. How do you declare a floating-point variable in Java?</p>
+        <div class="options">
+          <label><input type="radio" name="q4" value="a"> float number = 3.14;</label>
+          <label><input type="radio" name="q4" value="b"> double number = 3.14;</label>
+          <label><input type="radio" name="q4" value="c"> int number = 3.14;</label>
+        </div>
+      </div>
+
+      <!-- Question 5 -->
+    <div class="question" id="question5">
+        <p>5. What type of variable is used to store a single character in Java?</p>
+        <div class="options">
+          <label><input type="radio" name="q5" value="a"> String</label>
+          <label><input type="radio" name="q5" value="b"> char</label>
+          <label><input type="radio" name="q5" value="c"> boolean</label>
+        </div>
+      </div>
+
+      <!-- Question 6 -->
+    <div class="question" id="question6">
+        <p>6. What is an example of a reference type in Java?</p>
+        <div class="options">
+          <label><input type="radio" name="q6" value="a"> int</label>
+          <label><input type="radio" name="q6" value="b"> double</label>
+          <label><input type="radio" name="q6" value="c"> String</label>
+        </div>
+      </div>
+    
+        <!-- Buttons -->
+        <div class="button-container">
+          <button class="btn" id="next-btn" onclick="nextQuestion()">Next Question</button>
+          <a href="chapter3.html"><button id="me">Next chapter</button></a>
+        </div>
+    
+        <div class="result" id="result" style="display: none;"></div>
+      </div>
+    
+        </div>
+      </main>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+   <!--FOOTER-->
+   <footer class="padding_4x">
+    <div class="top_footer flex">
+    <section class="flex_content">
+    
+    </section>
+    </div>
+    <div>
+    <div class="footer_body flex" >
+    <section class="flex_content padding_1x">
+    <figure class="logo fixed_flex">
+    
+    <figcaption>
+    <strong class="title">VILDASH</strong> NETWORK  
+    </figcaption>
+    </figure>
+    <a href="#">
+    <i class="fa fa-map-marker"></i>
+    we are here for you. they key to knowing how to code is concistency in coding 
+    and we are here to make you explore to the fullest of technologies. contact us at
+    </a>
+    <i class="fa fa-envelope-o"></i>
+    liblissz3@gmail.com
+    </a>
+    <a href="tel:654598457">
+    <i class="fa fa-headphones"></i>
+    654598457
+    </a>
+    </section>
+    <section class="flex_content padding_1x">
+    <h3> keep </h3>
+    <a href="../feedback.html">feedback</a>
+    <a href="../AIVILDASH.html">Our AI</a>
+    <a href="../csharp.html">learn c#</a>
+   
+    <a href="../Basic concepts in css.html">learn css</a>
+<a href="../html-1.html">learn html</a>
+    </section>
+    <section class="flex_content padding_1x">
+    <h3>Other Links</h3>
+    <a href="../c\c.html">learn c</a>
+    <a href="../DOC-20250105-WA0008.html">learn python</a>
+    <a href="../DOC-20250105-WA0007.html">learn javascript</a>
+    <a href="../java.html">learn java</a>
+    <a href="../projected-page.html">buy webpages</a>
+    <a href="../feedback.html">send feedback</a>
+    <a href="../c ++/C++Lesson1.html">learn c++</a>
+    </section>
+    <section class="flex_content padding_1x">
+    <h3>vildash network</h3>
+    <p>we are here to see you prosper</p>
+    <!--<fieldset class="fixed_flex">
+    <input type="email" name="newsletter" placeholder="Your Email Address">
+    <button class="btn btn_2">Subscribe</button>
+    </fieldset>-->
+    </section>
+    </div>
+    <div class="flex">
+    <section class="flex-content padding_1x">
+    <p>Copyright ©2024 All rights reserved || VILDASH NETWORK</p>
+    </section>
+    <section class="flex-content padding_1x">
+    <a href="https://web.facebook.com/profile.php?id=61552332181172&sk=followers"><i class="fa fa-facebook"></i></a>
+    <a href="https://www.instagram.com/holy_conceptsstudio/"><i class="fa fa-instagram"></i></a>
+    <a href="https://www.youtube.com/@holyconcepts"><i class="fa fa-youtube"></i></i></a> 
+     
+    </section>
+    </div>
+    </footer>
+      <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+     <link rel="stylesheet" href="../footer.css">
+  </body>
+
+</html>
