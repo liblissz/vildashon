@@ -1,0 +1,154 @@
+
+                /*SECTION1*/
+            .section1 {
+                width: 100%;
+                position: relative;
+               
+            }
+            
+            /*-----PRICE CARDS----*/
+            
+            .section1 .title {
+                font-family: 'Recursive', sans-serif;
+            }
+            
+            .section1 .sub-title {
+                font-family: 'Raleway', sans-serif;
+            }
+            
+            .no {
+                color: #c0392b;
+            }
+            
+            .not_available {
+                color: gray;
+            }
+            
+            .section1 .btn1 {
+                outline: none;
+                border: 0;
+                background: #1e1e1e;
+                padding: 10px 20px;
+                border-radius: 20px;
+                text-align: center;
+                width: 150px;
+                margin: auto;
+                color: #fff;
+                transition: 0.5s;
+            }
+            
+            .section1 .btn1:hover {
+                background: #000;
+            }
+            
+            .price_cards {
+                width: 100%;
+                padding:0;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                text-align: center;
+                background-color: chartreuse;
+            }
+            
+            .price_cards .card {
+                background-color: yellow;
+                width: 25%;
+                border-radius: 30px;
+                display: inline-block;
+                padding: 2%;
+                margin: 10px;
+                position: relative;
+                transition: 0.5s;
+            }
+            
+            .price_cards .card:hover {
+                box-shadow: 0px 6px 16px -6px rgba(1, 1, 1, 0.5);
+                padding: 3% 2%;
+            }
+            
+            .price_cards .card img {
+                width: 80px;
+                height: 100px;
+                position: absolute;
+                left: -35px;
+                top: -30px;
+            }
+            
+            .badge {
+                opacity: 0;
+            }
+            
+            /*.price_cards .card:hover > .badge{-moz-transition: all 0.8s ease-out; 
+            -o-transition: all 0.8s ease-out;-webkit-transition: all 0.8s ease-out;
+            -ms-transition: all 0.8s ease-out;transition: all 0.8s ease-out; opacity:1;}*/
+            .price_cards .card .title {
+                color: #fff;
+            }
+            
+            .price_cards .card .sub-title {
+                color: rgba(255, 255, 255, 0.8);
+            }
+            
+            .price_cards .card_1 {
+                background: #349417;
+            }
+            
+            .price_cards .card_2 {
+                background: #114706;
+            }
+            
+            .price_cards .card_3 {
+                background: #022e0d;
+            }
+            
+            .price_cards .card section {
+                width: 100%;
+                margin: auto;
+                background: #fff;
+                padding: 0px;
+                border-radius: 30px;
+                margin-top: 8vh;
+            }
+            
+            .price_cards .card section ul {
+                width: 100%;
+                padding: 10px;
+                background-color: aqua;
+            }
+            
+            .price_cards .card section ul li {
+                padding: 10px 0;
+                text-align: center;
+            }
+            
+            .price_cards .card section .btn1 {
+                position: relative;
+                top: 20px;
+            }
+            /*BK ,ADE THIS CHANGES*/
+            .cardlist li{
+                list-style-type: none;
+
+            }
+            
+            @media (max-width:900px) {
+                .price_cards {
+                    width: 100%;
+                    display: block;
+                }
+            
+                .price_cards .card {
+                    width: 90%;
+                }
+            
+                .price_cards .card img {
+                    position: absolute;
+                    left: -10px;
+                    top: -10px;
+                }
+            }
+ 
+            
+            
+           

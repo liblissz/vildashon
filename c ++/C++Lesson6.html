@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LEARN C++ (.cpp)</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
+    <script src="asset.js"></script>
+    <link rel="icon" href="../file-KXYNjXBEo2D9qPtH9iD6VQ (5).webp">
+</head>
+
+<body>
+    <div class="container">
+        <div class="overlay"></div>
+        <div class="overlay2"></div>
+        <!-- Side nav -->
+        <div class="sideNav">
+            <nav>
+                <div class="navHead">
+                    <div class="profile">
+                        <img style="margin: 10px !important ; border-radius: 5px !important;" src="../file-KXYNjXBEo2D9qPtH9iD6VQ (5).webp" alt="profile" />
+
+                    </div>
+                    <div class="userName">
+                        <p></p>
+                    </div>
+
+                </div>
+                <div class="navBody">
+                    <ul id="links">
+
+<a href="../feedback.html">
+                        <li>
+
+                            <div class="icon">
+                                <ion-icon name="list-outline"></ion-icon>
+                            </div>
+                            <p>send feedback</p>
+                        </li>
+                        </a>
+                        <button onclick=" CreateAndFollow()" id="lessonGenButton">
+                            <a href="#">
+                                <li>
+                                    <div class="icon">
+                                        <ion-icon name="log-out-outline"></ion-icon>
+                                    </div>
+                                    <p>learn c++</p>
+
+                                </li>
+
+                            </a>
+                        </button>
+                        <div id="welcome"></div>
+
+
+                        <li>
+                            <div class="icon">
+                                <ion-icon name="log-out-outline"></ion-icon>
+                            </div>
+                            <p>learn c</p>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <ion-icon name="log-out-outline"></ion-icon>
+                            </div>
+                            <p>learn javascript(.js)</p>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <ion-icon name="log-out-outline"></ion-icon>
+                            </div>
+                            <p>learn html</p>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <ion-icon name="log-out-outline"></ion-icon>
+                            </div>
+                            <p>learn css</p>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <ion-icon name="log-out-outline"></ion-icon>
+                            </div>
+                            <p>learn c sharp </p>
+                        </li>
+                        <a href="../homepage.html">
+                        <li>
+                            <div class="icon">
+                                <ion-icon name="log-out-outline"></ion-icon>
+                            </div>
+                            <p>home page</p>
+                        </li>
+                        </a>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- Hero Section -->
+        <div class="topNav">
+            <nav>
+                <div class="topLeft">
+                    <div id="hamburgar" class="hamburgar">
+                        <div class="line"></div>
+                    </div>
+                    <p>LEARN C (.c)</p>
+                </div>
+                <div id="demo" style="opacity: 0.4; font-size: 1rem;
+          font-weight: bold; color:#fff;"><input style="opacity: none !important; padding:10px;" type="text" placeholder="
+          search our pages........" name="search" id="searchinput" onkeyup="search()"> 
+          
+          <div id="results" style="padding: 20px;"></div></div>
+
+                <!--<div class="ctaBtn">
+            <button class="ctaModal">Sign In</button>
+          </div>-->
+            </nav>
+        </div>
+        <section class="heroSection">
+            <div class="textCont">
+                <h1></h1>
+                <p>
+
+                </p>
+                <div class="ctaBtn">
+                    <!--<button class="ctaModal">Sign In</button>-->
+                </div>
+            </div>
+        </section>
+        <main>
+            <!--START-->
+            <div class="readers">
+                <button onclick="readText(textToread)" class="readBtn" id="read">READ OUT LOUD</button>
+                <button onclick="stopReading()" class="readBtn" id="stop">STOP READING</button>
+            </div>
+
+            <span id="textToget">
+                <div class="textContainer">
+                    <h1>Lesson #6 : Output C++:</h1>
+
+                    <P>In this lesson , we are going to learn how to print output to our console or computer screen</P>
+                    <div>
+                        <H2>SubLesson #1 :Print Text</H2>
+                        <p>To print simple text in c, we will use the <span class="key">cout</span> object together with
+                            the <span class="key">&lt;&lt;</span> operator , it is used to output values and print text.
+                        </p>
+                        <p>When printing plain text , the intended text must be surounded with single codes (<span
+                                class="key">" "</span>),followed by a semi colon <span class="key">; </span> </p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>Sample Code</h3>
+
+                                <pre class="code-sample">
+#include &lt;iostream &gt; 
+int main(){
+    cout &lt;&lt; "Hello World" ;
+    cout &lt;&lt; "I am learning C++" ;
+    return 0;
+} </pre>
+                            </div>
+                            <div class="col-md-6">
+                                <br>
+                                <h3>Output</h3>
+
+                                <div id="output">Hello World!I am learning c++</div><br><br>
+
+                                <h3>Explaination</h3>
+                                when ever the <span class="key">cout</span> is written, it prints the content written in
+                                bracket,
+                                however the contents of the code will not be on seperate lines
+                                <br><br><br><br><br>
+                            </div>
+                                <!--END -->
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+<hr>             
+  <!--Impor -->
+
+                    <div class="subLesson">
+                        <h2>Sub lesson #2 : Print Numbers</h2>
+                        <p>You can also use <span class="key">cout()</span> to print numbers.</p>
+                        <p>However unlike text, it should not be contained in double quotes:</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>Sample Code</h3>
+
+                                <pre id="code-sample">
+#include &lt;iostream &gt; 
+int main(){
+    cout &lt;&lt; 100 ;
+    return 0;
+}  
+                                </pre>                                          </pre>
+                            </div>
+                            <div class="col-md-6">
+                                <br>
+                                <h3>Output</h3>
+
+                                <div id="output"> 100</div>
+
+                                <h3>Explaination</h3>
+                                when ever the <span class="key">cout</span> is written, it prints the numbers here it
+                                can also be used
+                                to perform calculations
+
+                                however the contents of the code will not be on seperate lines
+                                <br><br><br>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <!--END -->
+<hr>
+                    <div class="subLesson">
+                        <h2>Sub lesson #3 : Print New Line</h2>
+                        <p>To insert new lines into your output, you can use the <span class="key">\n</span>
+                            character </p>
+                        <p>You can also use <span class="key">cout()</span> to print numbers.</p>
+                        <p>However unlike text, it should not be contained in double quotes:</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>Sample Code</h3>
+
+                                <pre id="code-sample">
+#include &lt;iostream &gt; 
+int main(){
+    cout &lt;&lt; "Hello world\n";
+    cout &lt;&lt; "I am learning c++";
+    return 0;
+}  
+                                            </pre>
+                            </div>
+                            <div class="col-md-6">
+                                <br>
+                                <h3>Output</h3>
+
+                                <div id="output">
+                                    Hello world ! <br>
+                                    I am learning
+                                </div>
+
+                                <h3>Explaination</h3>
+                                Due to the fact that we used <span class="key">\n</span>, a new line was created
+                                after the first line
+                                which contained "hello world".
+                                <br><br><br><br>
+
+                                <!--END -->
+
+                            </div>
+
+
+                        </div>
+
+
+
+                    </div>
+                    <br><br>
+
+
+
+
+
+                    <br>
+<hr>
+               </span>
+                      <h2>Test it Out</h2>
+                      <textarea id="cCode" class="UserProgram">
+#include &lt;iostream &gt; 
+int main(){
+    cout &lt;&lt; "Hello World" ;
+    cout &lt;&lt; "I am learning C++" ;
+    return 0;
+}  
+                     </textarea>
+                     
+          
+                      <button onclick="compileC()" class="C-run">Run Code</button><br>
+                      <iframe id="output-1" class="iframeOut"></iframe>
+                      </p>
+                      <button class="previousLessonBtn"><a href="C++Lesson5.html">Previous Lesson</a></button>
+                      <button class="testYourSelf"><a href="QuizC++6.html">Test My skill</a></button>
+                      <button class="nextLessonBtn"><a href="C++Lesson7.html">Next Lesson</a></button>
+          
+    </div>
+
+    </div>
+    </main>
+    </div>
+
+
+
+    <!--FOOTER-->
+  <footer class="padding_4x">
+    <div class="top_footer flex">
+      <section class="flex_content">
+
+      </section>
+    </div>
+    <div>
+      <div class="footer_body flex">
+        <section class="flex_content padding_1x">
+          <figure class="logo fixed_flex">
+
+            <figcaption>
+              <strong class="title">VILDASH</strong> NETWORK
+            </figcaption>
+          </figure>
+          <a href="#">
+            <i class="fa fa-map-marker"></i>
+            we are here for you. they key to knowing how to code is concistency in coding
+            and we are here to make you explore to the fullest of technologies. contact us at
+          </a>
+          <i class="fa fa-envelope-o"></i>
+          liblissz3@gmail.com
+          </a>
+          <a href="tel:654598457">
+            <i class="fa fa-headphones"></i>
+            654598457
+          </a>
+        </section>
+        <section class="flex_content padding_1x">
+          <h3> keep </h3>
+          <a href="../feedback.html">feedback</a>
+          <a href="../AIVILDASH.html">Our AI</a>
+          <a href="../csharp.html">learn c#</a>
+          <a href="../c ++\C++Lesson1.html">learn c++</a>
+          <a href="../Basic concepts in css.html">learn css</a>
+<a href="../html-1.html">learn html</a>
+        </section>
+        <section class="flex_content padding_1x">
+          <h3>Other Links</h3>
+          <a href="../c\c.html">learn c</a>
+          <a href="../DOC-20250105-WA0008.html">learn python</a>
+          <a href="../DOC-20250105-WA0007.html">learn javascript</a>
+          <a href="../java.html">learn java</a>
+          <a href="../projected-page.html">buy webpages</a>
+          <a href="../feedback.html">send feedback</a>
+        </section>
+        <section class="flex_content padding_1x">
+          <h3>vildash network</h3>
+          <p>we are here to see you prosper</p>
+          <!--<fieldset class="fixed_flex">
+     <input type="email" name="newsletter" placeholder="Your Email Address">
+     <button class="btn btn_2">Subscribe</button>
+     </fieldset>-->
+        </section>
+      </div>
+      <div class="flex">
+        <section class="flex-content padding_1x">
+          <p>Copyright ©2024 All rights reserved || VILDASH NETWORK</p>
+        </section>
+        <section class="flex-content padding_1x">
+          <a href="https://web.facebook.com/profile.php?id=61552332181172&sk=followers"><i
+              class="fa fa-facebook"></i></a>
+          <a href="https://www.instagram.com/holy_conceptsstudio/"><i class="fa fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@holyconcepts"><i class="fa fa-youtube"></i></i></a>
+
+        </section>
+      </div>
+  </footer>
+  <script>
+    //laoding animation 
+    window.addEventListener('load', () => {
+      const cube = document.getElementById('landing');
+      cube.style.display = 'none';
+    })
+
+  </script>
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  <link rel="stylesheet" href="footer.css">
+
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+</body>
+
+</html>

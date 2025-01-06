@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LEARN C (.c)</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
+    <script src="asset.js"></script>
+    <link rel="icon" href="../file-KXYNjXBEo2D9qPtH9iD6VQ (5).webp">
+</head>
+
+<body>
+    <div class="container">
+        <div class="overlay"></div>
+        <div class="overlay2"></div>
+        <!-- Side nav -->
+        <div class="sideNav">
+            <nav>
+                <div class="navHead">
+                    <div class="profile">
+                        <img style="margin: 10px !important ; border-radius: 5px !important;" src="../file-KXYNjXBEo2D9qPtH9iD6VQ (5).webp" alt="profile" />
+                    </div>
+                    <div class="userName">
+                        <p></p>
+                    </div>
+
+                </div>
+                <div class="navBody">
+                    <ul id="links">
+
+                        <a href="../feedback.html">
+                        <li>
+            
+                          <div class="icon">
+                            <ion-icon name="list-outline"></ion-icon>
+                          </div>
+                          <p>send feedback</p>
+                        </li>
+            </a>
+                        <button onclick=" CreateAndFollow()" id="lessonGenButton">
+                          <a href="#">
+                            <li>
+                              <div class="icon">
+                                <ion-icon name="log-out-outline"></ion-icon>
+                              </div>
+                              <p>learn c++</p>
+            
+                            </li>
+            
+                          </a>
+                        </button>
+                        <div id="welcome"></div>
+                        <a href="">
+            
+                        </a>
+                        <a href="../c/c.html">
+                        <li>
+                          <div class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                          </div>
+                          <p>learn c</p>
+                        </li>
+                      </a>
+                      <a href="../DOC-20250105-WA0007.html">
+                        <li>
+                          <div class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                          </div>
+                          <p>learn javascript(.js)</p>
+                        </li>
+                      </a>
+                      <a href="../html-1.html">
+                        <li>
+                          <div class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                          </div>
+                          <p>learn html</p>
+                        </li>
+                      </a>
+                      <a href="../Basic concepts in css.html">
+                        <li>
+                          <div class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                          </div>
+                          <p>learn css</p>
+                        </li>
+                      </a>
+                      <a href="../csharp.html">
+                        <li>
+                          <div class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                          </div>
+                          <p>learn c sharp </p>
+                        </li>
+                        </a>
+                        <a href="../homepage.html">
+                        <li>
+                          <div class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                          </div>
+                          <p>home page</p>
+                        </li>
+                      </a>
+                      </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- Hero Section -->
+        <div class="topNav">
+            <nav>
+                <div class="topLeft">
+                    <div id="hamburgar" class="hamburgar">
+                        <div class="line"></div>
+                    </div>
+                    <p>LEARN C++ (.cpp)</p>
+                </div>
+                <div id="demo" style="opacity: 0.4; font-size: 1rem;
+          font-weight: bold; color:#fff;"><input style="opacity: none !important; padding:10px;" type="text" placeholder="
+          search our pages........" name="search" id="searchinput" onkeyup="search()"> 
+          
+          <div id="results" style="padding: 20px;"></div></div>
+
+                <!--<div class="ctaBtn">
+            <button class="ctaModal">Sign In</button>
+          </div>-->
+            </nav>
+        </div>
+        <section class="heroSection">
+            <div class="textCont">
+                <h1></h1>
+                <p>
+
+                </p>
+                <div class="ctaBtn">
+                    <!--<button class="ctaModal">Sign In</button>-->
+                </div>
+            </div>
+        </section>
+        <main>
+            <!--START-->
+            <div class="readers">
+                <button onclick="readText(textToread)" class="readBtn" id="read">READ OUT LOUD</button>
+                <button onclick="stopReading()" class="readBtn" id="stop">STOP READING</button>
+            </div>
+
+            <span id="textToget">
+                <div class="textContainer">
+                    <h1>Lesson #4 : Datatypes in C++:</h1>
+
+                    <P>In this lesson, we are going to learn about data types and the various types
+                       of datatypes that exist in c++
+                    </P>
+                    <h2> Overview</h2>
+                   <P>Data types in C define the type of data that a variable can hold. This determines how much memory
+                    the variable will occupy and what operations can be performed on it. C offers a variety of built-in
+                    data types, each with its own characteristics.
+               </P> 
+                    <br>
+                    <br>
+                    <h3>Categories of Data</h3>
+                    <ol type="I">
+                    <p>   These are the fundamental data types that represent simple values like integers, characters,
+                         and floating-point numbers. 
+                    </p>  <br>
+                  <br>
+                        <h4>
+                            <li class="comments">Basic Data Types</li>
+                        </h4>
+                        <ul><br>
+                            <li>
+                                <h5 class="types">int:</h5><span>
+                                    <p>This data type is used to store integer values. In other words, it stores whole positive and negative whole numbers </p> 
+                                   <br> <strong>Examples:</strong> <span class="number">10 , -5 ,0</span>
+                                </span>
+ <pre>
+ 1.  <span class="comments">// declaration  only</span>
+ 2.  <span class="types">int </span><span class="declaration">x</span> ;<br> 
+ 3.  <span class="comments">// declaration  and intialisation</span>
+ 4.  <span class="types">int </span><span class="declaration">x</span> = <span class="number">3.141592665 </span>;<br>
+ </pre>
+                                           
+                            </li><br>
+                            <li>
+                                <h5 class="types">char:</h5>
+                                <span><p>Char is used to store single characters <br></p>
+                                  <strong>Examples:</strong><span class="cOutput"> "a", "B"," "</span></span>
+                            </li>
+                            <br>
+<pre>
+1.  <span class="comments">// declaration  only</span>
+2.  <span class="types">char</span><span class="declaration"> x</span> ;<br> 
+3.  <span class="comments">// declaration  and intialisation</span>
+4.  <span class="types">char</span><span class="declaration"> x</span> = <span class="cOutput">'A' </span>;<br>
+</pre>                            
+                            <li>
+                                <h5 class="types">float:</h5> <span> <p>Stores single-precision floating-point numbers (numbers with decimal points). </p>
+                                  <br> <strong>Examples: </strong> <span class="number"> 3.14, -0.5, 1.2e3</span></span>
+                            </li>
+<pre>
+1.  <span class="comments">// declaration  only</span>
+2.  <span class="types">int </span><span class="declaration">x</span> ;<br> 
+3.  <span class="comments">// declaration  and intialisation</span>
+4.  <span class="types">int </span><span class="declaration">x</span> = <span class="number">3.141592665 </span>;<br>
+    </pre>
+                            <br>
+                            <li>
+                                <h5 class="types">double:</h5><span><p>Stores double-precision floating-point numbers (more precise than float).</p>
+                                <br>   <strong>Examples:</strong> <span class="number"> 3.14159265, -0.5e-10, 1.23456789</span></span>
+                            </li>
+<pre>
+1.  <span class="comments">// declaration  only</span>
+2.  <span class="types">double </span><span class="declaration">x</span> ;<br> 
+3.  <span class="comments">// declaration  and intialisation</span>
+4.  <span class="types">double </span><span class="declaration">x</span> = <span class="number">3.141592665 </span>;<br>
+</pre>
+                                          
+                            <br>
+                        </ul>
+                        <br>
+                        <H4>
+                            <li class="comments">Derived Data Types</li>
+                        </H4>     
+                        <br>
+                        <br>
+                        <ul>
+                        <li>
+                            <h5>Array</h5>
+                        </li>
+                        <span><p>A collection of elements of the same data type.stored in a
+                             continous memory location It allows you store muntiple values under a </p>
+                           <br>
+                           <strong>Example:</strong> <span class="types">int</span>  numbers[5] = {1, 2, 3, 4, 5};</span>
+                           <br>
+                           <br>
+<pre>
+1.  <span class="comments">// declaration  only</span>
+2.  <span class="types">int </span><span class="declaration">numbers</span>[5] = {} ;<br> 
+3.  <span class="comments">// declaration  and intialisation</span>
+4.  <span class="types">int</span><span class="declaration">numbers</span>[5] = {<span class="number">8,2,3,6,7 </span>};<br>
+ </pre>
+ 
+ 
+
+ <li>
+    <h5>Structure</h5>
+</li>
+<span><p> A user-defined data type that groups variables of different data types under a single name. </p> </span>
+   <br>
+   <strong>Example:</strong> 
+   <br>
+   <br>
+   <pre>
+   <span class="types">struct</span>  student {
+    <span class="types">char</span> name[<span class="number"> 50</span>];
+    <span class="types">int</span> age;
+    <span class="types">float</span> gpa;
+    };
+    
+   </pre>
+
+</ul>
+<br>
+<p>This is not  all, other datatypes will be discused in future lessons </p>
+<br>
+<br>
+
+
+
+
+
+
+</ol>                           
+ <div class="row">
+                                <div class="col-md-6">
+                                    <h3>Sample Code</h3>
+
+<pre id="code-sample">
+   
+<span class="include">#include</span><span class="cOutput">&lt;iostream&gt;</span> 
+
+<span class="types">using namespace </span> std ;
+<span class="types">int </span><span class="functions">main() {</span> 
+<span class="types">int</span> age = <span class="number">18</span>;
+<span class="types">char</span> grade = <span class="cOutput">"A"</span>;
+<span class="types">float</span> pi = 3.14159;
+<span class="types">double</span> avogadro =<span class="number"> 6.02214076e23</span>;
+std::cout &lt;&lt;"age: "&lt;&lt;age&lt;&lt;std::endl;
+
+std::cout &lt;&lt;"grade: "&lt;&lt;grade&lt;&lt;std::endl;
+
+std::cout &lt;&lt;"pi "&lt;&lt;pi&lt;&lt;std::endl;
+
+std::cout &lt;&lt;"avogrdo "&lt;&lt;avogadro&lt;&lt;std::endl;
+
+<span class="include">return</span> <span class="number">0</span>;
+<span class="functions">}</span> 
+                                    </pre>                </pre>
+                                </div>
+                                <div class="col-md-6">
+                                    <br>
+                                    <h3>Output</h3>
+
+                                    <div id="output">
+Age: 25 <br>
+Grade: A <br>
+Pi: 3.141590 <br>
+Avogadro's number: 602214075999999987023872.000000 <br>
+
+                                    </div><br><br>
+                                    <h4 class="mt-3">Explanation</h4>
+                                    <p id="explanation">
+                                        This program demonstrates the use of various data types in C++.
+                                    </p>
+                                    <!--END --></span>
+                                </div>
+                            </div>
+
+
+                    </ol>
+
+                    <br>
+                    <br>
+               
+                
+                 
+            </span>
+             <h2>Test it Out</h2>
+             <textarea id="cCode" class="UserProgram">
+#include &lt; iostream> 
+
+using namespace  std ;
+int main() { 
+int age = 18;
+char grade = "A";
+float pi = 3.14159;
+double avogadro = 6.02214076e23;
+std::cout &lt;&lt;"age: "&lt;&lt;age&lt;&lt;std::endl;
+
+std::cout &lt;&lt;"grade: " &lt;&lt;grade&lt;&lt;std::endl;
+
+std::cout &lt;&lt;"pi "&lt;&lt;pi&lt;&lt;std::endl;
+
+std::cout &lt;&lt;"avogrdo "&lt;&lt;avogadro&lt;&lt;std::endl;
+
+return 0;
+} 
+</textarea>
+             
+                
+                    <button onclick="compileC()" class="C-run">Run Code</button><br>
+                    <iframe id="output-1" class="iframeOut"></iframe>
+                    </p>
+                    <button class="previousLessonBtn"><a href="C++Lesson3.html">Previous Lesson</a></button>
+                    <button class="testYourSelf"><a href="QuizC++4.html">Test My skill</a></button>
+                    <button class="nextLessonBtn"><a href="C++Lesson5.html">Next Lesson</a></button>
+                
+                </div>
+             </span>
+         
+        </main>
+    </div>
+
+
+
+    <!--FOOTER-->
+  <footer class="padding_4x">
+    <div class="top_footer flex">
+      <section class="flex_content">
+
+      </section>
+    </div>
+    <div>
+      <div class="footer_body flex">
+        <section class="flex_content padding_1x">
+          <figure class="logo fixed_flex">
+
+            <figcaption>
+              <strong class="title">VILDASH</strong> NETWORK
+            </figcaption>
+          </figure>
+          <a href="#">
+            <i class="fa fa-map-marker"></i>
+            we are here for you. they key to knowing how to code is concistency in coding
+            and we are here to make you explore to the fullest of technologies. contact us at
+          </a>
+          <i class="fa fa-envelope-o"></i>
+          liblissz3@gmail.com
+          </a>
+          <a href="tel:654598457">
+            <i class="fa fa-headphones"></i>
+            654598457
+          </a>
+        </section>
+        <section class="flex_content padding_1x">
+          <h3> keep </h3>
+          <a href="../feedback.html">feedback</a>
+          <a href="../AIVILDASH.html">Our AI</a>
+          <a href="../csharp.html">learn c#</a>
+          <a href="../c ++\C++Lesson1.html">learn c++</a>
+          <a href="../Basic concepts in css.html">learn css</a>
+<a href="../html-1.html">learn html</a>
+        </section>
+        <section class="flex_content padding_1x">
+          <h3>Other Links</h3>
+          <a href="../c\c.html">learn c</a>
+          <a href="../DOC-20250105-WA0008.html">learn python</a>
+          <a href="../DOC-20250105-WA0007.html">learn javascript</a>
+          <a href="../java.html">learn java</a>
+          <a href="../projected-page.html">buy webpages</a>
+          <a href="../feedback.html">send feedback</a>
+        </section>
+        <section class="flex_content padding_1x">
+          <h3>vildash network</h3>
+          <p>we are here to see you prosper</p>
+          <!--<fieldset class="fixed_flex">
+     <input type="email" name="newsletter" placeholder="Your Email Address">
+     <button class="btn btn_2">Subscribe</button>
+     </fieldset>-->
+        </section>
+      </div>
+      <div class="flex">
+        <section class="flex-content padding_1x">
+          <p>Copyright ©2024 All rights reserved || VILDASH NETWORK</p>
+        </section>
+        <section class="flex-content padding_1x">
+          <a href="https://web.facebook.com/profile.php?id=61552332181172&sk=followers"><i
+              class="fa fa-facebook"></i></a>
+          <a href="https://www.instagram.com/holy_conceptsstudio/"><i class="fa fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@holyconcepts"><i class="fa fa-youtube"></i></i></a>
+
+        </section>
+      </div>
+  </footer>
+  <script>
+    //laoding animation 
+    window.addEventListener('load', () => {
+      const cube = document.getElementById('landing');
+      cube.style.display = 'none';
+    })
+
+  </script>
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  <link rel="stylesheet" href="footer.css">
+
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+</body>
+
+</html>
