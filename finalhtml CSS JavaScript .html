@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VILDASH Online Web IDE</title>
+
+    <!-- Ace Editor Styles -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .header {
+            background-color: #1e1e1e;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+        }
+
+        .control-panel {
+            background-color: #404e35;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .editor-container {
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+            gap: 10px;
+        }
+
+        .editor-wrapper {
+            flex: 1;
+            position: relative;
+        }
+
+        .editor-label {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .editor {
+            width: 100%;
+            height: 400px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            overflow: auto;
+            resize: both;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        .output {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            min-height: 200px;
+            text-align: center;
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+
+    </style>
+
+    <!-- Ace Editor JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+</head>
+<body>
+
+    <div class="header">VILDASH Online Web IDE</div>
+
+    <div class="control-panel">
+        HTML, CSS, & JavaScript Coding
+    </div>
+
+    <div class="editor-container">
+        <div class="editor-wrapper">
+            <div class="editor-label">HTML Editor</div>
+            <div class="editor" id="htmlEditor"></div>
+        </div>
+
+        <div class="editor-wrapper">
+            <div class="editor-label">CSS Editor</div>
+            <div class="editor" id="cssEditor"></div>
+        </div>
+
+        <div class="editor-wrapper">
+            <div class="editor-label">JavaScript Editor</div>
+            <div class="editor" id="jsEditor"></div>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <button class="btn" onclick="runCode()">Run Code</button>
+    </div>
+
+    <div class="output" id="output"></div>
+
+    <script>
+        // Initialize Ace Editors
+        const htmlEditor = ace.edit("htmlEditor");
+        htmlEditor.setTheme("ace/theme/monokai");
+        htmlEditor.session.setMode("ace/mode/html");
+
+        const cssEditor = ace.edit("cssEditor");
+        cssEditor.setTheme("ace/theme/monokai");
+        cssEditor.session.setMode("ace/mode/css");
+
+        const jsEditor = ace.edit("jsEditor");
+        jsEditor.setTheme("ace/theme/monokai");
+        jsEditor.session.setMode("ace/mode/javascript");
+
+        // Fixing unwanted line break issue in editor
+        htmlEditor.setOptions({
+            useWorker: false,
+            wrap: true,
+            showPrintMargin: false,
+            showGutter: false
+        });
+
+        cssEditor.setOptions({
+            useWorker: false,
+            wrap: true,
+            showPrintMargin: false,
+            showGutter: false
+        });
+
+        jsEditor.setOptions({
+            useWorker: false,
+            wrap: true,
+            showPrintMargin: false,
+            showGutter: false
+        });
+
+        // Function to run the code
+        function runCode() {
+            // Get the code from all editors
+            const htmlCode = htmlEditor.getValue();
+            const cssCode = cssEditor.getValue();
+            const jsCode = jsEditor.getValue();
+
+            // Combine HTML, CSS, and JS into a new document in the output div
+            const outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = '';  // Clear previous output
+
+            // Creating a new document dynamically within the output div
+            const iframe = document.createElement('iframe');
+            outputDiv.appendChild(iframe);
+
+            const iframeDoc = iframe.contentWindow.document;
+            iframeDoc.open();
+            iframeDoc.write(`
+                <html>
+                    <head>
+                        <style>${cssCode}</style>
+                    </head>
+                    <body>
+                        ${htmlCode}
+                        <script type="text/javascript">${jsCode}<\/script>
+                    </body>
+                </html>
+            `);
+            iframeDoc.close();
+        }
+    </script>
+
+</body>
+</html>
