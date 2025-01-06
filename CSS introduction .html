@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LEARN CSS INTRODUCTION</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
+    <link rel="icon" href="file-KXYNjXBEo2D9qPtH9iD6VQ (5).webp">
+    <script src="asset.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="overlay"></div>
+      <div class="overlay2"></div>
+      <!-- Side nav -->
+      <div class="sideNav">
+        <nav>
+          <div class="navHead">
+            <div class="profile">
+              <img style="margin: 10px !important ; border-radius: 5px !important;" src="file-KXYNjXBEo2D9qPtH9iD6VQ (5).webp" alt="profile" />
+              
+            </div>
+            <div class="userName">
+              <p></p>
+            </div>
+            
+          </div>
+          <div class="navBody">
+            <ul id="links">
+        
+              <a href="feedback.html">
+              <li>
+            
+                <div class="icon">
+                  <ion-icon name="list-outline"></ion-icon>
+                </div>
+                <p>send feedback</p>
+              </li>
+              </a>
+             <style>
+.container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .col-md-6 {
+      flex: 1 1 calc(50% - 1rem);
+      box-sizing: border-box;
+    }
+
+    pre, #output {
+      padding: 1rem;
+      border-radius: 5px;
+    }
+
+    pre {
+      background-color: #f8f9fa;
+      border: 1px solid #ccc;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    #output {
+      background-color: #343a40;
+      color: white;
+      min-height: 100px;
+    }
+
+    h1, h3, h4 {
+      color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .col-md-6 {
+        flex: 1 1 100%;
+      }
+    }
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+:root{
+  --primary-green: #28a745;
+  --primary-black: #000000;
+  --primary-white: #ffff;
+}
+body {
+  font-family: "Overpass", sans-serif;
+}
+.container {
+  transition-duration: 400ms;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-property: transform, margin-left, margin-right;
+}
+.container .heroSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  padding-top: 5.5rem;
+}
+.container .topNav {
+  position: absolute;
+  z-index: 1;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  background-color: var(--primary-green);
+
+  transition-duration: 400ms;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-property: padding-left;
+}
+.container .topNav nav {
+  max-width: 1100px;
+  margin: 0% auto;
+}
+.container .heroSection .textCont {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  flex-direction: column;
+  border-bottom: 1px solid #c4c4c4;
+  padding: 2rem 1rem;
+  width: 90%;
+  max-width: 800px;
+}
+.container .heroSection .textCont h1 {
+  font-size: 2.52rem;
+}
+.container .heroSection .textCont p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+  color: var(--primary-black);
+}
+.container .heroSection button {
+  border: none;
+  outline: none;
+  padding: 0.575rem 1.4rem;
+  margin: 0 5px;
+  cursor: pointer;
+  background-color: var(--primary-green);
+  color: #fff;
+  font-weight: normal;
+  font-size: 1rem;
+  font-family: inherit;
+  border-radius: 0.25rem;
+  margin-top: 1rem;
+}
+.overlay {
+  display: none;
+}
+.container .sideNav {
+  position: fixed;
+  background-color: var(--primary-white);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  min-height: 100vh;
+  transform: translateX(-280px);
+  width: 280px;
+  z-index: 100;
+  transition-duration: 400ms;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-property: transform;
+  left: 0%;
+  top: 0%;
+  /* opacity: 0; */
+}
+
+.container .sideNav .navHead {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem 2rem;
+  background-size: 120%;
+  background-position: left center;
+  color: #fff;
+  background-color: var(--primary-green);
+}
+.container .sideNav .navHead p {
+  margin-left: 0.8rem;
+  margin-top: 0.5rem;
+}
+.container .sideNav .navHead .profile {
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .sideNav .navHead .profile img {
+  width: 120%;
+  height: 120%;
+  object-fit: cover;
+}
+
+.container .sideNav nav .navBody ul li {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem;
+  justify-content: flex-start;
+  padding-left: 0.8rem;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+}
+.container .sideNav nav .navBody ul li .icon {
+  padding: 0 1rem;
+}
+.container .sideNav nav .navBody ul li .icon ion-icon {
+  font-size: 1.3rem;
+  color: rgba(0, 0, 0, 0.514);
+  margin-top: 4px;
+}
+.container .sideNav nav .navBody ul li.active::after {
+  content: "";
+  height: 100%;
+  width: 4px;
+  position: absolute;
+  left: 0;
+  top: 0%;
+  background-color: var(--primary-green);
+  border-radius: 0 5px 5px 0;
+}
+.container .sideNav nav .navBody ul li:hover {
+  background-color: #7952b313;
+}
+.container .sideNav nav .navBody ul li.active {
+  background-color: #7952b341;
+}
+.container .sideNav nav .navBody ul li.active p,
+.container .sideNav nav .navBody ul li.active .icon ion-icon {
+  color: var(--primary-green);
+}
+
+.container .topNav nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.container .topNav nav .topLeft {
+  display: flex;
+  align-items: center;
+}
+.container .topNav nav .topLeft p {
+  margin-left: 1rem;
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.3rem;
+}
+.container .topNav nav .topLeft .hamburgar {
+  height: 35px;
+  width: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .topNav nav .topLeft .hamburgar .line {
+  height: 2px;
+  width: 80%;
+  background-color: #fff;
+  position: relative;
+}
+.container .topNav nav .topLeft .hamburgar .line::after,
+.container .topNav nav .topLeft .hamburgar .line::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+}
+.container .topNav nav .topLeft .hamburgar .line::after {
+  top: -8px;
+}
+.container .topNav nav .topLeft .hamburgar .line::before {
+  bottom: -8px;
+}
+.container .topNav nav .ctaBtn button {
+  border: none;
+  outline: none;
+  padding: 0.575rem 1.4rem;
+  border-radius: 99px;
+  margin: 0 5px;
+  cursor: pointer;
+  background-color: var(--primary-black);
+  color: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+}
+body main {
+  margin-top: 0.5rem;
+}
+body main .textContainer {
+  max-width: 800px;
+  margin: 0% auto;
+  padding: 2rem;
+  width: 95%;
+}
+body main .textContainer p {
+  padding: 0.6rem 0;
+  line-height: 1.5;
+  color: #747474;
+}
+body main .textContainer h2 {
+  margin-top: 0.6rem;
+}
+body.nav-open .container .sideNav {
+  transform: translate(0);
+  opacity: 1;
+}
+body.nav-open .container {
+  margin-left: 280px;
+}
+body.nav-open .container .topNav {
+  padding-left: 280px;
+}
+
+/* Modal */
+
+.container .modalCont {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+  background-color: #fff;
+  transform: translate(-50%, -50%);
+  border-radius: 0.25rem;
+  overflow: hidden;
+  width: 90%;
+  max-width: 350px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.container .modalCont .modalTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #7952b3;
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #c4c4c4;
+}
+.container .modalCont .modalTop h2 {
+  font-size: 1rem;
+}
+.container .modalCont .modalTop button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: crimson;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.container .modalCont form {
+  padding: 1rem;
+  user-select: none;
+}
+.container .modalCont form label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+.container .modalCont form div input {
+  width: 100%;
+  padding: 0.475rem 0.75rem;
+  border: 1px solid #c4c4c4;
+  border-radius: 0.25rem;
+  outline: none;
+  margin-bottom: 15px;
+}
+.container .modalCont form div input:focus {
+  border-color: #747474;
+}
+.container .modalCont form button {
+  width: 100%;
+  padding: 0.575rem 0.75rem;
+  border-radius: 0.25rem;
+  outline: none;
+  border: none;
+  color: #fff;
+  margin: 10px 0;
+  cursor: pointer;
+  background-color: #7952b3;
+}
+body .container .overlay,
+body .container .overlay2 {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  z-index: 10;
+  opacity: 0.5;
+  display: none;
+}
+body.modal-open .overlay2 {
+  display: block;
+  z-index: 101;
+}
+body.modal-open {
+  overflow: hidden;
+  margin-right: 17px;
+}
+@media (max-width: 800px) {
+  body.nav-open .overlay {
+    display: block;
+  }
+  body.nav-open .container {
+    margin-left: 0%;
+  }
+  body.nav-open,
+  body.modal-open {
+    overflow: hidden;
+    margin-right: 17px;
+  }
+
+  body.nav-open .container .topNav {
+    padding-left: 0px;
+  }
+}
+@media (max-width: 500px) {
+  .container .heroSection .textCont {
+    align-items: center;
+    text-align: center;
+  }
+  .container .heroSection .textCont h1 {
+    font-size: 2rem;
+  }
+  .container .heroSection .textCont p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 0.5rem;
+  }
+  body.nav-open,
+  body.modal-open {
+    overflow: hidden;
+    margin-right: 0px;
+  }
+}
+footer {
+      background-color: #008000;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .col-md-6 {
+        flex: 1 1 100%;
+      }
+    }
+              body {
+font-family: Arial, sans-serif;
+margin: 20px;
+}
+
+h1 {
+		color: #00698f;
+	}
+	
+	h2 {
+		color: #0085a5;
+	}
+	
+	section {
+		background-color: #f7f7f7;
+		padding: 20px;
+		margin-bottom: 20px;
+		border: 1px solid #ddd;
+		box-shadow: 0 0 10px rgba(0,0,0,0.1);
+	}
+              a{
+                text-decoration: none;
+                color: black;
+              }
+             </style>
+              <a href="csharp.html">
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn c#</p>
+              </li>
+              </a>
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn c++ </p>
+              </li>
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn javascript(.js)</p>
+              </li>
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn html</p>
+              </li>
+             <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn c </p>
+              </li>
+              <a href="homepage.html">
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>home page</p>
+              </li>
+      </a>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- Hero Section -->
+      <div class="topNav">
+        <nav>
+          <div class="topLeft">
+            <div id="hamburgar" class="hamburgar">
+              <div class="line"></div>
+            </div>
+            <p>LEARN CSS OVERVIEW</p>
+          </div>
+          <div id="demo" style="opacity: 0.4; font-size: 1rem;
+          font-weight: bold; color:#fff;"><input style="opacity: none !important; padding:10px;" type="text" placeholder="
+          search our pages........" name="search" id="searchinput" onkeyup="search()"> 
+          
+          <div id="results" style="padding: 20px;"></div></div>
+
+          <!--<div class="ctaBtn">
+            <button class="ctaModal">Sign In</button>
+          </div>-->
+        </nav>
+      </div>
+      <section class="heroSection">
+        <div class="textCont">
+          <h1></h1>
+          <p>
+          
+          </p>
+          <div class="ctaBtn">
+            <!--<button class="ctaModal">Sign In</button>-->
+          </div>
+        </div>
+      </section>
+      <main>
+        <body>
+        <h1>CSS Overview</h1>
+
+<section>
+	<h2>What is CSS?</h2>
+	<p>CSS stands for Cascading Style Sheets. It's a styling language used to control the layout and appearance of web pages written in HTML or XML.</p>
+</section>
+
+<section>
+	<h2>Features of CSS</h2>
+	<ul>
+		<li>Selectors: Used to target specific HTML elements.</li>
+		<li>Properties: Define the style or layout of an element.</li>
+		<li>Values: Assigned to properties to specify the style or layout.</li>
+		<li>Cascading Styles: Styles can be applied from multiple sources, with later styles overriding earlier ones.</li>
+	</ul>
+</section>
+
+<section>
+	<h2>Types of CSS</h2>
+	<ul>
+		<li>Internal CSS: Written directly in an HTML document.</li>
+		<li>External CSS: Written in a separate file, linked to an HTML document.</li>
+		<li>Inline CSS: Written directly in an HTML element.</li>
+	</ul>
+</section>
+
+<section>
+	<h2>CSS Syntax</h2>
+	<p><code>selector { property: value; }</code></p>
+	<p>Example: <code>h1 { color: blue; }</code></p>
+</section>
+
+<section>
+	<h2>CSS Selectors</h2>
+	<ul>
+		<li>Element Selectors: <code>h1</code>, <code>p</code>, <code>img</code></li>
+		<li>Class Selectors: <code>.class-name</code></li>
+		<li>ID Selectors: <code>#id-name</code></li>
+		<li>Attribute Selectors: <code>[attribute="value"]</code></li>
+	</ul>
+</section>
+
+<section>
+	<h2>CSS Properties</h2>
+	<ul>
+		<li>Color Properties: <code>color</code>, <code>background-color</code></li>
+		<li>Font Properties: <code>font-family</code>, <code>font-size</code></li>
+		<li>Layout Properties: <code>width</code>, <code>height</code>, <code>margin</code>, <code>padding</code></li>
+		<li>Border Properties: <code>border-style</code>, <code>border-width</code>, <code>border-color</code></li>
+	</ul>
+</section>
+
+<section>
+	<h2>CSS Units</h2>
+	<ul>
+		<li>Length Units: <code>px</code>, <code>em</code>, <code>cm</code>, <code>mm</code>, <code>in</code>, <code>pt</code>, <code>pc</code></li>
+		<li>Percentage Units: <code>%</code></li>
+		<li>Color Units: <code>rgb()</code>, <code>rgba()</code>, <code>hex</code></li>
+	</ul>
+</section>
+
+<section>
+	<h2>CSS Box Model</h2>
+	<ul>
+		<li>Content Area: The area where the content is displayed.</li>
+		<li>Padding: The space between the content and the border.</li>
+		<li>Border: The visible outline of the box.</li>
+		<li>Margin: The space between the box and other elements.</li>
+	</ul>
+</section>
+
+<section>
+<h2>CSS Positioning</h2>
+<ul>
+<li>Static Positioning: The default positioning scheme.</li>
+<li>Relative Positioning: Positions an element relative to its normal position.</li>
+<li>Absolute Positioning: Positions an element relative to its nearest positioned ancestor.</li>
+<li>Fixed Positioning: Positions an element relative to the viewport.</li>
+</ul>
+</section>
+
+And here are the remaining sections:
+
+<section>
+<h2>CSS Display</h2>
+<ul>
+<li>Block Display: Occupies the full width of its parent.</li>
+<li>Inline Display: Occupies only the space needed for its content.</li>
+<li>Inline-Block Display: Combines features of block and inline display.</li>
+</ul>
+</section>
+
+<section>
+<h2>CSS Flexbox</h2>
+<ul>
+<li>Flex Container: The element that contains the flex items.</li>
+<li>Flex Items: The elements that are direct children of the flex container.</li>
+<li>Flex Direction: The direction in which the flex items are laid out.</li>
+</ul>
+</section>
+
+<section>
+<h2>CSS Grid</h2>
+<ul>
+<li>Grid Container: The element that contains the grid items.</li>
+<li>Grid Items: The elements that are direct children of the grid container.</li>
+<li>Grid Tracks: The horizontal and vertical lines that make up the grid.</li>
+</ul>
+<a href="CSS background .html"><button class="de">next chapter</button></a>
+<style>
+  .de{
+padding:12px ;
+background: #00698f;
+color: #fff;
+margin-top: 20px;
+cursor: pointer;
+
+  }
+
+    .code{
+      padding: 4px;
+      background: #4f524d9f;
+    }
+    .box{
+      padding: 30px;
+    }
+    .box h2{
+      font-size: 2em;
+    }
+    .box p{
+      font-size: 1.7em;
+    }
+    .box pre{
+      padding: 2em;
+    }
+
+</style>
+</section>
+      </body>
+        <div class="textContainer">
+          <h2></h2>
+          <p>
+        
+          </p>
+          <h2></h2>
+          <p>
+   
+        </p>
+          <h2></h2>
+          <p>
+         
+          </p>
+          <h2></h2>
+
+          <p>
+  
+          </p>
+          <h2></h2>
+          <p>
+            
+          </p>
+        </div>
+      </main>
+       <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="./script.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;400;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+  margin: 0%;
+  padding: 0%;
+}
+body {
+  background-color: #fff;
+}
+.quizSection {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0% auto;
+}
+.quizSection .bgImg {
+  background: url(./asset/Background.png);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-size: cover;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.5;
+  background-position: center center;
+}
+
+.quizSection header {
+  padding: 1rem;
+  max-width: 700px;
+  margin: 0% auto;
+  margin-top: 1rem;
+}
+.quizSection header .title h1 {
+  font-size: 2rem;
+  color: #6b6b6b;
+}
+.quizSection header .title h1 span {
+  position: relative;
+}
+.quizSection header .title h1 span::after {
+  content: "";
+  background: url(./asset/zig-zag-underline.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  margin-top: 5px;
+  position: absolute;
+  width: 90%;
+  height: 10px;
+  left: 50%;
+  bottom: calc(0% - 7px);
+  transform: translateX(-50%);
+}
+.quizSection .progressCont {
+  width: 100%;
+  margin-top: 1.52rem;
+}
+.quizSection .progressCont .progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  max-width: 350px;
+  margin: 0% auto;
+}
+.quizSection .progressCont .progress .circle {
+  height: 35px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e5e5e5;
+  border-radius: 50%;
+}
+.quizSection .progressCont .progress .circle p {
+  color: #244974;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.quizSection .progressCont .progress .circle.correct {
+  background: #67bece;
+}
+.quizSection .progressCont .progress .circle.wrong {
+  background-color: #f8d7da;
+}
+.quizSection .progressCont .progress .circle.wrong p {
+  color: #842029;
+}
+.quizSection .questionContainer {
+  background-color: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 0.7rem;
+  padding: 2.2rem;
+  max-width: 500px;
+  margin: 0% auto;
+  margin-top: 2rem;
+}
+.quizSection .questionContainer .questions h1 {
+  color: #244974;
+}
+.quizSection .questionContainer .answerCont .answer {
+  border: 1px solid #2449746e;
+  border-radius: 0.3rem;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.85rem;
+  line-height: 1.5;
+  margin: 1rem 0;
+  cursor: pointer;
+  background-color: transparent;
+  user-select: none;
+}
+.quizSection .questionContainer .answerCont .answer .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+}
+.quizSection .questionContainer .answerCont .answer .icon ion-icon {
+  font-size: 1.2rem;
+}
+.quizSection .questionContainer .answerCont .answer p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-left: 0.3rem;
+  color: #8e8c9b;
+}
+.quizSection .questionContainer .answerCont .answer.wrong {
+  background-color: #f8d7da;
+  color: #842029;
+  border-color: #f5c2c7;
+}
+.quizSection .questionContainer .answerCont .answer.wrong p {
+  color: #842029;
+}
+
+.quizSection .questionContainer .answerCont .answer.correct {
+  background-color: #d1e7dd;
+  color: #0f5132;
+  border-color: #badbcc;
+}
+.quizSection .questionContainer .answerCont .answer.correct p {
+  color: #0f5132;
+}
+.quizSection .questionContainer .nextBtnEl {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.quizSection .questionContainer .nextBtnEl button {
+  padding: 0.55rem 2rem;
+  border: none;
+  outline: none;
+  background-color: #67bece;
+  color: #fff;
+  font-weight: normal;
+  letter-spacing: 2px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+.quizSection .questionContainer .nextBtnEl button:disabled {
+  background-color: #6b6b6b;
+}
+
+.quizSection .questionContainer .resultTable {
+  width: 100%;
+}
+
+.quizSection .questionContainer .resultTable tr {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.quizSection .questionContainer .resultTable,
+.quizSection .questionContainer .resultTable th,
+.quizSection .questionContainer .resultTable td {
+  border-collapse: collapse;
+  border: 1px solid #8e8c9b46;
+}
+.quizSection .questionContainer .resultTable td,
+.quizSection .questionContainer .resultTable th {
+  padding: 1rem;
+  width: 100%;
+  text-align: left;
+}
+.questionContainer .restartCont {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.5rem;
+}
+.questionContainer .restartCont button {
+  padding: 0.55rem 2rem;
+  border: none;
+  outline: none;
+  background-color: #67bece;
+  color: #fff;
+  font-weight: normal;
+  letter-spacing: 2px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .quizSection .bgImg {
+    background-position: center center;
+    background-size: cover;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <section class="quizSection">
+      <div class="bgImg"></div>
+      <header>
+        <div class="title">
+          <h1><span> Quiz </span> App</h1>
+        </div>
+      </header>
+      <div class="progressCont">
+        <div class="progress" id="progress"></div>
+      </div>
+      <div class="questionContainer" id="quizContainer">
+        <div class="questions">
+          <h1 id="question">What does html stand for?</h1>
+        </div>
+        <div class="answerCont" id="answerCont"></div>
+        <div class="nextBtnEl">
+          <button id="nextBtn">Next</button>
+        </div>
+      </div>
+    </section>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script>
+      const datas = [
+{
+id: 1,
+question: `What does CSS stand for?`,
+choices: [
+`Cascading Style Sheets`,
+`Cascading Sheet Styles`,
+`Creative Style Sheets`,
+`Colorful Style Sheets`,
+],
+answer: `Cascading Style Sheets`,
+},
+{
+id: 2,
+question: `What is the primary purpose of CSS?`,
+choices: [
+`To add interactivity to a web page`,
+`To add multimedia to a web page`,
+`To control the layout and appearance of a web page`,
+`To add animations to a web page`,
+],
+answer: `To control the layout and appearance of a web page`,
+},
+{
+id: 3,
+question: `What is the difference between internal and external CSS?`,
+choices: [
+`Internal CSS is used for small websites, while external CSS is used for large websites`,
+`Internal CSS is written directly in the HTML document, while external CSS is written in a separate file`,
+`Internal CSS is used for styling text, while external CSS is used for styling images`,
+`Internal CSS is used for styling tables, while external CSS is used for styling forms`,
+],
+answer: `Internal CSS is written directly in the HTML document, while external CSS is written in a separate file`,
+},
+{
+id: 4,
+question: `What is the purpose of the CSS selector?`,
+choices: [
+`To select the elements to be styled`,
+`To define the styles to be applied`,
+`To add interactivity to a web page`,
+`To add multimedia to a web page`,
+],
+answer: `To select the elements to be styled`,
+},
+{
+id: 5,
+question: `What is the difference between a CSS class and an ID?`,
+choices: [
+`A class is used to style multiple elements, while an ID is used to style a single element`,
+`A class is used to style a single element, while an ID is used to style multiple elements`,
+`A class is used to add interactivity to a web page, while an ID is used to add multimedia`,
+`A class is used to define the layout of a web page, while an ID is used to define the appearance`,
+],
+answer: `A class is used to style multiple elements, while an ID is used to style a single element`,
+},
+{
+id: 6,
+question: `What is the purpose of the CSS property?`,
+choices: [
+`To select the elements to be styled`,
+`To define the styles to be applied`,
+`To add interactivity to a web page`,
+`To add multimedia to a web page`,
+],
+answer: `To define the styles to be applied`,
+},
+{
+id: 7,
+question: `What is the difference between CSS padding and margin?`,
+choices: [
+`Padding is the space between an element's content and its border, while margin is the space between an element and other elements`,
+`Padding is the space between an element and other elements, while margin is the space between an element's content and its border`,
+`Padding is used to add interactivity to a web page, while margin is used to add multimedia`,
+`Padding is used to define the layout of a web page, while margin is used to define the appearance`,
+],
+answer: `Padding is the space between an element's content and its border, while margin is the space between an element and other elements`,
+},
+{
+id: 8,
+question: `What is the purpose of the CSS box model?`,
+choices: [
+`To define the layout of a web page`,
+`To define the appearance of a web page`,
+`To add interactivity to a web page`,
+`To describe the structure of an HTML element`,
+],
+answer: `To describe the structure of an HTML element`,
+},
+{
+id: 9,
+question: `What is the difference between CSS inline and block elements?`,
+choices: [
+`Inline elements take up the full width of their parent element, while block elements take up only the space needed for their content`,
+`Inline elements take up only the space needed for their content, while block elements take up the full width of their parent element`,
+`Inline elements are used to add interactivity to a web page, while block elements are used to add multimedia`,
+`Inline elements are used to define the layout of a web page, while block elements are used to define the appearance`,
+],
+answer: `Inline elements take up only the space needed for their content, while block elements take up the full width of their parent element`,
+},
+{
+id: 10,
+question: `What is the purpose of the CSS cascade?`,
+choices: [
+`To define the order in which CSS styles are applied`,
+`To define the layout of a web page`,
+`To define the appearance of a web page`,
+`To add interactivity to a web page`,
+],
+answer: `To define the order in which CSS styles are applied`,
+},
+];
+ const shuffledQuizData = datas.sort(() => 0.5 - Math.random());
+
+const progressEl = document.getElementById("progress");
+const answerContEl = document.getElementById("answerCont");
+const questionEl = document.getElementById("question");
+const nextBtnEl = document.getElementById("nextBtn");
+const quizContainerEl = document.getElementById("quizContainer");
+
+let quizCount = 0;
+let result = 0;
+let isAnswerSelected = false;
+
+// Counting El
+
+let circleCount = 0;
+let answerElCount = 0;
+
+// Disabling button when no choice is selected
+
+nextBtnEl.disabled = true;
+
+// Create Progress
+
+function createProgress() {
+  const circleEl = document.createElement("div");
+  circleEl.className = `circle circle${++circleCount}`;
+  const circlePara = document.createElement("p");
+  circlePara.innerHTML = circleCount;
+  circleEl.appendChild(circlePara);
+  progressEl.appendChild(circleEl);
+}
+
+datas.forEach((data) => {
+  createProgress();
+});
+
+// Create Quiz
+
+function createQuizChoices(data) {
+  const answerEl = document.createElement("div");
+  const attr = document.createAttribute("data-value");
+  attr.value = data;
+  answerEl.setAttributeNode(attr);
+  answerEl.className = `answer answer${++answerElCount}`;
+  const answerPara = document.createElement("p");
+  answerPara.innerHTML = data;
+  answerEl.appendChild(answerPara);
+  answerContEl.appendChild(answerEl);
+
+  // Event Listener
+  answerEl.addEventListener("click", (e) => {
+    if (!isAnswerSelected) {
+      let allAnswerEl = answerContEl.querySelectorAll(`.answer`);
+      checkAnswer(answerEl, allAnswerEl);
+      isAnswerSelected = true;
+      nextBtnEl.disabled = false;
+      if (quizCount === shuffledQuizData.length - 1) {
+        nextBtnEl.innerHTML = `Show Result`;
+      }
+    }
+  });
+}
+
+function createQuiz() {
+  let currentQuiz = shuffledQuizData[quizCount];
+  questionEl.innerHTML = currentQuiz.question;
+
+  answerContEl.innerHTML = ``;
+
+  currentQuiz.choices
+    .sort(() => 0.5 - Math.random())
+    .forEach((choice) => {
+      createQuizChoices(choice);
+    });
+}
+
+createQuiz();
+
+function checkAnswer(selectedAnswerEl, allAnswerEl) {
+  let currentProgress = [...progressEl.querySelectorAll(".circle")];
+
+  let currentQuizAnswer = shuffledQuizData[quizCount].answer;
+  let selectedAnswer = selectedAnswerEl.dataset.value;
+  if (selectedAnswer === currentQuizAnswer) {
+    selectedAnswerEl.classList.add("correct");
+    selectedAnswerEl.prepend(createCorrectIcon());
+    currentProgress[quizCount].classList.add("correct");
+    ++result;
+  } else if (selectedAnswer !== currentQuizAnswer) {
+    selectedAnswerEl.classList.add("wrong");
+    selectedAnswerEl.prepend(createWrongIcon());
+    currentProgress[quizCount].classList.add("wrong");
+    allAnswerEl.forEach((ans) => {
+      if (ans.dataset.value === currentQuizAnswer) {
+        ans.classList.add("correct");
+        ans.prepend(createCorrectIcon());
+      }
+    });
+  }
+}
+
+function createCorrectIcon() {
+  const iconEl = document.createElement("div");
+  iconEl.classList.add("icon");
+  iconEl.innerHTML = `<ion-icon name="checkmark-circle"></ion-icon>`;
+  return iconEl;
+}
+
+function createWrongIcon() {
+  const iconEl = document.createElement("div");
+  iconEl.classList.add("icon");
+  iconEl.innerHTML = `<ion-icon name="close-circle"></ion-icon>`;
+  return iconEl;
+}
+
+nextBtnEl.addEventListener("click", (e) => {
+  if (isAnswerSelected) {
+    isAnswerSelected = false;
+    nextBtnEl.disabled = true;
+
+    if (quizCount < shuffledQuizData.length - 1) {
+      ++quizCount;
+      createQuiz();
+    } else {
+      createResultEl();
+    }
+  } else {
+    alert("you must select a choice");
+  }
+});
+
+function createResultEl() {
+  quizContainerEl.innerHTML = ``;
+
+  progressEl.style.opacity = `0`;
+
+  const tableEl = document.createElement("table");
+  tableEl.classList.add("resultTable");
+
+  const resultData = [
+    { text: `Total Question`, count: shuffledQuizData.length },
+    { text: `Correct`, count: result },
+    { text: `Wrong`, count: shuffledQuizData.length - result },
+    {
+      text: `Percentage`,
+      count: `${(result / shuffledQuizData.length) * 100}%`,
+    },
+    { text: `Your Total`, count: `${result} / ${shuffledQuizData.length}` },
+  ];
+
+  // tr1
+  function createTableRow(data) {
+    const tr = document.createElement("tr");
+    const th = document.createElement("th");
+    th.innerHTML = data.text;
+    const td = document.createElement("td");
+    td.innerHTML = data.count;
+    tr.appendChild(th);
+    tr.appendChild(td);
+    tableEl.appendChild(tr);
+  }
+
+  resultData.forEach((data) => createTableRow(data));
+
+  const restartCont = document.createElement("div");
+  restartCont.classList.add("restartCont");
+  const restartBtn = document.createElement("button");
+  restartBtn.innerHTML = `Restart`;
+  restartCont.appendChild(restartBtn);
+
+  restartBtn.addEventListener("click", (e) => {
+    window.location.reload();
+  });
+
+  // Append Table to continer
+  quizContainerEl.appendChild(tableEl);
+  quizContainerEl.appendChild(restartCont);
+}
+
+    </script>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script>
+    const hamburgarEl = document.getElementById("hamburgar");
+const bodyEl = document.querySelector("body");
+const linksEl = document.querySelectorAll("#links li");
+const containerEl = document.querySelector(".container");
+
+const ctaModalEl = document.querySelectorAll(".ctaModal");
+
+hamburgarEl.addEventListener("click", (e) => {
+  bodyEl.classList.toggle("nav-open");
+});
+
+linksEl.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    linksEl.forEach((item) => {
+      item.classList.remove("active");
+    });
+    link.classList.add("active");
+  });
+});
+
+// Create Modal
+
+function createModal() {
+  const modalCont = document.createElement("div");
+  const modalEl = document.createElement("div");
+  modalCont.classList.add("modalCont");
+  modalEl.classList.add("modal");
+
+  // Modal Top
+
+  const modalTop = document.createElement("div");
+  modalTop.classList.add("modalTop");
+  modalEl.appendChild(modalTop);
+  modalCont.appendChild(modalEl);
+  // Modal Title
+
+  const modalTitle = document.createElement("h2");
+  modalTitle.innerHTML = `Sign In`;
+  modalTop.appendChild(modalTitle);
+
+  // Close Btn
+  const closeBtn = document.createElement("button");
+  closeBtn.innerHTML = `<ion-icon name="close"></ion-icon>`;
+  modalTop.appendChild(closeBtn);
+  const formEl = document.createElement("form");
+
+  // UserName
+  const userNameDiv = document.createElement("div");
+  const userNameLabel = document.createElement("label");
+  userNameLabel.htmlFor = "userName";
+  const userNameInput = document.createElement("input");
+  userNameInput.id = "userName";
+  userNameInput.placeholder = "Username";
+  userNameLabel.innerHTML = `User Name`;
+  userNameDiv.appendChild(userNameLabel);
+  userNameDiv.appendChild(userNameInput);
+  formEl.appendChild(userNameDiv);
+
+  // Email
+
+  const userEmailDiv = document.createElement("div");
+  const userEmailLabel = document.createElement("label");
+  userEmailLabel.htmlFor = "email";
+  const userEmailInput = document.createElement("input");
+  userEmailInput.id = "email";
+  userEmailInput.placeholder = "Email";
+  userEmailLabel.innerHTML = `Email`;
+  userEmailDiv.appendChild(userEmailLabel);
+  userEmailDiv.appendChild(userEmailInput);
+  formEl.appendChild(userEmailDiv);
+
+  // PassWord
+  const userPasswordDiv = document.createElement("div");
+  const userPasswordLabel = document.createElement("label");
+  userPasswordLabel.innerHTML = `Password`;
+  userPasswordLabel.htmlFor = `password`;
+  const userPasswordInput = document.createElement("input");
+  userPasswordInput.id = `password`;
+  userPasswordInput.placeholder = `Password`;
+  userPasswordDiv.appendChild(userPasswordLabel);
+  userPasswordDiv.appendChild(userPasswordInput);
+  formEl.appendChild(userPasswordDiv);
+
+  // Submit btn
+  const ctaBtn = document.createElement("button");
+  ctaBtn.type = "submit";
+  ctaBtn.innerHTML = `Submit`;
+  formEl.appendChild(ctaBtn);
+
+  closeBtn.addEventListener("click", (e) => {
+    bodyEl.classList.remove("modal-open");
+    modalCont.remove();
+  });
+
+  //
+  window.addEventListener("click", (e) => {
+    if (e.target.classList == "overlay2") {
+      bodyEl.classList.remove("modal-open");
+      modalCont.remove();
+    }
+  });
+
+  modalEl.appendChild(formEl);
+  containerEl.appendChild(modalCont);
+}
+
+ctaModalEl.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    createModal();
+    bodyEl.classList.add("modal-open");
+  });
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target.classList == "overlay") bodyEl.classList.remove("nav-open");
+});
+
+    </script>
+        <!--FOOTER-->
+   <footer class="padding_4x">
+    <div class="top_footer flex">
+    <section class="flex_content">
+    
+    </section>
+    </div>
+    <div>
+    <div class="footer_body flex" >
+    <section class="flex_content padding_1x">
+    <figure class="logo fixed_flex">
+    
+    <figcaption>
+    <strong class="title">VILDASH</strong> NETWORK  
+    </figcaption>
+    </figure>
+    <a href="#">
+    <i class="fa fa-map-marker"></i>
+    we are here for you. they key to knowing how to code is concistency in coding 
+    and we are here to make you explore to the fullest of technologies. contact us at
+    </a>
+    <i class="fa fa-envelope-o"></i>
+    liblissz3@gmail.com
+    </a>
+    <a href="tel:654598457">
+    <i class="fa fa-headphones"></i>
+    654598457
+    </a>
+    </section>
+    <section class="flex_content padding_1x">
+      <h3> keep </h3>
+      <a href="feedback.html">feedback</a>
+        <a href="AIVILDASH.html">Our AI</a>
+        <a href="csharp.html">learn c#</a>
+        <a href="c ++\C++Lesson1.html">learn c++</a>
+        <a href="">learn css</a>
+<a href="html-1.html">learn html</a>
+    </section>
+    <section class="flex_content padding_1x">
+      <h3>Other Links</h3>
+      <a href="c\c.html">learn c</a>
+      <a href="DOC-20250105-WA0008.html">learn python</a>
+      <a href="DOC-20250105-WA0007.html">learn javascript</a>
+      <a href="java.html">learn java</a>
+      <a href="projected-page.html">buy webpages</a>
+      <a href="feedback.html">send feedback</a>
+      
+      
+    
+    </section>
+    <section class="flex_content padding_1x">
+    <h3>vildash network</h3>
+    <p>we are here to see you prosper</p>
+    <!--<fieldset class="fixed_flex">
+    <input type="email" name="newsletter" placeholder="Your Email Address">
+    <button class="btn btn_2">Subscribe</button>
+    </fieldset>-->
+    </section>
+    </div>
+    <div class="flex">
+    <section class="flex-content padding_1x">
+    <p>Copyright ©2024 All rights reserved || VILDASH NETWORK</p>
+    </section>
+    <section class="flex-content padding_1x">
+    <a href="https://web.facebook.com/profile.php?id=61552332181172&sk=followers"><i class="fa fa-facebook"></i></a>
+    <a href="https://www.instagram.com/holy_conceptsstudio/"><i class="fa fa-instagram"></i></a>
+    <a href="https://www.youtube.com/@holyconcepts"><i class="fa fa-youtube"></i></i></a>
+    
+    </section>
+    </div>
+    </footer>
+      <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+      <link rel="stylesheet" href="footer.css">
+  </body>
+</html>
