@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conditional statements in Java</title>
+    <link rel="stylesheet" href="./chapters.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="./chapter.js" defer></script>
+    <script src="../script.js" defer></script>
+    <link rel="icon" href="../file-KXYNjXBEo2D9qPtH9iD6VQ (5).webp">
+  </head>
+  <body>
+    <div class="container">
+      <div class="overlay"></div>
+      <div class="overlay2"></div>
+      <!-- Side nav -->
+      <div class="sideNav">
+        <nav>
+          <div class="navHead">
+            <div class="profile">
+              <div class="profile"><img style="margin: 10px !important ; border-radius: 5px !important;" src="../file-KXYNjXBEo2D9qPtH9iD6VQ (5).webp" alt="profile" />    
+              
+            </div>
+            <div class="userName">
+              <p></p>
+            </div>
+            
+          </div>
+          
+          <div class="navBody" style="color: #fff !important;">
+            <ul id="links">
+              <a href="../feedback.html">
+  
+              <li>
+  
+                <div class="icon">
+                  <ion-icon name="list-outline"></ion-icon>
+                </div>
+                <p>send feedback</p>
+              </li>
+              </a>
+                <a href="../c/c.html">
+                  <li>
+                    <div class="icon">
+                      <ion-icon name="log-out-outline"></ion-icon>
+                    </div>
+                    <p>learn c</p>
+  
+                  </li>
+  
+                </a>
+              </button>
+              <div id="welcome"></div>
+              <a href="../c ++/C++Lesson1.html">
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn c++ </p>
+              </li>
+              </a>
+              <a href="../DOC-20250105-WA0007.html">
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn javascript(.js)</p>
+              </li>
+            </a>
+            <a href="../html-1.html">
+              <li>
+             
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn html</p>
+              </li>
+            </a>
+            <a href="../Basic concepts in css.html">
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn css</p>
+              </li>
+              </a>
+              <a href="../csharp.html">
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn c sharp </p>
+              </li>
+              </a>
+              <a href="../AIVILDASH.html">
+                <li>
+                  <div class="icon">
+                    <ion-icon name="log-out-outline"></ion-icon>
+                  </div>
+                  <p>use our AI</p>
+                </li>
+                </a>
+              <a href="../homepage.html">
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>home page</p>
+              </li>
+  </a>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- Hero Section -->
+      <div class="topNav">
+        <nav>
+          <div class="topLeft">
+            <div id="hamburgar" class="hamburgar">
+              <div class="line"></div>
+            </div>
+            <p>Learn Java Programming (java)</p>
+          </div>
+          <div id="demo" style="opacity: 0.4; font-size: 1rem;
+          font-weight: bold; color:#fff;"><input style="opacity: none !important; padding:10px;" type="text" placeholder="
+          search our pages........" name="search" id="searchinput" onkeyup="search()"> 
+          <div id="results" style="padding: 20px;"></div></div>
+
+
+          <style>
+            #searchinput::placeholder{
+              float: right;
+              padding-left: 13px;
+              color: green;
+            }
+            #results {
+             background-color: #1650245e;
+             display: flex;
+             flex-direction: column;
+             gap: 6px;
+            }
+          </style>
+          <script>
+            const pages = [
+      {title: "csharp(c#)", url:"../csharp.html", content:"learn c#" },
+      {title: "feedback", url:"../feedback.html", content:"give a feedback message" },
+      {title: "java", url:"../java.html", content:"learn java" },
+      {title: "python", url:"../python.html", content:"learn python" },
+      {title: "c program", url:"../c.html", content:"learn c" },
+      {title: "c++", url:"../cplusplus.html", content:"learn c++" },
+      {title: "javscript js", url:"../java.html", content:"learn javascript(js)" },
+      {title: "css", url:"../css.html", content:"learn casceding stylesheet(css)" },
+      {title: "html", url:"../html.html", content:"learn html" },
+      {title: "terms and condition", url:"../term.html", content:"term and condition" },
+      {title: "use AI", url:"../ai.html", content:"use  AI" },
+      {title: "c++", url:"../cplusplus.html", content:"learn c++" }
+      
+      ];
+      
+      function search(){
+      const query = document.getElementById("searchinput").value.toLowerCase();
+      const resultcontainer = document.getElementById("results");
+      resultcontainer.innerHTML ='';
+      if(query){
+          const results = pages.filter(pages => pages.content.toLowerCase().includes(query)||
+          pages.title.toLowerCase().includes(query)
+      );
+      if(results.length > 0){
+          results.forEach(result =>{
+              const resultDiv = document.createElement('div');
+              resultDiv.classList.add('results');
+          resultDiv.style.background = "#333";
+          resultDiv.style.padding = "10px";
+          resultDiv.style.borderRadius = "10px";
+              resultDiv.innerHTML = `<h2><a style ="color: white;" href="${result.url}">${result.title}</a></h2>
+              <p style = "color:white">${result.content}</p>`;
+              resultcontainer.appendChild(resultDiv);
+              
+          });
+      }
+          else{
+              resultcontainer.innerHTML = `<p>no results found</p>`
+          }
+      
+      }
+      }
+      
+          </script>
+          <!--<div class="ctaBtn">
+            <button class="ctaModal">Sign In</button>
+          </div>-->
+        </nav>
+      </div>
+      <section class="heroSection" style="margin-top: 50px;">
+        <div class="textCont">
+          <h1>Conditional Statements in Java</h1>
+          <p>
+            Explore the different cores of java programming below
+          </p>
+          <div class="ctaBtn">
+            <!--<button class="ctaModal">Sign In</button>-->
+          </div>
+        </div>
+      </section>
+      <main>
+        <div class="textContents">
+            <div class="contents">
+                <h2>Conditional Statements in Java (IF-ELSE, IF-ELSE IF)</h2>
+                <p>Conditional statements in Java are fundamental for making decisions and controlling the flow of a program based on certain conditions. These statements allow developers to execute different blocks of code depending on whether a condition evaluates to true or false. Among the most commonly used conditional statements are IF-ELSE and IF-ELSE IF, which provide flexibility for implementing complex decision-making logic.</p>
+                <button class="read-aloud">Read aloud</button>
+            </div>
+            <div class="contents">
+                <h2>The IF-ELSE Statement</h2>
+                <p>The IF-ELSE statement is a two-way decision-making construct that executes one block of code if a specified condition is true and another block if the condition is false. It is ideal for situations where a binary decision is needed, such as validating user input or determining whether a number is positive or negative. The syntax for IF-ELSE is straightforward, making it easy to use in simple and complex scenarios.</p>
+                <button class="read-aloud">Read aloud</button>
+            </div>
+            <div class="contents">
+                <h2>The IF-ELSE IF Statement</h2>
+                <p>The IF-ELSE IF construct, on the other hand, extends the decision-making capabilities by allowing multiple conditions to be evaluated in sequence. This is particularly useful when there are more than two possible outcomes. The program evaluates each condition in the order they appear, and the first condition that evaluates to true determines which block of code is executed. If none of the conditions are true, an optional ELSE block can be used as a default case.
+                </p>
+                <button class="read-aloud">Read aloud</button>
+            </div>
+       <div class="contents">
+          <div class="code-container">
+            <h2>Example 1: Simple IF-ELSE Statement</h2>
+            <pre class="code-snippet">
+    <code>
+        public class IfElseExample {
+            public static void main(String[] args) {
+                int number = 10;
+        
+                if (number > 0) {
+                    System.out.println("The number is positive.");
+                } else {
+                    System.out.println("The number is not positive.");
+                }
+            }
+        }                                       
+    </code>
+            </pre>
+            <button class="copy-button">Copy Code</button>
+        </div>
+          <div class="code-container">
+            <h2>Example 2: Using IF-ELSE IF for Multiple Conditions</h2>
+            <pre class="code-snippet">
+    <code>
+        public class IfElseIfExample {
+            public static void main(String[] args) {
+                int score = 85;
+        
+                if (score >= 90) {
+                    System.out.println("Grade: A");
+                } else if (score >= 80) {
+                    System.out.println("Grade: B");
+                } else if (score >= 70) {
+                    System.out.println("Grade: C");
+                } else {
+                    System.out.println("Grade: F");
+                }
+            }
+        }                                  
+    </code>
+            </pre>
+            <button class="copy-button">Copy Code</button>
+        </div>
+          <div class="code-container">
+            <h2>Example 3: Nested IF-ELSE Statement</h2>
+            <pre class="code-snippet">
+    <code>
+        public class NestedIfElseExample {
+            public static void main(String[] args) {
+                int age = 20;
+                boolean hasPermission = true;
+        
+                if (age >= 18) {
+                    if (hasPermission) {
+                        System.out.println("Access granted.");
+                    } else {
+                        System.out.println("Permission required.");
+                    }
+                } else {
+                    System.out.println("Access denied. Age restriction applies.");
+                }
+            }
+        }                                       
+    </code>
+            </pre>
+            <button class="copy-button">Copy Code</button>
+        </div>
+        <button class="quiz-btn">Take a quiz</button>
+       </div>
+       <div class="quiz-container">
+        <!-- Question 1: Theory -->
+        <div class="question" id="question1">
+            <p>1. What is the primary purpose of an IF-ELSE statement in Java?</p>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a"> To create loops</label>
+                <label><input type="radio" name="q1" value="b"> To handle exceptions</label>
+                <label><input type="radio" name="q1" value="c"> To make binary decisions based on conditions</label>
+            </div>
+        </div>
+    
+        <!-- Question 2: Theory -->
+        <div class="question" id="question2">
+            <p>2. In an IF-ELSE IF construct, what happens if none of the conditions are true?</p>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a"> The first block of code is always executed.</label>
+                <label><input type="radio" name="q2" value="b"> The ELSE block is executed if present.</label>
+                <label><input type="radio" name="q2" value="c"> The program throws an error.</label>
+            </div>
+        </div>
+    
+        <!-- Question 3: Theory -->
+        <div class="question" id="question3">
+            <p>3. Which of the following is true about nested IF-ELSE statements?</p>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a"> They can only contain one condition.</label>
+                <label><input type="radio" name="q3" value="b"> They are limited to comparing numerical values.</label>
+                <label><input type="radio" name="q3" value="c"> They allow IF-ELSE blocks inside other IF-ELSE blocks.</label>
+            </div>
+        </div>
+    
+        <!-- Question 4: Code -->
+        <div class="question" id="question4">
+            <p>4. What will the following code output?</p>
+            <pre>
+                int num = -5;
+                if (num > 0) {
+                    System.out.println("Positive");
+                } else {
+                    System.out.println("Not Positive");
+                }                
+            </pre>
+            <div class="options">
+                <label><input type="radio" name="q4" value="a"> Positive</label>
+                <label><input type="radio" name="q4" value="b">  Not Positive</label>
+                <label><input type="radio" name="q4" value="c"> Error: num cannot be negative</label>
+            </div>
+        </div>
+    
+        <!-- Question 5: Code -->
+        <div class="question" id="question5">
+            <p>5. What will the following code output?</p>
+            <pre>
+                int score = 75;
+                if (score >= 90) {
+                    System.out.println("A");
+                } else if (score >= 80) {
+                    System.out.println("B");
+                } else if (score >= 70) {
+                    System.out.println("C");
+                } else {
+                    System.out.println("F");
+                }                
+            </pre>
+            <div class="options">
+                <label><input type="radio" name="q5" value="a"> F</label>
+                <label><input type="radio" name="q5" value="b"> C</label>
+                <label><input type="radio" name="q5" value="c"> B</label>
+            </div>
+        </div>
+    
+        <!-- Question 6: Code -->
+        <div class="question" id="question6">
+            <p>6. What will the following code output?</p>
+            <pre>
+                int age = 16;
+                boolean hasPermission = true;
+                
+                if (age >= 18) {
+                    if (hasPermission) {
+                        System.out.println("Access granted.");
+                    } else {
+                        System.out.println("Permission required.");
+                    }
+                } else {
+                    System.out.println("Access denied. Age restriction applies.");
+                }
+                
+            </pre>
+            <div class="options">
+                <label><input type="radio" name="q6" value="a">  Access granted.</label>
+                <label><input type="radio" name="q6" value="b"> Permission required.</label>
+                <label><input type="radio" name="q6" value="c"> Access denied. Age restriction applies.</label>
+            </div>
+        </div>
+    
+        <!-- Buttons -->
+        <div class="button-container">
+            <button class="btn" id="next-btn" onclick="nextQuestion()">Next Question</button>
+            <a href="chapter6.html"><button id="me">Next course</button></a>
+          </div>
+    
+        <div class="result" id="result" style="display: none;"></div>
+    </div>
+    
+      
+    
+        </div>
+      </main>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+   <!--FOOTER-->
+   <footer class="padding_4x">
+    <div class="top_footer flex">
+    <section class="flex_content">
+    
+    </section>
+    </div>
+    <div>
+    <div class="footer_body flex" >
+    <section class="flex_content padding_1x">
+    <figure class="logo fixed_flex">
+    
+    <figcaption>
+    <strong class="title">VILDASH</strong> NETWORK  
+    </figcaption>
+    </figure>
+    <a href="#">
+    <i class="fa fa-map-marker"></i>
+    we are here for you. they key to knowing how to code is concistency in coding 
+    and we are here to make you explore to the fullest of technologies. contact us at
+    </a>
+    <i class="fa fa-envelope-o"></i>
+    liblissz3@gmail.com
+    </a>
+    <a href="tel:654598457">
+    <i class="fa fa-headphones"></i>
+    654598457
+    </a>
+    </section>
+    <section class="flex_content padding_1x">
+    <h3> keep </h3>
+    <a href="../feedback.html">feedback</a>
+    <a href="../AIVILDASH.html">Our AI</a>
+    <a href="../csharp.html">learn c#</a>
+   
+    <a href="../Basic concepts in css.html">learn css</a>
+<a href="../html-1.html">learn html</a>
+    </section>
+    <section class="flex_content padding_1x">
+    <h3>Other Links</h3>
+    <a href="../c\c.html">learn c</a>
+    <a href="../DOC-20250105-WA0008.html">learn python</a>
+    <a href="../DOC-20250105-WA0007.html">learn javascript</a>
+    <a href="../java.html">learn java</a>
+    <a href="../projected-page.html">buy webpages</a>
+    <a href="../feedback.html">send feedback</a>
+    <a href="../c ++/C++Lesson1.html">learn c++</a>
+    </section>
+    <section class="flex_content padding_1x">
+    <h3>vildash network</h3>
+    <p>we are here to see you prosper</p>
+    <!--<fieldset class="fixed_flex">
+    <input type="email" name="newsletter" placeholder="Your Email Address">
+    <button class="btn btn_2">Subscribe</button>
+    </fieldset>-->
+    </section>
+    </div>
+    <div class="flex">
+    <section class="flex-content padding_1x">
+    <p>Copyright ©2024 All rights reserved || VILDASH NETWORK</p>
+    </section>
+    <section class="flex-content padding_1x">
+    <a href="https://web.facebook.com/profile.php?id=61552332181172&sk=followers"><i class="fa fa-facebook"></i></a>
+    <a href="https://www.instagram.com/holy_conceptsstudio/"><i class="fa fa-instagram"></i></a>
+    <a href="https://www.youtube.com/@holyconcepts"><i class="fa fa-youtube"></i></i></a> 
+     
+    </section>
+    </div>
+    </footer>
+      <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+     <link rel="stylesheet" href="../footer.css">
+  </body>
+
+</html>

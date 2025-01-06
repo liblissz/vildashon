@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inputs in Java</title>
+    <link rel="stylesheet" href="./chapters.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="./chapter.js" defer></script>
+    <script src="../script.js" defer></script>
+    <link rel="icon" href="../file-KXYNjXBEo2D9qPtH9iD6VQ (5).webp">
+  </head>
+  <body>
+    <div class="container">
+      <div class="overlay"></div>
+      <div class="overlay2"></div>
+      <!-- Side nav -->
+      <div class="sideNav">
+        <nav>
+          <div class="navHead">
+            <div class="profile">
+              <img style="margin: 10px !important ; border-radius: 5px !important;" src="../file-KXYNjXBEo2D9qPtH9iD6VQ (5).webp" alt="profile" />
+              
+              
+            </div>
+            <div class="userName">
+          
+            </div>
+            
+          </div>
+          <div class="navBody">
+            <ul id="links">
+              <a href="../feedback.html">
+  
+              <li>
+  
+                <div class="icon">
+                  <ion-icon name="list-outline"></ion-icon>
+                </div>
+                <p>send feedback</p>
+              </li>
+              </a>
+                <a href="../c/c.html">
+                  <li>
+                    <div class="icon">
+                      <ion-icon name="log-out-outline"></ion-icon>
+                    </div>
+                    <p>learn c</p>
+  
+                  </li>
+  
+                </a>
+              </button>
+              <div id="welcome"></div>
+              <a href="../c ++/C++Lesson1.html">
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn c++ </p>
+              </li>
+              </a>
+              <a href="../DOC-20250105-WA0007.html">
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn javascript(.js)</p>
+              </li>
+            </a>
+            <a href="../html-1.html">
+              <li>
+             
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn html</p>
+              </li>
+            </a>
+            <a href="../Basic concepts in css.html">
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn css</p>
+              </li>
+              </a>
+              <a href="../csharp.html">
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn c sharp </p>
+              </li>
+              </a>
+              <a href="../AIVILDASH.html">
+                <li>
+                  <div class="icon">
+                    <ion-icon name="log-out-outline"></ion-icon>
+                  </div>
+                  <p>use our AI</p>
+                </li>
+                </a>
+              <a href="../homepage.html">
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>home page</p>
+              </li>
+  </a>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- Hero Section -->
+      <div class="topNav">
+        <nav>
+          <div class="topLeft">
+            <div id="hamburgar" class="hamburgar">
+              <div class="line"></div>
+            </div>
+            <p>Learn Java Programming (java)</p>
+          </div>
+          <div id="demo" style="opacity: 0.4; font-size: 1rem;
+          font-weight: bold; color:#fff;"><input style="opacity: none !important; padding:10px;" type="text" placeholder="
+          search our pages........" name="search" id="searchinput" onkeyup="search()"> 
+          
+          <div id="results" style="padding: 20px;"></div></div>
+
+
+          <style>
+            #searchinput::placeholder{
+              float: right;
+              padding-left: 13px;
+            }
+            #results {
+             background-color: #1650245e;
+             display: flex;
+             flex-direction: column;
+             gap: 6px;
+            }
+          </style>
+          <script>
+            const pages = [
+      {title: "csharp(c#)", url:"../csharp.html", content:"learn c#" },
+      {title: "feedback", url:"../feedback.html", content:"give a feedback message" },
+      {title: "java", url:"../java.html", content:"learn java" },
+      {title: "python", url:"../python.html", content:"learn python" },
+      {title: "c program", url:"../c.html", content:"learn c" },
+      {title: "c++", url:"../cplusplus.html", content:"learn c++" },
+      {title: "javscript js", url:"../java.html", content:"learn javascript(js)" },
+      {title: "css", url:"../css.html", content:"learn casceding stylesheet(css)" },
+      {title: "html", url:"../html.html", content:"learn html" },
+      {title: "terms and condition", url:"../term.html", content:"term and condition" },
+      {title: "use AI", url:"../ai.html", content:"use  AI" },
+      {title: "c++", url:"../cplusplus.html", content:"learn c++" }
+      
+      ];
+      
+      function search(){
+      const query = document.getElementById("searchinput").value.toLowerCase();
+      const resultcontainer = document.getElementById("results");
+      resultcontainer.innerHTML ='';
+      if(query){
+          const results = pages.filter(pages => pages.content.toLowerCase().includes(query)||
+          pages.title.toLowerCase().includes(query)
+      );
+      if(results.length > 0){
+          results.forEach(result =>{
+              const resultDiv = document.createElement('div');
+              resultDiv.classList.add('results');
+          resultDiv.style.background = "#333";
+          resultDiv.style.padding = "10px";
+          resultDiv.style.borderRadius = "10px";
+              resultDiv.innerHTML = `<h2><a style ="color: white;" href="${result.url}">${result.title}</a></h2>
+              <p style = "color:white">${result.content}</p>`;
+              resultcontainer.appendChild(resultDiv);
+              
+          });
+      }
+          else{
+              resultcontainer.innerHTML = `<p>no results found</p>`
+          }
+      
+      }
+      }
+      
+          </script>
+          <!--<div class="ctaBtn">
+            <button class="ctaModal">Sign In</button>
+          </div>-->
+        </nav>
+      </div>
+      <section class="heroSection">
+        <div class="textCont">
+          <h1>Inputs in Java</h1>
+          <p>
+            Explore the different cores of java programming below
+          </p>
+          <div class="ctaBtn">
+            <!--<button class="ctaModal">Sign In</button>-->
+          </div>
+        </div>
+      </section>
+      <main>
+        <div class="textContents">
+            <div class="contents">
+                <h2>Inputs in Java: Overview</h2>
+                <p>In Java, obtaining user input is an essential part of creating interactive applications. The Scanner class, provided in the java.util package, is commonly used for this purpose. This class allows developers to read various types of data, including integers, floats, strings, and more. By using methods like nextInt(), nextDouble(), and nextLine(), programmers can collect specific data types from users. This flexibility enables dynamic programming, where user inputs influence the behavior and output of the program.</p>
+                <button class="read-aloud">Read aloud</button>
+            </div>
+            <div class="contents">
+                <h2>Getting Input from a User</h2>
+                <p>To get input from the user, you first need to create an instance of the Scanner class. The System.in argument tells the Scanner to read input from the console. Once the Scanner object is initialized, you can use its methods to fetch specific data types. For instance, if you prompt the user to enter their name and age, you would use nextLine() for the name and nextInt() for the age. Properly handling user input, including validating and processing it, ensures a smooth user experience and prevents unexpected errors.</p>
+                <button class="read-aloud">Read aloud</button>
+            </div>
+            <div class="contents">
+                <h2>Performing Actions with Inputs</h2>
+                <p>Once input is obtained, it can be processed to perform various actions. For example, if a user inputs two numbers, the program can calculate their sum, product, or other mathematical operations. Java's type-specific methods allow easy manipulation of input data. For strings, Java provides methods like toUpperCase() and toLowerCase() for formatting, and concat() for combining strings. By leveraging these capabilities, developers can create applications ranging from simple calculators to complex data-processing systems.</p>
+                <button class="read-aloud">Read aloud</button>
+            </div>
+       <div class="contents">
+          <div class="code-container">
+            <h2>Example 1: Getting a User's Name and Greeting Them</h2>
+            <pre class="code-snippet">
+    <code>
+        import java.util.Scanner;
+
+public class UserInputExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompting the user
+        System.out.print("Enter your name: ");
+        String name = scanner.nextLine();
+
+        // Greeting the user
+        System.out.println("Hello, " + name + "! Welcome to Java programming.");
+        
+        scanner.close();
+    }
+}                       
+    </code>
+            </pre>
+            <button class="copy-button">Copy Code</button>
+        </div>
+          <div class="code-container">
+            <h2>Example 2: Performing Arithmetic Operations java Copy code</h2>
+            <pre class="code-snippet">
+    <code>
+        import java.util.Scanner;
+
+public class ArithmeticOperations {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Getting two numbers from the user
+        System.out.print("Enter the first number: ");
+        int num1 = scanner.nextInt();
+
+        System.out.print("Enter the second number: ");
+        int num2 = scanner.nextInt();
+
+        // Performing and displaying operations
+        int sum = num1 + num2;
+        int product = num1 * num2;
+
+        System.out.println("The sum of the numbers is: " + sum);
+        System.out.println("The product of the numbers is: " + product);
+
+        scanner.close();
+    }
+}                       
+    </code>
+            </pre>
+            <button class="copy-button">Copy Code</button>
+        </div>
+          <div class="code-container">
+            <h2>Example 3: String Manipulation</h2>
+            <pre class="code-snippet">
+    <code>
+        import java.util.Scanner;
+
+public class StringManipulation {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Getting a string from the user
+        System.out.print("Enter a phrase: ");
+        String phrase = scanner.nextLine();
+
+        // String manipulations
+        System.out.println("Uppercase: " + phrase.toUpperCase());
+        System.out.println("Lowercase: " + phrase.toLowerCase());
+        System.out.println("Length: " + phrase.length());
+
+        scanner.close();
+    }
+}                       
+    </code>
+            </pre>
+            <button class="copy-button">Copy Code</button>
+        </div>
+        <button class="quiz-btn">Take a quiz</button>
+       </div>
+       <div class="quiz-container">
+        <!-- Question 1 -->
+        <div class="question" id="question1">
+          <p>1. Which class is commonly used in Java to obtain user input?</p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="a"> Scanner</label>
+            <label><input type="radio" name="q1" value="b"> String</label>
+            <label><input type="radio" name="q1" value="c"> System</label>
+          </div>
+        </div>
+      
+        <!-- Question 2 -->
+        <div class="question" id="question2">
+          <p>2. What is the purpose of the <code>System.in</code> argument in the <code>Scanner</code> class?</p>
+          <div class="options">
+            <label><input type="radio" name="q2" value="a"> To read input from a file</label>
+            <label><input type="radio" name="q2" value="b"> To read input from the console</label>
+            <label><input type="radio" name="q2" value="c"> To display output on the console</label>
+          </div>
+        </div>
+      
+        <!-- Question 3 -->
+        <div class="question" id="question3">
+          <p>3. Which method is used to read an integer input from the user?</p>
+          <div class="options">
+            <label><input type="radio" name="q3" value="a"> nextFloat()</label>
+            <label><input type="radio" name="q3" value="b"> nextLine()</label>
+            <label><input type="radio" name="q3" value="c"> nextInt()</label>
+          </div>
+        </div>
+      
+        <!-- Question 4 -->
+        <div class="question" id="question4">
+          <p>4. What method of the <code>Scanner</code> class can be used to read a full line of text input?</p>
+          <div class="options">
+            <label><input type="radio" name="q4" value="a"> next()</label>
+            <label><input type="radio" name="q4" value="b"> nextLine()</label>
+            <label><input type="radio" name="q4" value="c"> readLine()</label>
+          </div>
+        </div>
+      
+        <!-- Question 5 -->
+        <div class="question" id="question5">
+          <p>5. What method is used to convert a string to uppercase in Java?</p>
+          <div class="options">
+            <label><input type="radio" name="q5" value="a"> toLowerCase()</label>
+            <label><input type="radio" name="q5" value="b"> toUpperCase()</label>
+            <label><input type="radio" name="q5" value="c"> concat()</label>
+          </div>
+        </div>
+      
+        <!-- Question 6 -->
+        <div class="question" id="question6">
+          <p>6. What is the output of the following code if the user inputs "Hello"?</p>
+          <pre>
+      Scanner scanner = new Scanner(System.in);
+      String input = scanner.nextLine();
+      System.out.println(input.toUpperCase());
+          </pre>
+          <div class="options">
+            <label><input type="radio" name="q6" value="a"> hello</label>
+            <label><input type="radio" name="q6" value="b"> inputError</label>
+            <label><input type="radio" name="q6" value="c"> HELLO</label>
+          </div>
+        </div>
+      
+        <!-- Question 7 -->
+        <div class="question" id="question7">
+          <p>7. Which of the following correctly closes a <code>Scanner</code> object?</p>
+          <div class="options">
+            <label><input type="radio" name="q7" value="a"> scanner.stop()</label>
+            <label><input type="radio" name="q7" value="b"> scanner.close()</label>
+            <label><input type="radio" name="q7" value="c"> scanner.end()</label>
+          </div>
+        </div>
+      
+        <!-- Question 8 -->
+        <div class="question" id="question8">
+          <p>8. What is the output of the following code if the user enters 10 and 20?</p>
+          <pre>
+      Scanner scanner = new Scanner(System.in);
+      int a = scanner.nextInt();
+      int b = scanner.nextInt();
+      System.out.println(a + b);
+          </pre>
+          <div class="options">
+            <label><input type="radio" name="q8" value="a"> 30</label>
+            <label><input type="radio" name="q8" value="b"> 1020</label>
+            <label><input type="radio" name="q8" value="c"> Error</label>
+          </div>
+        </div>
+      
+        <!-- Question 9 -->
+        <div class="question" id="question9">
+          <p>9. What is the output of the following code if the user enters "Java Programming"?</p>
+          <pre>
+      Scanner scanner = new Scanner(System.in);
+      String phrase = scanner.nextLine();
+      System.out.println(phrase.length());
+          </pre>
+          <div class="options">
+            <label><input type="radio" name="q9" value="a"> 16</label>
+            <label><input type="radio" name="q9" value="b"> 17</label>
+            <label><input type="radio" name="q9" value="c"> Error</label>
+          </div>
+        </div>
+      
+        <!-- Question 10 -->
+        <div class="question" id="question10">
+          <p>10. What will the following code output if the user enters "Code"? </p>
+          <pre>
+      Scanner scanner = new Scanner(System.in);
+      String word = scanner.nextLine();
+      System.out.println(word.toLowerCase());
+          </pre>
+          <div class="options">
+            <label><input type="radio" name="q10" value="a"> CODE</label>
+            <label><input type="radio" name="q10" value="b"> code</label>
+            <label><input type="radio" name="q10" value="c"> Error</label>
+          </div>
+        </div>
+      
+        <!-- Buttons -->
+        <div class="button-container">
+          <button class="btn" id="next-btn" onclick="nextQuestion()">Next Question</button>
+          <a href="chapter4.html"><button id="me">Next course</button></a>
+        </div>
+      
+        <div class="result" id="result" style="display: none;"></div>
+      </div>
+      
+    
+        </div>
+      </main>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+  <!--FOOTER-->
+  <footer class="padding_4x">
+    <div class="top_footer flex">
+    <section class="flex_content">
+    
+    </section>
+    </div>
+    <div>
+    <div class="footer_body flex" >
+    <section class="flex_content padding_1x">
+    <figure class="logo fixed_flex">
+    
+    <figcaption>
+    <strong class="title">VILDASH</strong> NETWORK  
+    </figcaption>
+    </figure>
+    <a href="#">
+    <i class="fa fa-map-marker"></i>
+    we are here for you. they key to knowing how to code is concistency in coding 
+    and we are here to make you explore to the fullest of technologies. contact us at
+    </a>
+    <i class="fa fa-envelope-o"></i>
+    liblissz3@gmail.com
+    </a>
+    <a href="tel:654598457">
+    <i class="fa fa-headphones"></i>
+    654598457
+    </a>
+    </section>
+    <section class="flex_content padding_1x">
+    <h3> keep </h3>
+    <a href="../feedback.html">feedback</a>
+    <a href="../AIVILDASH.html">Our AI</a>
+    <a href="../csharp.html">learn c#</a>
+   
+    <a href="../Basic concepts in css.html">learn css</a>
+<a href="../html-1.html">learn html</a>
+    </section>
+    <section class="flex_content padding_1x">
+    <h3>Other Links</h3>
+    <a href="../c\c.html">learn c</a>
+    <a href="../DOC-20250105-WA0008.html">learn python</a>
+    <a href="../DOC-20250105-WA0007.html">learn javascript</a>
+    <a href="../java.html">learn java</a>
+    <a href="../projected-page.html">buy webpages</a>
+    <a href="../feedback.html">send feedback</a>
+    <a href="../c ++/C++Lesson1.html">learn c++</a>
+    </section>
+    <section class="flex_content padding_1x">
+    <h3>vildash network</h3>
+    <p>we are here to see you prosper</p>
+    <!--<fieldset class="fixed_flex">
+    <input type="email" name="newsletter" placeholder="Your Email Address">
+    <button class="btn btn_2">Subscribe</button>
+    </fieldset>-->
+    </section>
+    </div>
+    <div class="flex">
+    <section class="flex-content padding_1x">
+    <p>Copyright ©2024 All rights reserved || VILDASH NETWORK</p>
+    </section>
+    <section class="flex-content padding_1x">
+    <a href="https://web.facebook.com/profile.php?id=61552332181172&sk=followers"><i class="fa fa-facebook"></i></a>
+    <a href="https://www.instagram.com/holy_conceptsstudio/"><i class="fa fa-instagram"></i></a>
+    <a href="https://www.youtube.com/@holyconcepts"><i class="fa fa-youtube"></i></i></a> 
+     
+    </section>
+    </div>
+    </footer>
+      <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+     <link rel="stylesheet" href="../footer.css">
+  </body>
+
+</html>

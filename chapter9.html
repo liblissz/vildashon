@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strings in Java</title>
+    <link rel="stylesheet" href="./chapters.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="./chapter.js" defer></script>
+    <script src="../script.js" defer></script>
+    <script src="asset.js"></script>
+    <link rel="icon" href="../file-KXYNjXBEo2D9qPtH9iD6VQ (5).webp">
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="overlay"></div>
+      <div class="overlay2"></div>
+      <!-- Side nav -->
+      <div class="sideNav">
+        <nav>
+          <div class="navHead">
+            <div class="profile">
+              <img style="margin: 10px !important ; border-radius: 5px !important;" src="../file-KXYNjXBEo2D9qPtH9iD6VQ (5).webp" alt="profile" />    
+              
+            </div>
+            <div class="userName">
+              <p></p>
+            </div>
+            
+          </div>
+          <div class="navBody">
+            <ul id="links">
+              <a href="../feedback.html">
+  
+              <li>
+  
+                <div class="icon">
+                  <ion-icon name="list-outline"></ion-icon>
+                </div>
+                <p>send feedback</p>
+              </li>
+              </a>
+                <a href="../c/c.html">
+                  <li>
+                    <div class="icon">
+                      <ion-icon name="log-out-outline"></ion-icon>
+                    </div>
+                    <p>learn c</p>
+  
+                  </li>
+  
+                </a>
+              </button>
+              <div id="welcome"></div>
+              <a href="../c ++/C++Lesson1.html">
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn c++ </p>
+              </li>
+              </a>
+              <a href="../DOC-20250105-WA0007.html">
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn javascript(.js)</p>
+              </li>
+            </a>
+            <a href="../html-1.html">
+              <li>
+             
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn html</p>
+              </li>
+            </a>
+            <a href="../Basic concepts in css.html">
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn css</p>
+              </li>
+              </a>
+              <a href="../csharp.html">
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn c sharp </p>
+              </li>
+              </a>
+              <a href="../AIVILDASH.html">
+                <li>
+                  <div class="icon">
+                    <ion-icon name="log-out-outline"></ion-icon>
+                  </div>
+                  <p>use our AI</p>
+                </li>
+                </a>
+              <a href="../homepage.html">
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>home page</p>
+              </li>
+  </a>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- Hero Section -->
+      <div class="topNav" >
+        <nav>
+          <div class="topLeft">
+            <div id="hamburgar" class="hamburgar">
+              <div class="line"></div>
+            </div>
+            <p>Learn Java Programming (java)</p>
+          </div>
+          <div id="demo" style="opacity: 0.4; font-size: 1rem;
+          font-weight: bold; color:#fff;"><input style="opacity: none !important; padding:10px;" type="text" placeholder="
+          search our pages........" name="search" id="searchinput" onkeyup="search()"> 
+          
+          <div id="results" style="padding: 20px;"></div></div>
+
+          <!--<div class="ctaBtn">
+            <button class="ctaModal">Sign In</button>
+          </div>-->
+        </nav>
+      </div>
+      <section class="heroSection" style="margin-top: 100px;">
+        <div class="textCont">
+          <h1>Strings in Java</h1>
+          <p>
+            Explore the different cores of java programming below
+          </p>
+          <div class="ctaBtn">
+            <!--<button class="ctaModal">Sign In</button>-->
+          </div>
+        </div>
+      </section>
+      <main>
+        <div class="textContents">
+            <div class="contents">
+                <h2>Strings in Java</h2>
+                <p>Strings in Java are immutable sequences of characters, represented by the String class in the java.lang package. Being one of the most commonly used data types, strings allow developers to handle textual data efficiently. Java treats strings as objects, which means they come with a rich set of built-in methods for manipulation. For instance, methods like length(), substring(), and charAt() make it easy to analyze and extract parts of a string. Since strings are immutable, any modification to a string creates a new object, ensuring thread safety and enhancing performance in concurrent applications.</p>
+                <button class="read-aloud">Read aloud</button>
+            </div>
+            <div class="contents">
+                <p>Java provides several ways to create strings, including string literals and the new keyword. Using a string literal, such as String str = "Hello";, allows Java to reuse existing objects through a special memory region called the "string pool," saving memory and improving performance. On the other hand, when a string is created with the new keyword, such as String str = new String("Hello");, a new object is always created, bypassing the string pool. Developers must be mindful of these differences to write efficient and optimized code when working with strings.</p>
+                <button class="read-aloud">Read aloud</button>
+            </div>
+            <div class="contents">
+                <p>Additionally, Java offers the StringBuilder and StringBuffer classes for scenarios requiring extensive string modifications. Unlike the String class, these classes are mutable, meaning their contents can be changed without creating new objects. StringBuilder is not synchronized, making it faster for single-threaded operations, whereas StringBuffer is synchronized and suitable for multi-threaded environments. Together with the String class, these tools provide a robust framework for handling textual data in Java applications, catering to a wide variety of needs, from simple text processing to complex data transformations.
+                </p>
+                <button class="read-aloud">Read aloud</button>
+            </div>
+       <div class="contents">
+          <div class="code-container">
+            <h2>Example 1:   Basic String Operations</h2>
+            <pre class="code-snippet">
+    <code>
+        public class StringOperations {
+            public static void main(String[] args) {
+                String message = "Welcome to Java Programming";
+        
+                // Length of the string
+                System.out.println("Length: " + message.length());
+        
+                // Character at a specific index
+                System.out.println("Character at index 8: " + message.charAt(8));
+        
+                // Substring from the string
+                System.out.println("Substring (11 to 15): " + message.substring(11, 15));
+            }
+        }
+                                             
+    </code>
+            </pre>
+            <button class="copy-button">Copy Code</button>
+        </div>
+          <div class="code-container">
+            <h2>Example 2: String Comparison</h2>
+            <pre class="code-snippet">
+    <code>
+        public class StringComparison {
+            public static void main(String[] args) {
+                String str1 = "Java";
+                String str2 = "java";
+                String str3 = "Java";
+        
+                // Comparing strings using equals()
+                System.out.println("str1 equals str2: " + str1.equals(str2)); // false
+                System.out.println("str1 equals str3: " + str1.equals(str3)); // true
+        
+                // Comparing strings using compareTo()
+                System.out.println("str1 compareTo str2: " + str1.compareTo(str2)); // Negative value
+                System.out.println("str1 compareTo str3: " + str1.compareTo(str3)); // 0
+            }
+        }                          
+    </code>
+            </pre>
+            <button class="copy-button">Copy Code</button>
+        </div>
+          <div class="code-container">
+            <h2>Example 3: StringBuilder for Efficient String Manipulation</h2>
+            <pre class="code-snippet">
+    <code>
+        public class StringBuilderExample {
+            public static void main(String[] args) {
+                StringBuilder sb = new StringBuilder("Hello");
+        
+                // Append to the string
+                sb.append(" World");
+                System.out.println("After append: " + sb);
+        
+                // Insert into the string
+                sb.insert(6, "Java ");
+                System.out.println("After insert: " + sb);
+        
+                // Reverse the string
+                sb.reverse();
+                System.out.println("After reverse: " + sb);
+            }
+        }
+                                           
+    </code>
+            </pre>
+            <button class="copy-button">Copy Code</button>
+        </div>
+        <button class="quiz-btn">Take a quiz</button>
+       </div>
+       <div class="quiz-container">
+        <!-- Question 1: Theory -->
+        <div class="question" id="question1">
+            <p>1. What is the primary reason why strings in Java are immutable?</p>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a"> To ensure thread safety and enhance performance in concurrent applications.</label>
+                <label><input type="radio" name="q1" value="b"> To allow direct memory allocation.</label>
+                <label><input type="radio" name="q1" value="c"> To enable multiple inheritance of classes.</label>
+            </div>
+        </div>
+    
+        <!-- Question 2: Theory -->
+        <div class="question" id="question2">
+            <p>2. How does Java manage memory when a string is created using a string literal?</p>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a"> By always creating a new object in memory.</label>
+                <label><input type="radio" name="q2" value="b"> By reusing existing objects from the string pool if the value already exists.</label>
+                <label><input type="radio" name="q2" value="c"> By allocating memory in the heap space only.</label>
+            </div>
+        </div>
+    
+        <!-- Question 3: Theory -->
+        <div class="question" id="question3">
+            <p>3. Which class in Java is suitable for extensive string modifications in a single-threaded environment?</p>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a"> String</label>
+                <label><input type="radio" name="q3" value="b"> StringBuffer</label>
+                <label><input type="radio" name="q3" value="c"> StringBuilder</label>
+            </div>
+        </div>
+    
+        <!-- Question 4: Code -->
+        <div class="question" id="question4">
+            <p>4. What will the following code output?</p>
+            <pre>
+                public class Main {
+                    public static void main(String[] args) {
+                        String message = "Welcome to Java Programming";
+                        System.out.println(message.substring(11, 15));
+                    }
+                }
+            </pre>
+            <div class="options">
+                <label><input type="radio" name="q4" value="a"> Welcome</label>
+                <label><input type="radio" name="q4" value="b"> Java</label>
+                <label><input type="radio" name="q4" value="c"> to Ja</label>
+            </div>
+        </div>
+    
+        <!-- Question 5: Code -->
+        <div class="question" id="question5">
+            <p>5. What will the following code output?</p>
+            <pre>
+                public class Main {
+                    public static void main(String[] args) {
+                        String str1 = "Java";
+                        String str2 = "java";
+                        System.out.println(str1.equals(str2));
+                    }
+                }
+            </pre>
+            <div class="options">
+                <label><input type="radio" name="q5" value="a"> true</label>
+                <label><input type="radio" name="q5" value="b"> false</label>
+                <label><input type="radio" name="q5" value="c"> NullPointerException</label>
+            </div>
+        </div>
+    
+        <!-- Question 6: Code -->
+        <div class="question" id="question6">
+            <p>6. What will the following code output?</p>
+            <pre>
+                public class Main {
+                    public static void main(String[] args) {
+                        StringBuilder sb = new StringBuilder("Hello");
+                        sb.append(" World");
+                        sb.reverse();
+                        System.out.println(sb);
+                    }
+                }
+            </pre>
+            <div class="options">
+                <label><input type="radio" name="q6" value="a"> Hello World</label>
+                <label><input type="radio" name="q6" value="b"> dlroWolleH</label>
+                <label><input type="radio" name="q6" value="c"> dlroW olleH</label>
+            </div>
+        </div>
+    
+        <!-- Buttons -->
+        <div class="button-container">
+            <button class="btn" id="next-btn" onclick="nextQuestion()">Next Question</button>
+        </div>
+    
+        <div class="result" id="result" style="display: none;"></div>
+        <a href="chapter10.html"><button class="btn" id="next-btn">Next course</button></a>
+        <a href="chapter10.html"><button id="me">Next course</button></a>
+      </div>
+    
+        </div>
+      </main>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+<!--FOOTER-->
+<footer class="padding_4x">
+  <div class="top_footer flex">
+  <section class="flex_content">
+  
+  </section>
+  </div>
+  <div>
+  <div class="footer_body flex" >
+  <section class="flex_content padding_1x">
+  <figure class="logo fixed_flex">
+  
+  <figcaption>
+  <strong class="title">VILDASH</strong> NETWORK  
+  </figcaption>
+  </figure>
+  <a href="#">
+  <i class="fa fa-map-marker"></i>
+  we are here for you. they key to knowing how to code is concistency in coding 
+  and we are here to make you explore to the fullest of technologies. contact us at
+  </a>
+  <i class="fa fa-envelope-o"></i>
+  liblissz3@gmail.com
+  </a>
+  <a href="tel:654598457">
+  <i class="fa fa-headphones"></i>
+  654598457
+  </a>
+  </section>
+  <section class="flex_content padding_1x">
+  <h3> keep </h3>
+  <a href="../feedback.html">feedback</a>
+  <a href="../AIVILDASH.html">Our AI</a>
+  <a href="../csharp.html">learn c#</a>
+ 
+  <a href="../Basic concepts in css.html">learn css</a>
+<a href="../html-1.html">learn html</a>
+  </section>
+  <section class="flex_content padding_1x">
+  <h3>Other Links</h3>
+  <a href="../c\c.html">learn c</a>
+  <a href="../DOC-20250105-WA0008.html">learn python</a>
+  <a href="../DOC-20250105-WA0007.html">learn javascript</a>
+  <a href="../java.html">learn java</a>
+  <a href="../projected-page.html">buy webpages</a>
+  <a href="../feedback.html">send feedback</a>
+  <a href="../c ++/C++Lesson1.html">learn c++</a>
+  </section>
+  <section class="flex_content padding_1x">
+  <h3>vildash network</h3>
+  <p>we are here to see you prosper</p>
+  <!--<fieldset class="fixed_flex">
+  <input type="email" name="newsletter" placeholder="Your Email Address">
+  <button class="btn btn_2">Subscribe</button>
+  </fieldset>-->
+  </section>
+  </div>
+  <div class="flex">
+  <section class="flex-content padding_1x">
+  <p>Copyright ©2024 All rights reserved || VILDASH NETWORK</p>
+  </section>
+  <section class="flex-content padding_1x">
+  <a href="https://web.facebook.com/profile.php?id=61552332181172&sk=followers"><i class="fa fa-facebook"></i></a>
+  <a href="https://www.instagram.com/holy_conceptsstudio/"><i class="fa fa-instagram"></i></a>
+  <a href="https://www.youtube.com/@holyconcepts"><i class="fa fa-youtube"></i></i></a> 
+   
+  </section>
+  </div>
+  </footer>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+   <link rel="stylesheet" href="../footer.css">
+</body>
+
+</html>
