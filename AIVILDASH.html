@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VILDASH AI</title>
+    <link rel="icon" href="he.webp">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 97vh;
+            margin: 0;
+            background: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9),rgba(0,0,0,0.9)), url(he.webp);
+        }
+
+        #chat-container {
+            width: 500px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            background: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9),rgba(0,0,0,0.9)), url(he.webp);
+        }
+
+        #messages {
+            height: 300px;
+            overflow-y: auto;
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        #userMessage {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .bot-message,
+        .user-message {
+            margin: 10px 0;
+            padding: 8px;
+            border-radius:
+                8px;
+            max-width: 80%;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .bot-message {
+            background-color: #e1f5fe;
+            text-align: left;
+            font-weight: 60px;
+        }
+
+        .user-message {
+            background-color: #d1c4e9;
+            text-align: right;
+            margin-left:
+                auto;
+                font-weight: 60px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="chat-container"><style>
+        span{
+            color: rgb(13, 35, 230);
+            font-weight: 400;
+            font-size: 1.2em;
+            font-family: fantasy;
+        }
+        button{
+            padding: 6px;
+            cursor: pointer;
+            background-color: #d1c4e9;
+            color: #333;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        button:hover{
+            background-color: #333;
+            color: #d1c4e9;
+        }
+    </style>
+    <script>
+        const text = `ABOUT VILDASH IT EXPERTS
+
+vildash IT experts are group of dynamic IT soldiers that are out for creating softwares that aims at solving complex problem in the society. We are a group of seven with experts in mobile development, desktop development, web development, ethical hacking and data analysis. we came up with a new initaitive to create a website like thsi to help people code with languages like (you can click on it to take the course if you want):
+hypertext mark up language (html)
+caseceding stylesheet (css)
+javascript language
+java language
+python language
+c language
+c# language
+c++ language
+
+Or you can use our code editors to code
+html css and javascript IDE
+java IDE
+python IDE
+c IDE
+c# IDE
+c++ IDE`;
+function voice(){
+    const speech = new SpeechSynthesisUtterance(text);
+    speech.rate = 1;
+    speech.volume = 1;
+    speechSynthesis.speak(speech);
+}
+    </script>
+        <div id="messages" style="font-family: sans-serif; "></div> 
+        <input type="text" id="userMessage" ondblclick="sendMessage()" placeholder="Type your questions here..."onkeydown="if(event.key === 'Enter') sendMessage()">
+         <button onclick="sendMessage()">Send</button>
+    </div>
+
+
+
+
+
+    <script>
+const text1 = `you can use our code editors to code by clicking bellow
+html css and javascript IDE
+java IDE
+python IDE
+c IDE
+c# IDE
+c++ IDE`;
+function voice1(){
+    const speech1 = new SpeechSynthesisUtterance(text1);
+    speech1.rate = 1;
+    speech1.volume=1;
+    window.speechSynthesis.speak(speech1);
+}
+function stop1(){
+    window.speechSynthesis.cancel();
+}
+    </script>
+    <script>
+        const text3 = ` Hi there!
+Welcome to VILDASH IT EXPERTS AI.
+
+Questions you can ask:
+what is vildash all about?
+how can i access the code editors
+how are the courses been treated?
+how regularly will the website be updated?
+how can i get a physical class?
+what is the secrete of learning programing faster?
+what is programing?
+what is c programing ?
+what is c# program?
+what is c++ programming
+what is python programing?
+what is java programing?
+what is javascript programing?
+is javascript same as java?
+what is css?
+what is html`;
+function dance(){
+    const speech = new SpeechSynthesisUtterance(text3);
+    speech.rate =1;
+    speech.volume =1;
+    window.speechSynthesis.speak(speech);
+}
+    </script>
+    <script>
+        const text4 = `how our courses are been thought
+
+we consider that everyone is still a learner we teach the courses from the basics right from when the programing langauge originated we teach learners with sample codes we explain the codes and you can copy the codes and try using it on our IDEs in our website no
+ need for and external IDEs. we got you covered. After each course you will either take a quize or move to the next chapter`;
+ function voice3(){
+    const speech = new SpeechSynthesisUtterance(text4);
+    speech.lang = "US-en";
+  speech.rate =0.7;
+  speech.volume =1;
+  window.speechSynthesis.speak(speech); 
+}
+    </script>
+    <script>
+        const text7 = `HOW OUR WEBSITE WILL BE UPDATED
+we will be adding, new features to our website every after 10days, we will send you notifications 
+to your email for this. and you can give your feedback on how you want the website to look like by clicking here`;
+function voice4(){
+    const speech = new SpeechSynthesisUtterance(text7);
+    speech.lang = "US-en";
+  speech.rate =0.7;
+  speech.volume =1;
+  window.speechSynthesis.speak(speech); 
+}
+    </script>
+    <script>
+        const text10 = ` secrete of learning programing faster
+you will need be very attentive. first you need to be partionate about programing.
+ donot try to cram the synthax instead understand the synthax. always have a book for each programming 
+ language you want to learn. do not skip the basic always start from there basic and we've got you with that.`;
+
+ function voice5(){
+const speech = new SpeechSynthesisUtterance(text10);
+speech.lang = "US-en";
+speech.rate = 1;
+speech.volume =1;
+window.speechSynthesis.speak(speech);
+ }
+    </script>
+    <script>
+        const text11= ` WHAT IS PROGRAMING
+programing is the step by step process of solving a specific problem using a computer.
+ and yh now you see it's all about problem solving that's what you signed up for. programers often 
+spend thie times solving problems or creating a problem for them to solve.`;
+
+ function voice6(){
+const speech = new SpeechSynthesisUtterance(text11);
+speech.lang = "US-en";
+speech.rate = 1;
+speech.volume =1;
+window.speechSynthesis.speak(speech);
+ }
+    </script>
+    <script>
+         const responses = [{
+            keywords: ["hello", "hi" ,"hey","morning","afternoon","evening","day"], response: `Hi there!<br>Welcome to VILDASH IT  EXPERTS AI. <br><br> <b>Questions you can ask:</b> <ul> <li>what is vildash all about?  </li>  
+                  <li>how can i access the code editors </li>  <li>how 
+                    are the courses been treated? </li> <li>how regularly 
+                        will the website be updated? </li> <li>how can i get
+                             a physical class? </li> <li>what is the secrete 
+                                of learning programing faster?</li>   <li>what
+                                     is programing?</li> <li>what is c programing ? 
+
+                                     </li> <li>what is c# program?</li> <li>what is
+                                         c++ programming</li> <li>what is python programing?
+
+                                         </li> <li>what is java programing?</li> <li>what is
+                                             javascript programing? </li> <li>is javascript
+                                                 same as java? </li> <li>what is css? </li>
+                                                  <li>what is html </li></ul> 
+                                                  <button onclick ="dance()"
+                                                   style= "padding: 5px !important;">🔊 
+                read on voice </button>
+                <button onclick ="stop1()">🖐️ stop playing </button>` }, 
+            { 
+    keywords: ["what is vildash all about","vildash","about","what is vildash"], response: `<span>ABOUT 
+        VILDASH IT EXPERTS </span> <br> <br> <b>vildash IT experts are group of dynamic
+             IT soldiers that are out for creating softwares that aims at solving 
+             complex problem in the society. We are a group of seven with 
+             experts in mobile development, desktop development, web development, 
+             ethical hacking and data analysis. we came up with a new initaitive to 
+             create a  website like this to help people code  with languages like
+              (you can click on it to take the course if you want): </b>
+             <ul> <li> <a href="html-1.html">hypertext mark up language (html) </a></li>
+         <li><a href="CSS introduction .html"> caseceding stylesheet (css) </a></li>
+             <li><a href="DOC-20250105-WA0007.html"> javascript language</a></li>
+              <li><a href= "java.html"> java language</a></li>
+              <li> <a href="DOC-20250105-WA0008.html"> python language</a></li>
+              <li> c language </li>
+              <li><a href ="csharp.html"> c# language</a></li>
+               <li> c++ language</li> <br> 
+               <b>Or you can use our code editors to code </b>
+             <li><a href="HTML ide.html">html css and javascript IDE</a></li>
+              <li><a href= "javafinal.html"> java IDE</a></li>
+              <li> <a href="pythonfinaal.html"> python IDE</a></li>
+              <li><a href="finalcide.html"> c IDE </a></li>
+              <li><a href ="finalcSHARP.html"> c# IDE</a></li>
+               <li><a href ="finalcpp.html"> c++ IDE</a></li> <br> <br>
+               <button onclick ="voice()" style= "padding: 5px !important;">🔊 
+                read on voice </button>
+                <button onclick ="stop1()">🖐️ stop playing </button> ` },
+    { 
+        keywords: ["how can i access the code editors", "editor", "code here", "code", "editors"], 
+        response: `<b> you can use our code editors to code  by clicking bellow</b>
+             <li><a href="HTML ide.html">html css and javascript IDE</a></li>
+              <li><a href= "javafinal.html"> java IDE</a></li>
+              <li> <a href="pythonfinaal.html"> python IDE</a></li>
+              <li><a href="finalcide.html"> c IDE </a></li>
+              <li><a href ="finalcSHARP.html"> c# IDE</a></li>
+               <li><a href ="finalcpp.html"> c++ IDE</a></li> 
+                <button onclick ="voice1()">🔊 read on voice </button> 
+                 <button onclick ="stop1()">🖐️ stop playing </button> `
+        },
+        { 
+            keywords: ["how are the courses been treated", "course", "thought", "teaching"], 
+            response: 
+                `<span>how our courses are been thought </span> <br><br>
+            <b> we consider that everyone is still a learner we teach the courses 
+                from the basics right from when the programing langauge originated
+                we teach learners with sample codes  we explain the codes and you can copy
+                the codes and try using it on our IDEs in our website no need for and external
+                IDEs. we got you covered. After each course you will either take a quize or 
+                move to the next chapter.<br>
+                 <button onclick ="voice3()">🔊 read on voice </button> 
+                 <button onclick ="stop1()">🖐️ stop playing </button>
+            </b>`
+            }, 
+    { 
+        keywords: ["how regularly will the website be updated", "update", "latest"], response: 
+    `<span> HOW OUR WEBSITE WILL BE UPDATED </span> <br> <br>
+    we will be adding new features to our website every after  10days
+    we will send you notifications to your email for this. and you can give your
+    feedback on how you want the website to look like by <a href = "feedback.html"> clicking here</a> <br><br>
+       <button onclick ="voice4()">🔊 read on voice </button> 
+                 <button onclick ="stop1()">🖐️ stop playing </button>`
+        },
+        {
+        keywords: ["what is the secrete of learning programing faster", "secrete", "faster"],response: 
+       `<span> secrete of learning programing faster </span> <br> <br>
+       you will need be very attentive. first you need to be partionate about programing. donot try to cram the synthax instead understand the synthax.
+       always have a book for each programming language you want to learn. do not skip the basic always start from there basic and we've got you with that.<br>
+         <button onclick ="voice5()">🔊 read on voice </button> 
+                 <button onclick ="stop1()">🖐️ stop playing </button> `
+            },
+            {
+            keywords: ["what is programing", "programing", "program"], response: 
+            `<span>WHAT IS PROGRAMING</span><br>
+            programing is the step by step process of solving a specific problem using 
+            a computer. and yh now you see it's all about problem solving
+            that's what you signed up for. programers often spend thie times solving problems or creating
+            a problem for them to solve.<br>
+             <button onclick ="voice6()">🔊 read on voice </button> 
+                 <button onclick ="stop1()">🖐️ stop playing </button> `
+                },
+                {
+                    keywords: ["what is c programing", "c"], response: 
+                    `<span>what is c programing </span><br>
+                    c is a middle level language developed by dennis ritchie in 1976: to learn ore about c visit 
+                    <a href="">learn c(visit the home page to navigate)</a>`
+                        },
+                        {
+                            keywords: ["what is c# programing", "c#"], response: 
+                            `<span>what is c# programing </span><br>
+                          it is a morden object oriented  programing language developed by Microsoft as a part of it's .NET plartforms.  
+                            <a href="csharp.html">learn more about c#</a>`
+                                },
+                                {
+                                    keywords: ["what is python programing", "python"], response: 
+                                    `<span>what is python programing</span><br>
+                                python is a high level general purpose language known for it's simplicity
+                                it was created by Guido Van Rossum in 1991.
+                                    <a href="DOC-20250105-WA0008.html">learn python in details</a>`
+                                        },
+                                        {
+                                        keywords: ["what is java programing", "java"], response: 
+                                        `<span>what is java programing</span><br>
+                                   java is a widely used high level, object oriented programing language developed by Sun Microsystem
+                                        <a href="java.html">learn java in details</a>`
+                                            },
+                                            {
+                                            keywords: ["what is javascript programing", "javascript"], response: 
+                                            `<span>what is javascript programing</span><br>
+                                        javascript is a high level , dynamic language used for creating and interactive websites
+                                            <a href="DOC-20250105-WA0007.html">learn javascript in details</a>`
+                                                },
+                                                {
+                                                keywords: ["what is html", "html"], response: 
+                                                `<span>what is css</span><br>
+                                            html stands for HYPERTEXT MARKUP LANGUAGE and it is used for creating web pages
+                                                <a href="html-1.html">learn html in details</a>`
+                                                    },
+                                                    {
+                                                        keywords: ["what is css", "css"], response: 
+                                                        `<span>what is css</span><br>
+                                                     css starnds for CASCEDING STYLESHEET used for styling webpages
+                                                        <a href="CSS introduction .html">learn css in details</a>`
+                                                            },
+        {
+            keywords: ["thank you", "thanks", "appreciate"], response:
+                "yeah! take care!"
+        }];
+        function findResponse(userInput) {
+            const inputWords =
+                userInput.toLowerCase().split(/\s+/); 
+                 // Using .some() to check if any keyword  matches the user input
+                 const foundResponse = responses.find(entry =>
+                    entry.keywords.some(keyword => inputWords.includes(keyword)
+                    ));
+            return foundResponse ? foundResponse.response : "I'm sorry, I don't quite understand your question. <br><br> <b>Questions you can ask:</b> <ul> <li>what is vildash all about?  </li>    <li>how can i access the code editors </li>  <li>how are the courses been treated? </li> <li>how regularly will the website be updated? </li> <li>how can i get a physical class? </li> <li>what is the secrete of learning programing faster?</li>   <li>what is programing?</li> <li>what is c programing ? </li> <li>what is c# program?</li> <li>what is c++ programming</li> <li>what is python programing?</li> <li>what is java programing?</li> <li>what is javascript programing? </li> <li>what is css? </li> <li>what is html </li></ul>"; 
+        }
+     function sendMessage() {
+                const userInput = document.getElementById('userMessage').value.trim(); 
+                    const messagesDiv = document.getElementById('messages');
+                if (userInput === "") 
+                return;
+                const userMessage = document.createElement('div'); 
+                userMessage.className ='user-message';
+                 userMessage.innerHTML = "You: " + userInput;
+                messagesDiv.appendChild(userMessage);
+                const botMessage = document.createElement('div');
+                 botMessage.className ='bot-message';
+                  const response = findResponse(userInput); 
+                 botMessage.innerHTML = "Bot: " + response; messagesDiv.appendChild(botMessage);
+                document.getElementById('userMessage').value = ''; messagesDiv.scrollTop =
+                    messagesDiv.scrollHeight;
+            } </script>
+</body>
+
+</html>

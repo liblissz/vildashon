@@ -1,0 +1,1588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LEARN C SHARP chapter 4 (c#)</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="./script.js" defer></script>
+  <script src="asset.js"></script>
+  <link rel="icon" href="file-KXYNjXBEo2D9qPtH9iD6VQ (5).webp">
+</head>
+
+<body>
+  <div class="container">
+    <div class="overlay"></div>
+    <div class="overlay2"></div>
+    <!-- Side nav -->
+    <div class="sideNav">
+      <nav>
+        <div class="navHead">
+          <div class="profile">
+            <img style="margin: 10px !important ; border-radius: 5px !important;" src="file-KXYNjXBEo2D9qPtH9iD6VQ (5).webp" alt="profile" />
+
+          </div>
+          <div class="userName">
+            <p></p>
+          </div>
+
+        </div>
+        <div class="navBody">
+          <ul id="links">
+
+<a href="feedback.html">
+            <li>
+
+              <div class="icon">
+                <ion-icon name="list-outline"></ion-icon>
+              </div>
+              <p>send feedback</p>
+            </li>
+            </a>
+            <style>
+              a {
+                text-decoration: none;
+                color: black;
+              }
+            </style>
+            <a href="csharp.html">
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn c#</p>
+              </li>
+            </a>
+            <a href="c ++\C++Lesson1.html">
+            <li>
+              <div class="icon">
+                <ion-icon name="log-out-outline"></ion-icon>
+              </div>
+              <p>learn c++ </p>
+            </li>
+          </a>
+            <li>
+              
+           
+            <a href="homepage.html">
+            <li>
+              <div class="icon">
+                <ion-icon name="log-out-outline"></ion-icon>
+              </div>
+              <p>home page</p>
+            </li>
+          </a>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- Hero Section -->
+    <div class="topNav">
+      <nav>
+        <div class="topLeft">
+          <div id="hamburgar" class="hamburgar">
+            <div class="line"></div>
+          </div>
+          <p>LEARN C# chapter FOUR</p>
+        </div>
+        <div id="demo" style="opacity: 0.4; font-size: 1rem;
+          font-weight: bold; color:#fff;"><input style="opacity: none !important; padding:10px;" type="text" placeholder="
+          search our pages........" name="search" id="searchinput" onkeyup="search()"> 
+          
+          <div id="results" style="padding: 20px;"></div></div>
+
+        <!--<div class="ctaBtn">
+            <button class="ctaModal">Sign In</button>
+          </div>-->
+      </nav>
+    </div>
+
+    <section class="heroSection">
+      <div class="root typing-slash" style="--x-percentage:100%;">
+        <div class="inner 
+          typing-slash"> <span class="hidden font-slash-animation typing-slash">Offload
+            complexity</span> <span class="dots font-slash-animation 
+          typing-slash">••••••••••••••••••</span>
+          <div class="title typing-slash">
+            <h1 class="font-slash-animation typingContent typing-slash">attentive</h1>
+          </div>
+          <div class="slash typing-slash"></div>
+        </div>
+      </div>
+
+      <style>
+        .root.typing-slash {
+          width: 100%;
+          max-width: 95vw;
+          margin: 0 auto;
+          padding:
+            24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .inner.typing-slash {
+          position: relative;
+          padding: 16px 0;
+        }
+
+        .font-slash-animation.typing-slash {
+          font-size: max(24px, min(6vw, 88px));
+          font-weight: 700;
+          line-height: 1.05;
+          letter-spacing: -0.022em;
+        }
+
+        .hidden.typing-slash {
+          opacity: 0;
+          padding: 0 8px;
+        }
+
+        .dots.typing-slash {
+          color: hsl(226deg 57% 18% / 0.5);
+          -webkit-clip-path:
+            polygon(var(--x-percentage) 0, 100% 0, 100% 120%, var(--x-percentage) 120%);
+          clip-path: polygon(var(--x-percentage) 0, 100% 0, 100% 120%,
+              var(--x-percentage) 120%);
+        }
+
+        .title.typing-slash {
+          color: hsl(226deg 57% 18%);
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: linear-gradient(to right, hsl(222deg 100% 58% / 0), hsl(222deg 100% 58% / 0.15));
+          -webkit-clip-path: polygon(0 0, var(--x-percentage) 0, var(--x-percentage) 120%, 0 120%);
+          clip-path: polygon(0 0, var(--x-percentage) 0,
+              var(--x-percentage) 120%, 0 120%);
+        }
+
+        .title.typing-slash,
+        .dots.typing-slash {
+          width: 100%;
+          text-align: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        .font-slash-animation.typing-slash {
+          font-size: max(24px, min(6vw, 88px));
+          font-weight: 700;
+          line-height: 1.05;
+          letter-spacing: -0.022em;
+        }
+
+        .slash.typing-slash {
+          position: absolute;
+          left: var(--x-percentage);
+          transform: skew(-5deg) translate(-10px) translateY(-50%);
+          box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        @media (min-width: 768px){}
+         .slash.typing-slash {
+          border-radius: 0.25rem;
+        }
+
+        .slash.typing-slash {
+          width: max(8px, min(1vw, 20px));
+          height: 100%;
+          top: 50%;
+          background-color: #578f40;
+          border-radius: 0.125rem;
+        }
+      </style>
+
+      <script>
+        const strings = ["chapter", "four", "on c#", "be", "attentive"];
+           const fontSlash = document.querySelector(".typingContent");
+        const slash = document.querySelector(".root"); let xPercentage = 0;
+        function slashAnimation() {
+          setTimeout(() => {
+            let interval = setInterval(() => {
+                xPercentage += 2; slash.style.setProperty("--x-percentage", xPercentage +
+                  "%");
+              if (xPercentage === 100) {
+                clearInterval(interval);
+                // Wait for 2 seconds before decreasing 
+                setTimeout(() => { interval = 
+                setInterval(() => {
+                  xPercentage -= 2; slash.style.setProperty("--x-percentage",
+                    xPercentage + "%");
+                  if (xPercentage === 0) {
+                    clearInterval(interval); 
+                    const index = strings.indexOf(fontSlash.innerText); // find index of prevoius H1 content 
+                    const nextIndex = index + 1 === strings.length ? 0 : index + 1;
+                    fontSlash.innerText = strings[nextIndex];
+                     // change with next index of strings array // Start over after reaching 0
+                      slashAnimation(); } }, 10); }, 2000); } }, 
+                    10);
+              }, 150);
+          }
+          slashAnimation();
+      
+
+        
+
+      </script>
+      <div class="textCont">
+
+
+        <h1></h1>
+        <p>
+
+        </p>
+        <div class="ctaBtn">
+          <!--<button class="ctaModal">Sign In</button>-->
+        </div>
+      </div>
+    </section>
+    <!--<main>
+        <div class="textContainer">
+
+        </div>
+      </main>-->
+  </div>
+
+
+
+
+  <style>
+    h1 {
+      margin-bottom: 20px;
+      font-size: 3em;
+      color: #444;
+    }
+
+    .typing-container {
+      font-size: 1.2em;
+      border-right: 2px solid #333;
+      overflow: hidden;
+      animation: blink 0.7s steps(2, start) infinite;
+      max-width: 600px;
+      word-wrap: break-word;
+      white-space: normal;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+    /* Keyframe for Cursor Blink */
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+    }
+.demo{
+  font-size: 1.5em;
+}
+.demo::before{
+  content: "👉";
+}
+    
+  </style>
+
+
+
+
+  <div class="container">
+    <h1 style="font-weight: bolder;"> topic#7: things you need to get started</h1>
+    <br>
+    <br>
+    <p class="demo"><b>Introduction to comments:</b></p>
+<br>
+
+<p class="demo">in Programming, a comment is a programmer-readable explanaition or annotation in the 
+  source editor. comments are ignored by the compiler. in c# there are two ways of commenting:
+</p>
+<br>
+<li style="font-size: 1.4em; font-weight:0.2em;">single line(//comment)</li>
+<br>
+<li style="font-size: 1.4em; font-weight:0.2em;">multi line (/*comment*/)</li>
+
+<br>
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Sample Code</h3>
+      <pre id="code-sample" class="code1">
+        <code>
+Using System.IO;
+Using System;
+class program{
+  static void Main(){
+    // this is a single line comment
+    /* this is a multi line comment */
+  }
+}
+</code>
+
+    </pre>
+
+    <button onclick="copy1()">copy code</button>
+    <script>
+      function copy1() {
+        // Get the raw text from the <pre> tag and clean it up
+        let code = document.querySelector('.code1').textContent;
+  
+        // Normalize whitespace: remove leading/trailing spaces and excessive indentation
+        code = code.split('\n')
+          .map(line => line.trim()) // Remove spaces from each line
+          .filter(line => line) // Remove empty lines
+          .join('\n'); // Join the cleaned lines back with line breaks
+  
+        // Copy the cleaned code to the clipboard
+        navigator.clipboard.writeText(code).then(() => {
+          alert("Code copied to clipboard!");
+        }).catch(err => {
+          alert("Failed to copy code: " + err);
+        });
+        
+      }
+    </script>
+  
+    </div>
+    <div class="col-md-6 " >
+      <h3>Output</h3>
+      <div id="output">
+        <h1 style="color: #fff;"></h1>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--<p class="demo">the above code cantains both single and multi line comment 
+  and it shall be ignored by the compiler
+</p>
+<br>
+<br>
+<p class="demo"> <b>INTRODUCTION TO CONSTANTS</b></p>
+<br>
+<p class="demo">A constant is named memory location where data is stored. constants cant have thesame name 
+  . A constant's value cannot be changed during the execution of the program. A constant name should
+  start with and upper case letter.
+</p>
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Sample Code</h3>
+      <pre id="code-sample" class="code2">
+        <code>
+Using System.IO;
+Using System;
+class Program{
+  static void Main(string[] args){
+    const int Con1 = 12;
+    const int Con2 = 14;
+    Console.WriteLine("the first number is = " + Con1);
+    Console.WriteLine("the second number is = " + Con2);
+  }
+}
+        </code>
+    </pre>
+
+    
+    <button onclick="copy2()">copy code</button>
+    <script>
+      function copy2() {
+        // Get the raw text from the <pre> tag and clean it up
+        let code = document.querySelector('.code2').textContent;
+  
+        // Normalize whitespace: remove leading/trailing spaces and excessive indentation
+        code = code.split('\n')
+          .map(line => line.trim()) // Remove spaces from each line
+          .filter(line => line) // Remove empty lines
+          .join('\n'); // Join the cleaned lines back with line breaks
+  
+        // Copy the cleaned code to the clipboard
+        navigator.clipboard.writeText(code).then(() => {
+          alert("Code copied to clipboard!");
+        }).catch(err => {
+          alert("Failed to copy code: " + err);
+        });
+        
+      }
+    </script>
+    </div>
+    <style>
+    h4{
+      font-size: 2em;
+    }
+    @media screen and (max-width: 652px) {
+      h4{
+        font-size: 1em;
+      }
+    }
+    </style>
+    <div class="col-md-6 " >
+      <h3>Output</h3>
+      <div id="output">
+        <h4 style="color: #fff;">the first number is = 12</h4>
+        <h4 style="color: #fff;">the second number is = 14</h4>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<br>
+<p class="demo">in order to store decimals in c#, we need to choose the right variable. we will use Double in This
+  case
+</p>
+<br>-->
+<!--<div class="container">
+
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Sample Code</h3>
+      <pre id="code-sample" class="code3">
+Using System;
+namespace   CodeSample{
+  class Program {
+    static void Main(string[] args){
+      double A;
+    }
+  }
+}
+    </pre>
+
+    <button onclick="copy3()">copy code</button>
+    <script>
+      function copy3() {
+        // Get the raw text from the <pre> tag and clean it up
+        let code = document.querySelector('.code3').textContent;
+  
+        // Normalize whitespace: remove leading/trailing spaces and excessive indentation
+        code = code.split('\n')
+          .map(line => line.trim()) // Remove spaces from each line
+          .filter(line => line) // Remove empty lines
+          .join('\n'); // Join the cleaned lines back with line breaks
+  
+        // Copy the cleaned code to the clipboard
+        navigator.clipboard.writeText(code).then(() => {
+          alert("Code copied to clipboard!");
+        }).catch(err => {
+          alert("Failed to copy code: " + err);
+        });
+        
+      }
+    </script>
+    </div>
+    <div class="col-md-6 " >
+      <h3>Output</h3>
+      <div id="output">
+        <h1 style="color: #fff;"></h1>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+<p class="demo">double is the type of variable used for decimals
+</p>
+<br>
+<p class="demo">let's see a couple more examples</p>
+<br>
+<p class="demo">examples</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Sample Code</h3>
+      <pre id="code-sample" class="code4">
+Using System;
+namespace mynamespace{
+  class Program{
+    static void Main(string[], args){
+      double A = 12.098089;
+      double B = -10.080;
+      double C = 0.0000;
+      double D;
+      D = 10.99090;
+    }
+  }
+}
+    </pre>
+
+    <button onclick="copy4()">copy code</button>
+    <script>
+      function copy4() {
+        // Get the raw text from the <pre> tag and clean it up
+        let code = document.querySelector('.code4').textContent;
+  
+        // Normalize whitespace: remove leading/trailing spaces and excessive indentation
+        code = code.split('\n')
+          .map(line => line.trim()) // Remove spaces from each line
+          .filter(line => line) // Remove empty lines
+          .join('\n'); // Join the cleaned lines back with line breaks
+  
+        // Copy the cleaned code to the clipboard
+        navigator.clipboard.writeText(code).then(() => {
+          alert("Code copied to clipboard!");
+        }).catch(err => {
+          alert("Failed to copy code: " + err);
+        });
+        
+      }
+    </script>
+    
+    </div>
+    <div class="col-md-6 " >
+      <h3>Output</h3>
+      <div id="output">
+        <h1 style="color: #fff;"></h1>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>-->
+
+
+<!--<button onclick="topic1()">🔊read topic five on voice</button>
+<button onclick="stop()">🖐️ stop playing</button>-->
+<br>
+<br>
+
+<script>
+ 
+  const before =`topic#7: things you need to get started
+
+
+Introduction to comments:
+
+
+in Programming, a comment is a programmer-readable explanaition or annotation in the source editor. comments are ignored by the compiler. in c# there are two ways of commenting:
+
+
+single line(//comment)
+
+multi line (/*comment*/)
+
+Sample Code
+        
+Using System.IO;
+Using System;
+class program{
+  static void Main(){
+    // this is a single line comment
+    /* this is a multi line comment */
+  }
+}
+
+
+    
+copy code
+Output
+
+the above code cantains both single and multi line comment and it shall be ignored by the compiler
+
+
+
+ INTRODUCTION TO CONSTANTS
+
+
+A constant is named memory location where data is stored. constants cant have thesame name . A constant's value cannot be changed during the execution of the program. A constant name should start with and upper case letter.
+
+Sample Code
+        
+Using System.IO;
+Using System;
+class Program{
+  static void Main(string[] args){
+    const int Con1 = 12;
+    const int Con2 = 14;
+    Console.WriteLine("the first number is = " + Con1);
+    Console.WriteLine("the second number is = " + Con2);
+  }
+}
+        
+     `;
+  function topic1(){
+    const speech = new SpeechSynthesisUtterance(before);
+    speech.lang = "en-US";
+    speech.rate = 1;
+    speech.volume = 1;
+    window.speechSynthesis.speak(speech);
+
+  }
+
+    function stop(){
+      window.speechSynthesis.cancel();
+    }
+  
+</script>
+
+
+<br>
+<h1 style="font-weight: bolder;">topic#9: Introduction to literals </h1>
+<br>
+<p class="demo">
+<b>this is a notation for representing a fixed value </b>.
+in sinmple words , it is a value  written as it is meant to be intepreted.
+</p>
+<p class="demo">variable represents different values and a constant represents thesame value. A literal
+is the value itself.</p>
+<br>
+<p class="demo"><b>Example:</b> company = "onepercent"</p>
+<br>
+<p class="demo">the value onepercent is a literal</p>
+<p class="demo"><b>INTRODUCTION TO KEYWORDS:</b></p>
+<br>
+<p class="demo">leywords are predefined, reserved words used in Programming that have special meanings
+  to the compiler
+</p>
+<br>
+<p class="demo">keywords are part of the syntax and they cannot be used as identifiers.</p>
+<br>
+<p class="demo">here are the list of keywords in c#: break, char, checked, continue, double,
+  explicit, do, event, finally, foreach, in operator, private, ref, whort, struct, true, ulong, while.
+</p>
+<br>
+<p class="demo"><b>TOKENS</b></p>
+<br>
+<p class="demo">a token is the smallest unit in a c# program which are meaningful to the compiler.</p>
+<br>
+<p class="demo">tokens are divided into 6 different types: keywords(example: if, int), identifiers(int quantity, price) etc</p>
+<br>
+<p class="demo"><b>Introduction to operators</b></p>
+<br>
+<p class="demo">An operator is a symbol that operates on a value or a variable. 
+  for example. <#>+ is and operator to add numbers.
+</p>
+<br>
+<p class="demo"><b>the types of operators that exist are: arithmetic, logic, increment/decrement, 
+  comparism, logical, assignment and bitwise operators.
+</b></p>
+<br>
+<p class="demo"><b>INTRODUCTION TO ACCESS SPECIFIES.</b></p>
+<br>
+<p class="demo">acces specifiers are used for determining or setting  the boundry for the availiability
+  of class members outside its class.
+</p>
+<br>
+<p class="demo">access specifies are important to impliment  data hiding</p>
+<br>
+<p class="demo">it is an important element of OOPS concepts</p>
+<br>
+<p class="demo"><b>PUBLIC:</b> all the class members declared under public will be availiable to everyone</p>
+<br>
+<p class="demo"><b>PRIVATE:</b> the class members declared as private can be accessed by the functions inside\
+the class </p>
+<br>
+<p class="demo"><b>PROTECTED:</b> all the members declared as protected are inaccessible outside 
+the class but can accessed by subclass of the class.</p>
+<br>
+<p class="demo"><b>INTERNAL:</b> the class members declared as internal are accessible by other functions and ]
+objects lying withing the assembly. assembly is the produced .dll or .exe from .NET Code</p>
+<br>
+<br>
+<h1>topic#10: input and output</h1>
+<br>
+<p class="demo"><b>Console.WriteLine()</b></p>
+<br>
+<p class="demo">the Console.Writeline() is a method used to send formated output to the 
+  screen.
+</p>
+<br>
+<p class="demo">Any text within " " is printed as it is.</p>
+<br>
+<p class="demo">after, is where you specify the identifier who's value you would like to print.
+  you can specify multiple values and it will be printed as in the index specified inside {}. the data 
+  would then be printed in the place of the {}.
+</p>
+<br>
+<p class="demo"><b>Console.ReadLine()</b></p>
+<br>
+<p class="demo">the Console.ReadLine() is a method to accept input from the user. </p>
+<br>
+<p class="demo">Console.ReadLine() returns a value entered by the user and that value is then stored
+  into a variable for later.
+</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Sample Code</h3>
+      <pre class="for" id="code-sample">
+<code>
+Using System;
+Using System.IO;
+namespace Sample{
+  class Test{
+    static void Main(string[] args){
+      int x = 12;
+      int y;
+      Console.Wriline("hello world");
+      Console.WriteLine("value of x is {0}", x);
+      Console.WriteLine("Enter a value");
+      y = Console.Readline();
+      Console.WriteLine("value of y is {0}", y);
+    }
+  }
+}
+</code>
+    </pre>
+    <button onclick="topic1()">🔊read topic five on voice</button>
+    <button onclick="stop()">🖐️ stop playing</button>
+    <br>
+    <br>
+    
+    <script>
+     
+      const after =`topic#7: things you need to get started
+
+
+Introduction to comments:
+
+
+in Programming, a comment is a programmer-readable explanaition or annotation in the source editor. comments are ignored by the compiler. in c# there are two ways of commenting:
+
+
+single line(//comment)
+
+multi line (/*comment*/)
+
+Sample Code
+        
+Using System.IO;
+Using System;
+class program{
+  static void Main(){
+    // this is a single line comment
+    /* this is a multi line comment */
+  }
+}
+
+
+    
+copy code
+Output
+
+
+
+topic#9: Introduction to literals
+
+ this is a notation for representing a fixed value . in sinmple words , it is a value written as it is meant to be intepreted.
+
+variable represents different values and a constant represents thesame value. A literal is the value itself.
+
+
+Example: company = "onepercent"
+
+
+the value onepercent is a literal
+
+INTRODUCTION TO KEYWORDS:
+
+
+leywords are predefined, reserved words used in Programming that have special meanings to the compiler
+
+
+keywords are part of the syntax and they cannot be used as identifiers.
+
+
+here are the list of keywords in c#: break, char, checked, continue, double, explicit, do, event, finally, foreach, in operator, private, ref, whort, struct, true, ulong, while.
+
+
+TOKENS
+
+
+a token is the smallest unit in a c# program which are meaningful to the compiler.
+
+
+tokens are divided into 6 different types: keywords(example: if, int), identifiers(int quantity, price) etc
+
+
+Introduction to operators
+
+
+An operator is a symbol that operates on a value or a variable. for example. <#>+ is and operator to add numbers.
+
+
+the types of operators that exist are: arithmetic, logic, increment/decrement, comparism, logical, assignment and bitwise operators.
+
+
+INTRODUCTION TO ACCESS SPECIFIES.
+
+
+acces specifiers are used for determining or setting the boundry for the availiability of class members outside its class.
+
+
+access specifies are important to impliment data hiding
+
+
+it is an important element of OOPS concepts
+
+
+PUBLIC: all the class members declared under public will be availiable to everyone
+
+
+PRIVATE: the class members declared as private can be accessed by the functions inside\ the class
+
+
+PROTECTED: all the members declared as protected are inaccessible outside the class but can accessed by subclass of the class.
+
+
+INTERNAL: the class members declared as internal are accessible by other functions and ] objects lying withing the assembly. assembly is the produced .dll or .exe from .NET Code
+
+
+
+topic#10: input and output
+
+Console.WriteLine()
+
+
+the Console.Writeline() is a method used to send formated output to the screen.
+
+
+Any text within " " is printed as it is.
+
+
+after, is where you specify the identifier who's value you would like to print. you can specify multiple values and it will be printed as in the index specified inside {}. the data would then be printed in the place of the {}.
+
+
+Console.ReadLine()
+
+
+the Console.ReadLine() is a method to accept input from the user.
+
+
+Console.ReadLine() returns a value entered by the user and that value is then stored into a variable for later.
+
+Sample Code
+
+Using System;
+Using System.IO;
+namespace Sample{
+  class Test{
+    static void Main(string[] args){
+      int x = 12;
+      int y;
+      Console.Wriline("hello world");
+      Console.WriteLine("value of x is {0}", x);
+      Console.WriteLine("Enter a value");
+      y = Console.Readline();
+      Console.WriteLine("value of y is {0}", y);
+    }
+  }
+}
+`;
+      function topic1(){
+        const speech = new SpeechSynthesisUtterance(before);
+        speech.lang = "en-US";
+        speech.rate = 1;
+        speech.volume = 1;
+        window.speechSynthesis.speak(speech);
+    
+      }
+    
+        function stop(){
+          window.speechSynthesis.cancel();
+        }
+      
+    </script>
+    
+    
+    <button onclick="copy()">copy code</button>
+<style>
+  pre {
+    background-color: #f4f4f4 in !important;
+    padding: 10px !important;
+    border: 1px solid #ddd !important;
+    border-radius: 5px !important;
+    overflow-x: auto !important;
+    font-family: monospace !important;
+  }
+</style>
+
+    <script>
+      function copy() {
+        // Get the raw text from the <pre> tag and clean it up
+        let code = document.querySelector('.for').textContent;
+  
+        // Normalize whitespace: remove leading/trailing spaces and excessive indentation
+        code = code.split('\n')
+          .map(line => line.trim()) // Remove spaces from each line
+          .filter(line => line) // Remove empty lines
+          .join('\n'); // Join the cleaned lines back with line breaks
+  
+        // Copy the cleaned code to the clipboard
+        navigator.clipboard.writeText(code).then(() => {
+          alert("Code copied to clipboard!");
+        }).catch(err => {
+          alert("Failed to copy code: " + err);
+        });
+        
+      }
+    </script>
+  
+    
+    </div>
+    <style>
+      h4{
+        font-size: 1.3em !important;
+        color: #fff !important;
+      }
+      #output{
+        padding: 40px !important;
+      }
+    </style>
+    <div class="col-md-6 " >
+      <h3>Output</h3>
+      <div id="output">
+        <h4 style="color: #fff;"> output: hello world</h4>
+        <h4 style="color: #fff;"> input:  enter a value</h4>
+        <h4 style="color: #fff;">input:  15</h4>
+        <h4 style="color: #fff;">output: value of is 15</h4>
+
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<h1>topic#11: introduction to control statements </h1>
+<br>
+<p class="demo">a control statement is responsible for deciding which statement to execute (if statement)
+</p>
+<br>
+<p class="demo">it also decides the number of times a statement executes 
+</p>
+<p class="demo"><b>examples:</b>if,  if else, else if ladder, nested if, switch case, while loop, do-while loop,
+for loop, nested loop;</p>
+<br>
+<p class="demo"><b>if:</b> simple if checks if a condition is true. it only executes if the condition is true.</p>
+<br>
+<pre style="color: #fff;">
+  syntax
+  <code>
+ if(condition){
+  code;
+ }
+  </code>
+</pre>
+<br>
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Sample Code</h3>
+      <pre id="code-sample" class="code5">
+Using System;
+Using System.IO;
+namespace Mynamespace{
+  class Program{
+    static void Main(string[] args){
+      int age;
+      int max = 12;
+      Console.WriteLine("enter your age ");
+      age = Console.ReadLine();
+      if (age == max){
+        Console.WriteLine("you can enter"){
+        }
+        if(age>12){
+          Console.WriteLine("you cannot enter not for adults")
+        }
+      }
+    }
+  }
+}
+    </pre>
+
+    <button onclick="copy5()">copy code</button>
+    <script>
+      function copy5() {
+        // Get the raw text from the <pre> tag and clean it up
+        let code = document.querySelector('.code5').textContent;
+  
+        // Normalize whitespace: remove leading/trailing spaces and excessive indentation
+        code = code.split('\n')
+          .map(line => line.trim()) // Remove spaces from each line
+          .filter(line => line) // Remove empty lines
+          .join('\n'); // Join the cleaned lines back with line breaks
+  
+        // Copy the cleaned code to the clipboard
+        navigator.clipboard.writeText(code).then(() => {
+          alert("Code copied to clipboard!");
+        }).catch(err => {
+          alert("Failed to copy code: " + err);
+        });
+        
+      }
+    </script>
+    
+    </div>
+    <div class="col-md-6 " >
+      <h3>Output</h3>
+      <div id="output">
+        <h4 style="color: #553a3a;">output:  enter your age</h4>
+        <h4>input:  13</h4>
+        <h4>output: you cannot enter not for adults</h4>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class="demo"><b>if else statement:</b></p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Sample Code</h3>
+      <pre id="code-sample" class="code5">
+Using System;
+Using System.IO;
+namespace Myname{
+  class Program{
+    static void Main(strings[], args){
+      int y = 5;
+      int x = 3;
+      if(y = x){
+        Console.WriteLine("equal");
+      }else{
+        Console.WriteLine("not equal");
+      }
+    }
+  }
+}
+    </pre>
+
+    <button onclick="copy5()">copy code</button>
+    <script>
+      function copy5() {
+        // Get the raw text from the <pre> tag and clean it up
+        let code = document.querySelector('.code5').textContent;
+  
+        // Normalize whitespace: remove leading/trailing spaces and excessive indentation
+        code = code.split('\n')
+          .map(line => line.trim()) // Remove spaces from each line
+          .filter(line => line) // Remove empty lines
+          .join('\n'); // Join the cleaned lines back with line breaks
+  
+        // Copy the cleaned code to the clipboard
+        navigator.clipboard.writeText(code).then(() => {
+          alert("Code copied to clipboard!");
+        }).catch(err => {
+          alert("Failed to copy code: " + err);
+        });
+        
+      }
+    </script>
+    
+    </div>
+    <div class="col-md-6 " >
+      <h3>Output</h3>
+      <div id="output">
+        <h4 style="color: #fff;">output: not equal</h4>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+ 
+<!--<script>
+  document.addEventListener("keydown", (e) =>{
+if((e.ctrlKey && (e.key === 'c' || e.key === 'u')) || e.key === 'printSreen'){
+  e.preventDefault();
+}
+  });
+</script>
+
+<style>
+body{
+  user-select: none;
+ -webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+
+}
+</style>
+
+
+
+
+
+<!--<div class="container">
+  <h1 class="text-center">Learn HTML: Adding Links</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Sample Code</h3>
+      <pre id="code-sample">
+&lt;a href=&quot;https://www.example.com&quot;&gt;Visit Example&lt;/a&gt;
+    </pre>
+    </div>
+    <div class="col-md-6">
+      <h3>Output</h3>
+      <div id="output">
+        <a href="https://www.example.com">Visit Example</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h1 class="text-center">Learn HTML: Adding Images</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Sample Code</h3>
+      <pre id="code-sample">
+&lt;img src=&quot;image.jpg&quot; alt=&quot;Sample Image&quot; width=&quot;300&quot;&gt;
+    </pre>
+    </div>
+    <div class="col-md-6">
+      <h3>Output</h3>
+      <div id="output">
+        <img src="image.jpg" alt="Sample Image" width="300">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h1 class="text-center">Learn HTML: Creating Tables</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Sample Code</h3>
+      <pre id="code-sample">
+&lt;table border=&quot;1&quot;&gt;
+&lt;tr&gt;
+  &lt;th&gt;Name&lt;/th&gt;
+  &lt;th&gt;Age&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+  &lt;td&gt;Alice&lt;/td&gt;
+  &lt;td&gt;25&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+  &lt;td&gt;Bob&lt;/td&gt;
+  &lt;td&gt;30&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+    </pre>
+    </div>
+    <div class="col-md-6">
+      <h3>Output</h3>
+      <div id="output">
+        <table border="1">
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+          </tr>
+          <tr>
+            <td>Alice</td>
+            <td>25</td>
+          </tr>
+          <tr>
+            <td>Bob</td>
+            <td>30</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h1 class="text-center">Learn HTML: Adding Lists</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Sample Code</h3>
+      <pre id="code-sample">
+&lt;ul&gt;
+&lt;li&gt;HTML&lt;/li&gt;
+&lt;li&gt;CSS&lt;/li&gt;
+&lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+    </pre>
+    </div>
+    <div class="col-md-6">
+      <h3>Output</h3>
+      <div id="output">
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h1 class="text-center">Learn HTML: Adding Forms</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Sample Code</h3>
+      <pre id="code-sample">
+&lt;form action=&quot;/submit&quot;&gt;
+&lt;label for=&quot;name&quot;&gt;Name:&lt;/label&gt;
+&lt;input type=&quot;text&quot; id=&quot;name&quot; name=&quot;name&quot;&gt;
+&lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+    </pre>
+    </div>
+    <div class="col-md-6">
+      <h3>Output</h3>
+      <div id="output">
+        <form action="/submit">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name">
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h1 class="text-center">Learn HTML: Adding Audio</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Sample Code</h3>
+      <pre id="code-sample">
+&lt;audio controls&gt;
+&lt;source src=&quot;audio.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
+Your browser does not support the audio element.
+&lt;/audio&gt;
+    </pre>
+    </div>
+    <div class="col-md-6">
+      <h3>Output</h3>
+      <div id="output">
+        <audio controls>
+          <source src="audio.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<nav>
+  <a class="navbar-brand" href="#">Learn C Programming</a>
+</nav>
+
+<div class="container">
+  <h1 class="text-center">Learn C Programming with Examples</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Sample Code</h3>
+      <pre id="code-sample">
+#include &lt;stdio.h&gt;
+
+int main() {
+  printf("Hello, World!");
+  return 0;
+}
+      </pre>
+    </div>
+    <div class="col-md-6">
+      <h3>Output</h3>
+      <div id="output">Hello World!</div>
+      <h4 class="mt-3">Explanation</h4>
+      <p id="explanation">
+        This program prints "Hello, World!" to the console. The <code>printf()</code> function is used for output, and
+        <code>return 0;</code> signifies successful execution.
+      </p>
+    </div>
+  </div>
+</div>-->
+
+<button onclick="topictwo()">🔊 Read topic #6 Aloud</button>
+<button onclick="stop()">🖐️ stop playing</button>
+<br>
+<br>
+<!--<a href="topic3quiz.html"><button>💯take a quize</button></a>-->
+<a href="javascript:void(0)" onclick="fu()"><button>✍️next chapter</button></a>
+<p id="dem" style="color: #b61e1e; font-size: 1.5em;"></p>
+<a href="csharp.html"><button>🌅back to chapter page</button></a>
+<script>
+function fu(){
+  document.getElementById("dem").innerHTML = `💥 this chapter is coming up soon. stay tune for 
+  our update every after 9 days you will recieve emails for
+   this. please send feedback. click <a href="feedback.html" style="color:blue; font-size: 1.0em;" >feedback</a> `
+}
+</script>
+<br>
+<br>
+<script>
+const topic2 = `topic#11: introduction to control statements
+
+a control statement is responsible for deciding which statement to execute (if statement)
+
+
+it also decides the number of times a statement executes
+
+examples:if, if else, else if ladder, nested if, switch case, while loop, do-while loop, for loop, nested loop;
+
+
+if: simple if checks if a condition is true. it only executes if the condition is true.
+
+
+  syntax
+  
+ if(condition){
+  code;
+ }
+  
+
+Sample Code
+Using System;
+Using System.IO;
+namespace Mynamespace{
+  class Program{
+    static void Main(string[] args){
+      int age;
+      int max = 12;
+      Console.WriteLine("enter your age ");
+      age = Console.ReadLine();
+      if (age == max){
+        Console.WriteLine("you can enter"){
+        }
+        if(age>12){
+          Console.WriteLine("you cannot enter not for adults")
+        }
+      }
+    }
+  }
+}
+    
+copy code
+Output
+output: enter your age
+input: 13
+output: you cannot enter not for adults
+if else statement:
+
+Sample Code
+Using System;
+Using System.IO;
+namespace Myname{
+  class Program{
+    static void Main(strings[], args){
+      int y = 5;
+      int x = 3;
+      if(y = x){
+        Console.WriteLine("equal");
+      }else{
+        Console.WriteLine("not equal");
+      }
+    }
+  }
+}`;
+function topictwo() {
+  const speech = new SpeechSynthesisUtterance(topic2);
+  speech.lang = "en-US"; // Set the language
+  speech.rate = 1;       // Set the speech rate
+  speech.volume = 1;     // Set the volume
+  window.speechSynthesis.speak(speech);
+}
+
+</script>
+ 
+</div>
+
+
+<style>
+
+  @media screen and (max-width: 600px) {
+    #btm{
+ 
+      float: none !important;
+      display: block;
+      margin: 0;
+      position: fixed;
+    }
+  }
+</style>
+
+
+
+  <style>
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .col-md-6 {
+      flex: 1 1 calc(50% - 2rem);
+      box-sizing: border-box;
+color: #ccc;
+
+    }
+
+    pre,
+    #output {
+      padding: 4rem;
+      border-radius: 5px;
+    }
+
+    pre {
+      background-color: #282d32;
+      border: 1px solid #ccc;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      font-size: 1.4em;
+    }
+
+    #output {
+      background-color: #343a40;
+      color: white;
+      min-height: 100px;
+    }
+
+    h1,
+    h3,
+    h4 {
+      color: #333;
+    }
+
+    
+
+    @media (max-width: 768px) {
+      .col-md-6 {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+  <!--FOOTER-->
+
+  <footer class="padding_4x">
+    
+    <style>
+      .credits {
+        background: #1e1e1e;
+        color: gray;
+        font-size: 13px;
+        padding: 10px;
+        position: fixed;
+        right: 0;
+        bottom: 20px;
+   
+    }
+    .credits a{
+      background: #1e1e1e;
+      color: gray;
+      font-size: 13px;
+      padding: 10px;
+      position: fixed;
+      right: 0;
+      bottom: 20px;
+    }
+    </style>
+    <div class="top_footer flex">
+
+      <section class="flex_content">
+
+      </section>
+    </div>
+    <div>
+      <div class="footer_body flex">
+        <section class="flex_content padding_1x">
+          <figure class="logo fixed_flex">
+
+            <figcaption>
+              <strong class="title">VILDASH</strong> NETWORK
+            </figcaption>
+          </figure>
+          <a href="#">
+            <i class="fa fa-map-marker"></i>
+            we are here for you. they key to knowing how to code is concistency in coding
+            and we are here to make you explore to the fullest of technologies. contact us at
+          </a>
+          <i class="fa fa-envelope-o"></i>
+          liblissz3@gmail.com
+          </a>
+          <a href="tel:654598457">
+            <i class="fa fa-headphones"></i>
+            654598457
+          </a>
+        </section>
+        <section class="flex_content padding_1x">
+          <h3> keep </h3>
+          <a href="feedback.html">feedback</a>
+            <a href="AIVILDASH.html">Our AI</a>
+            <a href="csharp.html">learn c#</a>
+            <a href="c ++\C++Lesson1.html">learn c++</a>
+            <a href="">learn css</a>
+ <a href="html-1.html">learn html</a>
+        </section>
+        <section class="flex_content padding_1x">
+          <h3>Other Links</h3>
+          <a href="c\c.html">learn c</a>
+          <a href="DOC-20250105-WA0008.html">learn python</a>
+          <a href="DOC-20250105-WA0007.html">learn javascript</a>
+          <a href="java.html">learn java</a>
+          <a href="projected-page.html">buy webpages</a>
+          <a href="feedback.html">send feedback</a>
+          
+          
+        
+        </section>
+        <section class="flex_content padding_1x">
+          <h3>vildash network</h3>
+          <p>we are here to see you prosper</p>
+          <!--<fieldset class="fixed_flex">
+    <input type="email" name="newsletter" placeholder="Your Email Address">
+    <button class="btn btn_2">Subscribe</button>
+    </fieldset>-->
+        </section>
+      </div>
+      <div class="flex">
+        <section class="flex-content padding_1x">
+          <p>Copyright ©2024 All rights reserved || VILDASH NETWORK</p>
+        </section>
+        <section class="flex-content padding_1x">
+          <a href="https://web.facebook.com/profile.php?id=61552332181172&sk=followers"><i
+              class="fa fa-facebook"></i></a>
+          <a href="https://www.instagram.com/holy_conceptsstudio/"><i class="fa fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@holyconcepts"><i class="fa fa-youtube"></i></i></a>
+
+        </section>
+      </div>
+  </footer>
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  <link rel="stylesheet" href="footer.css">
+
+</body>
+
+</html>

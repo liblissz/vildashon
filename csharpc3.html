@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LEARN C SHARP chapter 3 (c#)</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="./script.js" defer></script>
+  <script src="asset.js"></script>
+  <link rel="icon" href="file-KXYNjXBEo2D9qPtH9iD6VQ (5).webp">
+</head>
+
+<body>
+  <div class="container">
+    <div class="overlay"></div>
+    <div class="overlay2"></div>
+    <!-- Side nav -->
+    <div class="sideNav">
+      <nav>
+        <div class="navHead">
+          <div class="profile">
+            <img style="margin: 10px !important ; border-radius: 5px !important;" src="file-KXYNjXBEo2D9qPtH9iD6VQ (5).webp" alt="profile" />
+          </div>
+          <div class="userName">
+            <p></p>
+          </div>
+
+        </div>
+        <div class="navBody">
+          <ul id="links">
+<a href="feedback.html">
+
+            <li>
+
+              <div class="icon">
+                <ion-icon name="list-outline"></ion-icon>
+              </div>
+              <p>send feedback</p>
+            </li>
+          </a>
+            <style>
+              a {
+                text-decoration: none;
+                color: black;
+              }
+            </style>
+            <a href="csharp.html">
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn c#</p>
+              </li>
+            </a>
+            <a href="c ++\C++Lesson1.html">
+            <li>
+              <div class="icon">
+                <ion-icon name="log-out-outline"></ion-icon>
+              </div>
+              <p>learn c++ </p>
+            </li>
+          </a>
+           
+      <a href="c\c.html">
+            <li>
+              <div class="icon">
+                <ion-icon name="log-out-outline"></ion-icon>
+              </div>
+              <p>learn c </p>
+            </li>
+          </a>
+            <a href="homepage.html">
+            <li>
+              <div class="icon">
+                <ion-icon name="log-out-outline"></ion-icon>
+              </div>
+              <p>home page</p>
+            </li>
+          </a>
+
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- Hero Section -->
+    <div class="topNav">
+      <nav>
+        <div class="topLeft">
+          <div id="hamburgar" class="hamburgar">
+            <div class="line"></div>
+          </div>
+          <p>LEARN C# chapter THREE</p>
+        </div>
+        <div id="demo" style="opacity: 0.4; font-size: 1rem;
+          font-weight: bold; color:#fff;"><input style="opacity: none !important; padding:10px;" type="text" placeholder="
+          search our pages........" name="search" id="searchinput" onkeyup="search()"> 
+          
+          <div id="results" style="padding: 20px;"></div></div>
+
+        <!--<div class="ctaBtn">
+            <button class="ctaModal">Sign In</button>
+          </div>-->
+      </nav>
+    </div>
+
+    <section class="heroSection">
+      <div class="root typing-slash" style="--x-percentage:100%;">
+        <div class="inner 
+          typing-slash"> <span class="hidden font-slash-animation typing-slash">Offload
+            complexity</span> <span class="dots font-slash-animation 
+          typing-slash">••••••••••••••••••</span>
+          <div class="title typing-slash">
+            <h1 class="font-slash-animation typingContent typing-slash">attentive</h1>
+          </div>
+          <div class="slash typing-slash"></div>
+        </div>
+      </div>
+
+      <style>
+        .root.typing-slash {
+          width: 100%;
+          max-width: 95vw;
+          margin: 0 auto;
+          padding:
+            24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .inner.typing-slash {
+          position: relative;
+          padding: 16px 0;
+        }
+
+        .font-slash-animation.typing-slash {
+          font-size: max(24px, min(6vw, 88px));
+          font-weight: 700;
+          line-height: 1.05;
+          letter-spacing: -0.022em;
+        }
+
+        .hidden.typing-slash {
+          opacity: 0;
+          padding: 0 8px;
+        }
+
+        .dots.typing-slash {
+          color: hsl(226deg 57% 18% / 0.5);
+          -webkit-clip-path:
+            polygon(var(--x-percentage) 0, 100% 0, 100% 120%, var(--x-percentage) 120%);
+          clip-path: polygon(var(--x-percentage) 0, 100% 0, 100% 120%,
+              var(--x-percentage) 120%);
+        }
+
+        .title.typing-slash {
+          color: hsl(226deg 57% 18%);
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: linear-gradient(to right, hsl(222deg 100% 58% / 0), hsl(222deg 100% 58% / 0.15));
+          -webkit-clip-path: polygon(0 0, var(--x-percentage) 0, var(--x-percentage) 120%, 0 120%);
+          clip-path: polygon(0 0, var(--x-percentage) 0,
+              var(--x-percentage) 120%, 0 120%);
+        }
+
+        .title.typing-slash,
+        .dots.typing-slash {
+          width: 100%;
+          text-align: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        .font-slash-animation.typing-slash {
+          font-size: max(24px, min(6vw, 88px));
+          font-weight: 700;
+          line-height: 1.05;
+          letter-spacing: -0.022em;
+        }
+
+        .slash.typing-slash {
+          position: absolute;
+          left: var(--x-percentage);
+          transform: skew(-5deg) translate(-10px) translateY(-50%);
+          box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        @media (min-width: 768px){}
+         .slash.typing-slash {
+          border-radius: 0.25rem;
+        }
+
+        .slash.typing-slash {
+          width: max(8px, min(1vw, 20px));
+          height: 100%;
+          top: 50%;
+          background-color: #578f40;
+          border-radius: 0.125rem;
+        }
+      </style>
+
+      <script>
+        const strings = ["chapter", "three", "on c#", "be", "attentive"];
+           const fontSlash = document.querySelector(".typingContent");
+        const slash = document.querySelector(".root"); let xPercentage = 0;
+        function slashAnimation() {
+          setTimeout(() => {
+            let interval = setInterval(() => {
+                xPercentage += 2; slash.style.setProperty("--x-percentage", xPercentage +
+                  "%");
+              if (xPercentage === 100) {
+                clearInterval(interval);
+                // Wait for 2 seconds before decreasing 
+                setTimeout(() => { interval = 
+                setInterval(() => {
+                  xPercentage -= 2; slash.style.setProperty("--x-percentage",
+                    xPercentage + "%");
+                  if (xPercentage === 0) {
+                    clearInterval(interval); 
+                    const index = strings.indexOf(fontSlash.innerText); // find index of prevoius H1 content 
+                    const nextIndex = index + 1 === strings.length ? 0 : index + 1;
+                    fontSlash.innerText = strings[nextIndex];
+                     // change with next index of strings array // Start over after reaching 0
+                      slashAnimation(); } }, 10); }, 2000); } }, 
+                    10);
+              }, 150);
+          }
+          slashAnimation();
+      
+
+        
+
+      </script>
+      <div class="textCont">
+
+
+        <h1></h1>
+        <p>
+
+        </p>
+        <div class="ctaBtn">
+          <!--<button class="ctaModal">Sign In</button>-->
+        </div>
+      </div>
+    </section>
+    <!--<main>
+        <div class="textContainer">
+
+        </div>
+      </main>-->
+  </div>
+
+
+
+
+  <style>
+    h1 {
+      margin-bottom: 20px;
+      font-size: 3em;
+      color: #444;
+    }
+
+    .typing-container {
+      font-size: 1.2em;
+      border-right: 2px solid #333;
+      overflow: hidden;
+      animation: blink 0.7s steps(2, start) infinite;
+      max-width: 600px;
+      word-wrap: break-word;
+      white-space: normal;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+    /* Keyframe for Cursor Blink */
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+    }
+.demo{
+  font-size: 1.5em;
+}
+.demo::before{
+  content: "👉";
+}
+    
+  </style>
+
+
+
+
+  <div class="container">
+    <h1 style="font-weight: bolder;"> topic#5: continue</h1>
+    <br>
+    <br>
+    <p class="demo">we have learned how to declare and integer type</p>
+<br>
+<p class="demo">but we haven't assigned a value to our variable yet. A variable is just like and empty room
+  . let's put sombody there
+</p>
+<br>
+<p class="demo">in c#. there are two ways that we can use to assign values to variables
+</p>
+<br>
+<li style="font-size: 1.4em; font-weight:0.2em;">on thesame line when declaring it.</li>
+<br>
+<li style="font-size: 1.4em; font-weight:0.2em;">assigning it later in the code post declaration</li>
+
+<br>
+<p class="demo">variables in c# can change their values when going through various operations</p>
+<br>
+
+    <p class="demo"><b>C#</b> was initialy named <b>C-Cool</b> but it was dropped due to copyright issues</p>
+<br>
+<p class="demo"><b style="font-size: 1.3em;">let's see how the code looks like</b></p>
+<br>
+<p class="demo">
+  <b>the first example illustrates the declaration and value assigning process on thesame line of code </b>
+</p>
+<br>
+
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Sample Code</h3>
+      <pre id="code-sample" class="code1">
+        <code>
+Using System;
+namespace mynamespace{
+  class Program{
+    static void Main(string[], args){
+      int A = 10;
+      int B = -50;
+      int C = 0;
+    }
+  }
+}
+</code>
+    </pre>
+
+    <button onclick="copy1()">copy code</button>
+    <script>
+      function copy1() {
+        // Get the raw text from the <pre> tag and clean it up
+        let code = document.querySelector('.code1').textContent;
+  
+        // Normalize whitespace: remove leading/trailing spaces and excessive indentation
+        code = code.split('\n')
+          .map(line => line.trim()) // Remove spaces from each line
+          .filter(line => line) // Remove empty lines
+          .join('\n'); // Join the cleaned lines back with line breaks
+  
+        // Copy the cleaned code to the clipboard
+        navigator.clipboard.writeText(code).then(() => {
+          alert("Code copied to clipboard!");
+        }).catch(err => {
+          alert("Failed to copy code: " + err);
+        });
+        
+      }
+    </script>
+  
+    </div>
+    <div class="col-md-6 " >
+      <h3>Output</h3>
+      <div id="output">
+        <h1 style="color: #fff;"></h1>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+<p class="demo">So what we got are 3 integers variable A, B, C, containing 3 different values 10, -50, 0 
+  respectively
+</p>
+<br>
+<br>
+<p class="demo"> the second example is asigning a value for a variable after it has been declared.</p>
+<br>
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Sample Code</h3>
+      <pre id="code-sample" class="code2">
+        <code>
+Using System;
+namespace   CodeSample{
+  class Program {
+    static void Main(string[] args){
+      int A;
+      int B;
+      A = 20;
+      B = 12;
+    }
+  }
+}
+        </code>
+    </pre>
+
+    
+    <button onclick="copy2()">copy code</button>
+    <script>
+      function copy2() {
+        // Get the raw text from the <pre> tag and clean it up
+        let code = document.querySelector('.code2').textContent;
+  
+        // Normalize whitespace: remove leading/trailing spaces and excessive indentation
+        code = code.split('\n')
+          .map(line => line.trim()) // Remove spaces from each line
+          .filter(line => line) // Remove empty lines
+          .join('\n'); // Join the cleaned lines back with line breaks
+  
+        // Copy the cleaned code to the clipboard
+        navigator.clipboard.writeText(code).then(() => {
+          alert("Code copied to clipboard!");
+        }).catch(err => {
+          alert("Failed to copy code: " + err);
+        });
+        
+      }
+    </script>
+    </div>
+    <div class="col-md-6 " >
+      <h3>Output</h3>
+      <div id="output">
+        <h1 style="color: #fff;"></h1>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<br>
+<p class="demo">in order to store decimals in c#, we need to choose the right variable. we will use Double in This
+  case
+</p>
+<br>
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Sample Code</h3>
+      <pre id="code-sample" class="code3">
+Using System;
+namespace   CodeSample{
+  class Program {
+    static void Main(string[] args){
+      double A;
+    }
+  }
+}
+    </pre>
+
+    <button onclick="copy3()">copy code</button>
+    <script>
+      function copy3() {
+        // Get the raw text from the <pre> tag and clean it up
+        let code = document.querySelector('.code3').textContent;
+  
+        // Normalize whitespace: remove leading/trailing spaces and excessive indentation
+        code = code.split('\n')
+          .map(line => line.trim()) // Remove spaces from each line
+          .filter(line => line) // Remove empty lines
+          .join('\n'); // Join the cleaned lines back with line breaks
+  
+        // Copy the cleaned code to the clipboard
+        navigator.clipboard.writeText(code).then(() => {
+          alert("Code copied to clipboard!");
+        }).catch(err => {
+          alert("Failed to copy code: " + err);
+        });
+        
+      }
+    </script>
+    </div>
+    <div class="col-md-6 " >
+      <h3>Output</h3>
+      <div id="output">
+        <h1 style="color: #fff;"></h1>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+<p class="demo">double is the type of variable used for decimals
+</p>
+<br>
+<p class="demo">let's see a couple more examples</p>
+<br>
+<p class="demo">examples</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Sample Code</h3>
+      <pre id="code-sample" class="code4">
+Using System;
+namespace mynamespace{
+  class Program{
+    static void Main(string[], args){
+      double A = 12.098089;
+      double B = -10.080;
+      double C = 0.0000;
+      double D;
+      D = 10.99090;
+    }
+  }
+}
+    </pre>
+
+    <button onclick="copy4()">copy code</button>
+    <script>
+      function copy4() {
+        // Get the raw text from the <pre> tag and clean it up
+        let code = document.querySelector('.code4').textContent;
+  
+        // Normalize whitespace: remove leading/trailing spaces and excessive indentation
+        code = code.split('\n')
+          .map(line => line.trim()) // Remove spaces from each line
+          .filter(line => line) // Remove empty lines
+          .join('\n'); // Join the cleaned lines back with line breaks
+  
+        // Copy the cleaned code to the clipboard
+        navigator.clipboard.writeText(code).then(() => {
+          alert("Code copied to clipboard!");
+        }).catch(err => {
+          alert("Failed to copy code: " + err);
+        });
+        
+      }
+    </script>
+    
+    </div>
+    <div class="col-md-6 " >
+      <h3>Output</h3>
+      <div id="output">
+        <h1 style="color: #fff;"></h1>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<button onclick="topic1()">🔊read topic five on voice</button>
+<button onclick="stop()">🖐️ stop playing</button>
+<br>
+<br>
+
+<script>
+ 
+  const before =`topic#5: continue
+
+
+we have learned how to declare and integer type
+
+
+but we haven't assigned a value to our variable yet. A variable is just like and empty room . let's put sombody there
+
+
+in c#. there are two ways that we can use to assign values to variables
+
+
+on thesame line when declaring it.
+
+assigning it later in the code post declaration
+
+variables in c# can change their values when going through various operations
+
+
+C# was initialy named C-Cool but it was dropped due to copyright issues
+
+
+let's see how the code looks like
+
+
+ the first example illustrates the declaration and value assigning process on thesame line of code
+
+
+Sample Code
+Using System;
+namespace mynamespace{
+  class Program{
+    static void Main(string[], args){
+      int A = 10;
+      int B = -50;
+      int C = 0;
+    }
+  }
+}
+    
+Output
+
+So what we got are 3 integers variable A, B, C, containing 3 different values 10, -50, 0 respectively
+
+
+
+ the second example is asigning a value for a variable after it has been declared.
+
+
+Sample Code
+Using System;
+namespace   CodeSample{
+  class Program {
+    static void Main(string[] args){
+      int A;
+      int B;
+      A = 20;
+      B = 12;
+    }
+  }
+}
+    
+Output
+
+in order to store decimals in c#, we need to choose the right variable. we will use Double in This case
+
+
+Sample Code
+Using System;
+namespace   CodeSample{
+  class Program {
+    static void Main(string[] args){
+      double A;
+    }
+  }
+}
+    
+Output
+
+double is the type of variable used for decimals
+
+
+let's see a couple more examples
+
+
+examples
+
+Sample Code
+Using System;
+namespace mynamespace{
+  class Program{
+    static void Main(string[], args){
+      double A = 12.098089;
+      double B = -10.080;
+      double C = 0.0000;
+      double D;
+      D = 10.99090;
+    }
+  }
+}
+     `;
+  function topic1(){
+    const speech = new SpeechSynthesisUtterance(before);
+    speech.lang = "en-US";
+    speech.rate = 1;
+    speech.volume = 1;
+    window.speechSynthesis.speak(speech);
+
+  }
+
+    function stop(){
+      window.speechSynthesis.cancel();
+    }
+  
+</script>
+
+
+<br>
+<h1 style="font-weight: bolder;">topic#6: characters </h1>
+<br>
+<p class="demo"><b>now let's learn how characters are stored in c#. it is similar to storing numbers</b>
+</b>
+characters are single letters and the character variable can only store a single lettter <b>for example: </b>
+char = 'b' not <strike>char = 'abc'</strike>
+</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Sample Code</h3>
+      <pre class="for" id="code-sample">
+<code>
+Using System;
+namespace mynamespace{
+  class Program{
+    static void Main(string[], args){
+      string A = 'b';
+    }
+  }
+}
+</code>
+    </pre>
+
+    <button onclick="copy()">copy code</button>
+<style>
+  pre {
+    background-color: #f4f4f4 in !important;
+    padding: 10px !important;
+    border: 1px solid #ddd !important;
+    border-radius: 5px !important;
+    overflow-x: auto !important;
+    font-family: monospace !important;
+  }
+</style>
+
+    <script>
+      function copy() {
+        // Get the raw text from the <pre> tag and clean it up
+        let code = document.querySelector('.for').textContent;
+  
+        // Normalize whitespace: remove leading/trailing spaces and excessive indentation
+        code = code.split('\n')
+          .map(line => line.trim()) // Remove spaces from each line
+          .filter(line => line) // Remove empty lines
+          .join('\n'); // Join the cleaned lines back with line breaks
+  
+        // Copy the cleaned code to the clipboard
+        navigator.clipboard.writeText(code).then(() => {
+          alert("Code copied to clipboard!");
+        }).catch(err => {
+          alert("Failed to copy code: " + err);
+        });
+        
+      }
+    </script>
+  
+    
+    </div>
+    <div class="col-md-6 " >
+      <h3>Output</h3>
+      <div id="output">
+        <h1 style="color: #fff;"></h1>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  document.addEventListener("keydown", (e) =>{
+if((e.ctrlKey && (e.key === 'c' || e.key === 'u')) || e.key === 'printSreen'){
+  e.preventDefault();
+}
+  });
+</script>
+
+<style>
+body{
+  user-select: none;
+ -webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+
+}
+</style>
+
+<br>
+  <p class="demo"><b>STRING TYPE:</b> with the string type of variable we use a "" not <strike>''</strike>
+  and it is used to store sentences. for example:</p>
+  <br>
+
+
+  <!-- mynamespace mynamespace -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h3>Sample Code</h3>
+        <pre id="code-sample" class="code5">
+  Using System;
+  namespace mynamespace{
+    class Program{
+      static void Main(string[], args){
+       string ="buddy"
+      }
+    }
+  }
+      </pre>
+
+      <button onclick="copy5()">copy code</button>
+      <script>
+        function copy5() {
+          // Get the raw text from the <pre> tag and clean it up
+          let code = document.querySelector('.code5').textContent;
+    
+          // Normalize whitespace: remove leading/trailing spaces and excessive indentation
+          code = code.split('\n')
+            .map(line => line.trim()) // Remove spaces from each line
+            .filter(line => line) // Remove empty lines
+            .join('\n'); // Join the cleaned lines back with line breaks
+    
+          // Copy the cleaned code to the clipboard
+          navigator.clipboard.writeText(code).then(() => {
+            alert("Code copied to clipboard!");
+          }).catch(err => {
+            alert("Failed to copy code: " + err);
+          });
+          
+        }
+      </script>
+      
+      </div>
+      <div class="col-md-6 " >
+        <h3>Output</h3>
+        <div id="output">
+          <h1 style="color: #fff;"></h1>
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </div>
+<br>
+
+
+<br>
+<br>
+<h1>finally you are ready for your first hello world program </h1>
+<!-- turtorial section -->
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Sample Code</h3>
+      <pre id="code-sample" class="code6">
+class Program{
+  static void Main(string[] args){
+    System.Console.WriteLine("hello, world!");
+  }
+}
+    </pre>
+    <button onclick="copy6()">copy code</button>
+    <script>
+      function copy6() {
+        // Get the raw text from the <pre> tag and clean it up
+        let code = document.querySelector('.code6').textContent;
+  
+        // Normalize whitespace: remove leading/trailing spaces and excessive indentation
+        code = code.split('\n')
+          .map(line => line.trim()) // Remove spaces from each line
+          .filter(line => line) // Remove empty lines
+          .join('\n'); // Join the cleaned lines back with line breaks
+  
+        // Copy the cleaned code to the clipboard
+        navigator.clipboard.writeText(code).then(() => {
+          alert("Code copied to clipboard!. you can test it on our ide");
+        }).catch(err => {
+          alert("Failed to copy code: " + err);
+        });
+        
+      }
+    </script>
+ 
+  
+    </div>
+    <div class="col-md-6 " >
+      <h3>Output</h3>
+      <div id="output">
+        <h1 style="color: #fff;">hello, world!</h1>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<p class="demo"><b>explanaition</b>(let's break down the code):</p>
+<br>
+<p class="demo"><b>Class Program:</b> is the name of the program . Classes will be explained in details later on every c#
+  program starts from the Main method. A method is a block of codes. System.Console.WritLine() prints the formated message
+  onto the screen
+</p>
+<br>
+
+<!--<div class="container">
+  <h1 class="text-center">Learn HTML: Adding Links</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Sample Code</h3>
+      <pre id="code-sample">
+&lt;a href=&quot;https://www.example.com&quot;&gt;Visit Example&lt;/a&gt;
+    </pre>
+    </div>
+    <div class="col-md-6">
+      <h3>Output</h3>
+      <div id="output">
+        <a href="https://www.example.com">Visit Example</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h1 class="text-center">Learn HTML: Adding Images</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Sample Code</h3>
+      <pre id="code-sample">
+&lt;img src=&quot;image.jpg&quot; alt=&quot;Sample Image&quot; width=&quot;300&quot;&gt;
+    </pre>
+    </div>
+    <div class="col-md-6">
+      <h3>Output</h3>
+      <div id="output">
+        <img src="image.jpg" alt="Sample Image" width="300">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h1 class="text-center">Learn HTML: Creating Tables</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Sample Code</h3>
+      <pre id="code-sample">
+&lt;table border=&quot;1&quot;&gt;
+&lt;tr&gt;
+  &lt;th&gt;Name&lt;/th&gt;
+  &lt;th&gt;Age&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+  &lt;td&gt;Alice&lt;/td&gt;
+  &lt;td&gt;25&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+  &lt;td&gt;Bob&lt;/td&gt;
+  &lt;td&gt;30&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+    </pre>
+    </div>
+    <div class="col-md-6">
+      <h3>Output</h3>
+      <div id="output">
+        <table border="1">
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+          </tr>
+          <tr>
+            <td>Alice</td>
+            <td>25</td>
+          </tr>
+          <tr>
+            <td>Bob</td>
+            <td>30</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h1 class="text-center">Learn HTML: Adding Lists</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Sample Code</h3>
+      <pre id="code-sample">
+&lt;ul&gt;
+&lt;li&gt;HTML&lt;/li&gt;
+&lt;li&gt;CSS&lt;/li&gt;
+&lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+    </pre>
+    </div>
+    <div class="col-md-6">
+      <h3>Output</h3>
+      <div id="output">
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h1 class="text-center">Learn HTML: Adding Forms</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Sample Code</h3>
+      <pre id="code-sample">
+&lt;form action=&quot;/submit&quot;&gt;
+&lt;label for=&quot;name&quot;&gt;Name:&lt;/label&gt;
+&lt;input type=&quot;text&quot; id=&quot;name&quot; name=&quot;name&quot;&gt;
+&lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+    </pre>
+    </div>
+    <div class="col-md-6">
+      <h3>Output</h3>
+      <div id="output">
+        <form action="/submit">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name">
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h1 class="text-center">Learn HTML: Adding Audio</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Sample Code</h3>
+      <pre id="code-sample">
+&lt;audio controls&gt;
+&lt;source src=&quot;audio.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
+Your browser does not support the audio element.
+&lt;/audio&gt;
+    </pre>
+    </div>
+    <div class="col-md-6">
+      <h3>Output</h3>
+      <div id="output">
+        <audio controls>
+          <source src="audio.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<nav>
+  <a class="navbar-brand" href="#">Learn C Programming</a>
+</nav>
+
+<div class="container">
+  <h1 class="text-center">Learn C Programming with Examples</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Sample Code</h3>
+      <pre id="code-sample">
+#include &lt;stdio.h&gt;
+
+int main() {
+  printf("Hello, World!");
+  return 0;
+}
+      </pre>
+    </div>
+    <div class="col-md-6">
+      <h3>Output</h3>
+      <div id="output">Hello World!</div>
+      <h4 class="mt-3">Explanation</h4>
+      <p id="explanation">
+        This program prints "Hello, World!" to the console. The <code>printf()</code> function is used for output, and
+        <code>return 0;</code> signifies successful execution.
+      </p>
+    </div>
+  </div>
+</div>-->
+
+<button onclick="topictwo()">🔊 Read topic #6 Aloud</button>
+<button onclick="stop()">🖐️ stop playing</button>
+<br>
+<br>
+<a href="topic3quiz.html"><button>💯take a quize</button></a>
+<a href="csharpc4.html"><button>✍️next chapter</button></a>
+<a href="csharp.html"><button>🌅back to chapter page</button></a>
+<br>
+<br>
+<script>
+const topic2 = `topic#6: characters
+
+now let's learn how characters are stored in c#. it is similar to storing numbers characters are single letters and the character variable can only store a single lettter for example: char = 'b' not char = 'abc'
+
+Sample Code
+Using System;
+namespace mynamespace{
+  class Program{
+    static void Main(string[], args){
+      string A = 'b';
+    }
+  }
+}
+    
+Output
+
+STRING TYPE: with the string type of variable we use a "" not '' and it is used to store sentences. for example:
+
+
+Sample Code
+  Using System;
+  namespace mynamespace{
+    class Program{
+      static void Main(string[], args){
+       string ="buddy"
+      }
+    }
+  }
+      
+Output
+
+
+
+finally you are ready for your first hello world program
+Sample Code
+class Program{
+  static void Main(string[] args){
+    System.Console.WriteLine("hello, world!");
+  }
+}
+    
+Output
+hello, world!
+explanaition(let's break down the code):
+
+
+Class Program: is the name of the program . Classes will be explained in details later on every c# program starts from the Main method. A method is a block of codes. System.Console.WritLine() prints the formated message onto the screen`;
+function topictwo() {
+  const speech = new SpeechSynthesisUtterance(topic2);
+  speech.lang = "en-US"; // Set the language
+  speech.rate = 1;       // Set the speech rate
+  speech.volume = 1;     // Set the volume
+  window.speechSynthesis.speak(speech);
+}
+
+</script>
+ 
+</div>
+
+
+<style>
+
+  @media screen and (max-width: 600px) {
+    #btm{
+ 
+      float: none !important;
+      display: block;
+      margin: 0;
+      position: fixed;
+    }
+  }
+</style>
+
+
+
+  <style>
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .col-md-6 {
+      flex: 1 1 calc(50% - 2rem);
+      box-sizing: border-box;
+color: #ccc;
+
+    }
+
+    pre,
+    #output {
+      padding: 4rem;
+      border-radius: 5px;
+    }
+
+    pre {
+      background-color: #282d32;
+      border: 1px solid #ccc;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      font-size: 1.4em;
+    }
+
+    #output {
+      background-color: #343a40;
+      color: white;
+      min-height: 100px;
+    }
+
+    h1,
+    h3,
+    h4 {
+      color: #333;
+    }
+
+    
+
+    @media (max-width: 768px) {
+      .col-md-6 {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+  <!--FOOTER-->
+
+  <footer class="padding_4x">
+    
+    <style>
+      .credits {
+        background: #1e1e1e;
+        color: gray;
+        font-size: 13px;
+        padding: 10px;
+        position: fixed;
+        right: 0;
+        bottom: 20px;
+   
+    }
+    .credits a{
+      background: #1e1e1e;
+      color: gray;
+      font-size: 13px;
+      padding: 10px;
+      position: fixed;
+      right: 0;
+      bottom: 20px;
+    }
+    </style>
+    <div class="top_footer flex">
+
+      <section class="flex_content">
+
+      </section>
+    </div>
+    <div>
+      <div class="footer_body flex">
+        <section class="flex_content padding_1x">
+          <figure class="logo fixed_flex">
+
+            <figcaption>
+              <strong class="title">VILDASH</strong> NETWORK
+            </figcaption>
+          </figure>
+          <a href="#">
+            <i class="fa fa-map-marker"></i>
+            we are here for you. they key to knowing how to code is concistency in coding
+            and we are here to make you explore to the fullest of technologies. contact us at
+          </a>
+          <i class="fa fa-envelope-o"></i>
+          liblissz3@gmail.com
+          </a>
+          <a href="tel:654598457">
+            <i class="fa fa-headphones"></i>
+            654598457
+          </a>
+        </section>
+        <section class="flex_content padding_1x">
+          <h3> keep </h3>
+          <a href="feedback.html">feedback</a>
+            <a href="AIVILDASH.html">Our AI</a>
+            <a href="csharp.html">learn c#</a>
+            <a href="c ++\C++Lesson1.html">learn c++</a>
+            <a href="">learn css</a>
+ <a href="html-1.html">learn html</a>
+        </section>
+        <section class="flex_content padding_1x">
+          <h3>Other Links</h3>
+          <a href="c\c.html">learn c</a>
+          <a href="DOC-20250105-WA0008.html">learn python</a>
+          <a href="DOC-20250105-WA0007.html">learn javascript</a>
+          <a href="java.html">learn java</a>
+          <a href="projected-page.html">buy webpages</a>
+          <a href="feedback.html">send feedback</a>
+          
+          
+        
+        </section>
+        <section class="flex_content padding_1x">
+          <h3>vildash network</h3>
+          <p>we are here to see you prosper</p>
+          <!--<fieldset class="fixed_flex">
+    <input type="email" name="newsletter" placeholder="Your Email Address">
+    <button class="btn btn_2">Subscribe</button>
+    </fieldset>-->
+        </section>
+      </div>
+      <div class="flex">
+        <section class="flex-content padding_1x">
+          <p>Copyright ©2024 All rights reserved || VILDASH NETWORK</p>
+        </section>
+        <section class="flex-content padding_1x">
+          <a href="https://web.facebook.com/profile.php?id=61552332181172&sk=followers"><i
+              class="fa fa-facebook"></i></a>
+          <a href="https://www.instagram.com/holy_conceptsstudio/"><i class="fa fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@holyconcepts"><i class="fa fa-youtube"></i></i></a>
+
+        </section>
+      </div>
+  </footer>
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  <link rel="stylesheet" href="footer.css">
+
+</body>
+
+</html>
