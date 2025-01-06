@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEARN JAVASCRIPT(.js)</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="file-KXYNjXBEo2D9qPtH9iD6VQ (5).webp">
+    <script src="asset.js"></script>
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="./script.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;400;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+  margin: 0%;
+  padding: 0%;
+}
+body {
+  background-color: #fff;
+}
+.quizSection {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0% auto;
+}
+.quizSection .bgImg {
+  background: url(./asset/Background.png);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-size: cover;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.5;
+  background-position: center center;
+}
+
+.quizSection header {
+  padding: 1rem;
+  max-width: 700px;
+  margin: 0% auto;
+  margin-top: 1rem;
+}
+.quizSection header .title h1 {
+  font-size: 2rem;
+  color: #6b6b6b;
+}
+.quizSection header .title h1 span {
+  position: relative;
+}
+.quizSection header .title h1 span::after {
+  content: "";
+  background: url(./asset/zig-zag-underline.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  margin-top: 5px;
+  position: absolute;
+  width: 90%;
+  height: 10px;
+  left: 50%;
+  bottom: calc(0% - 7px);
+  transform: translateX(-50%);
+}
+.quizSection .progressCont {
+  width: 100%;
+  margin-top: 1.52rem;
+}
+.quizSection .progressCont .progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  max-width: 350px;
+  margin: 0% auto;
+}
+.quizSection .progressCont .progress .circle {
+  height: 35px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e5e5e5;
+  border-radius: 50%;
+}
+.quizSection .progressCont .progress .circle p {
+  color: #244974;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.quizSection .progressCont .progress .circle.correct {
+  background: #67bece;
+}
+.quizSection .progressCont .progress .circle.wrong {
+  background-color: #f8d7da;
+}
+.quizSection .progressCont .progress .circle.wrong p {
+  color: #842029;
+}
+.quizSection .questionContainer {
+  background-color: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 0.7rem;
+  padding: 2.2rem;
+  max-width: 500px;
+  margin: 0% auto;
+  margin-top: 2rem;
+}
+.quizSection .questionContainer .questions h1 {
+  color: #244974;
+}
+.quizSection .questionContainer .answerCont .answer {
+  border: 1px solid #2449746e;
+  border-radius: 0.3rem;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.85rem;
+  line-height: 1.5;
+  margin: 1rem 0;
+  cursor: pointer;
+  background-color: transparent;
+  user-select: none;
+}
+.quizSection .questionContainer .answerCont .answer .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+}
+.quizSection .questionContainer .answerCont .answer .icon ion-icon {
+  font-size: 1.2rem;
+}
+.quizSection .questionContainer .answerCont .answer p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-left: 0.3rem;
+  color: #8e8c9b;
+}
+.quizSection .questionContainer .answerCont .answer.wrong {
+  background-color: #f8d7da;
+  color: #842029;
+  border-color: #f5c2c7;
+}
+.quizSection .questionContainer .answerCont .answer.wrong p {
+  color: #842029;
+}
+
+.quizSection .questionContainer .answerCont .answer.correct {
+  background-color: #d1e7dd;
+  color: #0f5132;
+  border-color: #badbcc;
+}
+.quizSection .questionContainer .answerCont .answer.correct p {
+  color: #0f5132;
+}
+.quizSection .questionContainer .nextBtnEl {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.quizSection .questionContainer .nextBtnEl button {
+  padding: 0.55rem 2rem;
+  border: none;
+  outline: none;
+  background-color: #67bece;
+  color: #fff;
+  font-weight: normal;
+  letter-spacing: 2px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+.quizSection .questionContainer .nextBtnEl button:disabled {
+  background-color: #6b6b6b;
+}
+
+.quizSection .questionContainer .resultTable {
+  width: 100%;
+}
+
+.quizSection .questionContainer .resultTable tr {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.quizSection .questionContainer .resultTable,
+.quizSection .questionContainer .resultTable th,
+.quizSection .questionContainer .resultTable td {
+  border-collapse: collapse;
+  border: 1px solid #8e8c9b46;
+}
+.quizSection .questionContainer .resultTable td,
+.quizSection .questionContainer .resultTable th {
+  padding: 1rem;
+  width: 100%;
+  text-align: left;
+}
+.questionContainer .restartCont {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.5rem;
+}
+.questionContainer .restartCont button {
+  padding: 0.55rem 2rem;
+  border: none;
+  outline: none;
+  background-color: #67bece;
+  color: #fff;
+  font-weight: normal;
+  letter-spacing: 2px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .quizSection .bgImg {
+    background-position: center center;
+    background-size: cover;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="overlay"></div>
+      <div class="overlay2"></div>
+      <!-- Side nav -->
+      <div class="sideNav">
+        <nav>
+          <div class="navHead">
+            <div class="profile">
+              <img style="margin: 10px !important ; border-radius: 5px !important;" src="file-KXYNjXBEo2D9qPtH9iD6VQ (5).webp" alt="profile" />
+              
+            </div>
+            <div class="userName">
+              <p></p>
+            </div>
+            
+          </div>
+          <div class="navBody">
+            <ul id="links">
+        
+     
+              <li>
+            
+                <div class="icon">
+                  <ion-icon name="list-outline"></ion-icon>
+                </div>
+                <p>send feedback</p>
+              </li>
+             <style>
+              xmp{
+                background-color:rgb(20, 150, 40);
+                color: white;
+                font-weight: bolder;
+                width: 700px;
+                display: flex;
+               
+                
+              
+                
+              }
+              a{
+                text-decoration: none;
+                color: black;
+              }
+              footer  {
+                background-color: green;
+                color: white;
+               }
+               a{
+                color:gainsboro;
+               }
+              
+
+teko-uniquifier {
+  font-family: "Teko", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+             </style>
+              <a href="csharp.html">
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn c#</p>
+              </li>
+              </a>
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn c++ </p>
+              </li>
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn javascript(.js)</p>
+              </li>
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn html</p>
+              </li>
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn css</p>
+              </li>
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn c </p>
+              </li>
+              <a href="homepage.html">
+              <li>
+                <div class="icon" style="opacity: 1 !important;">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p style="color: #333 !important; opacity: 1 !important; ">homepage</p>
+              </li>
+      </a>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- Hero Section -->
+      <div class="topNav">
+        <nav>
+          <div class="topLeft">
+            <div id="hamburgar" class="hamburgar">
+              <div class="line"></div>
+            </div>
+            <p>LEARN JAVASCRIPT (.js)</p>
+          </div>
+          <div id="demo" style="opacity: 0.4; font-size: 1rem;
+          font-weight: bold; color:#fff;"><input style="opacity: none !important; padding:10px;" type="text" placeholder="
+          search our pages........" name="search" id="searchinput" onkeyup="search()"> 
+          
+          <div id="results" style="padding: 20px;"></div></div>
+            <!--<div class="ctaBtn">
+            <button class="ctaModal">Sign In</button>
+          </div>-->
+        </nav>
+      </div>
+      <section class="heroSection">
+        <div class="textCont">
+          <h1><b>TOPIC#1:INTRODUCTION TO JAVASCRIPT.</b></h1>
+          <p>
+          Javascript is a dynamic computer programming Language.It is lightweight and most commonly used as a part
+          of web pages,whose implementations allow client-side script to interact with user and make dynamic pages.
+          <br>
+          Javascript'capabilities greatly depends on the environment it's running in.For instance ,Node.js supports
+          functions that allow Javascript to write/read arbitary files,perform network request,etc.
+          </p>
+          <img src="javascript.jfif" alt=""><br>
+          <h2><b>Brief History of JavaScript</b></h2><br>
+          <p>JavaScript was created by <b><mark>Brendan Eich</mark></b>,Eich developed the language in just
+           <b>10days in May 1995</b>. JavaScript was created to enable interactive features directly in
+          web browsers,complementing HTML and CSS. <br>
+                    intially called <b>Mocha</b>,later renamed <b>Livescript</b>,and finally rebranded
+                  as <b>Javascript in December 1995</b> as part of a marketing strategy.</p><br>
+                  Brendan Eich was an employee in the company that intergrated javascript <b>Netscape Navigator</b>
+                  one of the most popular browsers of the 1990s and the of 
+                  this company is <b><mark>Netscape Communication Corporation</mark></b> 
+          <br>
+          <br>
+           <div class="container">
+            <h1 class="text-center">1.JavaScript Where To</h1>
+            <div class="row">
+              <div class="col-md-6">
+                <h3>The (script) tag <br>Examples</h3>
+                <pre id="code-sample">
+        <xmp><script>
+          document.getElementById()
+        </script></xmp> 
+           <h2> <i>2.JavaScript function and events</i></h2>   
+           <p> A javascript fuction is a block of Javascript code, that can be executed when "called" for. 
+            For example,a function can be called when an event occurs,like when the user clicks a button.
+           </p>  
+              <h2><i>3.Javascript in < head> or < body></i></h2>
+              <p>You can place any number of scripts in an HTML document.Scripts can be placed in the < body >
+              ,or in the < head> section of an HTML page,or in both</p>
+               <h3>Examples</h3>
+               <xmp><!DOCTYPE html>
+               <html lang="en">
+               <head>
+                <script>
+                  function myFunction(){
+                    document.getElementById("demo").innerHTML = "Paragraph changed.";
+                  }
+                </script>
+               </head>
+               <body>
+                <h1>A web Page</h1>
+                <p id="demo" >A paragraph</p>
+                <button type="button" onclick="myFunction"> Try it</button>
+               </body>
+               </html></xmp>
+               <br>
+               <xmp>
+                <!DOCTYPE html>
+               <html lang="en">
+               <body>
+                <h1> A web Page </h1>
+                <p id="demo"> A paragraph</p>
+                <button type="button" onclick="myFunction">Try it</button>
+                <script>
+                  function myFunction(){
+                    document.getElementById("demo").innerHTML ="paragraph changed.";
+                  }
+                </script>
+               </body>
+               </html></xmp>
+               <h2><i>4.External javascript</i></h2>
+               Scripts can also be placed in external files:
+               <xmp> function myFunction(){
+                document.getElementById("demo").innerHTML = "Paragraph Changed.";
+               </xmp>
+               External scripts are practical when the same code is used in many different webpages.
+               javascript files have extension <b>.js.</b>
+               To use an external script,put the name of the script file in the <b>scr(source)</b> attribute of a
+               script tag.
+               <h3>Example</h3>
+               <xmp><script src="myScript.js"></script></xmp>
+                <h2><i>5.Javascript Output</i></h2>
+                <p><b>Javascript Display Possibilities</b></p>
+                <p>JavaScript can "display" data in different ways:</p>
+                <b>i.Using innerHTML</b>
+                <br>
+                To access an HTML element,JavaScript can use the <b><u>document.getElemntById("id")</u></b> method.
+                The id attribute defines the HTML element.The innerHTML property defines the HTML content:
+                
+                <h3>Examples</h3>  
+                <xmp><!DOCTYPE html>
+                <html lang="en">
+                <body>
+                  <h1>My First Web page.</h1>
+                  <p>My first paragraph</p>
+                  <script>
+                    document.write(5+6)
+                  </script>
+                </body>
+                </html></xmp>
+                   <b>ii.Using document.write()</b>
+                   For testing purposes,it is convenient to use document.write():
+                   <h3>Examples</h3>
+                   <xmp><!DOCTYPE html>
+                   <html lang="en">
+                   <body>
+                    <h1>My First webpage. </h1>
+                    <p>My First Paragraph.</p>
+                    <script>
+                      window.alert(5+6)
+                    </script>
+                   </body>
+                   </html></xmp>
+                    <b>iii.Using console.log()</b> <br>
+                    For debugging purposes,you can call the console.log() method in the browser to display data.
+                    <h3>Example</h3>
+                    <xmp><!DOCTYPE html>
+                    <html lang="en">
+                    <body>
+                      <script>
+                        console.log(5+6);
+                      </script>
+                    </body>
+                    </html></xmp>
+                      <b>iv.Javascript print</b>
+                      javascript does not have any print object or print methods.
+                      You cannot access output devices from JavaScript.The only exception is that you can call the 
+                      window.print() mehtod in the browser to print the content of the current window.
+                      <h3>Example</h3>
+                      <xmp><button onclick="window.print()">Print this page</button></xmp>
+                        <h2><i>6.JavaScript statements</i></h2>
+                        <b>i.JavaScript Programs</b>
+                           <p>A computer program is a list of "instructions" to be "executed" by a computer.In programming 
+                           Language,these programming instructions are called statements. 
+                          A javascript program is a list of programming staments.
+                         They are composed of : Values, Operations,Expression,Keywords, and Comments.This statements tells thw browser
+                         to write "Hello Dolly" inside an HTML element with id="demo":</p>
+                        <h3>Example</h3>
+                                <xmp><!DOCTYPE html>
+                                <html lang="en">
+                                <body>
+                                  <h2>JavaScript Statament</h2>
+                        <p>
+                          A JavaScript program is a list of statements 
+                            to be executedby a computer.
+                          </p>
+                                  <p id="demo"></p>
+                                  <script>
+                                    var x, y, z; //statement 1
+                                    x = 5; //statement 2
+                                    y = 6; //statement 3
+                                    z = x + y; //statement 4
+                                    document.getElementById("demo").innerHTML = 
+                                    "the value of z is " + z + ".";
+                                  </script>
+                                </body>
+                                </html></xmp>
+                        Most JavaScript programs contains many javascript statements.The statements are excuted,one by one,
+                        in the same order as they are written.
+                         <div class="ctaBtn">
+            <!--<button class="ctaModal">Sign In</button>-->
+          </div>
+        </div>
+      </section>
+      <section class="quizSection">
+        <div class="bgImg"></div>
+        <header>
+          <div class="title">
+            <h1><span> Quiz </span> App</h1>
+          </div>
+        </header>
+        <div class="progressCont">
+          <div class="progress" id="progress"></div>
+        </div>
+        <div class="questionContainer" id="quizContainer">
+          <div class="questions">
+            <h1 id="question">What is 2 + Undefined?</h1>
+          </div>
+          <div class="answerCont" id="answerCont"></div>
+          <div class="nextBtnEl">
+            <button id="nextBtn">Next</button>
+          </div>
+        </div>
+      </section>
+      <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+      <script>
+        const datas = [
+    {
+      id: 1,
+      question: `What is 2 + Undefined?`,
+      choices: [
+        `Null`,
+        `NaN`,
+        `When Javascript adds undefined is ignored result is 2`,
+        `2undefined`,
+      ],
+      answer: `NaN`,
+    },
+    {
+      id: 2,
+      question: `How do you write "Hello World" in an alert box?`,
+      choices: [
+        `msgBox("Hello World")`,
+        `msg("Hello World")`,
+        `alertBox("Hello World")`,
+        `alert("Hello World")`,
+      ],
+      answer: `alert("Hello World")`,
+    },
+    {
+      id: 3,
+      question: `How can you add a comment in a JavaScript?`,
+      choices: [
+        `'This is comment`,
+        `// This is comment`,
+        `<- This is comment ->`,
+        `\\ This is comment`,
+      ],
+      answer: `// This is comment`,
+    },
+    {
+      id: 4,
+      question: `What is the correct way to write a JavaScript array?`,
+      choices: [
+        `let colors = (1:"red", 2:"green", 3:"blue")`,
+        `let colors = 1 = ("red"), 2 = ("green"), 3 = ("blue")`,
+        `let colors = "red", "green", "blue"`,
+        `let colors = ["red", "green", "blue"]`,
+      ],
+      answer: `let colors = ["red", "green", "blue"]`,
+    },
+    {
+      id: 5,
+      question: `How do you find the number with the highest value of x and y?`,
+      choices: [`Math.max(x, y)`, `Math.ceil(x, y)`, `ceil(x, y)`, `top(x, y)`],
+      answer: `Math.max(x, y)`,
+    },
+  ];
+  const shuffledQuizData = datas.sort(() => 0.5 - Math.random());
+  
+  const progressEl = document.getElementById("progress");
+  const answerContEl = document.getElementById("answerCont");
+  const questionEl = document.getElementById("question");
+  const nextBtnEl = document.getElementById("nextBtn");
+  const quizContainerEl = document.getElementById("quizContainer");
+  
+  let quizCount = 0;
+  let result = 0;
+  let isAnswerSelected = false;
+  
+  // Counting El
+  
+  let circleCount = 0;
+  let answerElCount = 0;
+  
+  // Disabling button when no choice is selected
+  
+  nextBtnEl.disabled = true;
+  
+  // Create Progress
+  
+  function createProgress() {
+    const circleEl = document.createElement("div");
+    circleEl.className = `circle circle${++circleCount}`;
+    const circlePara = document.createElement("p");
+    circlePara.innerHTML = circleCount;
+    circleEl.appendChild(circlePara);
+    progressEl.appendChild(circleEl);
+  }
+  
+  datas.forEach((data) => {
+    createProgress();
+  });
+  
+  // Create Quiz
+  
+  function createQuizChoices(data) {
+    const answerEl = document.createElement("div");
+    const attr = document.createAttribute("data-value");
+    attr.value = data;
+    answerEl.setAttributeNode(attr);
+    answerEl.className = `answer answer${++answerElCount}`;
+    const answerPara = document.createElement("p");
+    answerPara.innerHTML = data;
+    answerEl.appendChild(answerPara);
+    answerContEl.appendChild(answerEl);
+  
+    // Event Listener
+    answerEl.addEventListener("click", (e) => {
+      if (!isAnswerSelected) {
+        let allAnswerEl = answerContEl.querySelectorAll(`.answer`);
+        checkAnswer(answerEl, allAnswerEl);
+        isAnswerSelected = true;
+        nextBtnEl.disabled = false;
+        if (quizCount === shuffledQuizData.length - 1) {
+          nextBtnEl.innerHTML = `Show Result`;
+        }
+      }
+    });
+  }
+  
+  function createQuiz() {
+    let currentQuiz = shuffledQuizData[quizCount];
+    questionEl.innerHTML = currentQuiz.question;
+  
+    answerContEl.innerHTML = ``;
+  
+    currentQuiz.choices
+      .sort(() => 0.5 - Math.random())
+      .forEach((choice) => {
+        createQuizChoices(choice);
+      });
+  }
+  
+  createQuiz();
+  
+  function checkAnswer(selectedAnswerEl, allAnswerEl) {
+    let currentProgress = [...progressEl.querySelectorAll(".circle")];
+  
+    let currentQuizAnswer = shuffledQuizData[quizCount].answer;
+    let selectedAnswer = selectedAnswerEl.dataset.value;
+    if (selectedAnswer === currentQuizAnswer) {
+      selectedAnswerEl.classList.add("correct");
+      selectedAnswerEl.prepend(createCorrectIcon());
+      currentProgress[quizCount].classList.add("correct");
+      ++result;
+    } else if (selectedAnswer !== currentQuizAnswer) {
+      selectedAnswerEl.classList.add("wrong");
+      selectedAnswerEl.prepend(createWrongIcon());
+      currentProgress[quizCount].classList.add("wrong");
+      allAnswerEl.forEach((ans) => {
+        if (ans.dataset.value === currentQuizAnswer) {
+          ans.classList.add("correct");
+          ans.prepend(createCorrectIcon());
+        }
+      });
+    }
+  }
+  
+  function createCorrectIcon() {
+    const iconEl = document.createElement("div");
+    iconEl.classList.add("icon");
+    iconEl.innerHTML = `<ion-icon name="checkmark-circle"></ion-icon>`;
+    return iconEl;
+  }
+  
+  function createWrongIcon() {
+    const iconEl = document.createElement("div");
+    iconEl.classList.add("icon");
+    iconEl.innerHTML = `<ion-icon name="close-circle"></ion-icon>`;
+    return iconEl;
+  }
+  
+  nextBtnEl.addEventListener("click", (e) => {
+    if (isAnswerSelected) {
+      isAnswerSelected = false;
+      nextBtnEl.disabled = true;
+  
+      if (quizCount < shuffledQuizData.length - 1) {
+        ++quizCount;
+        createQuiz();
+      } else {
+        createResultEl();
+      }
+    } else {
+      alert("you must select a choice");
+    }
+  });
+  
+  function createResultEl() {
+    quizContainerEl.innerHTML = ``;
+  
+    progressEl.style.opacity = `0`;
+  
+    const tableEl = document.createElement("table");
+    tableEl.classList.add("resultTable");
+  
+    const resultData = [
+      { text: `Total Question`, count: shuffledQuizData.length },
+      { text: `Correct`, count: result },
+      { text: `Wrong`, count: shuffledQuizData.length - result },
+      {
+        text: `Percentage`,
+        count: `${(result / shuffledQuizData.length) * 100}%`,
+      },
+      { text: `Your Total`, count: `${result} / ${shuffledQuizData.length}` },
+    ];
+  
+    // tr1
+    function createTableRow(data) {
+      const tr = document.createElement("tr");
+      const th = document.createElement("th");
+      th.innerHTML = data.text;
+      const td = document.createElement("td");
+      td.innerHTML = data.count;
+      tr.appendChild(th);
+      tr.appendChild(td);
+      tableEl.appendChild(tr);
+    }
+  
+    resultData.forEach((data) => createTableRow(data));
+  
+    const restartCont = document.createElement("div");
+    restartCont.classList.add("restartCont");
+    const restartBtn = document.createElement("button");
+    restartBtn.innerHTML = `Restart`;
+    restartCont.appendChild(restartBtn);
+  
+    restartBtn.addEventListener("click", (e) => {
+      window.location.reload();
+    });
+  
+    // Append Table to continer
+    quizContainerEl.appendChild(tableEl);
+    quizContainerEl.appendChild(restartCont);
+  }
+  
+      </script>
+  
+      <main>
+        <div class="textContainer">
+          <h1 class="text-center">javascript is incorporated with HTML and CSS.</h1>
+          <p>
+        
+          </p>
+          <h1><b>TOPIC#2: JAVASCRIPT DATA TYPES</b></h1>
+      <h2><i>I.JavaScript Arrays</i></h2>
+      <p> javascript arrays are used to store multiple values in a single variable.</p>
+      <h3>Example</h3>
+      <img src="data types.png" alt="">
+       
+      <xmp>
+     <html>
+     <body>
+                                        
+      <h2>JavaScript Arrays</h2>
+      <p id="demo"></p>
+      <script>
+      var cars = ["Saab" , "Volvo" , "BMW"];
+      document.getElementById("demo").innerHTML = cars;
+       </script>
+    </body>
+    </html>
+    </xmp>
+    <br>
+     <b>what is an Array ??</b>
+     <p>An array is a special variable , which can hold more than one value at a time.
+      If you have a list of items ( a list of car names, for example), storing the cars in 
+      single variables could look like this: <br>
+      var car1 = "Saab"; <br>
+      var car2 = "Volvo";<br>
+      var car3 = "BMW";
+     </p><br>
+     <img src="array.jfif" alt=""><br>
+     However , what id you want to loop through the cars and find a specific one? And what if you 
+     had not 3 cars, but 300?? The solution to this problem is an <b>Array</b>
+     <h3>Syntax</h3>
+     <xmp> var array_name = [item1, item2 , ......]</xmp>
+      <b>Creating Arrays using the JavaScript Keyword new</b>
+      <p> The following example also creats an Array, and assigns vslues to it : </p>
+      <xmp><!DOCTYPE html>
+      <html lang="en">
+      <body>
+        <h2> JavaScript Arrays </h2>
+        <p id="demo"></p>
+        <script>
+           var cars = new Array("saab", "Volvo", "BMW");
+           document.getElementById("demo").innerHTML = cars;
+        </script>
+      </body>
+      </html>
+    </xmp>
+    <b>Access to Element of an Array</b>
+    <p>To access an element of an array by reffering to the index number.
+      This statement accesses the value of the first element in cars:</p>
+      <xmp><!DOCTYPE html>
+      <html lang="en">
+      
+      <body>
+        var name = cars[0];
+      </body>
+      </html></xmp>
+    <p>JavaScript uses an assignment operator (=) to assign values to variables:</p>
+      <b>Example</b>
+      <xmp><!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+      </head>
+      <body>
+        <h2><i>JavaScript Arrays</i></h2>
+        <p> javascript array elements are accessed using indexes(starting from 0).
+        </p>
+        <p id="demo"></p>
+        <script>
+          var cars = ["Saab" , "Volvo" , "BMW"];
+          document.getElementById("demo").innerHTML = cars[0];
+        </script></xmp>
+        <b>Changing an Array Element</b>
+        <p>This statement changes the value of the first element in cars:</p>
+        <xmp><!DOCTYPE html>
+        <html lang="en">
+
+        <body>
+          <h2><i>JavaScript Arrays </i></h2>
+          <p>JavaScript Array elements are accessed using numeric indexes (starting from 0).</p>
+          <p id="demo"></p>
+          <script>
+            var cars = ["Saab" , "Volvo" , "BMW"];
+            document.getElementById("demo").innerHTML = cars;
+          </script>
+        </body>
+        </html></xmp>
+        <b><i>Arrays Are Objects</i></b>
+        <p>Arrays are special type of Objects.The type of operator in JavaScript returns "object" for arrays.
+          But , JavaScript arrays are best described as arrays.Arrays use numbers to access its "elements". 
+          In this example , person[0] returns John:
+        </p>
+        <b>Arraya</b>
+        <xmp><!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+        </head>
+        <body>
+          <h2>javascript Arrays</h2>
+          <p>Array use numbers to access its elements.</p>
+          <p id="demo"></p>
+          <script>
+            var person = ["John", "Deo" , 46];
+            document.getElementById("demo"),innerHTML = person[0]
+          </script> 
+          </body>
+        </html></xmp>
+        <p>Objects use name to access its "members".In this example , person.firstName returns John: 
+        </p>
+        <b>Object</b>
+        <xmp><!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+        </head>
+        <body>
+          <h2>JavaScript Objects </h2>
+          <p> JavaScript uses names to access object properties. </p>
+          <p id="demo"></p>
+          <script>
+            var person = {firsrName:"John", lastName:"Deo" , age:46};
+          document.getElementById("demo").innerHTML = person["firstName"];
+          </script>
+        </body>
+        </html></xmp>
+        <h2>II.JavaScript Array Methods</h2>
+        <h3>Coverting Array to strings</h3>
+        <p>The javascript method toString() converts an array to a string of <mark>(comma separated) array values.</mark></mark></p>
+        <b>Example</b>
+        <xmp>
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+          </head>
+          <body>
+           <h2>JavaScript Array Methods</h2>
+           <h2>toString()</h2> 
+           <p>The toString() method returns an array as a comma separated  string</p>
+           <p id="demo"></p>
+           <script>
+            var friuts = ["Banana" ,"Orange" , "Apple" , "Mango"];
+            document.getElementById("demo").innerHTML = fruits.toString();
+           </script>
+          </body>
+          </html>
+        </xmp>
+        <b>Results</b>
+      <p>Banana,Orange,Apple,Mango. <br>
+        The join() method also join all array elements into a string. <br>
+        it behaves just like toString(), but in addition you can specify the separator:
+      </p>
+      <b>Example</b>
+      <Xmp>
+        <html>
+          <body>
+            <h2>-JavaScript Array Methods</h2>
+            <h2>join()</h2>
+            <p> The join() method array element into a string.</p>
+            <p>It this example we have used "*" as separator between the element :</p>
+            <p id="demo"></p>
+            <script>
+              var fruits = ["Banana" , "Orange" , "Apple" , "Mango"];
+              document.getElementById("demo").innerHTML = fruits.join("*");
+            </script>
+          </body>
+        </html>
+      </Xmp>
+      <b>Results</b>
+      Banana*Orange*Apple*Mango <br>
+      <b>-Popping</b>
+      The pop() method removes the last element from an array: <br>
+      <b>Example</b>
+      <Xmp>
+        <html>
+          <body>
+            <h2>JavaScript Array Methods</h2>
+            <h2>pop()</h2>
+            <p>The pop() method removes the last element from an array.</p>
+            <p id="demo1"></p>
+            <p id="demo2"></p>
+            <script>
+              var fruits = ["Banana", "Apple" , "Mango"];
+              document.getElementById("demo1").innerHTML = fruits;
+              fruits.pop();
+              document.getElementById("demo2"),innerHTML = fruits; 
+              </script>
+          </body>
+        </html>
+      </Xmp>
+      The pop() method returns the value that was "popped out"
+      <h2><i>III.JavaScript Strings</i></h2>
+      <p>In JavaScript, the textual data is stored as strings.There is no separate type for a single character. <br>
+      The internal format for strings is always UTF-16, it is not tied to the page encoding</p><br>
+      <b>Qoutes</b> <br>
+      <p>let's recall the kinds of quotes <br>
+        Strings can be enclosed within either single quotes,double quotes or backticks:</p>
+        <xmp> let single = 'single-qouted';
+          let double = "bouble-qouted";
+        let backticks = `backticks`;
+        </xmp>
+        single and double quotes are essentially the same.Backticks, however , allow us to emmbed any expression in to 
+        the string,by wrapping it in ${...}.
+        <xmp>function sum (a,b) {
+          return a + b;
+        }
+        alert (`1+2 = ${(1,2)}.`);// 1 + 2 = 3.
+        </xmp>
+        Another advantage of using backtick is that they allow a string to span multiple lines:
+        <xmp> let guestlist = `Guest:
+          *John
+          *Peter
+          *Mary
+          `;
+          alert(guestlist);// a list of guest,multiple lines
+        </xmp>
+        Looks natural right but single or double donnot work this way. <br>
+        if we use them and try to use multiple lines, there will be an error
+        <xmp> let guestlist = "Guest: // Error: Unexpected token ILLEGAL
+          *John"
+        </xmp>
+        Single and double quotes come from ancient times of language creaction when the need for
+        multiline strings was not taken intp account. Backticks appeared much later and thus are more versatile. <br>
+        Backticks also allow us to specify a "template function"before the first backtick.The syntax is:<b><mark>func`string`.</mark></b>The 
+        function func is called automatically, recieves the string and embedded expression can process feature makes it
+        easier to implement custom templating , but is rarely used in practise.You can read more about it in the manual<br>
+      
+        </div>
+      </main>
+    </div>
+      
+    
+    <div class="textContainer" style="display:text-container; text-align: center;">
+               <h1 class="text-center"><b>TOPIC#3:JavaScript Classes</b></h1>
+                  <h2 class="text-center"><i>I.Class Basic Syntax</i></h2>
+                       In practice , we often need to create many objects of the same kind , like users , or goods or whatever <br>
+                     As we already know from the chapter Constructor,operator"new", new function can help with that. <br>
+        But in the mordern JavaScript,there is a more advanced "class" Construct, tha introduces great new features which
+        are useful  for object-oriented programming. <br>
+        <img src="classes.jfif" alt="">
+        <b>The "class" Syntax</b>
+        The basic syntax is :
+        <xmp> class Myclass {
+          // class methods
+        constructor() {....}
+      method1(){...}
+      method2(){...}
+      method3(){...}
+      ....
+      }</xmp>
+              Then use Myclass() to creat a new object with all the listed methods. <br>
+              The constructor() method is called automatically by new, so we can initialize the object there. <br>
+              <b>for Example</b>
+              <xmp> 
+                <html>
+                  <script>
+                    class user {
+                      constructor(name) {
+                        this.name = name;
+                      }
+                    }
+                  </script>
+                </html>
+                // Usage:
+                let user  = User("John");
+                user.sayHi();
+              </xmp>
+                  <b>What is a class??</b> <br>
+                  so what exactly is a class? That's not an entirely  new languge-level entity,as one might think
+                  Let's unveil any magic and see what a class really is.That'll helpm in understanding many complex aspects.
+                  In javascript, a class is a kind of function. <br>
+                  Here take a look: 
+                  <xmp>
+                    <html>
+                      <script>
+                        class user {
+                          constructor(name) {
+                            this.name = name ;
+                          }
+                          sayHi(){ alert(this.name);}
+                        }
+                        //proof : User is a function
+                        alert(tyoeofUser); // function
+                      </script>
+                    </html>
+                  </xmp>        
+                           What class User{...} construct really does is: <br>
+                        - Creates a function named User, that becomes the result of the class declaration. The function 
+                        is taken from the constructor method (assumed empty if we don't write such method) <br>
+                        - Stores class mehods, such as sayHi, in User.prototype. <br>
+                        After new user object is created, when we call its method, it's taken from the prototype,just as described
+                        in the chapter F.prototype. So the object has access to class methods. <br>
+                        Here's the code to introspect it:
+                        <xmp> <html>
+                          <body>
+                            <script>
+                              class user {
+                                constructor(name) {this.name = name;}
+                                sayHi() { alert(this.name);}
+                              }
+                              //class is a function
+                              alert(typeof User); // function
+      
+                              //....or, more precisely, the constructor method 
+                              alert(user === User.prototype.constructor); //true
+      
+                              // The method are in User.prototype,e.g
+                              alert(object.getOwnPropertyNames(User.prototype)); // constructor,sayHi
+                            </script>
+      
+                          </body>
+                        </html></xmp>
+    </div>
+              <div class="text-container" style="display: text-container; text-align: center;">
+                <br>
+                <br>
+        <h1><b>TOPIC#4:JavaScript Objects </b></h1>
+        
+            <h2><i>I.JavaScript Primitive</i></h2>
+            <p> A primitive value is a value that has no properties or methods <br>
+            A primitive data type is data that has a primitive value. <br>
+            <img src="object.jfif" alt=""><br>
+          JavaScript defines 5 types of primitive data types: <br>
+             * string <br>
+             * boolean <br>
+             * number <br>
+             *null <br>
+             *undefined </p>
+             Primitive values are immutable(they are hardcoded and therfore cannot be changed) <br>
+             <b>-Objects are Variables</b> <br>
+             JavaScript variables can contain single values: <br>
+             <b>Example</b>
+             <xmp> <!DOCTYPE html>
+             <html lang="en">
+             <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Document</title>
+             </head>
+             <body>
+              <script>
+                var person = "john Deo";
+                document.getElementById("demo").innerHTML = person;
+              </script>
+             </body>
+             </html></xmp>
+             <b>- JavaScript Display objects properties </b>
+             <p>The properties of an object can be displayed as a string:</p> <br>
+             <b>Example</b>
+             <xmp>
+              <!DOCTYPE html>
+        <html lang="en">
+        <head>
+        <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Document</title>
+        </head>
+      <body>
+       <h2>JavaScript Display Object properties</h2>
+           <p id="demo"></p>
+          <script>
+            var persson = {name:"John", age:30, city:"New York"};
+      document.getElementById("demo").innerHTML =
+         person.name + "," + person.age + "," + person.city;
+              </script>
+             </body>
+             </html></xmp>
+             </div>
+                
+           <br>
+           <br>
+           <button id="displayTextButton">Next chapter</button> 
+              <p id="textArea" style="display: none; color: rgb(128, 8, 8); font-size: 18px;"></p>  
+           <script>
+            //Javascript to display text on click button 
+            document.getElementById("displayTextButton").addEventListener("click", function(){
+                  //Get paragraph element
+                  const textArea = document.getElementById("textArea")
+                    //set the text and make it visible
+                           textArea.textContent = "this chapter is coming up soon.Stay tuned for our update every after 9days you will recieve emails for this please send your feedback."
+                        textArea.style.display = "block"
+              } );
+            //START STOP SPEECH
+            const textToread =document.getElementById("textCont").innerText
+            function readText(texting){
+              const utterance = new SpeechSynthesisUtterance(texting);
+            }
+            function stopReading(){
+              window.speechSynthesis.cancel();
+            }
+           </script>
+           
+     <button id="text",onclick="topic#1">start</button>
+     <button id="stop",onclick="stop">stop</button>
+    
+     <br>
+     
+     
+  <!--FOOTER-->
+   <footer class="padding_4x">
+    <div class="top_footer flex">
+    <section class="flex_content">
+    
+    </section>
+    </div>
+    <div>
+    <div class="footer_body flex" >
+    <section class=
+    
+    "flex_content padding_1x">
+    <figure class="logo fixed_flex">
+    
+    <figcaption>
+    <strong class="title">VILDASH</strong> NETWORK  
+    </figcaption><br>
+    </figure>
+    <a href="#">
+    <i class="fa fa-map-marker"></i>
+    we are here for you. they key to knowing <br>
+    how to code is concistency in coding <br>
+    and we are here to make you explore to <br>
+    the fullest of technologies. <br><br> contact us at
+    </a><br><br>
+    <i class="fa fa-envelope-o"></i>
+    liblissz3@gmail.com <br>
+    </a>
+    <br>
+    <a href="tel:654598457">
+    <i class="fa fa-headphones"></i>
+    654598457
+    </a>
+    <br>
+    </section>
+    <section class="flex_content padding_1x">
+    <h3> keep </h3><br>
+    <a href="index.html">feedback</a><br>
+    <a href="about.html">about</a><br>
+    <a href="learn.html">learn photography</a><br>
+    </section>
+    <section class="flex_content padding_1x">
+      <h3> keep </h3>
+      <a href="feedback.html">feedback</a>
+        <a href="AIVILDASH.html">Our AI</a>
+        <a href="csharp.html">learn c#</a>
+        <a href="c ++\C++Lesson1.html">learn c++</a>
+        <a href="">learn css</a>
+<a href="html-1.html">learn html</a>
+    </section>
+    <section class="flex_content padding_1x">
+      <h3>Other Links</h3>
+      <a href="c\c.html">learn c</a>
+      <a href="DOC-20250105-WA0008.html">learn python</a>
+      <a href="DOC-20250105-WA0007.html">learn javascript</a>
+      <a href="java.html">learn java</a>
+      <a href="projected-page.html">buy webpages</a>
+      <a href="feedback.html">send feedback</a>
+      
+      
+    
+    </section>
+    <section class="flex_content padding_1x">
+    <h3>vildash network</h3>
+    <p>we are here to see you prosper</p>
+    <!--<fieldset class="fixed_flex">
+    <input type="email" name="newsletter" placeholder="Your Email Address">
+    <button class="btn btn_2">Subscribe</button>
+    </fieldset>-->
+    </section>
+    </div>
+    <div class="flex">
+    <section class="flex-content padding_1x">
+    <p>Copyright ©2024 All rights reserved || VILDASH NETWORK</p>
+    </section>
+    <section class="flex-content padding_1x">
+    <a href="https://web.facebook.com/profile.php?id=61552332181172&sk=followers"><i class="fa fa-facebook"></i></a>
+    <a href="https://www.instagram.com/holy_conceptsstudio/"><i class="fa fa-instagram"></i></a>
+    <a href="https://www.youtube.com/@holyconcepts"><i class="fa fa-youtube"></i></i></a>
+    
+    </section>
+    </div>
+    </footer>
+    
+</script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    
+    </section>
+  </body>
+</html>
