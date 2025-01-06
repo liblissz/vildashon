@@ -4,12 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inputs in Java</title>
-    <link rel="stylesheet" href="./chapters.css">
-    <link rel="stylesheet" href="../style.css">
-    <script src="./chapter.js" defer></script>
-    <script src="../script.js" defer></script>
-    <link rel="icon" href="../file-KXYNjXBEo2D9qPtH9iD6VQ (5).webp">
+    <title>LEARN HTML CHAPTER3</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
   </head>
   <body>
     <div class="container">
@@ -20,96 +17,582 @@
         <nav>
           <div class="navHead">
             <div class="profile">
-              <img style="margin: 10px !important ; border-radius: 5px !important;" src="../file-KXYNjXBEo2D9qPtH9iD6VQ (5).webp" alt="profile" />
-              
+              <img src="./asset/profile.png" alt="profile" />
               
             </div>
             <div class="userName">
-          
+              <p>UserName</p>
             </div>
             
           </div>
           <div class="navBody">
             <ul id="links">
-              <a href="../feedback.html">
-  
+        
+     
               <li>
-  
+            
                 <div class="icon">
                   <ion-icon name="list-outline"></ion-icon>
                 </div>
                 <p>send feedback</p>
               </li>
+             <style>
+            .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .col-md-6 {
+      flex: 1 1 calc(50% - 1rem);
+      box-sizing: border-box;
+    }
+
+    pre, #output {
+      padding: 1rem;
+      border-radius: 5px;
+    }
+
+    pre {
+      background-color: #f8f9fa;
+      border: 1px solid #ccc;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    #output {
+      background-color: #343a40;
+      color: white;
+      min-height: 100px;
+    }
+
+    h1, h3, h4 {
+      color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .col-md-6 {
+        flex: 1 1 100%;
+      }
+    }
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+:root{
+  --primary-green: #28a745;
+  --primary-black: #000000;
+  --primary-white: #ffff;
+}
+body {
+  font-family: "Overpass", sans-serif;
+}
+.container {
+  transition-duration: 400ms;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-property: transform, margin-left, margin-right;
+}
+.container .heroSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  padding-top: 5.5rem;
+}
+.container .topNav {
+  position: absolute;
+  z-index: 1;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  background-color: var(--primary-green);
+
+  transition-duration: 400ms;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-property: padding-left;
+}
+.container .topNav nav {
+  max-width: 1100px;
+  margin: 0% auto;
+}
+.container .heroSection .textCont {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  flex-direction: column;
+  border-bottom: 1px solid #c4c4c4;
+  padding: 2rem 1rem;
+  width: 90%;
+  max-width: 800px;
+}
+.container .heroSection .textCont h1 {
+  font-size: 2.52rem;
+}
+.container .heroSection .textCont p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+  color: var(--primary-black);
+}
+.container .heroSection button {
+  border: none;
+  outline: none;
+  padding: 0.575rem 1.4rem;
+  margin: 0 5px;
+  cursor: pointer;
+  background-color: var(--primary-green);
+  color: #fff;
+  font-weight: normal;
+  font-size: 1rem;
+  font-family: inherit;
+  border-radius: 0.25rem;
+  margin-top: 1rem;
+}
+.overlay {
+  display: none;
+}
+.container .sideNav {
+  position: fixed;
+  background-color: var(--primary-white);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  min-height: 100vh;
+  transform: translateX(-280px);
+  width: 280px;
+  z-index: 100;
+  transition-duration: 400ms;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-property: transform;
+  left: 0%;
+  top: 0%;
+  /* opacity: 0; */
+}
+
+.container .sideNav .navHead {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem 2rem;
+  background-size: 120%;
+  background-position: left center;
+  color: #fff;
+  background-color: var(--primary-green);
+}
+.container .sideNav .navHead p {
+  margin-left: 0.8rem;
+  margin-top: 0.5rem;
+}
+.container .sideNav .navHead .profile {
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .sideNav .navHead .profile img {
+  width: 120%;
+  height: 120%;
+  object-fit: cover;
+}
+
+.container .sideNav nav .navBody ul li {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem;
+  justify-content: flex-start;
+  padding-left: 0.8rem;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+}
+.container .sideNav nav .navBody ul li .icon {
+  padding: 0 1rem;
+}
+.container .sideNav nav .navBody ul li .icon ion-icon {
+  font-size: 1.3rem;
+  color: rgba(0, 0, 0, 0.514);
+  margin-top: 4px;
+}
+.container .sideNav nav .navBody ul li.active::after {
+  content: "";
+  height: 100%;
+  width: 4px;
+  position: absolute;
+  left: 0;
+  top: 0%;
+  background-color: var(--primary-green);
+  border-radius: 0 5px 5px 0;
+}
+.container .sideNav nav .navBody ul li:hover {
+  background-color: #7952b313;
+}
+.container .sideNav nav .navBody ul li.active {
+  background-color: #7952b341;
+}
+.container .sideNav nav .navBody ul li.active p,
+.container .sideNav nav .navBody ul li.active .icon ion-icon {
+  color: var(--primary-green);
+}
+
+.container .topNav nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.container .topNav nav .topLeft {
+  display: flex;
+  align-items: center;
+}
+.container .topNav nav .topLeft p {
+  margin-left: 1rem;
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.3rem;
+}
+.container .topNav nav .topLeft .hamburgar {
+  height: 35px;
+  width: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .topNav nav .topLeft .hamburgar .line {
+  height: 2px;
+  width: 80%;
+  background-color: #fff;
+  position: relative;
+}
+.container .topNav nav .topLeft .hamburgar .line::after,
+.container .topNav nav .topLeft .hamburgar .line::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+}
+.container .topNav nav .topLeft .hamburgar .line::after {
+  top: -8px;
+}
+.container .topNav nav .topLeft .hamburgar .line::before {
+  bottom: -8px;
+}
+.container .topNav nav .ctaBtn button {
+  border: none;
+  outline: none;
+  padding: 0.575rem 1.4rem;
+  border-radius: 99px;
+  margin: 0 5px;
+  cursor: pointer;
+  background-color: var(--primary-black);
+  color: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+}
+body main {
+  margin-top: 0.5rem;
+}
+body main .textContainer {
+  max-width: 800px;
+  margin: 0% auto;
+  padding: 2rem;
+  width: 95%;
+}
+body main .textContainer p {
+  padding: 0.6rem 0;
+  line-height: 1.5;
+  color: #747474;
+}
+body main .textContainer h2 {
+  margin-top: 0.6rem;
+}
+body.nav-open .container .sideNav {
+  transform: translate(0);
+  opacity: 1;
+}
+body.nav-open .container {
+  margin-left: 280px;
+}
+body.nav-open .container .topNav {
+  padding-left: 280px;
+}
+
+/* Modal */
+
+.container .modalCont {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+  background-color: #fff;
+  transform: translate(-50%, -50%);
+  border-radius: 0.25rem;
+  overflow: hidden;
+  width: 90%;
+  max-width: 350px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.container .modalCont .modalTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #7952b3;
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #c4c4c4;
+}
+.container .modalCont .modalTop h2 {
+  font-size: 1rem;
+}
+.container .modalCont .modalTop button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: crimson;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.container .modalCont form {
+  padding: 1rem;
+  user-select: none;
+}
+.container .modalCont form label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+.container .modalCont form div input {
+  width: 100%;
+  padding: 0.475rem 0.75rem;
+  border: 1px solid #c4c4c4;
+  border-radius: 0.25rem;
+  outline: none;
+  margin-bottom: 15px;
+}
+.container .modalCont form div input:focus {
+  border-color: #747474;
+}
+.container .modalCont form button {
+  width: 100%;
+  padding: 0.575rem 0.75rem;
+  border-radius: 0.25rem;
+  outline: none;
+  border: none;
+  color: #fff;
+  margin: 10px 0;
+  cursor: pointer;
+  background-color: #7952b3;
+}
+body .container .overlay,
+body .container .overlay2 {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  z-index: 10;
+  opacity: 0.5;
+  display: none;
+}
+body.modal-open .overlay2 {
+  display: block;
+  z-index: 101;
+}
+body.modal-open {
+  overflow: hidden;
+  margin-right: 17px;
+}
+@media (max-width: 800px) {
+  body.nav-open .overlay {
+    display: block;
+  }
+  body.nav-open .container {
+    margin-left: 0%;
+  }
+  body.nav-open,
+  body.modal-open {
+    overflow: hidden;
+    margin-right: 17px;
+  }
+
+  body.nav-open .container .topNav {
+    padding-left: 0px;
+  }
+}
+@media (max-width: 500px) {
+  .container .heroSection .textCont {
+    align-items: center;
+    text-align: center;
+  }
+  .container .heroSection .textCont h1 {
+    font-size: 2rem;
+  }
+  .container .heroSection .textCont p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 0.5rem;
+  }
+  body.nav-open,
+  body.modal-open {
+    overflow: hidden;
+    margin-right: 0px;
+  }
+}
+              
+
+/* Global Styles */
+
+{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+/* Header Styles */
+
+header {
+background-color: rgba(0, 0, 0, 0.5);
+color: #fff;
+padding: 1em;
+text-align: center;
+}
+
+header nav ul {
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: space-between;
+}
+
+header nav ul li {
+margin-right: 20px;
+}
+
+header nav a {
+color: #fff;
+text-decoration: none;
+}
+
+/* Main Styles */
+
+main {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 2em;
+}
+
+h1 {
+font-size: 24px;
+margin-bottom: 10px;
+}
+section {
+background-color: rgba(255, 255, 255, 0.8);
+padding: 1em;
+margin-bottom: 20px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+p {
+margin-bottom: 20px;
+}
+
+button {
+background-color: #333;
+color: #fff;
+border: none;
+padding: 10px 20px;
+font-size: 16px;
+cursor: pointer;
+}
+
+button:hover {
+background-color: #555;
+}
+
+
+              a{
+                text-decoration: none;
+                color: black;
+              }
+footer {
+      background-color: #008000;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .col-md-6 {
+        flex: 1 1 100%;
+      }
+    }
+             </style>
+              <a href="csharp.html">
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>learn c#</p>
+              </li>
               </a>
-                <a href="../c/c.html">
-                  <li>
-                    <div class="icon">
-                      <ion-icon name="log-out-outline"></ion-icon>
-                    </div>
-                    <p>learn c</p>
-  
-                  </li>
-  
-                </a>
-              </button>
-              <div id="welcome"></div>
-              <a href="../c ++/C++Lesson1.html">
               <li>
                 <div class="icon">
                   <ion-icon name="log-out-outline"></ion-icon>
                 </div>
                 <p>learn c++ </p>
               </li>
-              </a>
-              <a href="../DOC-20250105-WA0007.html">
               <li>
                 <div class="icon">
                   <ion-icon name="log-out-outline"></ion-icon>
                 </div>
                 <p>learn javascript(.js)</p>
               </li>
-            </a>
-            <a href="../html-1.html">
               <li>
-             
                 <div class="icon">
                   <ion-icon name="log-out-outline"></ion-icon>
                 </div>
                 <p>learn html</p>
               </li>
-            </a>
-            <a href="../Basic concepts in css.html">
               <li>
                 <div class="icon">
                   <ion-icon name="log-out-outline"></ion-icon>
                 </div>
                 <p>learn css</p>
               </li>
-              </a>
-              <a href="../csharp.html">
               <li>
                 <div class="icon">
                   <ion-icon name="log-out-outline"></ion-icon>
                 </div>
-                <p>learn c sharp </p>
+                <p>learn c </p>
               </li>
-              </a>
-              <a href="../AIVILDASH.html">
-                <li>
-                  <div class="icon">
-                    <ion-icon name="log-out-outline"></ion-icon>
-                  </div>
-                  <p>use our AI</p>
-                </li>
-                </a>
-              <a href="../homepage.html">
               <li>
                 <div class="icon">
                   <ion-icon name="log-out-outline"></ion-icon>
                 </div>
-                <p>home page</p>
+                <p>Sign Out</p>
               </li>
-  </a>
+      
             </ul>
           </div>
         </nav>
@@ -121,73 +604,11 @@
             <div id="hamburgar" class="hamburgar">
               <div class="line"></div>
             </div>
-            <p>Learn Java Programming (java)</p>
+            <p>LEARN HTML</p>
           </div>
           <div id="demo" style="opacity: 0.4; font-size: 1rem;
-          font-weight: bold; color:#fff;"><input style="opacity: none !important; padding:10px;" type="text" placeholder="
-          search our pages........" name="search" id="searchinput" onkeyup="search()"> 
-          
-          <div id="results" style="padding: 20px;"></div></div>
+          font-weight: bold; color:#fff;">your user name</div>
 
-
-          <style>
-            #searchinput::placeholder{
-              float: right;
-              padding-left: 13px;
-            }
-            #results {
-             background-color: #1650245e;
-             display: flex;
-             flex-direction: column;
-             gap: 6px;
-            }
-          </style>
-          <script>
-            const pages = [
-      {title: "csharp(c#)", url:"../csharp.html", content:"learn c#" },
-      {title: "feedback", url:"../feedback.html", content:"give a feedback message" },
-      {title: "java", url:"../java.html", content:"learn java" },
-      {title: "python", url:"../python.html", content:"learn python" },
-      {title: "c program", url:"../c.html", content:"learn c" },
-      {title: "c++", url:"../cplusplus.html", content:"learn c++" },
-      {title: "javscript js", url:"../java.html", content:"learn javascript(js)" },
-      {title: "css", url:"../css.html", content:"learn casceding stylesheet(css)" },
-      {title: "html", url:"../html.html", content:"learn html" },
-      {title: "terms and condition", url:"../term.html", content:"term and condition" },
-      {title: "use AI", url:"../ai.html", content:"use  AI" },
-      {title: "c++", url:"../cplusplus.html", content:"learn c++" }
-      
-      ];
-      
-      function search(){
-      const query = document.getElementById("searchinput").value.toLowerCase();
-      const resultcontainer = document.getElementById("results");
-      resultcontainer.innerHTML ='';
-      if(query){
-          const results = pages.filter(pages => pages.content.toLowerCase().includes(query)||
-          pages.title.toLowerCase().includes(query)
-      );
-      if(results.length > 0){
-          results.forEach(result =>{
-              const resultDiv = document.createElement('div');
-              resultDiv.classList.add('results');
-          resultDiv.style.background = "#333";
-          resultDiv.style.padding = "10px";
-          resultDiv.style.borderRadius = "10px";
-              resultDiv.innerHTML = `<h2><a style ="color: white;" href="${result.url}">${result.title}</a></h2>
-              <p style = "color:white">${result.content}</p>`;
-              resultcontainer.appendChild(resultDiv);
-              
-          });
-      }
-          else{
-              resultcontainer.innerHTML = `<p>no results found</p>`
-          }
-      
-      }
-      }
-      
-          </script>
           <!--<div class="ctaBtn">
             <button class="ctaModal">Sign In</button>
           </div>-->
@@ -195,9 +616,9 @@
       </div>
       <section class="heroSection">
         <div class="textCont">
-          <h1>Inputs in Java</h1>
+          <h1></h1>
           <p>
-            Explore the different cores of java programming below
+          
           </p>
           <div class="ctaBtn">
             <!--<button class="ctaModal">Sign In</button>-->
@@ -205,245 +626,739 @@
         </div>
       </section>
       <main>
-        <div class="textContents">
-            <div class="contents">
-                <h2>Inputs in Java: Overview</h2>
-                <p>In Java, obtaining user input is an essential part of creating interactive applications. The Scanner class, provided in the java.util package, is commonly used for this purpose. This class allows developers to read various types of data, including integers, floats, strings, and more. By using methods like nextInt(), nextDouble(), and nextLine(), programmers can collect specific data types from users. This flexibility enables dynamic programming, where user inputs influence the behavior and output of the program.</p>
-                <button class="read-aloud">Read aloud</button>
-            </div>
-            <div class="contents">
-                <h2>Getting Input from a User</h2>
-                <p>To get input from the user, you first need to create an instance of the Scanner class. The System.in argument tells the Scanner to read input from the console. Once the Scanner object is initialized, you can use its methods to fetch specific data types. For instance, if you prompt the user to enter their name and age, you would use nextLine() for the name and nextInt() for the age. Properly handling user input, including validating and processing it, ensures a smooth user experience and prevents unexpected errors.</p>
-                <button class="read-aloud">Read aloud</button>
-            </div>
-            <div class="contents">
-                <h2>Performing Actions with Inputs</h2>
-                <p>Once input is obtained, it can be processed to perform various actions. For example, if a user inputs two numbers, the program can calculate their sum, product, or other mathematical operations. Java's type-specific methods allow easy manipulation of input data. For strings, Java provides methods like toUpperCase() and toLowerCase() for formatting, and concat() for combining strings. By leveraging these capabilities, developers can create applications ranging from simple calculators to complex data-processing systems.</p>
-                <button class="read-aloud">Read aloud</button>
-            </div>
-       <div class="contents">
-          <div class="code-container">
-            <h2>Example 1: Getting a User's Name and Greeting Them</h2>
-            <pre class="code-snippet">
-    <code>
-        import java.util.Scanner;
+<h1>HTML Features Tutorial</h1>
+<p>Welcome to this tutorial on HTML features!</p>
+<button id="myButton">Click me!</button>
+</section>
+<section>
+<h2>Basic HTML Structure</h2>
+<p>The basic structure of an HTML document consists of the following elements:</p>
+<ul>
+<li><code>&lt;!DOCTYPE html&gt;</code>: The document type declaration</li>
+<li><code>&lt;html&gt;</code>: The root element of the document</li>
+<li><code>&lt;head&gt;</code>: The head section of the document</li>
+<li><code>&lt;title&gt;</code>: The title of the document</li>
+<li><code>&lt;body&gt;</code>: The body section of the document</li>
+</ul>
+</section>
+<section>
+<h2>HTML Styles</h2>
+<p>HTML styles are used to control the layout and appearance of HTML elements.</p>
+<p>There are three types of HTML styles:</p>
+<ul>
+<li>Inline styles: These styles are applied directly to an HTML element using the <code>style</code> attribute.</li>
+<li>Internal styles: These styles are applied to an HTML document using the <code>&lt;style&gt;</code> element.</li>
+<li>External styles: These styles are applied to an HTML document using an external stylesheet.</li>
+</ul>
+</section>
+<section>
+<h2>Responsive Design</h2>
+<p>Responsive design is the practice of designing websites that adapt to different screen sizes and devices.</p>
+<p>Media queries are used to apply different styles based on different screen sizes.</p>
+</section>
+<section>
+<h2>Centering Text</h2>
+<p>Centering text can be achieved using the <code>text-align</code> property.</p>
+</section>
+<section>
+<h2>Text Formatting</h2>
+<p>Text formatting can be achieved using various HTML elements and attributes.</p>
+<p>Bold text can be achieved using the <code>&lt;b&gt;</code> element or the <code>font-weight</code> property.</p>
+<p>Italic text can be achieved using the <code>&lt;i&gt;</code> element or the <code>font-style</code> property.</p>
+</section>
+</main>
 
-public class UserInputExample {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        // Prompting the user
-        System.out.print("Enter your name: ");
-        String name = scanner.nextLine();
-
-        // Greeting the user
-        System.out.println("Hello, " + name + "! Welcome to Java programming.");
+<script>
+// Add event listener to button
+document.addEventListener("DOMContentLoaded", function() {
+var button = document.getElementById("myButton");
+button.addEventListener("click", function() {
+alert("Hello World!");
+});
+});
+        <div class="textContainer">
+          <h2></h2>
+          <p>
         
-        scanner.close();
-    }
-}                       
-    </code>
-            </pre>
-            <button class="copy-button">Copy Code</button>
-        </div>
-          <div class="code-container">
-            <h2>Example 2: Performing Arithmetic Operations java Copy code</h2>
-            <pre class="code-snippet">
-    <code>
-        import java.util.Scanner;
+          </p>
+          <h2></h2>
+          <p>
+   
+        </p>
+          <h2></h2>
+          <p>
+         
+          </p>
+          <h2></h2>
 
-public class ArithmeticOperations {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+          <p>
+  
+          </p>
+          <h2></h2>
+          <p>
+            
+          </p>
+        </div>
+  </main>
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="./script.js"></script>
 
-        // Getting two numbers from the user
-        System.out.print("Enter the first number: ");
-        int num1 = scanner.nextInt();
-
-        System.out.print("Enter the second number: ");
-        int num2 = scanner.nextInt();
-
-        // Performing and displaying operations
-        int sum = num1 + num2;
-        int product = num1 * num2;
-
-        System.out.println("The sum of the numbers is: " + sum);
-        System.out.println("The product of the numbers is: " + product);
-
-        scanner.close();
-    }
-}                       
-    </code>
-            </pre>
-            <button class="copy-button">Copy Code</button>
-        </div>
-          <div class="code-container">
-            <h2>Example 3: String Manipulation</h2>
-            <pre class="code-snippet">
-    <code>
-        import java.util.Scanner;
-
-public class StringManipulation {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        // Getting a string from the user
-        System.out.print("Enter a phrase: ");
-        String phrase = scanner.nextLine();
-
-        // String manipulations
-        System.out.println("Uppercase: " + phrase.toUpperCase());
-        System.out.println("Lowercase: " + phrase.toLowerCase());
-        System.out.println("Length: " + phrase.length());
-
-        scanner.close();
-    }
-}                       
-    </code>
-            </pre>
-            <button class="copy-button">Copy Code</button>
-        </div>
-        <button class="quiz-btn">Take a quiz</button>
-       </div>
-       <div class="quiz-container">
-        <!-- Question 1 -->
-        <div class="question" id="question1">
-          <p>1. Which class is commonly used in Java to obtain user input?</p>
-          <div class="options">
-            <label><input type="radio" name="q1" value="a"> Scanner</label>
-            <label><input type="radio" name="q1" value="b"> String</label>
-            <label><input type="radio" name="q1" value="c"> System</label>
-          </div>
-        </div>
-      
-        <!-- Question 2 -->
-        <div class="question" id="question2">
-          <p>2. What is the purpose of the <code>System.in</code> argument in the <code>Scanner</code> class?</p>
-          <div class="options">
-            <label><input type="radio" name="q2" value="a"> To read input from a file</label>
-            <label><input type="radio" name="q2" value="b"> To read input from the console</label>
-            <label><input type="radio" name="q2" value="c"> To display output on the console</label>
-          </div>
-        </div>
-      
-        <!-- Question 3 -->
-        <div class="question" id="question3">
-          <p>3. Which method is used to read an integer input from the user?</p>
-          <div class="options">
-            <label><input type="radio" name="q3" value="a"> nextFloat()</label>
-            <label><input type="radio" name="q3" value="b"> nextLine()</label>
-            <label><input type="radio" name="q3" value="c"> nextInt()</label>
-          </div>
-        </div>
-      
-        <!-- Question 4 -->
-        <div class="question" id="question4">
-          <p>4. What method of the <code>Scanner</code> class can be used to read a full line of text input?</p>
-          <div class="options">
-            <label><input type="radio" name="q4" value="a"> next()</label>
-            <label><input type="radio" name="q4" value="b"> nextLine()</label>
-            <label><input type="radio" name="q4" value="c"> readLine()</label>
-          </div>
-        </div>
-      
-        <!-- Question 5 -->
-        <div class="question" id="question5">
-          <p>5. What method is used to convert a string to uppercase in Java?</p>
-          <div class="options">
-            <label><input type="radio" name="q5" value="a"> toLowerCase()</label>
-            <label><input type="radio" name="q5" value="b"> toUpperCase()</label>
-            <label><input type="radio" name="q5" value="c"> concat()</label>
-          </div>
-        </div>
-      
-        <!-- Question 6 -->
-        <div class="question" id="question6">
-          <p>6. What is the output of the following code if the user inputs "Hello"?</p>
-          <pre>
-      Scanner scanner = new Scanner(System.in);
-      String input = scanner.nextLine();
-      System.out.println(input.toUpperCase());
-          </pre>
-          <div class="options">
-            <label><input type="radio" name="q6" value="a"> hello</label>
-            <label><input type="radio" name="q6" value="b"> inputError</label>
-            <label><input type="radio" name="q6" value="c"> HELLO</label>
-          </div>
-        </div>
-      
-        <!-- Question 7 -->
-        <div class="question" id="question7">
-          <p>7. Which of the following correctly closes a <code>Scanner</code> object?</p>
-          <div class="options">
-            <label><input type="radio" name="q7" value="a"> scanner.stop()</label>
-            <label><input type="radio" name="q7" value="b"> scanner.close()</label>
-            <label><input type="radio" name="q7" value="c"> scanner.end()</label>
-          </div>
-        </div>
-      
-        <!-- Question 8 -->
-        <div class="question" id="question8">
-          <p>8. What is the output of the following code if the user enters 10 and 20?</p>
-          <pre>
-      Scanner scanner = new Scanner(System.in);
-      int a = scanner.nextInt();
-      int b = scanner.nextInt();
-      System.out.println(a + b);
-          </pre>
-          <div class="options">
-            <label><input type="radio" name="q8" value="a"> 30</label>
-            <label><input type="radio" name="q8" value="b"> 1020</label>
-            <label><input type="radio" name="q8" value="c"> Error</label>
-          </div>
-        </div>
-      
-        <!-- Question 9 -->
-        <div class="question" id="question9">
-          <p>9. What is the output of the following code if the user enters "Java Programming"?</p>
-          <pre>
-      Scanner scanner = new Scanner(System.in);
-      String phrase = scanner.nextLine();
-      System.out.println(phrase.length());
-          </pre>
-          <div class="options">
-            <label><input type="radio" name="q9" value="a"> 16</label>
-            <label><input type="radio" name="q9" value="b"> 17</label>
-            <label><input type="radio" name="q9" value="c"> Error</label>
-          </div>
-        </div>
-      
-        <!-- Question 10 -->
-        <div class="question" id="question10">
-          <p>10. What will the following code output if the user enters "Code"? </p>
-          <pre>
-      Scanner scanner = new Scanner(System.in);
-      String word = scanner.nextLine();
-      System.out.println(word.toLowerCase());
-          </pre>
-          <div class="options">
-            <label><input type="radio" name="q10" value="a"> CODE</label>
-            <label><input type="radio" name="q10" value="b"> code</label>
-            <label><input type="radio" name="q10" value="c"> Error</label>
-          </div>
-        </div>
-      
-        <!-- Buttons -->
-        <div class="button-container">
-          <button class="btn" id="next-btn" onclick="nextQuestion()">Next Question</button>
-          <a href="chapter4.html"><button id="me">Next course</button></a>
-        </div>
-      
-        <div class="result" id="result" style="display: none;"></div>
-      </div>
-      
     
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;400;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+  margin: 0%;
+  padding: 0%;
+}
+body {
+  background-color: #fff;
+}
+.quizSection {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0% auto;
+}
+.quizSection .bgImg {
+  background: url(./asset/Background.png);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-size: cover;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.5;
+  background-position: center center;
+}
+
+.quizSection header {
+  padding: 1rem;
+  max-width: 700px;
+  margin: 0% auto;
+  margin-top: 1rem;
+}
+.quizSection header .title h1 {
+  font-size: 2rem;
+  color: #6b6b6b;
+}
+.quizSection header .title h1 span {
+  position: relative;
+}
+.quizSection header .title h1 span::after {
+  content: "";
+  background: url(./asset/zig-zag-underline.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  margin-top: 5px;
+  position: absolute;
+  width: 90%;
+  height: 10px;
+  left: 50%;
+  bottom: calc(0% - 7px);
+  transform: translateX(-50%);
+}
+.quizSection .progressCont {
+  width: 100%;
+  margin-top: 1.52rem;
+}
+.quizSection .progressCont .progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  max-width: 350px;
+  margin: 0% auto;
+}
+.quizSection .progressCont .progress .circle {
+  height: 35px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e5e5e5;
+  border-radius: 50%;
+}
+.quizSection .progressCont .progress .circle p {
+  color: #244974;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.quizSection .progressCont .progress .circle.correct {
+  background: #67bece;
+}
+.quizSection .progressCont .progress .circle.wrong {
+  background-color: #f8d7da;
+}
+.quizSection .progressCont .progress .circle.wrong p {
+  color: #842029;
+}
+.quizSection .questionContainer {
+  background-color: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 0.7rem;
+  padding: 2.2rem;
+  max-width: 500px;
+  margin: 0% auto;
+  margin-top: 2rem;
+}
+.quizSection .questionContainer .questions h1 {
+  color: #244974;
+}
+.quizSection .questionContainer .answerCont .answer {
+  border: 1px solid #2449746e;
+  border-radius: 0.3rem;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.85rem;
+  line-height: 1.5;
+  margin: 1rem 0;
+  cursor: pointer;
+  background-color: transparent;
+  user-select: none;
+}
+.quizSection .questionContainer .answerCont .answer .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+}
+.quizSection .questionContainer .answerCont .answer .icon ion-icon {
+  font-size: 1.2rem;
+}
+.quizSection .questionContainer .answerCont .answer p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-left: 0.3rem;
+  color: #8e8c9b;
+}
+.quizSection .questionContainer .answerCont .answer.wrong {
+  background-color: #f8d7da;
+  color: #842029;
+  border-color: #f5c2c7;
+}
+.quizSection .questionContainer .answerCont .answer.wrong p {
+  color: #842029;
+}
+
+.quizSection .questionContainer .answerCont .answer.correct {
+  background-color: #d1e7dd;
+  color: #0f5132;
+  border-color: #badbcc;
+}
+.quizSection .questionContainer .answerCont .answer.correct p {
+  color: #0f5132;
+}
+.quizSection .questionContainer .nextBtnEl {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.quizSection .questionContainer .nextBtnEl button {
+  padding: 0.55rem 2rem;
+  border: none;
+  outline: none;
+  background-color: #67bece;
+  color: #fff;
+  font-weight: normal;
+  letter-spacing: 2px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+.quizSection .questionContainer .nextBtnEl button:disabled {
+  background-color: #6b6b6b;
+}
+
+.quizSection .questionContainer .resultTable {
+  width: 100%;
+}
+
+.quizSection .questionContainer .resultTable tr {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.quizSection .questionContainer .resultTable,
+.quizSection .questionContainer .resultTable th,
+.quizSection .questionContainer .resultTable td {
+  border-collapse: collapse;
+  border: 1px solid #8e8c9b46;
+}
+.quizSection .questionContainer .resultTable td,
+.quizSection .questionContainer .resultTable th {
+  padding: 1rem;
+  width: 100%;
+  text-align: left;
+}
+.questionContainer .restartCont {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.5rem;
+}
+.questionContainer .restartCont button {
+  padding: 0.55rem 2rem;
+  border: none;
+  outline: none;
+  background-color: #67bece;
+  color: #fff;
+  font-weight: normal;
+  letter-spacing: 2px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .quizSection .bgImg {
+    background-position: center center;
+    background-size: cover;
+  }
+}
+
+    </style>
+  <body>
+    <section class="quizSection">
+      <div class="bgImg"></div>
+      <header>
+        <div class="title">
+          <h1><span> Quiz </span> App</h1>
         </div>
-      </main>
+      </header>
+      <div class="progressCont">
+        <div class="progress" id="progress"></div>
+      </div>
+      <div class="questionContainer" id="quizContainer">
+        <div class="questions">
+          <h1 id="question">What does html stand for?</h1>
+        </div>
+        <div class="answerCont" id="answerCont"></div>
+        <div class="nextBtnEl">
+          <button id="nextBtn">Next</button>
+        </div>
+      </div>
+    </section>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script>
+      const datas = [
+{
+id: 1,
+question: `What is the basic structure of an HTML document?`,
+choices: [
+`&lt;html&gt; &lt;head&gt; &lt;body&gt;`,
+`&lt;html&gt; &lt;title&gt; &lt;body&gt;`,
+`&lt;html&gt; &lt;head&gt; &lt;title&gt; &lt;body&gt;`,
+`&lt;html&gt; &lt;body&gt;`,
+],
+answer: `&lt;html&gt; &lt;head&gt; &lt;title&gt; &lt;body&gt;`,
+},
+{
+id: 2,
+question: `What is the HTML tag used to add styles to a web page?`,
+choices: [
+`&lt;style&gt;`,
+`&lt;script&gt;`,
+`&lt;link&gt;`,
+`&lt;css&gt;`,
+],
+answer: `&lt;style&gt;`,
+},
+{
+id: 3,
+question: `What is the purpose of the &lt;meta&gt; tag in HTML?`,
+choices: [
+`To define the character encoding of a document`,
+`To define the title of a document`,
+`To define the styles of a document`,
+`To define the scripts of a document`,
+],
+answer: `To define the character encoding of a document`,
+},
+{
+id: 4,
+question: `What is the HTML attribute used to make a web page responsive?`,
+choices: [
+`width`,
+`height`,
+`viewport`,
+`responsive`,
+],
+answer: `viewport`,
+},
+{
+id: 5,
+question: `How do you center text in HTML?`,
+choices: [
+`Using the &lt;center&gt; tag`,
+`Using the &lt;p&gt; tag with the align attribute`,
+`Using the &lt;div&gt; tag with the text-align property`,
+`Using the &lt;span&gt; tag with the text-align property`,
+],
+answer: `Using the &lt;div&gt; tag with the text-align property`,
+},
+{
+id: 6,
+question: `What is the HTML tag used to format text as bold?`,
+choices: [
+`&lt;b&gt;`,
+`&lt;i&gt;`,
+`&lt;strong&gt;`,
+`&lt;em&gt;`,
+],
+answer: `&lt;b&gt;`,
+},
+{
+id: 7,
+question: `What is the HTML tag used to format text as italic?`,
+choices: [
+`&lt;b&gt;`,
+`&lt;i&gt;`,
+`&lt;strong&gt;`,
+`&lt;em&gt;`,
+],
+answer: `&lt;i&gt;`,
+},
+{
+id: 8,
+question: `What is the HTML tag used to insert a line break?`,
+choices: [
+`&lt;br&gt;`,
+`&lt;hr&gt;`,
+`&lt;p&gt;`,
+`&lt;div&gt;`,
+],
+answer: `&lt;br&gt;`,
+},
+{
+id: 9,
+question: `What is the HTML tag used to define a paragraph?`,
+choices: [
+`&lt;p&gt;`,
+`&lt;div&gt;`,
+`&lt;span&gt;`,
+`&lt;section&gt;`,
+],
+answer: `&lt;p&gt;`,
+},
+{
+id: 10,
+question: `What is the HTML tag used to define a heading?`,
+choices: [
+`&lt;h1&gt;`,
+`&lt;h2&gt;`,
+`&lt;h3&gt;`,
+`All of the above`,
+],
+answer: `All of the above`,
+},
+];
+ const shuffledQuizData = datas.sort(() => 0.5 - Math.random());
+
+const progressEl = document.getElementById("progress");
+const answerContEl = document.getElementById("answerCont");
+const questionEl = document.getElementById("question");
+const nextBtnEl = document.getElementById("nextBtn");
+const quizContainerEl = document.getElementById("quizContainer");
+
+let quizCount = 0;
+let result = 0;
+let isAnswerSelected = false;
+
+// Counting El
+
+let circleCount = 0;
+let answerElCount = 0;
+
+// Disabling button when no choice is selected
+
+nextBtnEl.disabled = true;
+
+// Create Progress
+
+function createProgress() {
+  const circleEl = document.createElement("div");
+  circleEl.className = `circle circle${++circleCount}`;
+  const circlePara = document.createElement("p");
+  circlePara.innerHTML = circleCount;
+  circleEl.appendChild(circlePara);
+  progressEl.appendChild(circleEl);
+}
+
+datas.forEach((data) => {
+  createProgress();
+});
+
+// Create Quiz
+
+function createQuizChoices(data) {
+  const answerEl = document.createElement("div");
+  const attr = document.createAttribute("data-value");
+  attr.value = data;
+  answerEl.setAttributeNode(attr);
+  answerEl.className = `answer answer${++answerElCount}`;
+  const answerPara = document.createElement("p");
+  answerPara.innerHTML = data;
+  answerEl.appendChild(answerPara);
+  answerContEl.appendChild(answerEl);
+
+  // Event Listener
+  answerEl.addEventListener("click", (e) => {
+    if (!isAnswerSelected) {
+      let allAnswerEl = answerContEl.querySelectorAll(`.answer`);
+      checkAnswer(answerEl, allAnswerEl);
+      isAnswerSelected = true;
+      nextBtnEl.disabled = false;
+      if (quizCount === shuffledQuizData.length - 1) {
+        nextBtnEl.innerHTML = `Show Result`;
+      }
+    }
+  });
+}
+
+function createQuiz() {
+  let currentQuiz = shuffledQuizData[quizCount];
+  questionEl.innerHTML = currentQuiz.question;
+
+  answerContEl.innerHTML = ``;
+
+  currentQuiz.choices
+    .sort(() => 0.5 - Math.random())
+    .forEach((choice) => {
+      createQuizChoices(choice);
+    });
+}
+
+createQuiz();
+
+function checkAnswer(selectedAnswerEl, allAnswerEl) {
+  let currentProgress = [...progressEl.querySelectorAll(".circle")];
+
+  let currentQuizAnswer = shuffledQuizData[quizCount].answer;
+  let selectedAnswer = selectedAnswerEl.dataset.value;
+  if (selectedAnswer === currentQuizAnswer) {
+    selectedAnswerEl.classList.add("correct");
+    selectedAnswerEl.prepend(createCorrectIcon());
+    currentProgress[quizCount].classList.add("correct");
+    ++result;
+  } else if (selectedAnswer !== currentQuizAnswer) {
+    selectedAnswerEl.classList.add("wrong");
+    selectedAnswerEl.prepend(createWrongIcon());
+    currentProgress[quizCount].classList.add("wrong");
+    allAnswerEl.forEach((ans) => {
+      if (ans.dataset.value === currentQuizAnswer) {
+        ans.classList.add("correct");
+        ans.prepend(createCorrectIcon());
+      }
+    });
+  }
+}
+
+function createCorrectIcon() {
+  const iconEl = document.createElement("div");
+  iconEl.classList.add("icon");
+  iconEl.innerHTML = `<ion-icon name="checkmark-circle"></ion-icon>`;
+  return iconEl;
+}
+
+function createWrongIcon() {
+  const iconEl = document.createElement("div");
+  iconEl.classList.add("icon");
+  iconEl.innerHTML = `<ion-icon name="close-circle"></ion-icon>`;
+  return iconEl;
+}
+
+nextBtnEl.addEventListener("click", (e) => {
+  if (isAnswerSelected) {
+    isAnswerSelected = false;
+    nextBtnEl.disabled = true;
+
+    if (quizCount < shuffledQuizData.length - 1) {
+      ++quizCount;
+      createQuiz();
+    } else {
+      createResultEl();
+    }
+  } else {
+    alert("you must select a choice");
+  }
+});
+
+function createResultEl() {
+  quizContainerEl.innerHTML = ``;
+
+  progressEl.style.opacity = `0`;
+
+  const tableEl = document.createElement("table");
+  tableEl.classList.add("resultTable");
+
+  const resultData = [
+    { text: `Total Question`, count: shuffledQuizData.length },
+    { text: `Correct`, count: result },
+    { text: `Wrong`, count: shuffledQuizData.length - result },
+    {
+      text: `Percentage`,
+      count: `${(result / shuffledQuizData.length) * 100}%`,
+    },
+    { text: `Your Total`, count: `${result} / ${shuffledQuizData.length}` },
+  ];
+
+  // tr1
+  function createTableRow(data) {
+    const tr = document.createElement("tr");
+    const th = document.createElement("th");
+    th.innerHTML = data.text;
+    const td = document.createElement("td");
+    td.innerHTML = data.count;
+    tr.appendChild(th);
+    tr.appendChild(td);
+    tableEl.appendChild(tr);
+  }
+
+  resultData.forEach((data) => createTableRow(data));
+
+  const restartCont = document.createElement("div");
+  restartCont.classList.add("restartCont");
+  const restartBtn = document.createElement("button");
+  restartBtn.innerHTML = `Restart`;
+  restartCont.appendChild(restartBtn);
+
+  restartBtn.addEventListener("click", (e) => {
+    window.location.reload();
+  });
+
+  // Append Table to continer
+  quizContainerEl.appendChild(tableEl);
+  quizContainerEl.appendChild(restartCont);
+}
+
+    </script>
     </div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script>
+    const hamburgarEl = document.getElementById("hamburgar");
+const bodyEl = document.querySelector("body");
+const linksEl = document.querySelectorAll("#links li");
+const containerEl = document.querySelector(".container");
 
-  <!--FOOTER-->
-  <footer class="padding_4x">
+const ctaModalEl = document.querySelectorAll(".ctaModal");
+
+hamburgarEl.addEventListener("click", (e) => {
+  bodyEl.classList.toggle("nav-open");
+});
+
+linksEl.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    linksEl.forEach((item) => {
+      item.classList.remove("active");
+    });
+    link.classList.add("active");
+  });
+});
+
+// Create Modal
+
+function createModal() {
+  const modalCont = document.createElement("div");
+  const modalEl = document.createElement("div");
+  modalCont.classList.add("modalCont");
+  modalEl.classList.add("modal");
+
+  // Modal Top
+
+  const modalTop = document.createElement("div");
+  modalTop.classList.add("modalTop");
+  modalEl.appendChild(modalTop);
+  modalCont.appendChild(modalEl);
+  // Modal Title
+
+  const modalTitle = document.createElement("h2");
+  modalTitle.innerHTML = `Sign In`;
+  modalTop.appendChild(modalTitle);
+
+  // Close Btn
+  const closeBtn = document.createElement("button");
+  closeBtn.innerHTML = `<ion-icon name="close"></ion-icon>`;
+  modalTop.appendChild(closeBtn);
+  const formEl = document.createElement("form");
+
+  // UserName
+  const userNameDiv = document.createElement("div");
+  const userNameLabel = document.createElement("label");
+  userNameLabel.htmlFor = "userName";
+  const userNameInput = document.createElement("input");
+  userNameInput.id = "userName";
+  userNameInput.placeholder = "Username";
+  userNameLabel.innerHTML = `User Name`;
+  userNameDiv.appendChild(userNameLabel);
+  userNameDiv.appendChild(userNameInput);
+  formEl.appendChild(userNameDiv);
+
+  // Email
+
+  const userEmailDiv = document.createElement("div");
+  const userEmailLabel = document.createElement("label");
+  userEmailLabel.htmlFor = "email";
+  const userEmailInput = document.createElement("input");
+  userEmailInput.id = "email";
+  userEmailInput.placeholder = "Email";
+  userEmailLabel.innerHTML = `Email`;
+  userEmailDiv.appendChild(userEmailLabel);
+  userEmailDiv.appendChild(userEmailInput);
+  formEl.appendChild(userEmailDiv);
+
+  // PassWord
+  const userPasswordDiv = document.createElement("div");
+  const userPasswordLabel = document.createElement("label");
+  userPasswordLabel.innerHTML = `Password`;
+  userPasswordLabel.htmlFor = `password`;
+  const userPasswordInput = document.createElement("input");
+  userPasswordInput.id = `password`;
+  userPasswordInput.placeholder = `Password`;
+  userPasswordDiv.appendChild(userPasswordLabel);
+  userPasswordDiv.appendChild(userPasswordInput);
+  formEl.appendChild(userPasswordDiv);
+
+  // Submit btn
+  const ctaBtn = document.createElement("button");
+  ctaBtn.type = "submit";
+  ctaBtn.innerHTML = `Submit`;
+  formEl.appendChild(ctaBtn);
+
+  closeBtn.addEventListener("click", (e) => {
+    bodyEl.classList.remove("modal-open");
+    modalCont.remove();
+  });
+
+  //
+  window.addEventListener("click", (e) => {
+    if (e.target.classList == "overlay2") {
+      bodyEl.classList.remove("modal-open");
+      modalCont.remove();
+    }
+  });
+
+  modalEl.appendChild(formEl);
+  containerEl.appendChild(modalCont);
+}
+
+ctaModalEl.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    createModal();
+    bodyEl.classList.add("modal-open");
+  });
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target.classList == "overlay") bodyEl.classList.remove("nav-open");
+});
+
+    </script>
+   <!--FOOTER-->
+   <footer class="padding_4x">
     <div class="top_footer flex">
     <section class="flex_content">
     
@@ -473,22 +1388,18 @@ public class StringManipulation {
     </section>
     <section class="flex_content padding_1x">
     <h3> keep </h3>
-    <a href="../feedback.html">feedback</a>
-    <a href="../AIVILDASH.html">Our AI</a>
-    <a href="../csharp.html">learn c#</a>
-   
-    <a href="../Basic concepts in css.html">learn css</a>
-<a href="../html-1.html">learn html</a>
-    </section>
+      <ul>
+        <li><a href="index.html">feedback</a></li>
+          <li></><a href="about.html">about</a></li>
+          <li></><a href="learn.html">learn photography</a></li>
+      </ul>
+      </section>
     <section class="flex_content padding_1x">
     <h3>Other Links</h3>
-    <a href="../c\c.html">learn c</a>
-    <a href="../DOC-20250105-WA0008.html">learn python</a>
-    <a href="../DOC-20250105-WA0007.html">learn javascript</a>
-    <a href="../java.html">learn java</a>
-    <a href="../projected-page.html">buy webpages</a>
-    <a href="../feedback.html">send feedback</a>
-    <a href="../c ++/C++Lesson1.html">learn c++</a>
+      <ul>
+        <li><a href="partnership/index.html">partnership</a></li>
+          <li><a href="contact.html">contact us</a></li>
+            <li></><a href="gelary.html">gelary</a></li>
     </section>
     <section class="flex_content padding_1x">
     <h3>vildash network</h3>
@@ -506,13 +1417,13 @@ public class StringManipulation {
     <section class="flex-content padding_1x">
     <a href="https://web.facebook.com/profile.php?id=61552332181172&sk=followers"><i class="fa fa-facebook"></i></a>
     <a href="https://www.instagram.com/holy_conceptsstudio/"><i class="fa fa-instagram"></i></a>
-    <a href="https://www.youtube.com/@holyconcepts"><i class="fa fa-youtube"></i></i></a> 
-     
+    <a href="https://www.youtube.com/@holyconcepts"><i class="fa fa-youtube"></i></i></a>
+    
     </section>
     </div>
     </footer>
       <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-     <link rel="stylesheet" href="../footer.css">
-  </body>
-
+      <link rel="stylesheet" href="footer.css">
+</body>
 </html>
+

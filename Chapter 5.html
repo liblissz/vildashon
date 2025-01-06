@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LEARN HTML</title>
+    <titl>Html Practical exampled</title>
     <link rel="stylesheet" href="style.css" />
     <script src="./script.js" defer></script>
     <script src="asset.js"></script>
@@ -39,7 +39,7 @@
                 <p>send feedback</p>
               </li>
              <style>
-              .container {
+    .container {
       max-width: 1200px;
       margin: 2rem auto;
       padding: 1rem;
@@ -485,16 +485,17 @@ padding: 10px;
 border: 1px solid #ddd;
 }
 
-.feature-box img {
-width: 100%;
-height: auto;
-margin-bottom: 20px;
+.button {
+background-color: #4CAF50;
+color: #fff;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
 }
 
-.feature-box iframe {
-width: 100%;
-height: 500px;
-margin-bottom: 20px;
+.button:hover {
+background-color: #3e8e41;
 }
 footer {
       background-color: #008000;
@@ -515,7 +516,7 @@ footer {
                 color: black;
               }
              </style>
-             <a href="csharp.html">
+              <a href="csharp.html">
               <li>
                 <div class="icon">
                   <ion-icon name="log-out-outline"></ion-icon>
@@ -555,7 +556,7 @@ footer {
                 <p>home page</p>
               </li>
       </a>
-      </ul>
+            </ul>
           </div>
         </nav>
       </div>
@@ -566,11 +567,10 @@ footer {
             <div id="hamburgar" class="hamburgar">
               <div class="line"></div>
             </div>
-            <p>LEARN HTML FEATURES</p>
+            <p>LEARN HTML</p>
           </div>
           <div id="demo" style="opacity: 0.4; font-size: 1rem;
-          font-weight: bold; color:#fff;">ize: 1rem;
-          font-weight: bold; color:#fff;">           <input style="opacity: none !important; padding:10px;" type="text" placeholder="
+          font-weight: bold; color:#fff;"> <input style="opacity: none !important; padding:10px;" type="text" placeholder="
           search our pages........" name="search" id="searchinput" onkeyup="search()"> 
           
           <div id="results" style="padding: 20px;"></div></div>
@@ -595,161 +595,165 @@ footer {
         <h1>HTML Features Tutorial</h1>
 <hr>
 
-<!-- 1. HTML Content Editable -->
+<!-- 1. HTML Introduction -->
 <div class="feature-box">
-<h2>1. HTML Content Editable</h2>
+<h2>1. HTML Introduction</h2>
+<p>This is a basic HTML document.</p>
+<button class="button" onclick="runIntroExample()">Run Example</button>
+<div id="intro-example"></div>
+</div>
+
+<!-- 2. HTML Content Editable -->
+<div class="feature-box">
+<h2>2. HTML Content Editable</h2>
 <p>This paragraph is editable. Try clicking on it and typing something!</p>
-<p contenteditable="true">This paragraph is editable. Try clicking on it and typing something!</p>
-<p>The <code>contenteditable</code> attribute is used to make an element editable.</p>
-<pre>
-&lt;p contenteditable="true"&gt;This paragraph is editable.&lt;/p&gt;
-</pre>
+<button class="button" onclick="runEditableExample()">Run Example</button>
+<div id="editable-example"></div>
 </div>
 
-<!-- 2. HTML Meta -->
+<!-- 3. HTML Meta -->
 <div class="feature-box">
-<h2>2. HTML Meta</h2>
-<p>Meta tags provide information about the document, such as author, description, and keywords.</p>
-<pre>
-&lt;meta name="author" content="Ntang Enjebel"&gt;
-&lt;meta name="description" content="This is a tutorial on HTML features"&gt;
-&lt;meta name="keywords" content="HTML, features, tutorial"&gt;
-</pre>
-<p>The <code>meta</code> element is used to provide metadata about the document.</p>
+<h2>3. HTML Meta</h2>
+<p>Meta tags provide information about the document.</p>
+<button class="button" onclick="runMetaExample()">Run Example</button>
+<div id="meta-example"></div>
 </div>
 
-<!-- 3. HTML Blockquote -->
+<!-- 4. HTML Blockquote -->
 <div class="feature-box">
-<h2>3. HTML Blockquote</h2>
+<h2>4. HTML Blockquote</h2>
 <p>A blockquote is used to indicate that a section of text is a quotation.</p>
-<blockquote>
-<p>This is a quotation from a famous person.</p>
-</blockquote>
-<p>The <code>blockquote</code> element is used to define a blockquote.</p>
-<pre>
-&lt;blockquote&gt;
-&lt;p&gt;This is a quotation from a famous person.&lt;/p&gt;
-&lt;/blockquote&gt;
-</pre>
+<button class="button" onclick="runBlockquoteExample()">Run Example</button>
+<div id="blockquote-example"></div>
 </div>
 
-<!-- 4. HTML Subscribe Text -->
+<!-- 5. HTML Subscribe Text -->
 <div class="feature-box">
-<h2>4. HTML Subscribe Text</h2>
+<h2>5. HTML Subscribe Text</h2>
 <p>The ins element is used to define a text that has been inserted into a document.</p>
-<p>This text is <ins>subscribed</ins> to our newsletter.</p>
-<p>The <code>ins</code> element is used to define inserted text.</p>
-<pre>
-&lt;p&gt;This text is &lt;ins&gt;subscribed&lt;/ins&gt; to our newsletter.&lt;/p&gt;
-</pre>
+<button class="button" onclick="runSubscribeExample()">Run Example</button>
+<div id="subscribe-example"></div>
 </div>
 
-<!-- 5. HTML Superscript Text -->
+<!-- 6. HTML Superscript Text -->
 <div class="feature-box">
-<h2>5. HTML Superscript Text</h2>
+<h2>6. HTML Superscript Text</h2>
 <p>The sup element is used to define superscripted text.</p>
-<p>This text is <sup>superscripted</sup>.</p>
-<p>The <code>sup</code> element is used to define superscripted text.</p>
-<pre>
-&lt;p&gt;This text is &lt;sup&gt;superscripted&lt;/sup&gt;.&lt;/p&gt;
-</pre>
+<button class="button" onclick="runSuperscriptExample()">Run Example</button>
+<div id="superscript-example"></div>
 </div>
 
-<!-- 6. HTML Figures -->
+<!-- 7. HTML Figures -->
 <div class="feature-box">
-<h2>6. HTML Figures</h2>
-<p>The figure element is used to specify self-contained content, like illustrations, diagrams, photos, code listings, etc.</p>
-<figure>
-<img src="image.jpg" alt="An image">
-<figcaption>This is a figure caption.</figcaption>
-</figure>
-<p>The <code>figure</code> element is used to define a figure.</p>
-<pre>
-&lt;figure&gt;
-&lt;img src="image.jpg" alt="An image"&gt;
-&lt;figcaption&gt;This is a figure caption.&lt;/figcaption&gt;
-&lt;/figure&gt;
-</pre>
+<h2>7. HTML Figures</h2>
+<p>The figure element is used to specify self-contained content.</p>
+<button class="button" onclick="runFiguresExample()">Run Example</button>
+<div id="figures-example"></div>
 </div>
 
-<!-- 7. HTML Character Entities -->
+<!-- 8. HTML Character Entities -->
 <div class="feature-box">
-<h2>7. HTML Character Entities</h2>
-
+<h2>8. HTML Character Entities</h2>
 <p>Character entities are used to display reserved characters in HTML.</p>
-<pre>
-&lt; &amp; &quot; &apos; &copy; &reg; &trade; &pound; &cent; &yen; &euro;
-</pre>
-<p>The above characters are examples of character entities.</p>
+<button class="button" onclick="runEntitiesExample()">Run Example</button>
+<div id="entities-example"></div>
 </div>
 
-<!-- 8. HTML Video & Audio -->
+<!-- 9. HTML Video & Audio -->
 <div class="feature-box">
-<h2>8. HTML Video & Audio</h2>
-<p>The video and audio elements are used to embed video and audio files into an HTML document.</p>
-<video width="320" height="240" controls>
-<source src="movie.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<audio controls>
-<source src="audio.mp3" type="audio/mp3">
-Your browser does not support the audio tag.
-</audio>
-<p>The <code>video</code> and <code>audio</code> elements are used to embed video and audio files.</p>
-<pre>
-&lt;video width="320" height="240" controls&gt;
-&lt;source src="movie.mp4" type="video/mp4"&gt;
-Your browser does not support the video tag.
-&lt;/video&gt;
-
-&lt;audio controls&gt;
-&lt;source src="audio.mp3" type="audio/mp3"&gt;
-Your browser does not support the audio tag.
-&lt;/audio&gt;
-</pre>
+<h2>9. HTML Video & Audio</h2>
+<p>The video and audio elements are used to embed video and audio files.</p>
+<button class="button" onclick="runVideoAudioExample()">Run Example</button>
+<div id="video-audio-example"></div>
 </div>
 
-<!-- 9. HTML Iframe -->
+<!-- 10. HTML Iframe -->
 <div class="feature-box">
-<h2>9. HTML Iframe</h2>
+<h2>10. HTML Iframe</h2>
 <p>The iframe element is used to embed another document within the current HTML document.</p>
-<iframe src="(link unavailable)" width="500" height="500" frameborder="0" scrolling="yes"></iframe>
-<p>The <code>iframe</code> element is used to embed another document.</p>
-<pre>
-&lt;iframe src="(link unavailable)" width="500" height="500" frameborder="0" scrolling="yes"&gt;&lt;/iframe&gt;
-</pre>
+<button class="button" onclick="runIframeExample()">Run Example</button>
+<div id="iframe-example"></div>
 </div>
 
-<!-- 10. HTML YouTube Videos -->
+<!-- 11. HTML YouTube Videos -->
 <div class="feature-box">
-<h2>10. HTML YouTube Videos</h2>
+<h2>11. HTML YouTube Videos</h2>
 <p>The iframe element can be used to embed YouTube videos into an HTML document.</p>
-<iframe width="560" height="315" src="(AI System with HTML, CSS and Javascript)" frameborder="0" allowfullscreen></iframe>
-<p>The <code>iframe</code> element is used to embed YouTube videos.</p>
-<pre>
-&lt;iframe width="560" height="315" src="(link unavailable)" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
-</pre>
+<button class="button" onclick="runYoutubeExample()">Run Example</button>
+<div id="youtube-example"></div>
+
+<!-- 12. HTML File Paths -->
+<div class="feature-box">
+<h2>12. HTML File Paths</h2>
+<p>A file path describes the location of a file in a web site's folder structure.</p>
+<button class="button" onclick="runFilePathsExample()">Run Example</button>
+<div id="file-paths-example"></div>
 </div>
 
-<!-- 11. HTML File Paths -->
-<div class="feature-box">
-<h2>11. HTML File Paths</h2>
-<p>A file path describes the location of a file in a web site's folder structure.</p>
-<p>Example:</p>
-<pre>
-&lt;img src="images/image.jpg" alt="An image"&gt;
-</pre>
-<p>Or:</p>
-<pre>
-&lt;img src="../images/image.jpg" alt="An image"&gt;
-</pre>
-</div>
-<a href="Chapter 5.html"><button style="
-  font-size:1.2em;
-  color:#fff;
-  background:#008000;
-  padding:10px;
-  cursor: pointer;"> NEXT CHAPTER</button></a>
+<script>
+function runIntroExample() {
+var introExample = document.getElementById("intro-example");
+introExample.innerHTML = "<p>This is a basic HTML document.</p>";
+}
+
+function runEditableExample() {
+var editableExample = document.getElementById("editable-example");
+editableExample.innerHTML = "<p contenteditable='true'>This paragraph is editable. Try clicking on it and typing something!</p>";
+}
+
+function runMetaExample() {
+var metaExample = document.getElementById("meta-example");
+metaExample.innerHTML = "<pre>&lt;meta name='author' content='John Doe'&gt;\n&lt;meta name='description' content='This is a tutorial on HTML features'&gt;\n&lt;meta name='keywords' content='HTML, features, tutorial'&gt;</pre>";
+}
+
+function runBlockquoteExample() {
+var blockquoteExample = document.getElementById("blockquote-example");
+blockquoteExample.innerHTML = "<blockquote><p>This is a quotation from a famous person.</p></blockquote>";
+}
+
+function runSubscribeExample() {
+var subscribeExample = document.getElementById("subscribe-example");
+subscribeExample.innerHTML = "<p>This text is <ins>subscribed</ins> to our newsletter.</p>";
+}
+
+function runSuperscriptExample() {
+var superscriptExample = document.getElementById("superscript-example");
+superscriptExample.innerHTML = "<p>This text is <sup>superscripted</sup>.</p>";
+}
+
+function runFiguresExample() {
+var figuresExample = document.getElementById("figures-example");
+figuresExample.innerHTML = "<figure><img src='image.jpg' alt='An image'><figcaption>This is a figure caption.</figcaption></figure>";
+}
+
+function runEntitiesExample() {
+var entitiesExample = document.getElementById("entities-example");
+entitiesExample.innerHTML = "<p>&lt; &amp; &quot; &apos; &copy; &reg; &trade; &pound; &cent; &yen; &euro;</p>";
+}
+
+function runVideoAudioExample() {
+var videoAudioExample = document.getElementById("video-audio-example");
+videoAudioExample.innerHTML = "<video width='320' height='240' controls><source src='movie.mp4' type='video/mp4'>Your browser does not support the video tag.</video><audio controls><source src='audio.mp3' type='audio/mp3'>Your browser does not support the audio tag.</audio>";
+}
+
+function runIframeExample() {
+var iframeExample = document.getElementById("iframe-example");
+iframeExample.innerHTML = "<iframe src='(link unavailable)' width='500' height='500' frameborder='0' scrolling='yes'></iframe>";
+}
+
+function runYoutubeExample() {
+var youtubeExample = document.getElementById("youtube-example");
+youtubeExample.innerHTML = "<iframe width='560' height='315' src='(link unavailable)' frameborder='0' allowfullscreen></iframe>";
+}
+
+function runFilePathsExample() {
+var filePathsExample = document.getElementById("file-paths-example");
+filePathsExample.innerHTML = "<pre>&lt;img src='images/image.jpg' alt='An image'&gt;\n&lt;img src='../images/image.jpg' alt='An image'&gt;</pre>";
+}
+</script>
+
+<div id="examples"></div>
+
 
         <div class="textContainer">
           <h2></h2>
@@ -775,7 +779,7 @@ Your browser does not support the audio tag.
           </p>
         </div>
       </main>
-        <title>Quiz App</title>
+         <title>Quiz App</title>
     <link rel="stylesheet" href="style.css" />
     <script defer src="./script.js"></script>
     <style>
@@ -1021,113 +1025,113 @@ body {
       const datas = [
 {
 id: 1,
-question: `What is the HTML attribute used to make content editable?`,
+question: `What does HTML stand for?`,
 choices: [
-`contenteditable`,
-`editable`,
-`modify`,
-`change`,
+`HyperText Markup Language`,
+`HyperText Machine Language`,
+`HyperText Meta Language`,
+`HyperText Media Language`,
 ],
-answer: `contenteditable`,
+answer: `HyperText Markup Language`,
 },
 {
 id: 2,
-question: `What is the HTML tag used to provide metadata about a document?`,
+question: `What is the purpose of the &lt;DOCTYPE&gt; declaration in HTML?`,
 choices: [
-`&lt;meta&gt;`,
-`&lt;head&gt;`,
-`&lt;title&gt;`,
-`&lt;description&gt;`,
+`To define the document type`,
+`To define the character encoding`,
+`To define the document title`,
+`To define the document author`,
 ],
-answer: `&lt;meta&gt;`,
+answer: `To define the document type`,
 },
 {
 id: 3,
-question: `What is the HTML tag used to define a blockquote?`,
+question: `What is the HTML tag used to create a hyperlink?`,
 choices: [
-`&lt;blockquote&gt;`,
-`&lt;quote&gt;`,
-`&lt;citation&gt;`,
-`&lt;reference&gt;`,
+`&lt;a&gt;`,
+`&lt;link&gt;`,
+`&lt;href&gt;`,
+`&lt;url&gt;`,
 ],
-answer: `&lt;blockquote&gt;`,
+answer: `&lt;a&gt;`,
 },
 {
 id: 4,
-question: `What is the HTML tag used to define subscript text?`,
+question: `What is the HTML tag used to add an image to a web page?`,
 choices: [
-`&lt;sub&gt;`,
-`&lt;sup&gt;`,
-`&lt;subscribe&gt;`,
-`&lt;script&gt;`,
+`&lt;picture&gt;`,
+`&lt;img&gt;`,
+`&lt;photo&gt;`,
+`&lt;graphic&gt;`,
 ],
-answer: `&lt;sub&gt;`,
+answer: `&lt;img&gt;`,
 },
 {
 id: 5,
-question: `What is the HTML tag used to define superscript text?`,
+question: `What is the HTML tag used to define a table?`,
 choices: [
-`&lt;sup&gt;`,
-`&lt;sub&gt;`,
-`&lt;super&gt;`,
-`&lt;script&gt;`,
+`&lt;table&gt;`,
+`&lt;grid&gt;`,
+`&lt;matrix&gt;`,
+`&lt;chart&gt;`,
 ],
-answer: `&lt;sup&gt;`,
+answer: `&lt;table&gt;`,
 },
 {
 id: 6,
-question: `What is the HTML tag used to define a figure?`,
+question: `What is the purpose of the &lt;style&gt; tag in HTML?`,
 choices: [
-`&lt;figure&gt;`,
-`&lt;fig&gt;`,
-`&lt;image&gt;`,
-`&lt;picture&gt;`,
+`To define CSS styles`,
+`To define JavaScript code`,
+`To define HTML tags`,
+`To define character encoding`,
 ],
-answer: `&lt;figure&gt;`,
+answer: `To define CSS styles`,
 },
 {
 id: 7,
-question: `What is the purpose of character entities in HTML?`,
+question: `What is the HTML tag used to define a paragraph?`,
 choices: [
-`To define special characters`,
-`To define HTML tags`,
-`To define CSS styles`,
-`To define JavaScript code`,
+`&lt;p&gt;`,
+`&lt;div&gt;`,
+`&lt;span&gt;`,
+`&lt;section&gt;`,
 ],
-answer: `To define special characters`,
+answer: `&lt;p&gt;`,
 },
 {
 id: 8,
-question: `What is the HTML tag used to define a video?`,
+question: `What is the purpose of the &lt;meta&gt; tag in HTML?`,
 choices: [
-`&lt;video&gt;`,
-`&lt;audio&gt;`,
-`&lt;movie&gt;`,
-`&lt;clip&gt;`,
+`To define metadata about a document`,
+`To define CSS styles`,
+`To define JavaScript code`,
+`To define character encoding`,
 ],
-answer: `&lt;video&gt;`,
+answer: `To define metadata about a document`,
 },
 {
 id: 9,
-question: `What is the HTML tag used to define an audio file?`,
+question: `What is the HTML tag used to define a heading?`,
 choices: [
-`&lt;audio&gt;`,
-`&lt;video&gt;`,
-`&lt;sound&gt;`,
-`&lt;music&gt;`,
+`&lt;h1&gt;`,
+`&lt;h2&gt;`,
+`&lt;h3&gt;`,
+`All of the above`,
 ],
-answer: `&lt;audio&gt;`,
+answer: `All of the above`,
 },
 {
 id: 10,
-question: `What is the purpose of the &lt;source&gt; tag in HTML?`,
+question: `What is the purpose of the &lt;script&gt; tag in HTML?`,
 choices: [
-`To define the source of an image`,
-`To define the source of a video or audio file`,
-`To define the source of a web page`,
-`To define the source of a CSS style`,
+`To define JavaScript code`,
+`To define CSS styles`,
+`To define HTML tags`,
+`To define character encoding`,
 ],
-answer: `To define the source of a video or audio file`,
+answer: `To define JavaScript code`,
 },
 ];
  const shuffledQuizData = datas.sort(() => 0.5 - Math.random());
@@ -1312,8 +1316,8 @@ function createResultEl() {
     </script>
     </div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-    <script>
-    const hamburgarEl = document.getElementById("hamburgar");
+      <script>
+      const hamburgarEl = document.getElementById("hamburgar");
 const bodyEl = document.querySelector("body");
 const linksEl = document.querySelectorAll("#links li");
 const containerEl = document.querySelector(".container");
@@ -1430,9 +1434,8 @@ window.addEventListener("click", (e) => {
   if (e.target.classList == "overlay") bodyEl.classList.remove("nav-open");
 });
 
-    </script>
-    
-  <!--FOOTER-->
+      </script>
+    <!--FOOTER-->
    <footer class="padding_4x">
     <div class="top_footer flex">
     <section class="flex_content">
@@ -1465,24 +1468,23 @@ window.addEventListener("click", (e) => {
     <h3> keep </h3>
       <ul>
         <a href="feedback.html">feedback</a>
-            <a href="AIVILDASH.html">Our AI</a>
-            <a href="csharp.html">learn c#</a>
-            <a href="c ++\C++Lesson1.html">learn c++</a>
-            <a href="">learn css</a>
-        </ul>
-      </section>
-      <p></p>
-   <section class="flex_content padding_1x">
+        <a href="AIVILDASH.html">Our AI</a>
+        <a href="csharp.html">learn c#</a>
+        <a href="c ++\C++Lesson1.html">learn c++</a>
+        <a href="">learn css</a>
+      </ul>    
+    </section>
+    <section class="flex_content padding_1x">
     <h3>Other Links</h3>
       <ul>
         <a href="c\c.html">learn c</a>
-            <a href="DOC-20250105-WA0008.html">learn python</a>
-            <a href="DOC-20250105-WA0007.html">learn javascript</a>
-            <a href="java.html">learn java</a>
-            <a href="projected-page.html">buy webpages</a>
-            <a href="feedback.html">send feedback</a>
-      </ul>
-      </section>
+        <a href="DOC-20250105-WA0008.html">learn python</a>
+        <a href="DOC-20250105-WA0007.html">learn javascript</a>
+        <a href="java.html">learn java</a>
+        <a href="projected-page.html">buy webpages</a>
+        <a href="feedback.html">send feedback</a>
+      </ul>   
+    </section>
     <section class="flex_content padding_1x">
     <h3>vildash network</h3>
     <p>we are here to see you prosper</p>
@@ -1491,19 +1493,8 @@ window.addEventListener("click", (e) => {
     <button class="btn btn_2">Subscribe</button>
     </fieldset>-->
     </section>
-    </div>
-    <div class="flex">
-    <section class="flex-content padding_1x">
-    <p>Copyright ©2024 All rights reserved || VILDASH NETWORK</p>
-    </section>
-    <section class="flex-content padding_1x">
-    <a href="https://web.facebook.com/profile.php?id=61552332181172&sk=followers"><i class="fa fa-facebook"></i></a>
-    <a href="https://www.instagram.com/holy_conceptsstudio/"><i class="fa fa-instagram"></i></a>
-    <a href="https://www.youtube.com/@holyconcepts"><i class="fa fa-youtube"></i></i></a>
     
-    </section>
-
-<!--   <section class="flex_content padding_1x">
+      <!-- <section class="flex_content padding_1x">
             <h3> keep </h3>
             <a href="feedback.html">feedback</a>
             <a href="AIVILDASH.html">Our AI</a>
@@ -1520,12 +1511,27 @@ window.addEventListener("click", (e) => {
             <a href="java.html">learn java</a>
             <a href="projected-page.html">buy webpages</a>
             <a href="feedback.html">send feedback</a>
-          </section>  -->
-
+          </section> -->
+    </div>
+    <div class="flex">
+    <section class="flex-content padding_1x">
+    <p>Copyright ©2024 All rights reserved || VILDASH NETWORK</p>
+    </section>
+    <section class="flex-content padding_1x">
+    <a href="https://web.facebook.com/profile.php?id=61552332181172&sk=followers"><i class="fa fa-facebook"></i></a>
+    <a href="https://www.instagram.com/holy_conceptsstudio/"><i class="fa fa-instagram"></i></a>
+    <a href="https://www.youtube.com/@holyconcepts"><i class="fa fa-youtube"></i></i></a>
+    
+    </section>
     </div>
     </footer>
       <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
       <link rel="stylesheet" href="footer.css">
 
+  </body>
+</html>
+
+  </body>
+</html>
   </body>
 </html>

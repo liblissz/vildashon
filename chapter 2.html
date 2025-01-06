@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LEARN HTML</title>
+    <title>LEARNING HTML COURSE2</title>
     <link rel="stylesheet" href="style.css" />
     <script src="./script.js" defer></script>
     <script src="asset.js"></script>
@@ -30,6 +30,7 @@
           <div class="navBody">
             <ul id="links">
         
+              <a href="feedback.html">
      
               <li>
             
@@ -38,6 +39,7 @@
                 </div>
                 <p>send feedback</p>
               </li>
+              </a>
              <style>
               .container {
       max-width: 1200px;
@@ -459,44 +461,36 @@ body.modal-open {
     margin-right: 0px;
   }
 }
+              
+       
 body {
 font-family: Arial, sans-serif;
-margin: 20px;
 }
-
-.feature-box {
-border: 1px solid #ddd;
+.container {
+max-width: 800px;
+margin: 40px auto;
 padding: 20px;
-margin-bottom: 20px;
+background-color: #f9f9f9;
+border: 1px solid #ddd;
 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-.feature-box h2 {
-margin-top: 0;
-}
-
-.feature-box p {
-margin-bottom: 20px;
-}
-
-.feature-box pre {
-background-color: #f9f9f9;
+.example {
+background-color: #f0f0f0;
 padding: 10px;
-border: 1px solid #ddd;
+border: 1px solid #ccc;
 }
+.output {
+background-color: #f0f0f0;
+padding: 10px;
+border: 1px solid #ccc;
+}
+      
 
-.feature-box img {
-width: 100%;
-height: auto;
-margin-bottom: 20px;
-}
-
-.feature-box iframe {
-width: 100%;
-height: 500px;
-margin-bottom: 20px;
-}
-footer {
+              a{
+                text-decoration: none;
+                   color: black;
+              }
+    footer {
       background-color: #008000;
       color: white;
       text-align: center;
@@ -509,18 +503,14 @@ footer {
         flex: 1 1 100%;
       }
     }
+     </style>
+              <a href="csharp.html">
               
-              a{
-                text-decoration: none;
-                color: black;
-              }
-             </style>
-             <a href="csharp.html">
               <li>
                 <div class="icon">
                   <ion-icon name="log-out-outline"></ion-icon>
                 </div>
-                <p>learn c#</p>
+                <p>Learn c#</p>
               </li>
               </a>
               <a href="c ++\C++Lesson1.html">
@@ -530,22 +520,26 @@ footer {
                 </div>
                 <p>learn c++ </p>
               </li>
-            </a>
-            <a href="java.html">
+              </a>
+            
+              <a href="HTML ide.html">
               <li>
                 <div class="icon">
                   <ion-icon name="log-out-outline"></ion-icon>
                 </div>
-                <p>java</p>
+                <p>use  html ide</p>
               </li>
-            </a>
-              <a href="c\c.html">
-               <li>
+              </a>
+           <a href="c\c.html">
+              <li>
+                <a href="">
                 <div class="icon">
                   <ion-icon name="log-out-outline"></ion-icon>
                 </div>
+              
                 <p>learn c </p>
               </li>
+            </a>
             </a>
               <a href="homepage.html">
               <li>
@@ -555,7 +549,15 @@ footer {
                 <p>home page</p>
               </li>
       </a>
-      </ul>
+      <a href="java.html">
+        <li>
+          <div class="icon">
+            <ion-icon name="log-out-outline"></ion-icon>
+          </div>
+          <p>learn java</p>
+        </li>
+</a>
+            </ul>
           </div>
         </nav>
       </div>
@@ -566,11 +568,10 @@ footer {
             <div id="hamburgar" class="hamburgar">
               <div class="line"></div>
             </div>
-            <p>LEARN HTML FEATURES</p>
+            <p>LEARN HTML</p>
           </div>
           <div id="demo" style="opacity: 0.4; font-size: 1rem;
-          font-weight: bold; color:#fff;">ize: 1rem;
-          font-weight: bold; color:#fff;">           <input style="opacity: none !important; padding:10px;" type="text" placeholder="
+          font-weight: bold; color:#fff;">   <input style="opacity: none !important; padding:10px;" type="text" placeholder="
           search our pages........" name="search" id="searchinput" onkeyup="search()"> 
           
           <div id="results" style="padding: 20px;"></div></div>
@@ -592,165 +593,117 @@ footer {
         </div>
       </section>
       <main>
-        <h1>HTML Features Tutorial</h1>
-<hr>
+<div class="container">
+<h1>HTML Elements</h1>
+<h2>Headings</h2>
+<p>Headings are defined with the <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> tags.</p>
+<div class="example">
+&lt;h1&gt;Heading 1&lt;/h1&gt;
 
-<!-- 1. HTML Content Editable -->
-<div class="feature-box">
-<h2>1. HTML Content Editable</h2>
-<p>This paragraph is editable. Try clicking on it and typing something!</p>
-<p contenteditable="true">This paragraph is editable. Try clicking on it and typing something!</p>
-<p>The <code>contenteditable</code> attribute is used to make an element editable.</p>
-<pre>
-&lt;p contenteditable="true"&gt;This paragraph is editable.&lt;/p&gt;
-</pre>
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+
+&lt;h6&gt;Heading 6&lt;/h6&gt;
 </div>
-
-<!-- 2. HTML Meta -->
-<div class="feature-box">
-<h2>2. HTML Meta</h2>
-<p>Meta tags provide information about the document, such as author, description, and keywords.</p>
-<pre>
-&lt;meta name="author" content="Ntang Enjebel"&gt;
-&lt;meta name="description" content="This is a tutorial on HTML features"&gt;
-&lt;meta name="keywords" content="HTML, features, tutorial"&gt;
-</pre>
-<p>The <code>meta</code> element is used to provide metadata about the document.</p>
+<h2>Paragraphs</h2>
+<p>Paragraphs are defined with the <code>&lt;p&gt;</code> tag.</p>
+<div class="example">
+&lt;p&gt;This is a paragraph of text.&lt;/p&gt;
 </div>
-
-<!-- 3. HTML Blockquote -->
-<div class="feature-box">
-<h2>3. HTML Blockquote</h2>
-<p>A blockquote is used to indicate that a section of text is a quotation.</p>
-<blockquote>
-<p>This is a quotation from a famous person.</p>
-</blockquote>
-<p>The <code>blockquote</code> element is used to define a blockquote.</p>
-<pre>
-&lt;blockquote&gt;
-&lt;p&gt;This is a quotation from a famous person.&lt;/p&gt;
-&lt;/blockquote&gt;
-</pre>
+<h2>Links</h2>
+<p>Links are defined with the <code>&lt;a&gt;</code> tag.</p>
+<div class="example">
+&lt;a href=&quot;(link unavailable)&quot;&gt;Visit Example&lt;/a&gt;
 </div>
-
-<!-- 4. HTML Subscribe Text -->
-<div class="feature-box">
-<h2>4. HTML Subscribe Text</h2>
-<p>The ins element is used to define a text that has been inserted into a document.</p>
-<p>This text is <ins>subscribed</ins> to our newsletter.</p>
-<p>The <code>ins</code> element is used to define inserted text.</p>
-<pre>
-&lt;p&gt;This text is &lt;ins&gt;subscribed&lt;/ins&gt; to our newsletter.&lt;/p&gt;
-</pre>
+<h2>Images</h2>
+<p>Images are defined with the <code>&lt;img&gt;</code> tag.</p>
+<div class="example">
+&lt;img src=&quot;image.jpg&quot; alt=&quot;An image&quot;&gt;
 </div>
+<h2>Lists</h2>
+<p>Lists are defined with the <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, and <code>&lt;li&gt;</code> tags.</p>
+<div class="example">
+&lt;ul&gt;
 
-<!-- 5. HTML Superscript Text -->
-<div class="feature-box">
-<h2>5. HTML Superscript Text</h2>
-<p>The sup element is used to define superscripted text.</p>
-<p>This text is <sup>superscripted</sup>.</p>
-<p>The <code>sup</code> element is used to define superscripted text.</p>
-<pre>
-&lt;p&gt;This text is &lt;sup&gt;superscripted&lt;/sup&gt;.&lt;/p&gt;
-</pre>
+&lt;li&gt;Item 1&lt;/li&gt;
+
+&lt;li&gt;Item 2&lt;/li&gt;
+
+&lt;li&gt;Item 3&lt;/li&gt;
+
+&lt;/ul&gt;
 </div>
+<h2>Tables</h2>
+<p>Tables are defined with the <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, and <code>&lt;td&gt;</code> tags.</p>
+<div class="example">
+&lt;table&gt;
 
-<!-- 6. HTML Figures -->
-<div class="feature-box">
-<h2>6. HTML Figures</h2>
-<p>The figure element is used to specify self-contained content, like illustrations, diagrams, photos, code listings, etc.</p>
-<figure>
-<img src="image.jpg" alt="An image">
-<figcaption>This is a figure caption.</figcaption>
-</figure>
-<p>The <code>figure</code> element is used to define a figure.</p>
-<pre>
-&lt;figure&gt;
-&lt;img src="image.jpg" alt="An image"&gt;
-&lt;figcaption&gt;This is a figure caption.&lt;/figcaption&gt;
-&lt;/figure&gt;
-</pre>
+&lt;tr&gt;
+
+&lt;td&gt;Cell 1&lt;/td&gt;
+
+&lt;td&gt;Cell 2&lt;/td&gt;
+
+&lt;/tr&gt;
+
+&lt;tr&gt;
+
+&lt;td&gt;Cell 3&lt;/td&gt;
+
+&lt;td&gt;Cell 4&lt;/td&gt;
+
+&lt;/tr&gt;
+
+&lt;/table&gt;
 </div>
+<h2>Forms</h2>
+<p>Forms are defined with the <code>&lt;form&gt;</code> tag.</p>
+<div class="example">
+&lt;form&gt;
 
-<!-- 7. HTML Character Entities -->
-<div class="feature-box">
-<h2>7. HTML Character Entities</h2>
+&lt;label&gt;Name:&lt;/label&gt;
 
-<p>Character entities are used to display reserved characters in HTML.</p>
-<pre>
-&lt; &amp; &quot; &apos; &copy; &reg; &trade; &pound; &cent; &yen; &euro;
-</pre>
-<p>The above characters are examples of character entities.</p>
+&lt;input type=&quot;text&quot; name=&quot;name&quot;&gt;
+
+&lt;br&gt;
+
+&lt;label&gt;Email:&lt;/label&gt;
+
+&lt;input type=&quot;email&quot; name=&quot;email&quot;&gt;
+
+&lt;br&gt;
+
+&lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+
+&lt;/form&gt;
 </div>
+<h2>Semantic Elements</h2>
+<p>Semantic elements provide meaning to the structure of the web page.</p>
+<div class="example">
+&lt;header&gt;Header&lt;/header&gt;
 
-<!-- 8. HTML Video & Audio -->
-<div class="feature-box">
-<h2>8. HTML Video & Audio</h2>
-<p>The video and audio elements are used to embed video and audio files into an HTML document.</p>
-<video width="320" height="240" controls>
-<source src="movie.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<audio controls>
-<source src="audio.mp3" type="audio/mp3">
-Your browser does not support the audio tag.
-</audio>
-<p>The <code>video</code> and <code>audio</code> elements are used to embed video and audio files.</p>
-<pre>
-&lt;video width="320" height="240" controls&gt;
-&lt;source src="movie.mp4" type="video/mp4"&gt;
-Your browser does not support the video tag.
-&lt;/video&gt;
+&lt;nav&gt;Navigation&lt;/nav&gt;
 
-&lt;audio controls&gt;
-&lt;source src="audio.mp3" type="audio/mp3"&gt;
-Your browser does not support the audio tag.
-&lt;/audio&gt;
-</pre>
-</div>
+&lt;main&gt;Main content&lt;/main&gt;
 
-<!-- 9. HTML Iframe -->
-<div class="feature-box">
-<h2>9. HTML Iframe</h2>
-<p>The iframe element is used to embed another document within the current HTML document.</p>
-<iframe src="(link unavailable)" width="500" height="500" frameborder="0" scrolling="yes"></iframe>
-<p>The <code>iframe</code> element is used to embed another document.</p>
-<pre>
-&lt;iframe src="(link unavailable)" width="500" height="500" frameborder="0" scrolling="yes"&gt;&lt;/iframe&gt;
-</pre>
-</div>
+&lt;section&gt;Section&lt;/section&gt;
 
-<!-- 10. HTML YouTube Videos -->
-<div class="feature-box">
-<h2>10. HTML YouTube Videos</h2>
-<p>The iframe element can be used to embed YouTube videos into an HTML document.</p>
-<iframe width="560" height="315" src="(AI System with HTML, CSS and Javascript)" frameborder="0" allowfullscreen></iframe>
-<p>The <code>iframe</code> element is used to embed YouTube videos.</p>
-<pre>
-&lt;iframe width="560" height="315" src="(link unavailable)" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
-</pre>
-</div>
+&lt;article&gt;Article&lt;/article&gt;
 
-<!-- 11. HTML File Paths -->
-<div class="feature-box">
-<h2>11. HTML File Paths</h2>
-<p>A file path describes the location of a file in a web site's folder structure.</p>
-<p>Example:</p>
-<pre>
-&lt;img src="images/image.jpg" alt="An image"&gt;
-</pre>
-<p>Or:</p>
-<pre>
-&lt;img src="../images/image.jpg" alt="An image"&gt;
-</pre>
-</div>
-<a href="Chapter 5.html"><button style="
+&lt;aside&gt;Aside&lt;/aside
+</section>
+</main>
+<a href="chapter4.html"><button style="
   font-size:1.2em;
   color:#fff;
   background:#008000;
   padding:10px;
   cursor: pointer;"> NEXT CHAPTER</button></a>
-
         <div class="textContainer">
           <h2></h2>
           <p>
@@ -775,7 +728,8 @@ Your browser does not support the audio tag.
           </p>
         </div>
       </main>
-        <title>Quiz App</title>
+  
+    <title>Quiz App</title>
     <link rel="stylesheet" href="style.css" />
     <script defer src="./script.js"></script>
     <style>
@@ -1019,117 +973,118 @@ body {
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script>
       const datas = [
-{
-id: 1,
-question: `What is the HTML attribute used to make content editable?`,
-choices: [
-`contenteditable`,
-`editable`,
-`modify`,
-`change`,
-],
-answer: `contenteditable`,
-},
-{
-id: 2,
-question: `What is the HTML tag used to provide metadata about a document?`,
-choices: [
-`&lt;meta&gt;`,
-`&lt;head&gt;`,
-`&lt;title&gt;`,
-`&lt;description&gt;`,
-],
-answer: `&lt;meta&gt;`,
-},
-{
-id: 3,
-question: `What is the HTML tag used to define a blockquote?`,
-choices: [
-`&lt;blockquote&gt;`,
-`&lt;quote&gt;`,
-`&lt;citation&gt;`,
-`&lt;reference&gt;`,
-],
-answer: `&lt;blockquote&gt;`,
-},
-{
-id: 4,
-question: `What is the HTML tag used to define subscript text?`,
-choices: [
-`&lt;sub&gt;`,
-`&lt;sup&gt;`,
-`&lt;subscribe&gt;`,
-`&lt;script&gt;`,
-],
-answer: `&lt;sub&gt;`,
-},
-{
-id: 5,
-question: `What is the HTML tag used to define superscript text?`,
-choices: [
-`&lt;sup&gt;`,
-`&lt;sub&gt;`,
-`&lt;super&gt;`,
-`&lt;script&gt;`,
-],
-answer: `&lt;sup&gt;`,
-},
-{
-id: 6,
-question: `What is the HTML tag used to define a figure?`,
-choices: [
-`&lt;figure&gt;`,
-`&lt;fig&gt;`,
-`&lt;image&gt;`,
-`&lt;picture&gt;`,
-],
-answer: `&lt;figure&gt;`,
-},
-{
-id: 7,
-question: `What is the purpose of character entities in HTML?`,
-choices: [
-`To define special characters`,
-`To define HTML tags`,
-`To define CSS styles`,
-`To define JavaScript code`,
-],
-answer: `To define special characters`,
-},
-{
-id: 8,
-question: `What is the HTML tag used to define a video?`,
-choices: [
-`&lt;video&gt;`,
-`&lt;audio&gt;`,
-`&lt;movie&gt;`,
-`&lt;clip&gt;`,
-],
-answer: `&lt;video&gt;`,
-},
-{
-id: 9,
-question: `What is the HTML tag used to define an audio file?`,
-choices: [
-`&lt;audio&gt;`,
-`&lt;video&gt;`,
-`&lt;sound&gt;`,
-`&lt;music&gt;`,
-],
-answer: `&lt;audio&gt;`,
-},
-{
-id: 10,
-question: `What is the purpose of the &lt;source&gt; tag in HTML?`,
-choices: [
-`To define the source of an image`,
-`To define the source of a video or audio file`,
-`To define the source of a web page`,
-`To define the source of a CSS style`,
-],
-answer: `To define the source of a video or audio file`,
-},
-];
+  {
+    id: 1,
+    question: `What is the HTML tag used to create a hyperlink?`,
+    choices: [
+      `&lt;a&gt;`,
+      `&lt;link&gt;`,
+      `&lt;href&gt;`,
+      `&lt;url&gt;`,
+    ],
+    answer: `&lt;a&gt;`,
+  },
+  {
+    id: 2,
+    question: `What is the HTML tag used to add an image to a web page?`,
+    choices: [
+      `&lt;picture&gt;`,
+      `&lt;img&gt;`,
+      `&lt;photo&gt;`,
+      `&lt;graphic&gt;`,
+    ],
+    answer: `&lt;img&gt;`,
+  },
+  {
+    id: 3,
+    question: `What is the HTML tag used to add an audio file in a web page?`,
+    choices: [
+      `&lt;audio&gt;`,
+      `&lt;sound&gt;`,
+      `&lt;music&gt;`,
+      `&lt;voice&gt;`,
+    ],
+    answer: `&lt;audio&gt;`,
+  },
+  {
+    id: 4,
+    question: `What is the HTML tag used to define a table?`,
+    choices: [
+      `&lt;table&gt;`,
+      `&lt;grid&gt;`,
+      `&lt;matrix&gt;`,
+      `&lt;chart&gt;`,
+    ],
+    answer: `&lt;table&gt;`,
+  },
+  {
+    id: 5,
+    question: `What is the HTML tag used to define an unordered list?`,
+    choices: [
+      `&lt;ul&gt;`,
+      `&lt;ol&gt;`,
+      `&lt;li&gt;`,
+      `&lt;dl&gt;`,
+    ],
+    answer: `&lt;ul&gt;`,
+  },
+  {
+    id: 6,
+    question: `What is the purpose of the &lt;div&gt; element in HTML?`,
+    choices: [
+      `To define a paragraph`,
+      `To define a heading`,
+      `To define a division or section`,
+      `To define a span`,
+    ],
+    answer: `To define a division or section`,
+  },
+  {
+    id: 7,
+    question: `What is the purpose of the &lt;span&gt; element in HTML?`,
+    choices: [
+      `To define a paragraph`,
+      `To define a heading`,
+      `To define a division or section`,
+      `To define a small section of text`,
+    ],
+    answer: `To define a small section of text`,
+  },
+  {
+    id: 8,
+    question: `What is the purpose of the &lt;header&gt; element in HTML?`,
+    choices: [
+      `To define the footer of a document`,
+      `To define the navigation menu`,
+      `To define the header of a document`,
+      `To define the main content of a document`,
+    ],
+    answer: `To define the header of a document`,
+  },
+  {
+    id: 9,
+    question: `What is the purpose of the &lt;nav&gt; element in HTML?`,
+    choices: [
+      `To define the main content of a document`,
+      `To define the footer of a document`,
+      `To define the navigation menu`,
+      `To define the header of a document`,
+    ],
+    answer: `To define the navigation menu`,
+  },
+  {
+    id: 10,
+    question: `What is the purpose of the &lt;main&gt; element in HTML?`,
+    choices: [
+      `To define the header of a document`,
+      `To define the navigation menu`,
+      `To define the main content of a document`,
+      `To define the footer of a document`,
+    ],
+    answer: `To define the main content of a document`,
+  },
+]
+ 
  const shuffledQuizData = datas.sort(() => 0.5 - Math.random());
 
 const progressEl = document.getElementById("progress");
@@ -1431,79 +1386,36 @@ window.addEventListener("click", (e) => {
 });
 
     </script>
-    
-  <!--FOOTER-->
-   <footer class="padding_4x">
-    <div class="top_footer flex">
-    <section class="flex_content">
-    
-    </section>
-    </div>
-    <div>
-    <div class="footer_body flex" >
-    <section class="flex_content padding_1x">
-    <figure class="logo fixed_flex">
-    
-    <figcaption>
-    <strong class="title">VILDASH</strong> NETWORK  
-    </figcaption>
-    </figure>
-    <a href="#">
-    <i class="fa fa-map-marker"></i>
-    we are here for you. they key to knowing how to code is concistency in coding 
-    and we are here to make you explore to the fullest of technologies. contact us at
-    </a>
-    <i class="fa fa-envelope-o"></i>
-    liblissz3@gmail.com
-    </a>
-    <a href="tel:654598457">
-    <i class="fa fa-headphones"></i>
-    654598457
-    </a>
-    </section>
-    <section class="flex_content padding_1x">
-    <h3> keep </h3>
-      <ul>
-        <a href="feedback.html">feedback</a>
-            <a href="AIVILDASH.html">Our AI</a>
-            <a href="csharp.html">learn c#</a>
-            <a href="c ++\C++Lesson1.html">learn c++</a>
-            <a href="">learn css</a>
-        </ul>
-      </section>
-      <p></p>
-   <section class="flex_content padding_1x">
-    <h3>Other Links</h3>
-      <ul>
-        <a href="c\c.html">learn c</a>
-            <a href="DOC-20250105-WA0008.html">learn python</a>
-            <a href="DOC-20250105-WA0007.html">learn javascript</a>
-            <a href="java.html">learn java</a>
-            <a href="projected-page.html">buy webpages</a>
-            <a href="feedback.html">send feedback</a>
-      </ul>
-      </section>
-    <section class="flex_content padding_1x">
-    <h3>vildash network</h3>
-    <p>we are here to see you prosper</p>
-    <!--<fieldset class="fixed_flex">
-    <input type="email" name="newsletter" placeholder="Your Email Address">
-    <button class="btn btn_2">Subscribe</button>
-    </fieldset>-->
-    </section>
-    </div>
-    <div class="flex">
-    <section class="flex-content padding_1x">
-    <p>Copyright ©2024 All rights reserved || VILDASH NETWORK</p>
-    </section>
-    <section class="flex-content padding_1x">
-    <a href="https://web.facebook.com/profile.php?id=61552332181172&sk=followers"><i class="fa fa-facebook"></i></a>
-    <a href="https://www.instagram.com/holy_conceptsstudio/"><i class="fa fa-instagram"></i></a>
-    <a href="https://www.youtube.com/@holyconcepts"><i class="fa fa-youtube"></i></i></a>
-    
-    </section>
+     <!--FOOTER-->
+     <footer class="padding_4x">
+      <div class="top_footer flex">
+        <section class="flex_content">
 
-<!--   <section class="flex_content padding_1x">
+        </section>
+      </div>
+      <div>
+        <div class="footer_body flex">
+          <section class="flex_content padding_1x">
+            <figure class="logo fixed_flex">
+
+              <figcaption>
+                <strong class="title">VILDASH</strong> NETWORK
+              </figcaption>
+            </figure>
+            <a href="#">
+              <i class="fa fa-map-marker"></i>
+              we are here for you. they key to knowing how to code is concistency in coding
+              and we are here to make you explore to the fullest of technologies. contact us at
+            </a>
+            <i class="fa fa-envelope-o"></i>
+            liblissz3@gmail.com
+            </a>
+            <a href="tel:654598457">
+              <i class="fa fa-headphones"></i>
+              654598457
+            </a>
+          </section>
+          <section class="flex_content padding_1x">
             <h3> keep </h3>
             <a href="feedback.html">feedback</a>
             <a href="AIVILDASH.html">Our AI</a>
@@ -1520,12 +1432,76 @@ window.addEventListener("click", (e) => {
             <a href="java.html">learn java</a>
             <a href="projected-page.html">buy webpages</a>
             <a href="feedback.html">send feedback</a>
-          </section>  -->
+          </section>
+          <section class="flex_content padding_1x">
+            <h3>vildash network</h3>
+            <p>we are here to see you prosper</p>
+          
+    
+            <!--<fieldset class="fixed_flex">
+  <input type="email" name="newsletter" placeholder="Your Email Address">
+  <button class="btn btn_2">Subscribe</button>
+  </fieldset>-->
+          </section>
+        </div>
+        <div class="flex">
+          <section class="flex-content padding_1x">
+            <p>Copyright ©2024 All rights reserved || VILDASH NETWORK</p>
+          </section>
+          <section class="flex-content padding_1x">
+            <a href="https://web.facebook.com/profile.php?id=61552332181172&sk=followers"><i
+                class="fa fa-facebook"></i></a>
+            <a href="https://www.instagram.com/holy_conceptsstudio/"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@holyconcepts"><i class="fa fa-youtube"></i></i></a>
 
-    </div>
+
+
+  <!--<h1 id="red">Welcome to the Homepage</h1>
+  <div id="blue">First Name: <span id="loggedUserFName"></span></div>
+  <div>Last Name: <span id="loggedUserLName"></span></div>
+  <div>Email: <span id="loggedUserEmail"></span></div>
+  <button id="logout">Logout</button>
+  <style>
+    #red{
+      text-align:center;
+
+  }
+  #logout{
+      color:blueviolet;
+      background-color:#c9d6ff;
+      padding:5px;
+      border-radius:5px;
+      font-size:1rem;
+      font-weight:bold;
+      border:none;
+  }
+  #logout:hover{
+      text-decoration: underline;
+      color:blue;
+  }
+  #logout, #blue{
+      margin-left:15%;
+      font-size:20px;
+      padding:10px;
+  }
+  #blue{
+      font-weight:400;
+      color:rgb(12,11,11);
+
+  }
+  span{
+      font-weight:600;
+      font-size:22px;
+      color:black;
+  }
+  </style>-->
+
+
+          </section>
+        </div>
     </footer>
-      <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-      <link rel="stylesheet" href="footer.css">
-
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  </div>
   </body>
+
 </html>
