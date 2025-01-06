@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LEARN C (.c)</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="./script.js" defer></script>
+  <link rel="icon" href="../file-KXYNjXBEo2D9qPtH9iD6VQ (5).webp">
+  <script src="asset.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="overlay"></div>
+    <div class="overlay2"></div>
+    <!-- Side nav -->
+    <div class="sideNav">
+      <nav>
+        <div class="navHead">
+          <div class="profile">
+            <img style="margin: 10px !important ; border-radius: 5px !important;" src="../file-KXYNjXBEo2D9qPtH9iD6VQ (5).webp" alt="profile" />
+
+          </div>
+          <div class="userName">
+            <p></p>
+          </div>
+
+        </div>
+        <div class="navBody">
+          <ul id="links">
+            <a href="../feedback.html">
+
+            <li>
+
+              <div class="icon">
+                <ion-icon name="list-outline"></ion-icon>
+              </div>
+              <p>send feedback</p>
+            </li>
+            </a>
+
+            <button onclick=" CreateAndFollow()" id="lessonGenButton">
+              <a href="#.html">
+                <li>
+                  <div class="icon">
+                    <ion-icon name="log-out-outline"></ion-icon>
+                  </div>
+                  <p>learn c</p>
+
+                </li>
+
+              </a>
+            </button>
+            <div id="welcome"></div>
+            <a href="../c ++/C++Lesson1.html">
+            <li>
+              <div class="icon">
+                <ion-icon name="log-out-outline"></ion-icon>
+              </div>
+              <p>learn c++ </p>
+            </li>
+            </a>
+            <a href="../DOC-20250105-WA0007.html">
+            <li>
+              <div class="icon">
+                <ion-icon name="log-out-outline"></ion-icon>
+              </div>
+              <p>learn javascript(.js)</p>
+            </li>
+          </a>
+          <a href="../html-1.html">
+            <li>
+           
+              <div class="icon">
+                <ion-icon name="log-out-outline"></ion-icon>
+              </div>
+              <p>learn html</p>
+            </li>
+          </a>
+          <a href="../Basic concepts in css.html">
+            <li>
+              <div class="icon">
+                <ion-icon name="log-out-outline"></ion-icon>
+              </div>
+              <p>learn css</p>
+            </li>
+            </a>
+            <a href="../csharp.html">
+            <li>
+              <div class="icon">
+                <ion-icon name="log-out-outline"></ion-icon>
+              </div>
+              <p>learn c sharp </p>
+            </li>
+            </a>
+            <a href="../AIVILDASH.html">
+              <li>
+                <div class="icon">
+                  <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                <p>use our AI</p>
+              </li>
+              </a>
+            <a href="../homepage.html">
+            <li>
+              <div class="icon">
+                <ion-icon name="log-out-outline"></ion-icon>
+              </div>
+              <p>home page</p>
+            </li>
+</a>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- Hero Section -->
+    <div class="topNav">
+      <nav>
+        <div class="topLeft">
+          <div id="hamburgar" class="hamburgar">
+            <div class="line"></div>
+          </div>
+          <p>LEARN C (.c)</p>
+        </div>
+        <div id="demo" style="opacity: 0.4; font-size: 1rem;
+          font-weight: bold; color:#fff;"><input style="opacity: none !important; padding:10px;" type="text" placeholder="
+          search our pages........" name="search" id="searchinput" onkeyup="search()"> 
+          
+          <div id="results" style="padding: 20px;"></div></div>
+
+        <!--<div class="ctaBtn">
+            <button class="ctaModal">Sign In</button>
+          </div>-->
+      </nav>
+    </div>
+    <section class="heroSection">
+      <div class="textCont">
+        <h1></h1>
+        <p>
+
+        </p>
+        <div class="ctaBtn">
+          <!--<button class="ctaModal">Sign In</button>-->
+        </div>
+      </div>
+    </section>
+    <main>
+      <!--START-->
+      <div class="readers">
+        <button onclick="readText(textToread)" class="readBtn" id="read">READ OUT LOUD</button>
+        <button onclick="stopReading()" class="readBtn" id="stop">STOP READING</button>
+      </div>
+
+      <apan id="textToget">
+        <div class="textContainer">
+          <h1>Lesson #2 :Anatomy of a Simple C Program: </h1>
+
+          <p>In this lesson we are going to dive deep into the various components of a simple
+            C program like that which displayed <strong>"Hello WOrld"</strong> in our previous lesson
+          </p>
+          <p>Hello World</p>
+          <pre>
+<span class="include">#include</span><span class="cOutput">&lt;stdio.h&gt;</span> 
+<span class="types">int </span><span class="functions">main() {</span> 
+<span class="comments">//This is a comment </span>
+<span class="functions">printf<span class="include">(</span></span><span class="cOutput">"Hello, World!"</span><span class="include">)</span>;
+<span class="include">return</span> <span class="number">0</span>;
+<div class="functions">}</div> 
+   </pre>
+          <br>
+          <h2>Various Parts</h3>
+            <ul>
+              <strong>
+                <li class="include">#include</li>
+              </strong>
+              this is a preprocessor directive that is used to include external files (header files) into your source
+              code.For example <span class="cOutput">stdio.h,stdlib.h</span>
+              <strong>
+                <li class="functions">main()</li>
+              </strong>
+              This is a funtion that serves as an entry point to every C program.
+              <strong>
+                <li class="comments">Comments</li>
+              </strong>
+              Comments are of two types, sinle-line(<span class="comments">/*every line*/</span> ) and multi - line<span
+                class="comments">//BEGINS THIS WAY</span> comments.They help the programmer make notes aabout a funtion
+              or some blog of code
+              this enhances Understanding of the code. They are often ignored by the compiler
+              <strong>
+                <li class="functions">Printf()</li>
+              </strong>
+              this funtion is used when ever a c programmer wants to display some output unto the console. In this case
+              we are printing the text "<span class="cOutput">Hello world !</span>"
+              <br>
+              <strong>Note</strong>
+              :In C text must alwys be printed indouble codes
+              <strong>
+                <li class="include">return 0 ;</li>
+              </strong>
+
+              This statement is used to indicate succeful exxecution of the program.
+              If a C program returns any other value apart form "0", it indicates error in the code at one point
+              <strong>
+                <li>Statements</li>
+              </strong>
+              Statements are a fundamental units of execution .theyy instruct the computer to perform specific actions.
+              most staments in c end with a semi colon(;)
+              an examples are:
+
+              <br>
+              <br>
+              <span class="functions">printf<span class="include">(</span></span><span class="cOutput">"Hello,
+                World!"</span><span class="include">)</span>; <br>
+              <span class="types">int</span> x = <span class="number">6</span>;
+              <li>Semicolon (;)</li>
+              In C we use a semi colon at the end of each command to indicate to the computer that its the end of the
+              command
+
+            </ul>
+       
+            </span>
+            <h2>Test it Out</h2>
+            <textarea id="cCode" class="UserProgram">
+#include &lt;stdio.h&gt;
+int main() {
+//hey there, the computer will not see this
+int x = 6; //staments 
+printf("Hello, World!\n");
+printf("%d",x);
+return 0;}
+          </textarea><br>
+            <button onclick="compileC()" class="C-run">Run Code</button><br>
+            <iframe id="output-1" class="iframeOut"></iframe>
+            </p>
+            <button class="previousLessonBtn"><a href="c.html">Previous Lesson</a></button>
+            <button class="testYourSelf"><a href="Quiz2.html">Test My skill</a></button>
+            <button class="nextLessonBtn"><a href="cLesson3.html">Next Lesson</a></button>
+        </div>
+
+    </main>
+  </div>
+
+
+
+    <!--FOOTER-->
+    <footer class="padding_4x">
+      <div class="top_footer flex">
+        <section class="flex_content">
+  
+        </section>
+      </div>
+      <div>
+        <div class="footer_body flex">
+          <section class="flex_content padding_1x">
+            <figure class="logo fixed_flex">
+  
+              <figcaption>
+                <strong class="title">VILDASH</strong> NETWORK
+              </figcaption>
+            </figure>
+            <a href="#">
+              <i class="fa fa-map-marker"></i>
+              we are here for you. they key to knowing how to code is concistency in coding
+              and we are here to make you explore to the fullest of technologies. contact us at
+            </a>
+            <i class="fa fa-envelope-o"></i>
+            liblissz3@gmail.com
+            </a>
+            <a href="tel:654598457">
+              <i class="fa fa-headphones"></i>
+              654598457
+            </a>
+          </section>
+          <section class="flex_content padding_1x">
+            <h3> keep </h3>
+            <a href="../feedback.html">feedback</a>
+            <a href="../AIVILDASH.html">Our AI</a>
+            <a href="../csharp.html">learn c#</a>
+           
+            <a href="../Basic concepts in css.html">learn css</a>
+  <a href="../html-1.html">learn html</a>
+          </section>
+          <section class="flex_content padding_1x">
+            <h3>Other Links</h3>
+            <a href="../c\c.html">learn c</a>
+            <a href="../DOC-20250105-WA0008.html">learn python</a>
+            <a href="../DOC-20250105-WA0007.html">learn javascript</a>
+            <a href="../java.html">learn java</a>
+            <a href="../projected-page.html">buy webpages</a>
+            <a href="../feedback.html">send feedback</a>
+            <a href="../c ++/C++Lesson1.html">learn c++</a>
+          </section>
+          <section class="flex_content padding_1x">
+            <h3>vildash network</h3>
+            <p>we are here to see you prosper</p>
+            <!--<fieldset class="fixed_flex">
+       <input type="email" name="newsletter" placeholder="Your Email Address">
+       <button class="btn btn_2">Subscribe</button>
+       </fieldset>-->
+          </section>
+        </div>
+        <div class="flex">
+          <section class="flex-content padding_1x">
+            <p>Copyright ©2024 All rights reserved || VILDASH NETWORK</p>
+          </section>
+          <section class="flex-content padding_1x">
+            <a href="https://web.facebook.com/profile.php?id=61552332181172&sk=followers"><i
+                class="fa fa-facebook"></i></a>
+            <a href="https://www.instagram.com/holy_conceptsstudio/"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@holyconcepts"><i class="fa fa-youtube"></i></i></a>
+  
+          </section>
+        </div>
+    </footer>
+    <script>
+      //laoding animation 
+      window.addEventListener('load', () => {
+        const cube = document.getElementById('landing');
+        cube.style.display = 'none';
+      })
+  
+    </script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <link rel="stylesheet" href="footer.css">
+  
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  
+  </body>
+  
+  </html>
