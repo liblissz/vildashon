@@ -1,260 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="english"
+    <head>My First web page
+        <title>Welcome to my page</title>
+    </head>
+    <body>
+    <p>My name is Nyami Lewis,i am a software engineering student.I am so poinate of being a web developer ,so am working towards developing my first web page.</p>
+    <ol>1-Dancing
+      2- outings
+      3-me time</ol>
+    <ul>1-Ndole,
+      2-water fuf and eru 
+      3-poulet deger
+      4-fried rice</ul>
+     <link>google,youtube
+     <img src="path/to/image.jpg."
+     alt="an image of how the future looks with Ai taking over"
+   </body></html>
+     
+ <!DOCTYPE html>
+ <html lang="english"
+ <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register & Login</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="styl.css">
-    <script type="module" src="firebaseauth.js"></script>
-
+    <meta name="viewport"
+    content="width=device-width,initial-scale=1.0">
+    <title> simple form </title>
+ </head>
+ <body>
+    <h1>contact form </h1>
+    <form action="/submit" method="post">
+        <label for name="name">Name:</label><br>
+        <input type="text" id="name" name="name"requiresd><br><br> 
+        <label for="email">email:</label><br><input type="email" required><br><br>
+        <label for="massage">message</label><br>,<textarea name="message" id="messag" cols="30" rows="10">required</textarea><br><br>
+        <input type="submit" value="submit">
+    </form>
+    
+ <!DOCTYPE html>
+ <html>
+    <head>
+        <title>marque Example</title>
+    </head>
+    <body>
+        <h1>welcome to marque example</h1>
+        <!--marque with attributes-->   
+    <marque direction="left" behavior="scroll" scrollamount="5"bgcolour=lightblue!
+    <marque> direction=up behavior=alternate height=100px</marque>
+    <marquedirecrion="right" behavior="slide"</marque>
+    </body>
+    <!DOCTYPE html>
+    <html lang="english"
+    <head>
+       <meta charset="UTF-8">
+       <meta name="viewport"
+       content="width=device-width,initial-scale=1.0">
+       <title>navigation menu
+    <link rel="stylesheet" href="styles.css">
+       </head>
+       <body>
+        <nav class="navbar"><div class=logo>my web site</div><ul class=nav-links><li><a href="#home"></a></li> 
+       <a href="#about">about</a></li><li><a hre="#services">services</a></li>
+       <li><a href="#contact">contanct</a></li></ul><div class="memu-toggle"id=mobile-menu><span class="bar"></span>
+        <span class="bar"></span><span class="bar"></span></div></nav><script scr="script.js"></script>
+       </body></html>
+        </body>
+ </html>
+ <!DOCTYPE html>
+ <html lang="english"
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width,initial-scale=1.0">
+    <title>sematic html example</title>
     <style>
-      *{
-        margin:0;
-        padding:0;
-        box-sizing:border-box;
-        font-family:"poppins",sans-serif;
-    }
-    body{
-        background-color: #c9d6ff;
-        background:linear-gradient(to right,#e2e2e2,#caffc9);
-    }
-    .container{
-        background:#fff;
-        width:380px;
-        padding:1.5rem;
-        margin:50px auto;
-        border-radius:10px;
-        box-shadow:0 20px 35px rgba(0,0,1,0.9);
-    }
-    form{
-        margin:0 2rem;
-    }
-    .form-title{
-        font-size:1.5rem;
-        font-weight:bold;
-        text-align:center;
-        padding:1.3rem;
-        margin-bottom:0.4rem;
-    }
-    input{
-        color:inherit;
-        width:100%;
-        background-color:transparent;
-        border:none;
-        border-bottom:1px solid #757575;
-        padding-left:1.5rem;
-        font-size:15px;
-    }
-    .input-group{
-        padding:1% 0;
-        position:relative;
-    
-    }
-    .input-group i{
-        position:absolute;
-        color:black;
-    }
-    input:focus{
-        background-color: transparent;
-        outline:transparent;
-        border-bottom:2px solid hsl(327,90%,28%);
-    }
-    input::placeholder{
-        color:transparent;
-    }
-    label{
-        color:#757575;
-        position:relative;
-        left:1.2em;
-        top:-1.3em;
-        cursor:auto;
-        transition:0.3s ease all;
-    }
-    input:focus~label,input:not(:placeholder-shown)~label{
-        top:-3em;
-        color:hsl(327,90%,28%);
-        font-size:15px;
-    }
-    .recover{
-        text-align:right;
-        font-size:1rem;
-        margin-bottom:1rem;
-    
-    }
-    .recover a{
-        text-decoration:none;
-        color:rgb(125, 235, 169);
-    }
-    .recover a:hover{
-        color:rgb(0, 255, 132);
-        text-decoration:underline;
-    }
-    button{
-        font-size:1.1rem;
-        padding:8px 0;
-        border-radius:5px;
-        outline:none;
-        border:none;
-        width:100%;
-        background:rgb(125, 235, 134);
-        color:white;
-        cursor:pointer;
-        transition:0.9s;
-    }
-    button:hover{
-        background:#07001f;
-    }
-    .or{
-        font-size:1.1rem;
-        margin-top:0.5rem;
-        text-align:center;
-    }
-    .icons{
-        text-align:center;
-    }
-    .icons i{
-        color:rgb(129, 237, 147);
-        padding:0.8rem 1.5rem;
-        border-radius:10px;
-        font-size:1.5rem;
-        cursor:pointer;
-        border:2px solid #dfe9f5;
-        margin:0 15px;
-        transition:1s;
-    }
-    .icons i:hover{
-        background:#07001f;
-        font-size:1.6rem;
-        border:2px solid rgb(125, 235, 167);
-    }
-    .links{
-        display:flex;
-        justify-content:space-around;
-        padding:0 4rem;
-        margin-top:0.9rem;
-        font-weight:bold;
-    }
-     #signUpButton, #signInButton{
-        color:rgb(125, 235, 171);
-        border:none;
-        background-color:transparent;
-        font-size:1rem;
-        font-weight:bold;
-    }
-    #signUpButton:hover, #signInButton:hover {
-        text-decoration:underline;
-        color:rgb(0, 255, 42);
-    } 
-    .messageDiv{
-        background-color:hsl(327,90%,28%);
-        color:white;
-        padding:10px 20px;
-        margin:10px;
-        border-radius: 5px;
-        font-size:1rem;
-        opacity:0;
-        animation:fadeOut 7s forwards;
-    
-    }
-    
-    </style>
-</head>
-<body>
-    <div class="container" id="signup" style="display:none;">
-      <h1 class="form-title">Register</h1>
-      <form method="post" action="">
-        <div id="signUpMessage" class="messageDiv" style="display:none;"></div>
-        <div class="input-group">
-           <i class="fas fa-user"></i>
-           <input type="text"  id="fName" placeholder="First Name" required>
-           <label for="fname">First Name</label>
-        </div>
-        <div class="input-group">
-            <i class="fas fa-user"></i>
-            <input type="text"  id="lName" placeholder="Last Name" required>
-            <label for="lName">Last Name</label>
-        </div>
-        <div class="input-group">
-            <i class="fas fa-envelope"></i>
-            <input type="email"  id="rEmail" placeholder="Email" required>
-            <label for="rEmail">Email</label>
-        </div>
-        <div class="input-group">
-            <i class="fas fa-lock"></i>
-            <input type="password" id="rPassword"  placeholder="Password" required>
-            <label for="rPassword">Password</label>
-        </div>
-       <button class="btn" id="submitSignUp" >Sign Up</button>
-      </form>
-
-
-      <p class="or">
-        ----------or--------
-      </p>
-      <div class="icons">
-        <i class="fab fa-google"></i>
-        <i class="fab fa-facebook"></i>
+      body{font-family:Arial, Helvetica, sans-serif;line-height:1.6;margin:0;padding:0;}
+      header{background:#4CAF50;text-decoration:none;}
+      nav{margin: 20px;}
+      nav a{margin: 0 15px;color: #4CAF50;text-decoration: none;}
+      section{margin-bottom: 20px;}
+      footer{text-align: center;padding: 15px;margin-top: 10px 0;background: #4CAF50;color: white;position: relative;bottom: 0;width: 100%;}
+    </style></head> 
+    <body>
+      <h1>Nyami lewis </h1>
+      <p>Web developer</p>
+      <section id="skills"><p>A beginner in website development,in Phibmat university of excellence</p></section>
+ <section id="experience">
+   <h2>experience</h2>
+   <h3>none</h3>
+ </section>
+    </body>
+    <!DOCTYPE html>
+ <html lang="english"
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width,initial-scale=1.0">
+    <title>photo gallery</title>
+    <style>
+      body{font-family:Arial, Helvetica, sans-serif;line-height:1.6;margin:0;padding:0;}
+      header{background:#4CAF50;text-decoration:none;}
+      nav{margin: 20px;}
+      nav a{margin: 0 15px;color: #4CAF50;text-decoration: none;}
+      section{margin-bottom: 20px;}
+      footer{text-align: center;padding: 15px;margin-top: 10px 0;background: #4CAF50;color: white;position: relative;bottom: 0;width: 100%;}
+      .gallery image{width:100%; border-radius: 5px;box-shadow:0 0 5px;}rgba(0,0,0,0,1)
+   .report-card{max-width:600px;margin:0 auto;padding:20px;background:white;border-radius:5px;box-shadow:0 0 10px rgba(0,0,0,0.1)}
+    </style></head> 
+<  <!DOCTYPE html>
+<html lang="english"`
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport"
+   content="width=device-width,initial-scale=1.0">
+   <title>report-card</title>i<p>school year : 2024-2025</p>
+         </header>
+         <section> <h2>name</h2><table><thead><tr>
+            <th>course</th>
+            <th>scores</th>
+         </section>
       </div>
-      <div class="links">
-        <p>Already Have Account ?</p>
-        <button id="signInButton">Sign In</button>
-      </div>
-    </div>
-
-  <div class="container" id="signIn">
-        <h1 class="form-title">Sign In</h1>
-        <form method="post" action="">
-          <div id="signInMessage" class="messageDiv" style="display:none;"></div>
-
-          <div class="input-group">
-              <i class="fas fa-envelope"></i>
-              <input type="email"  id="email" placeholder="Email" required>
-              <label for="email">Email</label>
-          </div>
-          <div class="input-group">
-              <i class="fas fa-lock"></i>
-            <input type="password" id="password"  placeholder="Password" required>
-              <label for="password">Password</label>
-          </div>
-          <!--<p class="recover">
-            <a href="#">Recover Password</a>
-          </p>-->
-         <button  class="btn"  id="submitSignIn">Sign In</button>
-        </form>
-
-      
-
-
-        <p class="or">
-          ----------or--------
-        </p>
-        <!--<div class="icons">
-          <i class="fab fa-google"></i>
-          <i class="fab fa-facebook"></i>
-        </div>-->
-        <div class="links">
-          <p>Don't have account yet?</p>
-          <button id="signUpButton">Sign Up</button>
-        </div>
-      </div>
-      <script src="scrip.js"></script>
-
-
-      <script>
-        const signUpButton=document.getElementById('signUpButton');
-const signInButton=document.getElementById('signInButton');
-const signInForm=document.getElementById('signIn');
-const signUpForm=document.getElementById('signup');
-
-signUpButton.addEventListener('click',function(){
-    signInForm.style.display="none";
-    signUpForm.style.display="block";
-})
-signInButton.addEventListener('click', function(){
-    signInForm.style.display="block";
-    signUpForm.style.display="none";
-})
-      </script>
-</body>
-</html>
+   </body>
+   </style>
+    </body>
+    </html>

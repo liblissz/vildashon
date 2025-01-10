@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="./script.js"></script>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;400;600;700&display=swap");
+
+    * {
+      :root {
+        --primary-green: #28a745;
+        --primary-black: #000000;
+        --primary-white: #ffff;
+      }
+
+      box-sizing: border-box;
+      font-family: "Overpass",
+      sans-serif;
+      margin: 0%;
+      padding: 0%;
+    }
+
+    body {
+      background-color: #fff;
+    }
+
+    .quizSection {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0% auto;
+    }
+
+    .quizSection .bgImg {
+      background: url(./asset/Background.png);
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      background-size: cover;
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      width: 100%;
+      z-index: -1;
+      opacity: 0.5;
+      background-position: center center;
+    }
+
+    .quizSection header {
+      padding: 1rem;
+      max-width: 700px;
+      margin: 0% auto;
+      margin-top: 1rem;
+    }
+
+    .quizSection header .title h1 {
+      font-size: 2rem;
+      color: #6b6b6b;
+    }
+
+    .quizSection header .title h1 span {
+      position: relative;
+    }
+
+    .quizSection header .title h1 span::after {
+      content: "";
+      background: url(./asset/zig-zag-underline.png);
+      background-repeat: no-repeat;
+      background-position: bottom;
+      margin-top: 5px;
+      position: absolute;
+      width: 90%;
+      height: 10px;
+      left: 50%;
+      bottom: calc(0% - 7px);
+      transform: translateX(-50%);
+    }
+
+    .quizSection .progressCont {
+      width: 100%;
+      margin-top: 1.52rem;
+    }
+
+    .quizSection .progressCont .progress {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 85%;
+      max-width: 350px;
+      margin: 0% auto;
+    }
+
+    .quizSection .progressCont .progress .circle {
+      height: 35px;
+      width: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #e5e5e5;
+      border-radius: 50%;
+    }
+
+    .quizSection .progressCont .progress .circle p {
+      color: #244974;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    .quizSection .progressCont .progress .circle.correct {
+      background: var(--primary-green);
+    }
+
+    .quizSection .progressCont .progress .circle.wrong {
+      background-color: #f8d7da;
+    }
+
+    .quizSection .progressCont .progress .circle.wrong p {
+      color: #842029;
+    }
+
+    .quizSection .questionContainer {
+      background-color: #fff;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      border-radius: 0.7rem;
+      padding: 2.2rem;
+      max-width: 500px;
+      margin: 0% auto;
+      margin-top: 2rem;
+    }
+
+    .quizSection .questionContainer .questions h1 {
+      color: var(--primary-black);
+    }
+
+    .quizSection .questionContainer .answerCont .answer {
+      border: 1px solid #2449746e;
+      border-radius: 0.3rem;
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 0.85rem;
+      line-height: 1.5;
+      margin: 1rem 0;
+      cursor: pointer;
+      background-color: transparent;
+      user-select: none;
+    }
+
+    .quizSection .questionContainer .answerCont .answer .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 5px;
+    }
+
+    .quizSection .questionContainer .answerCont .answer .icon ion-icon {
+      font-size: 1.2rem;
+    }
+
+    .quizSection .questionContainer .answerCont .answer p {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-left: 0.3rem;
+      color: #8e8c9b;
+    }
+
+    .quizSection .questionContainer .answerCont .answer.wrong {
+      background-color: #f8d7da;
+      color: #842029;
+      border-color: #f5c2c7;
+    }
+
+    .quizSection .questionContainer .answerCont .answer.wrong p {
+      color: #842029;
+    }
+
+    .quizSection .questionContainer .answerCont .answer.correct {
+      background-color: #d1e7dd;
+      color: #0f5132;
+      border-color: #badbcc;
+    }
+
+    .quizSection .questionContainer .answerCont .answer.correct p {
+      color: #0f5132;
+    }
+
+    .quizSection .questionContainer .nextBtnEl {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-top: 1.5rem;
+    }
+
+    .quizSection .questionContainer .nextBtnEl button {
+      padding: 0.55rem 2rem;
+      border: none;
+      outline: none;
+      background-color: var(--primary-green);
+      color: #fff;
+      font-weight: normal;
+      letter-spacing: 2px;
+      border-radius: 0.25rem;
+      cursor: pointer;
+    }
+
+    .quizSection .questionContainer .nextBtnEl button:disabled {
+      background-color: #6b6b6b;
+    }
+
+    .quizSection .questionContainer .resultTable {
+      width: 100%;
+    }
+
+    .quizSection .questionContainer .resultTable tr {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .quizSection .questionContainer .resultTable,
+    .quizSection .questionContainer .resultTable th,
+    .quizSection .questionContainer .resultTable td {
+      border-collapse: collapse;
+      border: 1px solid #8e8c9b46;
+    }
+
+    .quizSection .questionContainer .resultTable td,
+    .quizSection .questionContainer .resultTable th {
+      padding: 1rem;
+      width: 100%;
+      text-align: left;
+    }
+
+    .questionContainer .restartCont {
+      display: flex;
+      justify-content: center;
+      padding-top: 1.5rem;
+    }
+
+    .questionContainer .restartCont button {
+      padding: 0.55rem 2rem;
+      border: none;
+      outline: none;
+      background-color: var(--primary-green);
+      color: #fff;
+      font-weight: normal;
+      letter-spacing: 2px;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      margin: 0.7em;
+    }
+
+    .questionContainer .restartCont button .nextPageBtn {
+      background-color: red;
+    }
+    #restartBtn{
+      background-color: rgb(214, 107, 107);
+
+    }
+
+    /*ADDED BY ACHENYU BK*/
+    .tableHeader {
+      color: var(--primary-green);
+      margin: 0.55em;
+      text-decoration: wavy;
+
+    }
+    #remark{
+      margin-top: 0.55em;
+      background-color: rgb(3, 3, 3);
+      height: 2em;
+      width: 100%;
+      display: flex;
+      align-content: center;
+      align-items: center;
+      border-radius: 5px;
+    }
+    #remarkText1{
+      color:#ffffff;
+      padding: 0.55rem;
+      font-weight: bold;
+      text-align: center;
+      width: 100%;
+    }
+
+    @media (max-width: 600px) {
+      .quizSection .bgImg {
+        background-position: center center;
+        background-size: cover;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="quizSection">
+    <div class="bgImg"></div>
+    <header>
+      <div class="title">
+        <h1><span>Javascript Lesson #1: <br></span>  Intorduction</h1>
+      </div>
+    </header>
+    <div class="progressCont">
+      <div class="progress" id="progress"></div>
+    </div>
+    <div class="questionContainer" id="quizContainer">
+      <div class="questions">
+        <h1 id="question">What is 2 + Undefined?</h1>
+      </div>
+      <div class="answerCont" id="answerCont"></div>
+      <div class="nextBtnEl">
+        <button id="nextBtn">Next</button>
+
+
+      </div>
+    </div>
+  </section>
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  <script>
+    const datas = [
+      {
+        id: 1,
+        question: `What is javascript primarily used for?`,
+        choices: [
+          `Back-end development`,
+          `Styling web pages`,
+          `Making web pages interactive `,
+          `Managing database`,
+        ],
+        answer: `Making web pages interactive`,
+      },
+      {
+        id: 2,
+        question: `Which of the following is true about javascript`,
+        choices: [
+          `Javascript is the same java`,
+          `Javascript is a lightweight, interpreted programming language`,
+          `Javascript is only for cleint-side programming`,
+          `Javascript cannot manipulate HTML content`,
+        ],
+        answer: `Javascript is a lightweight, interpreted programming language`,
+      },
+      {
+        id: 3,
+        question: `Where is Javascript code be written in a webpage`,
+        choices: [
+          `Inside the <body> tag only `,
+          `Inside the <head> tag only`,
+          `Inside the <script> tag in the <body> or <head>`,
+          `Inside the <style> tag `,
+        ],
+        answer: `Inside the <script> tag in the <body> or <head>`,
+      },
+      {
+        id: 4,
+        question: `Which type of language is Javascript?`,
+        choices: [
+          `Compiled `,
+          `Interpreted`,
+          `Markup`,
+          `Procedural`,
+        ],
+        answer: `Interpreted`,
+      },
+    ];
+    const shuffledQuizData = datas.sort(() => 0.5 - Math.random());
+
+    const progressEl = document.getElementById("progress");
+    const answerContEl = document.getElementById("answerCont");
+    const questionEl = document.getElementById("question");
+    const nextBtnEl = document.getElementById("nextBtn");
+    const quizContainerEl = document.getElementById("quizContainer");
+
+    let quizCount = 0;
+    let result = 0;
+    let isAnswerSelected = false;
+
+    // Counting El
+
+    let circleCount = 0;
+    let answerElCount = 0;
+
+    // Disabling button when no choice is selected
+
+    nextBtnEl.disabled = true;
+
+    // Create Progress
+
+    function createProgress() {
+      const circleEl = document.createElement("div");
+      circleEl.className = `circle circle${++circleCount}`;
+      const circlePara = document.createElement("p");
+      circlePara.innerHTML = circleCount;
+      circleEl.appendChild(circlePara);
+      progressEl.appendChild(circleEl);
+    }
+
+    datas.forEach((data) => {
+      createProgress();
+    });
+
+    // Create Quiz
+
+    function createQuizChoices(data) {
+      const answerEl = document.createElement("div");
+      const attr = document.createAttribute("data-value");
+      attr.value = data;
+      answerEl.setAttributeNode(attr);
+      answerEl.className = `answer answer${++answerElCount}`;
+      const answerPara = document.createElement("p");
+      answerPara.innerHTML = data;
+      answerEl.appendChild(answerPara);
+      answerContEl.appendChild(answerEl);
+
+      // Event Listener
+      answerEl.addEventListener("click", (e) => {
+        if (!isAnswerSelected) {
+          let allAnswerEl = answerContEl.querySelectorAll(`.answer`);
+          checkAnswer(answerEl, allAnswerEl);
+          isAnswerSelected = true;
+          nextBtnEl.disabled = false;
+          if (quizCount === shuffledQuizData.length - 1) {
+            nextBtnEl.innerHTML = `Show Result`;
+          }
+        }
+      });
+    }
+
+    function createQuiz() {
+      let currentQuiz = shuffledQuizData[quizCount];
+      questionEl.innerHTML = currentQuiz.question;
+
+      answerContEl.innerHTML = ``;
+
+      currentQuiz.choices
+        .sort(() => 0.5 - Math.random())
+        .forEach((choice) => {
+          createQuizChoices(choice);
+        });
+    }
+
+    createQuiz();
+
+    function checkAnswer(selectedAnswerEl, allAnswerEl) {
+      let currentProgress = [...progressEl.querySelectorAll(".circle")];
+
+      let currentQuizAnswer = shuffledQuizData[quizCount].answer;
+      let selectedAnswer = selectedAnswerEl.dataset.value;
+      if (selectedAnswer === currentQuizAnswer) {
+        selectedAnswerEl.classList.add("correct");
+        selectedAnswerEl.prepend(createCorrectIcon());
+        currentProgress[quizCount].classList.add("correct");
+        ++result;
+      } else if (selectedAnswer !== currentQuizAnswer) {
+        selectedAnswerEl.classList.add("wrong");
+        selectedAnswerEl.prepend(createWrongIcon());
+        currentProgress[quizCount].classList.add("wrong");
+        allAnswerEl.forEach((ans) => {
+          if (ans.dataset.value === currentQuizAnswer) {
+            ans.classList.add("correct");
+            ans.prepend(createCorrectIcon());
+          }
+        });
+      }
+    }
+
+    function createCorrectIcon() {
+      const iconEl = document.createElement("div");
+      iconEl.classList.add("icon");
+      iconEl.innerHTML = `<ion-icon name="checkmark-circle"></ion-icon>`;
+      return iconEl;
+    }
+
+    function createWrongIcon() {
+      const iconEl = document.createElement("div");
+      iconEl.classList.add("icon");
+      iconEl.innerHTML = `<ion-icon name="close-circle"></ion-icon>`;
+      return iconEl;
+    }
+
+    nextBtnEl.addEventListener("click", (e) => {
+      if (isAnswerSelected) {
+        isAnswerSelected = false;
+        nextBtnEl.disabled = true;
+
+        if (quizCount < shuffledQuizData.length - 1) {
+          ++quizCount;
+          createQuiz();
+        } else {
+          createResultEl();
+        }
+      } else {
+        alert("you must select a choice");
+      }
+    });
+
+    function createResultEl() {
+      quizContainerEl.innerHTML = ``;
+
+      progressEl.style.opacity = `0`;
+      //Added By @Achenyu Bk
+         const paragraph = document.createElement("h2");
+         paragraph.classList.add("tableHeader");
+         paragraph.innerHTML = `Your result`;
+      //Changes End Here
+
+      const tableEl = document.createElement("table");
+      tableEl.classList.add("resultTable");
+
+      const resultData = [
+        { text: `Total Question`, count: shuffledQuizData.length },
+        { text: `Correct`, count: result },
+        { text: `Wrong`, count: shuffledQuizData.length - result },
+        {
+          text: `Percentage`,
+          count: `${(result / shuffledQuizData.length) * 100}%`,
+          //Achenyu ADDED THIS TO HELP DISPLAY REMARK
+          percent:(result / shuffledQuizData.length) * 100,
+        },
+        { text: `Your Total`, count: `${result} / ${shuffledQuizData.length}` },
+      ];
+     
+
+      // tr1
+      function createTableRow(data) {
+        const tr = document.createElement("tr");
+        const th = document.createElement("th");
+        th.innerHTML = data.text;
+        const td = document.createElement("td");
+        td.innerHTML = data.count;
+        tr.appendChild(th);
+        tr.appendChild(td);
+        tableEl.appendChild(tr);
+      }
+
+      resultData.forEach((data) => createTableRow(data));
+
+      const restartCont = document.createElement("div");
+      restartCont.classList.add("restartCont");
+
+      const restartBtn = document.createElement("button");
+      restartBtn.id = "restartBtn"
+      restartBtn.innerHTML = `Restart`;
+      restartCont.appendChild(restartBtn);
+      //MADE CHANGES HERE by @ACHENYU BK
+      //
+      //
+      const nextPageBtn = document.createElement("button");
+      nextPageBtn.classList.add("nextPageBtn");
+      nextPageBtn.id = "nextPageBtn";
+      nextPageBtn.innerHTML = `Next Lesson`;
+      restartCont.appendChild(nextPageBtn);
+
+      //create link to follow
+      function CreateAndFollow(url, text) {
+        const link = document.createElement('a');
+        link.href = url;
+        link.textContent = text;
+        const temp = document.createElement('div');
+        temp.appendChild(link);
+        document.body.appendChild(temp);
+        link.click();
+        document.body.removeChild(temp);
+      }
+      //Call to follow the link
+      nextPageBtn.addEventListener("click", (e) => {
+        CreateAndFollow("javascript lesson 2.html", "Go to the page");
+      });
+
+    
+
+      restartBtn.addEventListener("click", (e) => {
+        window.location.reload();
+      });
+      const remark = document.createElement("div");
+      remark.classList.add("remark");
+      remark.id ="remark"
+      //test something...by @Achenyu Bk 
+      //
+      //
+
+      if (resultData[3].percent<=20) {
+        const text1 = document.createElement("p");
+        text1.classList.add("remarkText");
+        text1.innerHTML = `Very Poor`;
+        text1.id ="remarkText1";
+        remark.appendChild(text1);
+        
+      }
+      else  if (resultData[3].percent<=40) {
+        const text1 = document.createElement("p");
+        text1.classList.add("remarkText");
+        text1.innerHTML = `You can do Better`;
+        text1.id ="remarkText1";
+        remark.appendChild(text1);
+        
+      }
+      else if (resultData[3].percent<=50) {
+        const text1 = document.createElement("p");
+        text1.classList.add("remarkText");
+        text1.innerHTML = `Almost Fair`;
+        text1.id ="remarkText1";
+        remark.appendChild(text1);
+        
+      }
+      else if (resultData[3].percent<=60) {
+        const text1 = document.createElement("p");
+        text1.classList.add("remarkText");
+        text1.innerHTML = `Fair Enough`;
+        text1.id ="remarkText1";
+        remark.appendChild(text1);
+        
+      }
+      else if (resultData[3].percent<=80) {
+        const text1 = document.createElement("p");
+        text1.classList.add("remarkText");
+        text1.innerHTML = `Good`;
+        text1.id ="remarkText1";
+        remark.appendChild(text1);
+        
+      }
+      else if (resultData[3].percent<=90) {
+        const text1 = document.createElement("p");
+        text1.classList.add("remarkText");
+        text1.innerHTML = `Very Good`;
+        text1.id ="remarkText1";
+        remark.appendChild(text1);
+        
+      }
+      else if (resultData[3].percent=100) {
+        const text1 = document.createElement("p");
+        text1.classList.add("remarkText");
+        text1.innerHTML = `Excellent`;
+        text1.id ="remarkText1";
+        remark.appendChild(text1);
+        
+      }
+      else{
+        alert(`Please retry please`) ;
+      }
+      //
+      //
+      //changes end here
+
+      // Append Table to continer
+      quizContainerEl.appendChild(paragraph);
+      quizContainerEl.appendChild(tableEl);
+      quizContainerEl.appendChild(remark);
+      quizContainerEl.appendChild(restartCont);
+
+      // quizContainerEl.appendChild(nextPageBtn);
+
+
+    }
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LEARN JavaScript (.js)</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="overlay"></div>
+        <div class="overlay2"></div>
+        <!-- Side nav -->
+        <div class="sideNav">
+            <nav>
+                <div class="navHead">
+                    <div class="profile">
+                        <img src="./asset/profile.png" alt="profile" />
+
+                    </div>
+                    <div class="userName">
+                        <p>UserName</p>
+                    </div>
+
+                </div>
+                <div class="navBody">
+                    <ul id="links">
+
+
+                        <li>
+
+                            <div class="icon">
+                                <ion-icon name="list-outline"></ion-icon>
+                            </div>
+                            <p>send feedback</p>
+                        </li>
+                        <button onclick=" CreateAndFollow()" id="lessonGenButton">
+                            <a href="#">
+                                <li>
+                                    <div class="icon">
+                                        <ion-icon name="log-out-outline"></ion-icon>
+                                    </div>
+                                    <p>learn c</p>
+
+                                </li>
+
+                            </a>
+                        </button>
+                        <div id="welcome"></div>
+
+
+                        <li>
+                            <div class="icon">
+                                <ion-icon name="log-out-outline"></ion-icon>
+                            </div>
+                            <p>learn c++ </p>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <ion-icon name="log-out-outline"></ion-icon>
+                            </div>
+                            <p>learn javascript(.js)</p>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <ion-icon name="log-out-outline"></ion-icon>
+                            </div>
+                            <p>learn html</p>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <ion-icon name="log-out-outline"></ion-icon>
+                            </div>
+                            <p>learn css</p>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <ion-icon name="log-out-outline"></ion-icon>
+                            </div>
+                            <p>learn c sharp </p>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <ion-icon name="log-out-outline"></ion-icon>
+                            </div>
+                            <p>Sign Out</p>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- Hero Section -->
+        <div class="topNav">
+            <nav>
+                <div class="topLeft">
+                    <div id="hamburgar" class="hamburgar">
+                        <div class="line"></div>
+                    </div>
+                    <p>LEARN JavaScript(.js)</p>
+                </div>
+                <div id="demo" style="opacity: 0.4; font-size: 1rem;
+          font-weight: bold; color:#fff;">your user name</div>
+
+                <!--<div class="ctaBtn">
+            <button class="ctaModal">Sign In</button>
+          </div>-->
+            </nav>
+        </div>
+        <section class="heroSection">
+            <div class="textCont">
+                <h1></h1>
+                <p>
+
+                </p>
+                <div class="ctaBtn">
+                    <!--<button class="ctaModal">Sign In</button>-->
+                </div>
+            </div>
+        </section>
+        <main>
+            <!--START-->
+            <div class="readers">
+                <button onclick="readText(textToread)" class="readBtn" id="read">READ OUT LOUD</button>
+                <button onclick="stopReading()" class="readBtn" id="stop">STOP READING</button>
+            </div>
+
+            <span id="textToget">
+                <div class="textContainer">
+                    <h1>Lesson #3 :JavaScript BOM(Browser object Model):</h1>
+                      <ul>
+                        <li><h2>Window object</h2></li>
+                        <p>
+                          The window object represents the brower window or tab.It provides access to various properties and methods for 
+                          interacting with the browser window.
+                        </p>
+                      </ul>
+                     <p style="text-align: center;color: green; border: solid 3px black;background-color: whitesmoke;">
+                      // Open a new browser window <br>
+                      let newWindow = window.open("https://example.com") <br>
+                      //Get the window's height and width <br>
+                      let windowWidth = window.innerWidth; <br>
+                      let widowHeight = <br>
+                      window.innerHeight;
+                     </p>
+                    <ul>
+                      <h2>
+                        <li>History Object</li>
+                      </h2>
+
+                  <p>
+                    The History object allows you to manipulate the browser's session history,enabling navigation through previosly
+                    visited pages.
+                  </p> 
+                </ul>
+                  <p style="text-align: center;color: green; border: solid 3px black;background-color: whitesmoke;">
+                    // Go back in history <br>
+                    history.back(); <br>
+                    // Go forward in history <br>
+                    history.forward();
+                  </p>
+                    <br>
+                    <br>
+                    <ul>
+                      <h2>
+                        <li>Navigator Object</li>
+                      </h2>
+                      <p> The Navigator object provides information about the browser,\
+                        such as its name,version,and user agent.
+                      </p>
+                    </ul>
+                    <p style="text-align: center;color:green;border: solid 3px black;background-color: whitesmoke;">
+                      // Get the browser name and version <br>
+                      let browserName= navigator.appName;
+                      let browserVersion = <br>
+                      navigator.appVersion;
+                    </p>
+                    <ul>
+                      <h2>
+                        <li> Screen Object</li>
+                      </h2>
+                      <p>The screen objects represents the user's screen,providing information about screen size and available
+                        screen properties.
+                      </p>
+                    </ul>
+                          <p style="text-align: center;color: green;border: solid 3px black;background-color: whitesmoke;">
+                            // Get the screen's width and height <br>
+                            let screenWidth = screen.width;
+                            let screenHeigth = screen.height;
+                          </p>
+             
+            
+             <h2>Test it Out</h2>
+             <textarea id="cCode" class="UserProgram">
+              &lt;html&gt;
+              &lt;head&gt;&lt;/head&gt;
+              &lt;body&gt;
+              
+              &lt;h1&gt;
+              &lt;/h1&gt;
+              
+              &lt;/body&gt;
+              &lt;/html&gt;
+                    
+ 
+          </textarea><br>
+
+          
+                    <button onclick="compileC()" class="C-run">Run Code</button><br>
+                    <iframe id="output-1" class="iframeOut"></iframe>
+                    </p>
+                    <button onclick="func()" style="padding: 10px ; color: whitesmoke; background-color: rgb(27, 161, 22); border-radius: 12px;">voice over me</button>
+            <button onclick="stop()" style="padding: 10px ; color:whitesmoke; background-color: rgb(148, 33, 33); border-radius: 12px;">stop playing me </button>
+            <script>
+                const text = `Window object
+                         The window object represents the brower window or tab.It provides access to various properties and methods for 
+                          interacting with the browser window.
+                          History Object 
+                          The History object allows you to manipulate the browser's session history,enabling navigation through previosly
+                    visited pages.
+                                 Navigator Object
+                                 The Navigator object provides information about the browser,
+                        such as its name,version,and user agent.
+                                   Screen Object
+                                   The screen objects represents the user's screen,providing information about screen size and available
+                        screen properties.`;
+      function func(){
+const voice = new SpeechSynthesisUtterance(text);
+voice.rate = 1;
+voice.volume = 2;
+window.speechSynthesis.speak(voice);
+
+}
+function stop(){
+window.speechSynthesis.cancel();
+}
+              
+            </script>
+                    <button class="previousLessonBtn"><a href="javascript lesson 2.html">Previous Lesson</a></button>
+                    <button class="testYourSelf"><a href="Quiz3.html">Test My skill</a></button>
+                    <button class="nextLessonBtn"><a href="javascript lesson 4.html">Next Lesson</a></button>
+                </div>
+          </textarea>
+        </main>
+    </div>
+
+
+
+    <!--FOOTER-->
+    <footer class="padding_4x">
+        <div class="top_footer flex">
+            <section class="flex_content">
+
+            </section>
+        </div>
+        <div>
+            <div class="footer_body flex">
+                <section class="flex_content padding_1x">
+                    <figure class="logo fixed_flex">
+
+                        <figcaption>
+                            <strong class="title">VILDASH</strong> NETWORK
+                        </figcaption>
+                    </figure>
+                    <a href="#">
+                        <i class="fa fa-map-marker"></i>
+                        we are here for you. they key to knowing how to code is concistency in coding
+                        and we are here to make you explore to the fullest of technologies. contact us at
+                    </a>
+                    <i class="fa fa-envelope-o"></i>
+                    liblissz3@gmail.com
+                    </a>
+                    <a href="tel:654598457">
+                        <i class="fa fa-headphones"></i>
+                        654598457
+                    </a>
+                </section>
+                <section class="flex_content padding_1x">
+                    <h3> keep </h3>
+                    <a href="index.html">feedback</a>
+                    <a href="about.html">about</a>
+                    <a href="learn.html">learn photography</a>
+                </section>
+                <section class="flex_content padding_1x">
+                    <h3>Other Links</h3>
+                    <a href="partnership/index.html">partnership</a>
+                    <a href="contact.html">contact us</a>
+                    <a href="gelary.html">gelary</a>
+                </section>
+                <section class="flex_content padding_1x">
+                    <h3>vildash network</h3>
+                    <p>we are here to see you prosper</p>
+                    <!--<fieldset class="fixed_flex">
+     <input type="email" name="newsletter" placeholder="Your Email Address">
+     <button class="btn btn_2">Subscribe</button>
+     </fieldset>-->
+                </section>
+            </div>
+            <div class="flex">
+                <section class="flex-content padding_1x">
+                    <p>Copyright ©2024 All rights reserved || VILDASH NETWORK</p>
+                </section>
+                <section class="flex-content padding_1x">
+                    <a href="https://web.facebook.com/profile.php?id=61552332181172&sk=followers"><i
+                            class="fa fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/holy_conceptsstudio/"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@holyconcepts"><i class="fa fa-youtube"></i></i></a>
+
+                </section>
+            </div>
+    </footer>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <link rel="stylesheet" href="footer.css">
+    <!-- IDE LOADER -->
+    <script>async function compileC() {
+            const code = document.getElementById('cCode').value;
+            const outputFrame = document.getElementById('output-1');
+            outputFrame.contentWindow.document.body.innerHTML = "Compiling...";
+
+            const response = await fetch("https://wandbox.org/api/compile.json", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    code: code,
+                    compiler: "gcc-head",
+                    options: "c11"
+                }),
+            });
+
+            const result = await response.json();
+            outputFrame.contentWindow.document.body.innerHTML = result.program_message || result.compiler_message;
+        }
+    </script>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+</body>
+
+</html>
